@@ -5,11 +5,31 @@ const level = {
 }
 
 const attribute = {
-  red: 0,
-  green: 1,
-  blue: 2,
-  yellow: 3,
-  black: 4
+  red: {
+    id: 0,
+    color: "red",
+    name: "紅色情緒",
+  },
+  green: {
+    id: 1,
+    color: "green",
+    name: "綠色情緒",
+  },
+  blue: {
+    id: 2,
+    color: "blue",
+    name: "藍色情緒",
+  },
+  light: {
+    id: 3,
+    color: "yellow",
+    name: "白色情緒",
+  },
+  dark: {
+    id: 4,
+    color: "black",
+    name: "黑色情緒",
+  },
 }
 
 const characterSource = {

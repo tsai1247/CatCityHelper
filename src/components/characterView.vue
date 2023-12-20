@@ -16,12 +16,12 @@
             v-model="attributeFilter"
             dark
             multiple>
-            <v-btn v-for="(item, index) in attributeEnum"
+            <v-btn v-for="(item) in attributeEnum"
               @click="filter"
-              :key="index"
+              :key="item.id"
               density="compact"
             >
-              <v-icon :color="index">mdi-circle-slice-8</v-icon>
+              <v-icon :color="item.color">mdi-circle-slice-8</v-icon>
             </v-btn>
           </v-btn-toggle>
         </v-col>
@@ -94,7 +94,7 @@
     characterList.value = character.filter(
       (item) => {
         const levelResult = levelFilter.value.find(level => item.level === level);
-        const attributeResult = attributeFilter.value.find(attribute => item.attribute === attribute);
+        const attributeResult = attributeFilter.value.find((attribute) => item.attribute?.id === attribute);
         return levelResult !== undefined && attributeResult !== undefined || item.attribute === undefined;
       }
     );
