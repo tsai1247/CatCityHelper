@@ -6,6 +6,7 @@
         <v-col cols="12" md="4">
           <v-text-field
             v-model="keyword"
+            clearable
             prepend-inner-icon="mdi-magnify">
 
           </v-text-field>
@@ -98,7 +99,7 @@
       }
     );
 
-    if(keyword.value !== "") {
+    if(keyword.value) {
       characterList.value = characterList.value.filter(
         (item) => {
           return item.name.indexOf(keyword.value) !== -1
