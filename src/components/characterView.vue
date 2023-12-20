@@ -94,7 +94,7 @@
       (item) => {
         const levelResult = levelFilter.value.find(level => item.level === level);
         const attributeResult = attributeFilter.value.find(attribute => item.attribute === attribute);
-        return levelResult !== undefined && attributeResult !== undefined;
+        return levelResult !== undefined && attributeResult !== undefined || item.attribute === undefined;
       }
     );
 
