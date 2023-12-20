@@ -3,14 +3,14 @@
 
     <v-container>
       <v-row>
-        <v-col>
+        <v-col cols="12" md="4">
           <v-text-field
             v-model="keyword"
             prepend-inner-icon="mdi-magnify">
 
           </v-text-field>
         </v-col>
-        <v-col>
+        <v-col cols="12" sm="7" md="4">
           <v-btn-toggle
             v-model="attributeFilter"
             dark
@@ -24,7 +24,7 @@
             </v-btn>
           </v-btn-toggle>
         </v-col>
-        <v-col>
+        <v-col cols="12" sm="5" md="4">
           <v-btn-toggle
             v-model="levelFilter"
             dark
@@ -46,8 +46,8 @@
                 <v-col>
                   <v-card
                     class="ma-2"
-                    width="160px"
-                    height="200px"
+                    width="125px"
+                    height="160px"
                     image="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
                     theme="dark"      >
 
