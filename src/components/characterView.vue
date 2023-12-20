@@ -47,8 +47,8 @@
                 <v-col>
                   <v-card
                     class="ma-2"
-                    width="125px"
-                    height="160px"
+                    width="145px"
+                    height="180px"
                     image="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
                     theme="dark"      >
 
@@ -56,7 +56,7 @@
                         <span>
                           {{ item.name }}
                         </span>
-                        <span class="float-right">
+                        <span class="float-right mr-1 text-subtitle-2 font-italic">
                           {{ getObjKeys(levelEnum, item.level) }}
                         </span>
                       </template>
