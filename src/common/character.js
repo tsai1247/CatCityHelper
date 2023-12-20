@@ -8,7 +8,7 @@ const characterList = [
     "name": "依琳",
     "subname": "蒼白舞者",
     "level": level.SSR,
-    "attribute": attribute.green,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -30,6 +30,7 @@ const characterList = [
     "name": "依蓮娜",
     "subname": "粉紅風暴",
     "level": level.SSR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -40,6 +41,7 @@ const characterList = [
     "name": "達妮卡",
     "subname": "暗巷燈火",
     "level": level.SSR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -50,6 +52,7 @@ const characterList = [
     "name": "祈",
     "subname": "碧魂燈",
     "level": level.SSR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -60,6 +63,7 @@ const characterList = [
     "name": "海蕾",
     "subname": "清道夫之夜",
     "level": level.SSR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -70,6 +74,7 @@ const characterList = [
     "name": "娜芙瑞特",
     "subname": "秘域訪客",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -80,6 +85,7 @@ const characterList = [
     "name": "司諾",
     "subname": "極寒朔風",
     "level": level.SSR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -90,6 +96,7 @@ const characterList = [
     "name": "奧爾嘉",
     "subname": "除障者",
     "level": level.SSR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -100,6 +107,7 @@ const characterList = [
     "name": "雲沛",
     "subname": "夕雪晚照",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -110,6 +118,7 @@ const characterList = [
     "name": "雲燦",
     "subname": "火樹流光",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -120,6 +129,7 @@ const characterList = [
     "name": "安雅",
     "subname": "長夜冰冕",
     "level": level.SSR,
+    "attribute": attribute.green,
     "source": [characterSource.summon, characterSource.signin],
     "bond": [
 
@@ -130,6 +140,7 @@ const characterList = [
     "name": "可可",
     "subname": "秘密調查",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -140,6 +151,7 @@ const characterList = [
     "name": "艾琳娜",
     "subname": "致命音符",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -150,6 +162,7 @@ const characterList = [
     "name": "小白",
     "subname": "戰略潛艇",
     "level": level.SSR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -160,6 +173,7 @@ const characterList = [
     "name": "伊德",
     "subname": "烈火戰線",
     "level": level.SSR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -170,6 +184,7 @@ const characterList = [
     "name": "小音",
     "subname": "幽靈社團",
     "level": level.SSR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -180,6 +195,7 @@ const characterList = [
     "name": "內特",
     "subname": "英雄憧憬",
     "level": level.SSR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -190,6 +206,7 @@ const characterList = [
     "name": "南彌生",
     "subname": "緋紅武士",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -200,6 +217,7 @@ const characterList = [
     "name": "特莉絲",
     "subname": "心動療癒",
     "level": level.SSR,
+    "attribute": attribute.green,
     "source": [characterSource.summon, characterSource.money],
     "bond": [
 
@@ -210,6 +228,7 @@ const characterList = [
     "name": "艾可",
     "subname": "電音騎士",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -220,6 +239,7 @@ const characterList = [
     "name": "非天",
     "subname": "森林守護者",
     "level": level.SSR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -230,6 +250,7 @@ const characterList = [
     "name": "小白",
     "subname": "滌蕩者",
     "level": level.SSR,
+    "attribute": attribute.green,
     "source": [characterSource.specialSummon],
     "bond": [
 
@@ -240,6 +261,7 @@ const characterList = [
     "name": "艾可",
     "subname": "完美效勞",
     "level": level.SSR,
+    "attribute": attribute.green,
     "source": [characterSource.money],
     "bond": [
 
@@ -250,6 +272,7 @@ const characterList = [
     "name": "特莉絲",
     "subname": "瘋人院",
     "level": level.SSR,
+    "attribute": attribute.dark,
     "source": [characterSource.money],
     "bond": [
 
@@ -260,6 +283,7 @@ const characterList = [
     "name": "多洛茜",
     "subname": "囚鳥綺愿",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.specialSummon],
     "bond": [
 
@@ -270,6 +294,7 @@ const characterList = [
     "name": "絲薇蒂",
     "subname": "致聖雪夜",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.specialSummon],
     "bond": [
 
@@ -280,6 +305,7 @@ const characterList = [
     "name": "艾可",
     "subname": "鰩搖心情",
     "level": level.SSR,
+    "attribute": attribute.light,
     "source": [characterSource.store],
     "bond": [
 
@@ -290,6 +316,7 @@ const characterList = [
     "name": "特莉絲",
     "subname": "浮世謠",
     "level": level.SSR,
+    "attribute": attribute.red,
     "source": [characterSource.store],
     "bond": [
 
@@ -300,6 +327,7 @@ const characterList = [
     "name": "小白",
     "subname": "棋盤遊戲",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -310,6 +338,7 @@ const characterList = [
     "name": "非天",
     "subname": "自由滑輪",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -320,6 +349,7 @@ const characterList = [
     "name": "艾可",
     "subname": "機械助理",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -330,6 +360,7 @@ const characterList = [
     "name": "特莉絲",
     "subname": "純真拜訪者",
     "level": level.SR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -340,6 +371,7 @@ const characterList = [
     "name": "特莉絲",
     "subname": "恬靜時刻",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -350,6 +382,7 @@ const characterList = [
     "name": "南彌生",
     "subname": "封面女郎",
     "level": level.SR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -360,6 +393,7 @@ const characterList = [
     "name": "南彌生",
     "subname": "夜間執勤",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -370,6 +404,7 @@ const characterList = [
     "name": "內特",
     "subname": "障礙破壞",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -380,6 +415,7 @@ const characterList = [
     "name": "內特",
     "subname": "海灘冒險",
     "level": level.SR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -390,6 +426,7 @@ const characterList = [
     "name": "小音",
     "subname": "橘色純真",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -400,6 +437,7 @@ const characterList = [
     "name": "小音",
     "subname": "不思議鴨鴨",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -410,6 +448,7 @@ const characterList = [
     "name": "伊德",
     "subname": "雪地奔馳",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -420,6 +459,7 @@ const characterList = [
     "name": "伊德",
     "subname": "繼承者",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -430,6 +470,7 @@ const characterList = [
     "name": "安雅",
     "subname": "鏡光旖夢",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -440,6 +481,7 @@ const characterList = [
     "name": "米婭",
     "subname": "愛心妝點",
     "level": level.SR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -450,6 +492,7 @@ const characterList = [
     "name": "雲燦",
     "subname": "銀鉤墨舞",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -460,6 +503,7 @@ const characterList = [
     "name": "雲沛",
     "subname": "墨蘊尋真",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon, characterSource.signin],
     "bond": [
 
@@ -470,6 +514,7 @@ const characterList = [
     "name": "刀客",
     "subname": "修習者",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -480,6 +525,7 @@ const characterList = [
     "name": "瑞德",
     "subname": "詐欺小丑",
     "level": level.SR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -490,6 +536,7 @@ const characterList = [
     "name": "伊雷",
     "subname": "爆裂火山",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -500,6 +547,7 @@ const characterList = [
     "name": "兔子玩偶",
     "subname": "怪力巨兔",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -510,6 +558,7 @@ const characterList = [
     "name": "杰克皇",
     "subname": "時運失衡",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -520,6 +569,7 @@ const characterList = [
     "name": "死神",
     "subname": "奪魂之鐮",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -531,6 +581,7 @@ const characterList = [
     "name": "文森特",
     "subname": "孤獨紳士",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -542,6 +593,7 @@ const characterList = [
     "name": "卡蘿爾",
     "subname": "落寞淑女",
     "level": level.SR,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -553,6 +605,7 @@ const characterList = [
     "name": "狂傲戰士",
     "subname": "鋼鐵傀儡",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -564,6 +617,7 @@ const characterList = [
     "name": "塞爾",
     "subname": "惡念殘響",
     "level": level.SR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -575,6 +629,7 @@ const characterList = [
     "name": "奈緒",
     "subname": "癔症粉絲",
     "level": level.SR,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -586,6 +641,7 @@ const characterList = [
     "name": "肖特朗",
     "subname": "瀕死血液",
     "level": level.SR,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -596,6 +652,7 @@ const characterList = [
     "name": "絲薇蒂",
     "subname": "狂想花骸",
     "level": level.SR,
+    "attribute": attribute.green,
     "source": [characterSource.event],
     "bond": [
 
@@ -607,6 +664,7 @@ const characterList = [
     "name": "小白",
     "subname": "AI助理",
     "level": level.R,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -617,6 +675,7 @@ const characterList = [
     "name": "非天",
     "subname": "塗鴉戰爭",
     "level": level.R,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -627,6 +686,7 @@ const characterList = [
     "name": "艾可",
     "subname": "星之願",
     "level": level.R,
+    "attribute": attribute.red,
     "source": [characterSource.summon, characterSource.gift],
     "bond": [
 
@@ -637,6 +697,7 @@ const characterList = [
     "name": "特莉絲",
     "subname": "枕邊童話",
     "level": level.R,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -647,6 +708,7 @@ const characterList = [
     "name": "南彌生",
     "subname": "高級特工",
     "level": level.R,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -657,6 +719,7 @@ const characterList = [
     "name": "內特",
     "subname": "紀律監督",
     "level": level.R,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -667,6 +730,7 @@ const characterList = [
     "name": "小音",
     "subname": "搬運工",
     "level": level.R,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -677,6 +741,7 @@ const characterList = [
     "name": "瑪拉",
     "subname": "憎惡鬥者",
     "level": level.R,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -687,6 +752,7 @@ const characterList = [
     "name": "通夜",
     "subname": "守夜人",
     "level": level.R,
+    "attribute": attribute.green,
     "source": [characterSource.summon],
     "bond": [
 
@@ -697,6 +763,7 @@ const characterList = [
     "name": "阿噓",
     "subname": "電玩怪客",
     "level": level.R,
+    "attribute": attribute.blue,
     "source": [characterSource.summon],
     "bond": [
 
@@ -707,6 +774,7 @@ const characterList = [
     "name": "米特",
     "subname": "噬血魔女",
     "level": level.R,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
@@ -717,6 +785,7 @@ const characterList = [
     "name": "維斯特",
     "subname": "命運審判",
     "level": level.R,
+    "attribute": attribute.red,
     "source": [characterSource.summon],
     "bond": [
 
