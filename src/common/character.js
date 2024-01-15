@@ -711,7 +711,7 @@ const characterList = [
 
   {
     "id": 27.2,
-    "name": "塞爾",
+    "name": "賽爾",
     "subname": "惡念殘響",
     "level": level.SR,
     "attribute": attribute.green,
