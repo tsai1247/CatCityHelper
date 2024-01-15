@@ -49,7 +49,7 @@
                     class="ma-2"
                     width="145px"
                     height="180px"
-                    :image="item.image"
+                    :image="`${characterImages[item.subname]}`"
 
                     theme="dark"      >
 
@@ -81,6 +81,9 @@
   import character from '@/common/character';
   import enumRelated from '@/common/scriptFile/enumRelated'
   import commonEnum from '@/common/scriptFile/commonEnum'
+  import images from "@/common/images";
+
+  const { characterImages } = images;
 
   const levelEnum = commonEnum.level;
   const attributeEnum = commonEnum.attribute;
