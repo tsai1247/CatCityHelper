@@ -43,34 +43,7 @@
           </v-row>
           <v-row>
             <v-col v-for="(item) in characterList" :key="item.id" cols="auto">
-              <v-card class="ma-2" elevation="2" tile @click="characterSelected(item)">
-                <v-sheet>
-                  <v-row class="fill-height" align="center" justify="center">
-                    <v-col>
-                      <v-card
-                        class="ma-2"
-                        width="145px"
-                        height="180px"
-                        :image="`${characterImages[item.subname]}`"
-                        theme="dark">
-
-                          <template v-slot:title>
-                            <span>
-                              {{ item.name }}
-                            </span>
-                            <span class="float-right mr-1 text-subtitle-2 font-italic">
-                              {{ getObjKeys(levelEnum, item.level) }}
-                            </span>
-                          </template>
-
-                          <v-card-text>
-                            {{ item.subname }}
-                          </v-card-text>
-                      </v-card>
-                    </v-col>
-                  </v-row>
-                </v-sheet>
-              </v-card>
+              <character-card :character="item" v-on:select="characterSelected(item)"></character-card>
             </v-col>
           </v-row>
         </v-col>
@@ -88,10 +61,8 @@
   import character from '@/common/character';
   import enumRelated from '@/common/scriptFile/enumRelated'
   import commonEnum from '@/common/scriptFile/commonEnum'
-  import images from "@/common/images";
   import characterInfo from "./characterInfo.vue"
-
-  const { characterImages } = images;
+  import characterCard from "./characterCard.vue"
 
   const levelEnum = commonEnum.level;
   const attributeEnum = commonEnum.attribute;
