@@ -49,7 +49,8 @@
                     class="ma-2"
                     width="145px"
                     height="180px"
-                    image="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                    :image="item.image"
+
                     theme="dark"      >
 
                       <template v-slot:title>

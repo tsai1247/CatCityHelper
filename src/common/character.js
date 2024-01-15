@@ -2,6 +2,13 @@ import enumList from "./scriptFile/commonEnum";
 const { level, attribute } = enumList;
 const { characterSource } = enumList;
 
+import 完美效勞 from "../assets/完美效勞.jpg"
+import 囚鳥綺願 from "../assets/囚鳥綺願.jpg"
+import 滌蕩者 from "../assets/滌蕩者.jpg"
+import 狂想花骸 from "../assets/狂想花骸.jpg"
+import 瘋人院 from "../assets/瘋人院.jpg"
+import 致聖雪夜 from "../assets/致聖雪夜.jpg"
+
 const characterList = [
   {
     "id": 1.1,
@@ -252,6 +259,7 @@ const characterList = [
     "level": level.SSR,
     "attribute": attribute.green,
     "source": [characterSource.specialSummon],
+    "image": 滌蕩者,
     "bond": [
 
     ]
@@ -263,6 +271,7 @@ const characterList = [
     "level": level.SSR,
     "attribute": attribute.green,
     "source": [characterSource.money],
+    "image": 完美效勞,
     "bond": [
 
     ]
@@ -274,6 +283,7 @@ const characterList = [
     "level": level.SSR,
     "attribute": attribute.dark,
     "source": [characterSource.money],
+    "image": 瘋人院,
     "bond": [
 
     ]
@@ -281,10 +291,11 @@ const characterList = [
   {
     "id": 26.1,
     "name": "多洛茜",
-    "subname": "囚鳥綺愿",
+    "subname": "囚鳥綺願",
     "level": level.SSR,
     "attribute": attribute.red,
     "source": [characterSource.specialSummon],
+    "image": 囚鳥綺願,
     "bond": [
 
     ]
@@ -296,6 +307,7 @@ const characterList = [
     "level": level.SSR,
     "attribute": attribute.red,
     "source": [characterSource.specialSummon],
+    "image": 致聖雪夜,
     "bond": [
 
     ]
@@ -654,6 +666,7 @@ const characterList = [
     "level": level.SR,
     "attribute": attribute.green,
     "source": [characterSource.event],
+    "image": 狂想花骸,
     "bond": [
 
     ]
