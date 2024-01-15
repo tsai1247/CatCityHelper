@@ -8,6 +8,8 @@ import 滌蕩者 from "../assets/滌蕩者.jpg"
 import 狂想花骸 from "../assets/狂想花骸.jpg"
 import 瘋人院 from "../assets/瘋人院.jpg"
 import 致聖雪夜 from "../assets/致聖雪夜.jpg"
+import 白瑰綺晶 from "../assets/白瑰綺晶.jpg"
+import 冬季奇遇 from "../assets/冬季奇遇.jpg"
 
 const characterList = [
   {
@@ -330,6 +332,30 @@ const characterList = [
     "level": level.SSR,
     "attribute": attribute.red,
     "source": [characterSource.store],
+    "bond": [
+
+    ]
+  },
+  {
+    "id": 30.1,
+    "name": "艾琳娜",
+    "subname": "白瑰綺晶",
+    "level": level.SSR,
+    "attribute": attribute.red,
+    "source": [characterSource.store],
+    "image": 白瑰綺晶,
+    "bond": [
+
+    ]
+  },
+  {
+    "id": 31.1,
+    "name": "米婭",
+    "subname": "冬季奇遇",
+    "level": level.SSR,
+    "attribute": attribute.red,
+    "source": [characterSource.store],
+    "image": 冬季奇遇,
     "bond": [
 
     ]
