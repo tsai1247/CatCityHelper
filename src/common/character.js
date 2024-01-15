@@ -39,6 +39,7 @@ const characterList = [
     "subname": "青之迴旋",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.square,
     "source": [characterSource.summon],
     "bond": [
 
@@ -50,6 +51,7 @@ const characterList = [
     "subname": "粉紅風暴",
     "level": level.SSR,
     "attribute": attribute.green,
+    "particle": particle.square,
     "source": [characterSource.summon],
     "bond": [
 
@@ -61,6 +63,7 @@ const characterList = [
     "subname": "暗巷星火",
     "level": level.SSR,
     "attribute": attribute.blue,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -72,6 +75,7 @@ const characterList = [
     "subname": "碧魂燈",
     "level": level.SSR,
     "attribute": attribute.blue,
+    "particle": particle.square,
     "source": [characterSource.summon],
     "bond": [
 
@@ -83,6 +87,7 @@ const characterList = [
     "subname": "清道夫之夜",
     "level": level.SSR,
     "attribute": attribute.blue,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -94,6 +99,7 @@ const characterList = [
     "subname": "秘域訪客",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -105,6 +111,7 @@ const characterList = [
     "subname": "極寒朔風",
     "level": level.SSR,
     "attribute": attribute.blue,
+    "particle": particle.square,
     "source": [characterSource.summon],
     "bond": [
 
@@ -116,6 +123,7 @@ const characterList = [
     "subname": "除障者",
     "level": level.SSR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -127,6 +135,7 @@ const characterList = [
     "subname": "夕雪晚照",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -138,6 +147,7 @@ const characterList = [
     "subname": "火樹流光",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -149,6 +159,7 @@ const characterList = [
     "subname": "長夜冰冕",
     "level": level.SSR,
     "attribute": attribute.green,
+    "particle": particle.triangle,
     "source": [characterSource.summon, characterSource.signin],
     "bond": [
 
@@ -160,6 +171,7 @@ const characterList = [
     "subname": "秘密調查",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -171,6 +183,7 @@ const characterList = [
     "subname": "致命音符",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -182,6 +195,7 @@ const characterList = [
     "subname": "戰略潛艇",
     "level": level.SSR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -193,6 +207,7 @@ const characterList = [
     "subname": "烈火戰線",
     "level": level.SSR,
     "attribute": attribute.green,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -204,6 +219,7 @@ const characterList = [
     "subname": "幽靈社團",
     "level": level.SSR,
     "attribute": attribute.green,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -215,6 +231,7 @@ const characterList = [
     "subname": "英雄憧憬",
     "level": level.SSR,
     "attribute": attribute.blue,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -226,6 +243,7 @@ const characterList = [
     "subname": "緋紅武士",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -237,6 +255,7 @@ const characterList = [
     "subname": "心動療癒",
     "level": level.SSR,
     "attribute": attribute.green,
+    "particle": particle.triangle,
     "source": [characterSource.summon, characterSource.money],
     "bond": [
 
@@ -248,6 +267,7 @@ const characterList = [
     "subname": "電音騎士",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -259,6 +279,7 @@ const characterList = [
     "subname": "森林守護者",
     "level": level.SSR,
     "attribute": attribute.green,
+    "particle": particle.square,
     "source": [characterSource.summon],
     "bond": [
 
@@ -270,6 +291,7 @@ const characterList = [
     "subname": "滌蕩者",
     "level": level.SSR,
     "attribute": attribute.green,
+    "particle": particle.triangle,
     "source": [characterSource.specialSummon],
     "bond": [
 
@@ -281,6 +303,7 @@ const characterList = [
     "subname": "完美效勞",
     "level": level.SSR,
     "attribute": attribute.green,
+    "particle": particle.triangle,
     "source": [characterSource.money],
     "bond": [
 
@@ -292,6 +315,7 @@ const characterList = [
     "subname": "瘋人院",
     "level": level.SSR,
     "attribute": attribute.dark,
+    "particle": particle.triangle,
     "source": [characterSource.money],
     "bond": [
 
@@ -303,6 +327,7 @@ const characterList = [
     "subname": "囚鳥綺願",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.star,
     "source": [characterSource.specialSummon],
     "bond": [
 
@@ -314,6 +339,7 @@ const characterList = [
     "subname": "致聖雪夜",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.star,
     "source": [characterSource.specialSummon],
     "bond": [
 
@@ -325,6 +351,7 @@ const characterList = [
     "subname": "鰩搖心情",
     "level": level.SSR,
     "attribute": attribute.light,
+    "particle": particle.triangle,
     "source": [characterSource.store],
     "bond": [
 
@@ -336,6 +363,7 @@ const characterList = [
     "subname": "浮世謠",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.store],
     "bond": [
 
@@ -347,6 +375,7 @@ const characterList = [
     "subname": "白瑰綺晶",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.square,
     "source": [characterSource.store],
     "bond": [
 
@@ -358,6 +387,7 @@ const characterList = [
     "subname": "冬季奇遇",
     "level": level.SSR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.store],
     "bond": [
 
@@ -369,6 +399,7 @@ const characterList = [
     "subname": "棋盤遊戲",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -380,6 +411,7 @@ const characterList = [
     "subname": "自由輪滑",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.square,
     "source": [characterSource.summon],
     "bond": [
 
@@ -391,6 +423,7 @@ const characterList = [
     "subname": "機械助理",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -402,6 +435,7 @@ const characterList = [
     "subname": "純真拜訪者",
     "level": level.SR,
     "attribute": attribute.green,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -413,6 +447,7 @@ const characterList = [
     "subname": "恬靜時刻",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -424,6 +459,7 @@ const characterList = [
     "subname": "封面女郎",
     "level": level.SR,
     "attribute": attribute.green,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -435,6 +471,7 @@ const characterList = [
     "subname": "夜間執勤",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -446,6 +483,7 @@ const characterList = [
     "subname": "障礙破壞",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -457,6 +495,7 @@ const characterList = [
     "subname": "海灘冒險",
     "level": level.SR,
     "attribute": attribute.green,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -468,6 +507,7 @@ const characterList = [
     "subname": "橘色純真",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -479,6 +519,7 @@ const characterList = [
     "subname": "不思議鴨鴨",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -490,6 +531,7 @@ const characterList = [
     "subname": "雪地奔馳",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -501,6 +543,7 @@ const characterList = [
     "subname": "繼承者",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -512,6 +555,7 @@ const characterList = [
     "subname": "鏡光旖夢",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -523,6 +567,7 @@ const characterList = [
     "subname": "愛心妝點",
     "level": level.SR,
     "attribute": attribute.green,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -534,6 +579,7 @@ const characterList = [
     "subname": "銀鉤墨舞",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -545,6 +591,7 @@ const characterList = [
     "subname": "墨蘊尋真",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.star,
     "source": [characterSource.summon, characterSource.signin],
     "bond": [
 
@@ -556,6 +603,7 @@ const characterList = [
     "subname": "修習者",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -567,6 +615,7 @@ const characterList = [
     "subname": "詐欺小丑",
     "level": level.SR,
     "attribute": attribute.green,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -578,6 +627,7 @@ const characterList = [
     "subname": "爆裂火山",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -589,6 +639,7 @@ const characterList = [
     "subname": "怪力巨兔",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -600,6 +651,7 @@ const characterList = [
     "subname": "時運失衡",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -611,6 +663,7 @@ const characterList = [
     "subname": "奪魂之鐮",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -623,6 +676,7 @@ const characterList = [
     "subname": "孤獨紳士",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -635,6 +689,7 @@ const characterList = [
     "subname": "落寞淑女",
     "level": level.SR,
     "attribute": attribute.red,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -647,6 +702,7 @@ const characterList = [
     "subname": "鋼鐵傀儡",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -659,6 +715,7 @@ const characterList = [
     "subname": "惡念殘響",
     "level": level.SR,
     "attribute": attribute.green,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -671,6 +728,7 @@ const characterList = [
     "subname": "癔症粉絲",
     "level": level.SR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -683,6 +741,7 @@ const characterList = [
     "subname": "瀕死血液",
     "level": level.SR,
     "attribute": attribute.green,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -694,6 +753,7 @@ const characterList = [
     "subname": "狂想花骸",
     "level": level.SR,
     "attribute": attribute.green,
+    "particle": particle.square,
     "source": [characterSource.event],
     "bond": [
 
@@ -706,6 +766,7 @@ const characterList = [
     "subname": "AI助理",
     "level": level.R,
     "attribute": attribute.green,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -717,6 +778,7 @@ const characterList = [
     "subname": "塗鴉戰爭",
     "level": level.R,
     "attribute": attribute.blue,
+    "particle": particle.square,
     "source": [characterSource.summon],
     "bond": [
 
@@ -728,6 +790,7 @@ const characterList = [
     "subname": "星之願",
     "level": level.R,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon, characterSource.gift],
     "bond": [
 
@@ -739,6 +802,7 @@ const characterList = [
     "subname": "枕邊童話",
     "level": level.R,
     "attribute": attribute.red,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -750,6 +814,7 @@ const characterList = [
     "subname": "高級特工",
     "level": level.R,
     "attribute": attribute.green,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -761,6 +826,7 @@ const characterList = [
     "subname": "紀律監督",
     "level": level.R,
     "attribute": attribute.green,
+    "particle": particle.triangle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -772,6 +838,7 @@ const characterList = [
     "subname": "搬運工",
     "level": level.R,
     "attribute": attribute.green,
+    "particle": particle.star,
     "source": [characterSource.summon],
     "bond": [
 
@@ -783,6 +850,7 @@ const characterList = [
     "subname": "憎惡鬥者",
     "level": level.R,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -794,6 +862,7 @@ const characterList = [
     "subname": "守夜人",
     "level": level.R,
     "attribute": attribute.green,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -805,6 +874,7 @@ const characterList = [
     "subname": "電玩怪客",
     "level": level.R,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -816,6 +886,7 @@ const characterList = [
     "subname": "噬血魔女",
     "level": level.R,
     "attribute": attribute.red,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 
@@ -827,6 +898,7 @@ const characterList = [
     "subname": "命運審判",
     "level": level.R,
     "attribute": attribute.red,
+    "particle": particle.circle,
     "source": [characterSource.summon],
     "bond": [
 

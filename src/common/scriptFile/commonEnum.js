@@ -41,7 +41,7 @@ const particle = {
   triangle: {
     id: 1,
     name: "三相",
-    icon: "mdi-triiangle-outline",
+    icon: "mdi-triangle-outline",
   },
   square: {
     id: 2,
