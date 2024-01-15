@@ -18,11 +18,21 @@ const characterList = [
       },
       "A": {
         "name": "會心一擊",
-        "description": "按120%攻擊力，對敵方單體造成傷害"
+        "description": "按120%攻擊力，對敵方單體造成傷害{{}}",
+        "arguments": [
+          "",
+          "並對目標施加「感染」1回合",
+          "並對目標施加「感染」2回合",
+        ]
       },
       "B": {
         "name": "優雅舞步",
-        "description": "提升友芳全體12%穿透率2回合"
+        "description": "提升友芳全體{{}}穿透率2回合",
+        "arguments": [
+          "12%",
+          "16%",
+          "24%",
+        ]
       },
       "Passive": {
         "name": "同化",
