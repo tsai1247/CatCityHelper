@@ -39,7 +39,7 @@ const characterList = [
   {
     "id": 4.1,
     "name": "達妮卡",
-    "subname": "暗巷燈火",
+    "subname": "暗巷星火",
     "level": level.SSR,
     "attribute": attribute.blue,
     "source": [characterSource.summon],
@@ -358,7 +358,7 @@ const characterList = [
   {
     "id": 2.2,
     "name": "非天",
-    "subname": "自由滑輪",
+    "subname": "自由輪滑",
     "level": level.SR,
     "attribute": attribute.red,
     "source": [characterSource.summon],
