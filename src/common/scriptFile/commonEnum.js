@@ -32,6 +32,29 @@ const attribute = {
   },
 }
 
+const particle = {
+  circle: {
+    id: 0,
+    name: "圓振",
+    icon: "mdi-circle-outline"
+  },
+  triangle: {
+    id: 1,
+    name: "三相",
+    icon: "mdi-triiangle-outline",
+  },
+  square: {
+    id: 2,
+    name: "方波",
+    icon: "mdi-square-outline"
+  },
+  star: {
+    id: 3,
+    name: "星流",
+    icon: "mdi-star-outline"
+  },
+}
+
 const characterSource = {
   "summon": "常駐/活動召喚",
   "specialSummon": "活動召喚",
@@ -45,5 +68,6 @@ const characterSource = {
 export default {
   level,
   attribute,
+  particle,
   characterSource
 }

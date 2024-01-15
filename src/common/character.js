@@ -1,5 +1,5 @@
 import enumList from "./scriptFile/commonEnum";
-const { level, attribute } = enumList;
+const { level, attribute, particle } = enumList;
 const { characterSource } = enumList;
 
 const characterList = [
@@ -9,7 +9,26 @@ const characterList = [
     "subname": "蒼白舞者",
     "level": level.SSR,
     "attribute": attribute.blue,
+    "particle": particle.circle,
     "source": [characterSource.summon],
+    "skills": {
+      "Sp": {
+        "name": "謝幕禮",
+        "description": "按168%攻擊力，對敵方單體造成傷害，並對目標施加「恐懼」2回合"
+      },
+      "A": {
+        "name": "會心一擊",
+        "description": "按120%攻擊力，對敵方單體造成傷害"
+      },
+      "B": {
+        "name": "優雅舞步",
+        "description": "提升友芳全體12%穿透率2回合"
+      },
+      "Passive": {
+        "name": "同化",
+        "description": "所有粒子型態均為「圓振」的友方攻擊力提升7%"
+      },
+    },
     "bond": [
 
     ]

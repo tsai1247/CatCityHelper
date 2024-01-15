@@ -7,7 +7,41 @@
         height="100%">
 
           <template v-slot:title>
-            <span>{{character.name}}</span>
+            <!-- name -->
+            <span class="font-weight-bold text-h5 mr-1">{{character.name}}</span>
+
+            <!-- attribute -->
+            <v-tooltip
+              location="top"
+            >
+              <template v-slot:activator="{ props }">
+                <span v-show="character.attribute">
+                  <v-icon size="x-small"
+                    v-bind="props"
+                    :color="character.attribute?.color">
+                    mdi-circle
+                  </v-icon>
+                </span>
+              </template>
+              <span>{{ character.attribute?.name }}</span>
+            </v-tooltip>
+
+            <!-- particle -->
+            <v-tooltip
+              location="top"
+            >
+              <template v-slot:activator="{ props }">
+                <span v-show="character.particle">
+                  <v-icon size="x-small"
+                    v-bind="props">
+                    {{ character.particle?.icon }}
+                  </v-icon>
+                </span>
+              </template>
+              <span>{{ character.particle?.name }}</span>
+            </v-tooltip>
+
+
             <v-icon class="float-right"
               @click="closeDialog">
               mdi-close-circle
