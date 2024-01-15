@@ -3,73 +3,80 @@
 
     <v-container>
       <v-row>
-        <v-col cols="12" md="4">
-          <v-text-field
-            v-model="keyword"
-            clearable
-            prepend-inner-icon="mdi-magnify">
+        <v-col cols="9">
+          <v-row>
+            <v-col cols="12" md="4">
+              <v-text-field
+                v-model="keyword"
+                clearable
+                prepend-inner-icon="mdi-magnify">
 
-          </v-text-field>
+              </v-text-field>
+            </v-col>
+            <v-col cols="12" sm="7" md="4">
+              <v-btn-toggle
+                v-model="attributeFilter"
+                dark
+                multiple>
+                <v-btn v-for="(item) in attributeEnum"
+                  @click="filter"
+                  :key="item.id"
+                  density="compact"
+                >
+                  <v-icon :color="item.color">mdi-circle-slice-8</v-icon>
+                </v-btn>
+              </v-btn-toggle>
+            </v-col>
+            <v-col cols="12" sm="5" md="4">
+              <v-btn-toggle
+                v-model="levelFilter"
+                dark
+                multiple>
+                <v-btn v-for="(item, index) in levelEnum"
+                @click="filter"
+                :key="index"
+                >
+                {{ getObjKeys(levelEnum, item) }}
+                </v-btn>
+              </v-btn-toggle>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col v-for="(item) in characterList" :key="item.id" cols="auto">
+              <v-card class="ma-2" elevation="2" tile @click="characterSelected(item)">
+                <v-sheet>
+                  <v-row class="fill-height" align="center" justify="center">
+                    <v-col>
+                      <v-card
+                        class="ma-2"
+                        width="145px"
+                        height="180px"
+                        :image="`${characterImages[item.subname]}`"
+                        theme="dark">
+
+                          <template v-slot:title>
+                            <span>
+                              {{ item.name }}
+                            </span>
+                            <span class="float-right mr-1 text-subtitle-2 font-italic">
+                              {{ getObjKeys(levelEnum, item.level) }}
+                            </span>
+                          </template>
+
+                          <v-card-text>
+                            {{ item.subname }}
+                          </v-card-text>
+                      </v-card>
+                    </v-col>
+                  </v-row>
+                </v-sheet>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-col>
-        <v-col cols="12" sm="7" md="4">
-          <v-btn-toggle
-            v-model="attributeFilter"
-            dark
-            multiple>
-            <v-btn v-for="(item) in attributeEnum"
-              @click="filter"
-              :key="item.id"
-              density="compact"
-            >
-              <v-icon :color="item.color">mdi-circle-slice-8</v-icon>
-            </v-btn>
-          </v-btn-toggle>
-        </v-col>
-        <v-col cols="12" sm="5" md="4">
-          <v-btn-toggle
-            v-model="levelFilter"
-            dark
-            multiple>
-            <v-btn v-for="(item, index) in levelEnum"
-            @click="filter"
-            :key="index"
-            >
-            {{ getObjKeys(levelEnum, item) }}
-            </v-btn>
-          </v-btn-toggle>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col v-for="(item) in characterList" :key="item.id" cols="auto">
-          <v-card class="ma-2" elevation="2" tile>
-            <v-sheet>
-              <v-row class="fill-height" align="center" justify="center">
-                <v-col>
-                  <v-card
-                    class="ma-2"
-                    width="145px"
-                    height="180px"
-                    :image="`${characterImages[item.subname]}`"
 
-                    theme="dark"      >
-
-                      <template v-slot:title>
-                        <span>
-                          {{ item.name }}
-                        </span>
-                        <span class="float-right mr-1 text-subtitle-2 font-italic">
-                          {{ getObjKeys(levelEnum, item.level) }}
-                        </span>
-                      </template>
-
-                      <v-card-text>
-                        {{ item.subname }}
-                      </v-card-text>
-                  </v-card>
-                </v-col>
-              </v-row>
-            </v-sheet>
-          </v-card>
+        <v-col cols="3">
+          <character-info :character="selectedCharacter" v-on:close-dialog="characterSelected(null)"></character-info>
         </v-col>
       </v-row>
     </v-container>
@@ -82,6 +89,7 @@
   import enumRelated from '@/common/scriptFile/enumRelated'
   import commonEnum from '@/common/scriptFile/commonEnum'
   import images from "@/common/images";
+  import characterInfo from "./characterInfo.vue"
 
   const { characterImages } = images;
 
@@ -112,6 +120,11 @@
       );
     }
 
+  }
+
+  const selectedCharacter = ref(null);
+  function characterSelected(item) {
+    selectedCharacter.value = item;
   }
 
 
