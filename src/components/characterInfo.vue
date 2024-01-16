@@ -121,10 +121,10 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref, watch } from 'vue';
   import characterSkillView from './characterSkillView.vue';
 
-  defineProps({
+  const props = defineProps({
     character: Object,
   })
 
@@ -144,6 +144,10 @@
       starNum.value = num;
     }
   }
+
+  watch(() => props.character, () => {
+    starNum.value = 0;
+  })
 
 </script>
 
