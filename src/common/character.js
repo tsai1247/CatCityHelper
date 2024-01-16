@@ -14,7 +14,13 @@ const characterList = [
     "skills": {
       "Sp": {
         "name": "謝幕禮",
-        "description": "按168%攻擊力，對敵方單體造成傷害，並對目標施加「恐懼」2回合"
+        "description": "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「恐懼」2回合",
+        "arguments": [
+          "168%",
+          "191%",
+          "216%",
+          "239%",
+        ]
       },
       "A": {
         "name": "會心一擊",
@@ -36,7 +42,13 @@ const characterList = [
       },
       "Passive": {
         "name": "同化",
-        "description": "所有粒子型態均為「圓振」的友方攻擊力提升7%"
+        "description": "所有粒子型態均為「圓振」的友方攻擊力提升{{}}",
+        "arguments": [
+          "7%",
+          "8.7%",
+          "10.3%",
+          "12%",
+        ]
       },
     },
     "bond": [

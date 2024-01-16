@@ -49,6 +49,29 @@
           </template>
 
           <v-card-text class="ma-1">
+            <!-- Stars -->
+            <v-tooltip
+              location="left"
+            >
+              <template v-slot:activator="{ props }">
+                <div class="ma-4" v-bind="props">
+                  <span v-for="i in 6" :key="i">
+                    <v-icon v-if="i > starNum"
+                      color="black" size="x-large" @click="setStar(i)"
+                    >
+                      mdi-star-four-points-outline
+                    </v-icon>
+                    <v-icon v-else
+                      color="blue" size="x-large" @click="setStar(i)"
+                    >
+                      mdi-star-four-points
+                    </v-icon>
+                  </span>
+                </div>
+              </template>
+              <span>升星</span>
+            </v-tooltip>
+
             <div v-if="character.skills">
               <!-- Sp -->
               <v-row>
@@ -72,7 +95,7 @@
                     <v-col cols="8">
                       <span v-show="character.skills" width="30px"
                         v-bind="props">
-                        {{ character.skills?.Sp.description }}
+                        {{ fillSkillSp }}
                       </span>
                     </v-col>
                   </v-row>
@@ -169,7 +192,7 @@
                     <v-col cols="8">
                       <span v-show="character.skills" width="30px"
                         v-bind="props">
-                        {{ character.skills?.Passive.description }}
+                        {{ fillSkillPassive }}
                       </span>
                     </v-col>
                   </v-row>
@@ -207,6 +230,28 @@
   const fillSkillB = computed(() => {
       return props.character.skills.B.description.replace(
       '{{}}', props.character.skills.B.arguments[levelB.value]
+    )
+  })
+
+  const starNum = ref(0);
+  function setStar(num) {
+    if (starNum.value === num) {
+      starNum.value = 0;
+    }
+    else {
+      starNum.value = num;
+    }
+  }
+
+  const fillSkillSp = computed(() => {
+      return props.character.skills.Sp.description.replace(
+      '{{}}', props.character.skills.Sp.arguments[parseInt((starNum.value+1)/2)]
+    )
+  })
+
+  const fillSkillPassive = computed(() => {
+      return props.character.skills.Passive.description.replace(
+      '{{}}', props.character.skills.Passive.arguments[parseInt(starNum.value/2)]
     )
   })
 
