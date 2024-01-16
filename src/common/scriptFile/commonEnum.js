@@ -1,7 +1,34 @@
 const level = {
-  R: 0,
-  SR: 1,
-  SSR: 2,
+  R: {
+    id: 0,
+    name: 'R',
+    color: 'blue'
+  },
+  SR: {
+    id: 1,
+    name: 'SR',
+    color: 'pruple'
+  },
+  SSR: {
+    id: 2,
+    name: 'SSR',
+    color: 'yellow'
+  },
+}
+
+const cardLevel = {
+  R: {
+    id: 0,
+    color: 'grey-darken-3'
+  },
+  SR: {
+    id: 1,
+    color: 'deep-purple'
+  },
+  SSR: {
+    id: 2,
+    color: 'amber-accent-4'
+  },
 }
 
 const attribute = {
@@ -67,6 +94,7 @@ const characterSource = {
 
 export default {
   level,
+  cardLevel,
   attribute,
   particle,
   characterSource

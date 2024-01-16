@@ -93,7 +93,7 @@
     characterList.value = character.filter(
       (item) => {
         const results = [
-          item.level === null || levelFilter.value.find(level => item.level === level) !== undefined,
+          item.level === null || levelFilter.value.find(level => item.level?.id === level) !== undefined,
           item.attribute === null || attributeFilter.value.find((attribute) => item.attribute?.id === attribute)  !== undefined,
           item.particle === null || particleFilter.value.find((particle) => item.particle?.id === particle)  !== undefined
         ];

@@ -38,17 +38,14 @@
               location="left"
             >
               <template v-slot:activator="{ props }">
-                <span v-show="skills"
-                  class="font-weight-bold"
-                  width="30px"
-                  v-bind="props">
-                  {{ skills?.A.name }}
-                  <span>
-                    <span v-for="i in levelA" :key="i">
-                      ◆
-                    </span>
+                <div :class="skillAColor">
+                  <span v-show="skills"
+                    class="font-weight-bold"
+                    width="30px"
+                    v-bind="props">
+                    {{ skills?.A.name }}
                   </span>
-                </span>
+                </div>
               </template>
               <span>A技能</span>
             </v-tooltip>
@@ -71,18 +68,15 @@
             <v-tooltip
               location="left"
             >
-              <template v-slot:activator="{ props }">
-                <span v-show="skills"
-                  class="font-weight-bold"
-                  width="30px"
-                  v-bind="props">
-                  {{ skills?.B.name }}
-                  <span>
-                    <span v-for="i in levelB" :key="i">
-                      ◆
-                    </span>
+            <template v-slot:activator="{ props }">
+                <div :class="skillBColor">
+                  <span v-show="skills"
+                    class="font-weight-bold"
+                    width="30px"
+                    v-bind="props">
+                    {{ skills?.B.name }}
                   </span>
-                </span>
+                </div>
               </template>
               <span>B技能</span>
             </v-tooltip>
@@ -129,16 +123,12 @@
 </template>
 
 <script setup>
-  import { ref, computed, watch } from 'vue';
+  import { ref, computed } from 'vue';
+  import commonEnum from '@/common/scriptFile/commonEnum'
 
   const props = defineProps({
     skills: Object,
     starNum: Number,
-  })
-
-  watch(() => props.starNum, () => {
-    console.log('star num', props.starNum);
-    console.log('skills', props.skills);
   })
 
   const levelA = ref(0);
@@ -154,6 +144,19 @@
       return props.skills.B.description.replace(
       '{{}}', props.skills.B.arguments[levelB.value]
     )
+  })
+
+  const cardLevelEnum = commonEnum.cardLevel;
+  const skillAColor = computed(() => {
+    const key = Object.keys(cardLevelEnum)[levelA.value];
+    const color = cardLevelEnum[key].color;
+    return `text-${color}`
+  })
+
+  const skillBColor = computed(() => {
+    const key = Object.keys(cardLevelEnum)[levelB.value];
+    const color = cardLevelEnum[key].color;
+    return `text-${color}`
   })
 
 
