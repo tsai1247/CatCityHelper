@@ -73,6 +73,15 @@
             </v-icon>
 
 
+            <!-- level -->
+            <span
+              class="float-right mr-4 text-h5 font-italic font-weight-black"
+              :class="`text-${character.level.textColor}`"
+            >
+              {{ character.level.name }}
+            </span>
+
+
           </template>
 
           <v-card-text class="ma-1">
