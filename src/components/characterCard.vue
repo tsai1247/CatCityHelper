@@ -11,16 +11,20 @@
             theme="dark">
 
               <template v-slot:title>
-                <span>
+                <span :class="character.name.length < 4 ? 'text-h5' : 'text-subtitle-1'">
                   {{ character.name }}
                 </span>
-                <span class="float-right mr-1 text-subtitle-2 font-italic">
-                  {{ getObjKeys(levelEnum, character.level) }}
+                <span
+                  class="float-right ma-1 text-subtitle-2 font-italic font-weight-black"
+                  :class="`text-${character.level.textColor}`">
+                  {{ character.level.name }}
                 </span>
               </template>
 
               <v-card-text>
-                {{ character.subname }}
+                <span :class="character.name.length < 4 ? 'text-subtitle-1' : 'text-subtitle-2'">
+                  {{ character.subname }}
+                </span>
               </v-card-text>
           </v-card>
         </v-col>
@@ -32,12 +36,7 @@
 <script setup>
   import images from "@/common/images";
 
-  import enumRelated from '@/common/scriptFile/enumRelated'
-  import commonEnum from '@/common/scriptFile/commonEnum'
-
   const { characterImages } = images;
-  const getObjKeys = enumRelated.getObjKeys;
-  const levelEnum = commonEnum.level;
 
   defineProps({
     character: Object

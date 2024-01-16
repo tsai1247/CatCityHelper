@@ -2,17 +2,20 @@ const level = {
   R: {
     id: 0,
     name: 'R',
-    color: 'blue'
+    color: 'blue',
+    textColor: 'blue-lighten-4'
   },
   SR: {
     id: 1,
     name: 'SR',
-    color: 'deep-purple-darken-4'
+    color: 'deep-purple-darken-4',
+    textColor: 'deep-purple-lighten-4'
   },
   SSR: {
     id: 2,
     name: 'SSR',
-    color: 'amber-accent-4'
+    color: 'amber-accent-4',
+    textColor: 'amber-accent-1'
   },
 }
 
