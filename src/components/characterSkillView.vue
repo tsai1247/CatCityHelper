@@ -135,14 +135,16 @@
   const levelB = ref(0);
 
   const fillSkillA = computed(() => {
+    let index = 0;
     return props.skills.A.description.replace(
-      '{{}}', props.skills.A.arguments[levelA.value]
+    /{{}}/g, () => props.skills.A.arguments[levelA.value][index++]
     )
   })
 
   const fillSkillB = computed(() => {
+      let index = 0;
       return props.skills.B.description.replace(
-      '{{}}', props.skills.B.arguments[levelB.value]
+      /{{}}/g, () => props.skills.B.arguments[levelB.value][index++]
     )
   })
 
@@ -161,14 +163,16 @@
 
 
   const fillSkillSp = computed(() => {
-      return props.skills.Sp.description.replace(
-      '{{}}', props.skills.Sp.arguments[parseInt((props.starNum+1)/2)]
+    let index = 0;
+    return props.skills.Sp.description.replace(
+      /{{}}/g, () => props.skills.Sp.arguments[parseInt((props.starNum+1)/2)][index++]
     )
   })
 
   const fillSkillPassive = computed(() => {
-      return props.skills.Passive.description.replace(
-      '{{}}', props.skills.Passive.arguments[parseInt(props.starNum/2)]
+    let index = 0;
+    return props.skills.Passive.description.replace(
+      /{{}}/g, () => props.skills.Passive.arguments[parseInt((props.starNum)/2)][index++]
     )
   })
 
