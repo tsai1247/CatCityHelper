@@ -3,6 +3,7 @@
     <v-col>
       <v-card v-if="character"
         class="ma-2 fixed-element"
+        :style="{userSelect: 'none'}"
         width="100%"
         height="100%">
 

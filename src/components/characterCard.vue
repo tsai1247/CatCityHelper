@@ -1,5 +1,6 @@
 <template>
-  <v-card class="ma-2" elevation="2" tile @click="characterSelected">
+  <v-card class="ma-2" elevation="2" tile @click="characterSelected"
+    :style="{userSelect: 'none'}">
     <v-sheet>
       <v-row class="fill-height" align="center" justify="center">
         <v-col>
