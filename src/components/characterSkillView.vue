@@ -3,7 +3,7 @@
     <!-- Sp -->
     <v-row>
       <v-card width="100%">
-        <v-row class="mb-2">
+        <v-row class="ma-1">
           <v-col cols="3">
             <v-tooltip
               location="left"
@@ -32,7 +32,7 @@
     <!-- A -->
     <v-row>
       <v-card width="100%" @click="levelA = (levelA + 1)%3">
-        <v-row class="mb-2">
+        <v-row class="ma-1">
           <v-col cols="3">
             <v-tooltip
               location="left"
@@ -63,7 +63,7 @@
     <!-- B -->
     <v-row>
       <v-card width="100%" @click="levelB = (levelB + 1)%3">
-        <v-row class="mb-2">
+        <v-row class="ma-1">
           <v-col cols="3">
             <v-tooltip
               location="left"
@@ -94,7 +94,7 @@
     <!-- Passive -->
     <v-row>
       <v-card width="100%">
-        <v-row class="mb-2">
+        <v-row class="ma-1">
           <v-col cols="3">
             <v-tooltip
               location="left"
