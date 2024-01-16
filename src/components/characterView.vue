@@ -22,8 +22,9 @@
                   @click="filter"
                   :key="item.id"
                   density="compact"
+                  :class="`text-${item.color}`"
                 >
-                  <v-icon :color="item.color">mdi-circle-slice-8</v-icon>
+                  <v-icon>mdi-circle-slice-8</v-icon>
                 </v-btn>
               </v-btn-toggle>
             </v-col>
@@ -49,6 +50,7 @@
                 <v-btn v-for="(item, index) in levelEnum"
                 @click="filter"
                 :key="index"
+                :class="`text-${item.color}`"
                 >
                 {{ getObjKeys(levelEnum, item) }}
                 </v-btn>

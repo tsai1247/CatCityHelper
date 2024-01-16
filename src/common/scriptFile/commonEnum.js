@@ -7,12 +7,12 @@ const level = {
   SR: {
     id: 1,
     name: 'SR',
-    color: 'pruple'
+    color: 'deep-purple-darken-4'
   },
   SSR: {
     id: 2,
     name: 'SSR',
-    color: 'yellow'
+    color: 'amber-accent-4'
   },
 }
 
@@ -49,12 +49,12 @@ const attribute = {
   },
   light: {
     id: 3,
-    color: "yellow",
+    color: "yellow-darken-3",
     name: "白色情緒",
   },
   dark: {
     id: 4,
-    color: "black",
+    color: "grey-darken-4",
     name: "黑色情緒",
   },
 }
@@ -73,7 +73,7 @@ const particle = {
   square: {
     id: 2,
     name: "方波",
-    icon: "mdi-square-outline"
+    icon: "mdi-rhombus-outline"
   },
   star: {
     id: 3,
