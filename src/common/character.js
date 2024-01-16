@@ -51,7 +51,7 @@ const characterList = [
         ]
       },
     },
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -63,7 +63,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.square,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -75,7 +75,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.square,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -87,7 +87,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -99,7 +99,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.square,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -111,7 +111,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -123,7 +123,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -135,7 +135,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.square,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -147,7 +147,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -159,7 +159,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -171,7 +171,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -183,7 +183,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.triangle,
     "source": [characterSource.summon, characterSource.signin],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -195,7 +195,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -207,7 +207,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -219,7 +219,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -231,7 +231,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -243,7 +243,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -255,7 +255,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -267,7 +267,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -279,7 +279,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.triangle,
     "source": [characterSource.summon, characterSource.money],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -291,7 +291,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -303,7 +303,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.square,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -315,7 +315,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.triangle,
     "source": [characterSource.specialSummon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -327,7 +327,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.triangle,
     "source": [characterSource.money],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -339,7 +339,7 @@ const characterList = [
     "attribute": attribute.dark,
     "particle": particle.triangle,
     "source": [characterSource.money],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -351,7 +351,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.star,
     "source": [characterSource.specialSummon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -363,7 +363,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.star,
     "source": [characterSource.specialSummon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -375,7 +375,7 @@ const characterList = [
     "attribute": attribute.light,
     "particle": particle.triangle,
     "source": [characterSource.store],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -387,7 +387,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.store],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -399,7 +399,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.square,
     "source": [characterSource.store],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -411,7 +411,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.store],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -423,7 +423,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -435,7 +435,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.square,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -447,7 +447,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -459,7 +459,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -471,7 +471,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -483,7 +483,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -495,7 +495,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -507,7 +507,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -519,7 +519,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -531,7 +531,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -543,7 +543,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -555,7 +555,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -567,7 +567,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -579,7 +579,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -591,7 +591,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -603,7 +603,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -615,7 +615,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.star,
     "source": [characterSource.summon, characterSource.signin],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -627,7 +627,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -639,7 +639,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -651,7 +651,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -663,7 +663,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -675,7 +675,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -687,7 +687,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -700,7 +700,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -713,7 +713,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -726,7 +726,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -739,7 +739,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -752,7 +752,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -765,7 +765,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -777,7 +777,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.square,
     "source": [characterSource.event],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -790,7 +790,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -802,7 +802,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.square,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -814,7 +814,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon, characterSource.gift],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -826,7 +826,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -838,7 +838,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -850,7 +850,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.triangle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -862,7 +862,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.star,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -874,7 +874,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -886,7 +886,7 @@ const characterList = [
     "attribute": attribute.green,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -898,7 +898,7 @@ const characterList = [
     "attribute": attribute.blue,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -910,7 +910,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },
@@ -922,7 +922,7 @@ const characterList = [
     "attribute": attribute.red,
     "particle": particle.circle,
     "source": [characterSource.summon],
-    "bond": [
+    "supporters": [
 
     ]
   },

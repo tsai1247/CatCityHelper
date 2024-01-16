@@ -41,11 +41,38 @@
               <span>{{ character.particle?.name }}</span>
             </v-tooltip>
 
+            <!-- supporters -->
+            <span v-if="character.supporters && character.supporters.length" class="ml-4">
+              <v-tooltip
+                location="bottom"
+              >
+                <template v-slot:activator="{ props }">
+                  <v-icon v-bind="props">
+                    mdi-link-variant
+                  </v-icon>
+                </template>
+                <span>助戰位</span>
+              </v-tooltip>
 
+              <v-tooltip
+                location="bottom" v-for="(supporter, index) in character.supporters" :key="index"
+              >
+                <template v-slot:activator="{ props }">
+                  <v-icon v-bind="props">
+                    mdi-circle
+                  </v-icon>
+                </template>
+                <span>{{ supporter }}</span>
+              </v-tooltip>
+            </span>
+
+            <!-- close button -->
             <v-icon class="float-right"
               @click="closeDialog">
               mdi-close-circle
             </v-icon>
+
+
           </template>
 
           <v-card-text class="ma-1">
