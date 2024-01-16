@@ -58,7 +58,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col v-for="(item) in characterList" :key="item.id" cols="auto">
+            <v-col v-for="(item, index) in characterList" :key="index" cols="auto">
               <character-card :character="item" v-on:select="characterSelected(item)"></character-card>
             </v-col>
           </v-row>
