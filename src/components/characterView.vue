@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <v-container>
+    <div class="ma-5">
       <v-row>
-        <v-col cols="9">
+        <v-col :cols="selectedCharacter ? 8 : 12">
           <v-row>
             <v-col cols="12">
               <v-text-field
@@ -13,7 +13,7 @@
 
               </v-text-field>
             </v-col>
-            <v-col cols="12" md="7" lg="5">
+            <v-col cols="12" :md="selectedCharacter ? 12 : 'auto'" lg="auto">
               <v-btn-toggle
                 v-model="attributeFilter"
                 dark
@@ -27,7 +27,7 @@
                 </v-btn>
               </v-btn-toggle>
             </v-col>
-            <v-col cols="12" md="5" lg="3">
+            <v-col cols="12" md="auto" lg="auto">
               <v-btn-toggle
                 v-model="particleFilter"
                 dark
@@ -41,7 +41,7 @@
                 </v-btn>
               </v-btn-toggle>
             </v-col>
-            <v-col cols="12" md="12" lg="3">
+            <v-col cols="12" :md="selectedCharacter ? 6 : 'auto'" :lg="selectedCharacter ? 3 : 'auto'">
               <v-btn-toggle
                 v-model="levelFilter"
                 dark
@@ -62,11 +62,11 @@
           </v-row>
         </v-col>
 
-        <v-col cols="3">
+        <v-col cols="4">
           <character-info :character="selectedCharacter" v-on:close-dialog="characterSelected(null)"></character-info>
         </v-col>
       </v-row>
-    </v-container>
+    </div>
   </div>
 </template>
 

@@ -2,9 +2,9 @@
   <div v-if="skills">
     <!-- Sp -->
     <v-row>
-      <v-card>
+      <v-card width="100%">
         <v-row class="mb-2">
-          <v-col cols="4">
+          <v-col cols="3">
             <v-tooltip
               location="left"
             >
@@ -19,7 +19,7 @@
               <span>Sp奧義技能</span>
             </v-tooltip>
           </v-col>
-          <v-col cols="8">
+          <v-col cols="9">
             <span v-show="skills" width="30px"
               v-bind="props">
               {{ fillSkillSp }}
@@ -31,9 +31,9 @@
 
     <!-- A -->
     <v-row>
-      <v-card @click="levelA = (levelA + 1)%3">
+      <v-card width="100%" @click="levelA = (levelA + 1)%3">
         <v-row class="mb-2">
-          <v-col cols="4">
+          <v-col cols="3">
             <v-tooltip
               location="left"
             >
@@ -43,17 +43,17 @@
                   width="30px"
                   v-bind="props">
                   {{ skills?.A.name }}
-                  <div>
+                  <span>
                     <span v-for="i in levelA" :key="i">
                       ◆
                     </span>
-                  </div>
+                  </span>
                 </span>
               </template>
               <span>A技能</span>
             </v-tooltip>
           </v-col>
-          <v-col cols="8">
+          <v-col cols="9">
             <span v-show="skills" width="30px"
               v-bind="props">
               {{ fillSkillA }}
@@ -65,9 +65,9 @@
 
     <!-- B -->
     <v-row>
-      <v-card @click="levelB = (levelB + 1)%3">
+      <v-card width="100%" @click="levelB = (levelB + 1)%3">
         <v-row class="mb-2">
-          <v-col cols="4">
+          <v-col cols="3">
             <v-tooltip
               location="left"
             >
@@ -77,17 +77,17 @@
                   width="30px"
                   v-bind="props">
                   {{ skills?.B.name }}
-                  <div>
+                  <span>
                     <span v-for="i in levelB" :key="i">
                       ◆
                     </span>
-                  </div>
+                  </span>
                 </span>
               </template>
               <span>B技能</span>
             </v-tooltip>
           </v-col>
-          <v-col cols="8">
+          <v-col cols="9">
             <span v-show="skills" width="30px"
               v-bind="props">
               {{ fillSkillB }}
@@ -99,9 +99,9 @@
 
     <!-- Passive -->
     <v-row>
-      <v-card>
+      <v-card width="100%">
         <v-row class="mb-2">
-          <v-col cols="4">
+          <v-col cols="3">
             <v-tooltip
               location="left"
             >
@@ -116,7 +116,7 @@
               <span>被動技能</span>
             </v-tooltip>
           </v-col>
-          <v-col cols="8">
+          <v-col cols="9">
             <span v-show="skills" width="30px"
               v-bind="props">
               {{ fillSkillPassive }}
