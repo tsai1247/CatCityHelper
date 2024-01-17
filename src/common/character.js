@@ -370,9 +370,9 @@ const characterList = [
     name: "艾琳娜",
     subname: "白瑰綺晶",
     level: level.SSR,
-    attribute: attribute.red,
+    attribute: attribute.light,
     particle: particle.square,
-    source: [characterSource.store],
+    source: [characterSource.specialSummon],
     supporters: [
 
     ]
@@ -425,9 +425,9 @@ const characterList = [
     name: "米婭",
     subname: "冬季奇遇",
     level: level.SSR,
-    attribute: attribute.red,
+    attribute: attribute.blue,
     particle: particle.triangle,
-    source: [characterSource.store],
+    source: [characterSource.specialSummon],
     supporters: [
 
     ]
