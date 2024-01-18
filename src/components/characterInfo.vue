@@ -2,9 +2,8 @@
   <v-row>
     <v-col>
       <v-card v-if="character"
-        class="ma-2 fixed-element"
-        :style="{userSelect: 'none'}"
-        width="100%"
+        class="ma-2"
+        :style="{userSelect: 'none', position: 'fixed'}"
         height="100%">
 
           <template v-slot:title>
