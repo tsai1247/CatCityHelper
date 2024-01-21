@@ -2,14 +2,16 @@
   <div v-if="skills">
     <!-- Sp -->
     <character-skill-description
-      :name="skills?.Sp.name"
+      v-if="skills.Sp.name"
+      :name="skills.Sp.name"
       type="Sp奧義技能"
       :content="fillSkillSp">
     </character-skill-description>
 
     <!-- A -->
     <character-skill-description
-      :name="skills?.A.name"
+      v-if="skills.A.name"
+      :name="skills.A.name"
       type="A技能"
       :level="levelA"
       :content="fillSkillA"
@@ -18,7 +20,8 @@
 
     <!-- B -->
     <character-skill-description
-      :name="skills?.B.name"
+      v-if="skills.B.name"
+      :name="skills.B.name"
       type="B技能"
       :level="levelB"
       :content="fillSkillB"
@@ -27,7 +30,8 @@
 
     <!-- Passive -->
     <character-skill-description
-      :name="skills?.Passive.name"
+      v-if="skills.Passive.name"
+      :name="skills.Passive.name"
       type="被動技能"
       :content="fillSkillPassive">
     </character-skill-description>
