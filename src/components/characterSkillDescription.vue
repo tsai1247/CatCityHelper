@@ -43,7 +43,7 @@
                       {{ item?.name }}
                     </span>
                   </template>
-                  <span>{{ item?.description }}</span>
+                  <span v-html="item?.description"></span>
                 </v-tooltip>
                 」
               </span>
