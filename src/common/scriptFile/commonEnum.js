@@ -95,10 +95,22 @@ const characterSource = {
   "gift": "兌換碼"
 }
 
+const skillDescription = [
+  {
+    name: "易傷",
+    description: "「易傷」：提升目標10%受到傷害（可疊加，最高10層）"
+  },
+  {
+    name: "嘲諷",
+    description: "「嘲諷」：使敵方的所有單體進攻和單體減益效果指向自己"
+  },
+]
+
 export default {
   level,
   cardLevel,
   attribute,
   particle,
-  characterSource
+  characterSource,
+  skillDescription,
 }

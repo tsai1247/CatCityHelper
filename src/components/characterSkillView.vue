@@ -1,130 +1,42 @@
 <template>
   <div v-if="skills">
     <!-- Sp -->
-    <v-row>
-      <v-card width="100%">
-        <v-row class="ma-1">
-          <v-col cols="3">
-            <v-tooltip
-              location="left"
-            >
-              <template v-slot:activator="{ props }">
-                <span v-show="skills"
-                  class="font-weight-bold"
-                  width="30px"
-                  v-bind="props">
-                  {{ skills?.Sp.name }}
-                </span>
-              </template>
-              <span>Sp奧義技能</span>
-            </v-tooltip>
-          </v-col>
-          <v-col cols="9">
-            <span v-show="skills" width="30px"
-              v-bind="props">
-              {{ fillSkillSp }}
-            </span>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-row>
+    <character-skill-description
+      :name="skills?.Sp.name"
+      type="Sp奧義技能"
+      :content="fillSkillSp">
+    </character-skill-description>
 
     <!-- A -->
-    <v-row>
-      <v-card width="100%" @click="levelA = (levelA + 1)%3">
-        <v-row class="ma-1">
-          <v-col cols="3">
-            <v-tooltip
-              location="left"
-            >
-              <template v-slot:activator="{ props }">
-                <div :class="skillAColor">
-                  <span v-show="skills"
-                    class="font-weight-bold"
-                    width="30px"
-                    v-bind="props">
-                    {{ skills?.A.name }}
-                  </span>
-                </div>
-              </template>
-              <span>A技能</span>
-            </v-tooltip>
-          </v-col>
-          <v-col cols="9">
-            <span v-show="skills" width="30px"
-              v-bind="props">
-              {{ fillSkillA }}
-            </span>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-row>
+    <character-skill-description
+      :name="skills?.A.name"
+      type="A技能"
+      :level="levelA"
+      :content="fillSkillA"
+      v-on:merge="levelA = (levelA + 1)%3">
+    </character-skill-description>
 
     <!-- B -->
-    <v-row>
-      <v-card width="100%" @click="levelB = (levelB + 1)%3">
-        <v-row class="ma-1">
-          <v-col cols="3">
-            <v-tooltip
-              location="left"
-            >
-            <template v-slot:activator="{ props }">
-                <div :class="skillBColor">
-                  <span v-show="skills"
-                    class="font-weight-bold"
-                    width="30px"
-                    v-bind="props">
-                    {{ skills?.B.name }}
-                  </span>
-                </div>
-              </template>
-              <span>B技能</span>
-            </v-tooltip>
-          </v-col>
-          <v-col cols="9">
-            <span v-show="skills" width="30px"
-              v-bind="props">
-              {{ fillSkillB }}
-            </span>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-row>
+    <character-skill-description
+      :name="skills?.B.name"
+      type="B技能"
+      :level="levelB"
+      :content="fillSkillB"
+      v-on:merge="levelB = (levelB + 1)%3">
+    </character-skill-description>
 
     <!-- Passive -->
-    <v-row>
-      <v-card width="100%">
-        <v-row class="ma-1">
-          <v-col cols="3">
-            <v-tooltip
-              location="left"
-            >
-              <template v-slot:activator="{ props }">
-                <span v-show="skills"
-                  class="font-weight-bold"
-                  width="30px"
-                  v-bind="props">
-                  {{ skills?.Passive.name }}
-                </span>
-              </template>
-              <span>被動技能</span>
-            </v-tooltip>
-          </v-col>
-          <v-col cols="9">
-            <span v-show="skills" width="30px"
-              v-bind="props">
-              {{ fillSkillPassive }}
-            </span>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-row>
+    <character-skill-description
+      :name="skills?.Passive.name"
+      type="被動技能"
+      :content="fillSkillPassive">
+    </character-skill-description>
   </div>
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue';
-  import commonEnum from '@/common/scriptFile/commonEnum'
+  import { ref, computed, watch } from 'vue';
+  import characterSkillDescription from './characterSkillDescription.vue';
 
   const props = defineProps({
     skills: Object,
@@ -148,20 +60,6 @@
     )
   })
 
-  const cardLevelEnum = commonEnum.cardLevel;
-  const skillAColor = computed(() => {
-    const key = Object.keys(cardLevelEnum)[levelA.value];
-    const color = cardLevelEnum[key].color;
-    return `text-${color}`
-  })
-
-  const skillBColor = computed(() => {
-    const key = Object.keys(cardLevelEnum)[levelB.value];
-    const color = cardLevelEnum[key].color;
-    return `text-${color}`
-  })
-
-
   const fillSkillSp = computed(() => {
     let index = 0;
     return props.skills.Sp.description.replace(
@@ -174,6 +72,11 @@
     return props.skills.Passive.description.replace(
       /{{}}/g, () => props.skills.Passive.arguments[parseInt((props.starNum)/2)][index++]
     )
+  })
+
+  watch(() => props.skills, () => {
+    levelA.value = 0;
+    levelB.value = 0;
   })
 
 </script>
