@@ -21,11 +21,29 @@
                 <!-- character skill -->
                 <v-col cols="6" md="5" lg="4">
                   <v-text-field
-                    label="技能敘述"
+                    v-if="isSelfDefinedSkill"
+                    label="技能敘述-其他"
                     v-model="skillKeyword"
                     clearable
-                    prepend-inner-icon="mdi-magnify">
+                    prepend-inner-icon="mdi-magnify"
+                    append-inner-icon="mdi-dots-horizontal"
+                    @click:append-inner="changeSkillKeywordType">
                   </v-text-field>
+                  <v-autocomplete
+                    v-else
+                    label="技能敘述"
+                    v-model="skillKeyword"
+                    prepend-inner-icon="mdi-magnify"
+                    append-inner-icon="mdi-dots-horizontal"
+                    :items="skillDescription"
+                    item-value="name"
+                    clearable
+                    :item-props="(item) => {return {'title': item.name, 'subtitle': item.description}}"
+
+                    @click:append-inner="changeSkillKeywordType"
+                  >
+
+                  </v-autocomplete>
                 </v-col>
               </v-row>
             </v-col>
@@ -108,6 +126,7 @@
   const attributeEnum = commonEnum.attribute;
   const particleEnum = commonEnum.particle;
   const getObjKeys = enumRelated.getObjKeys;
+  const skillDescription = commonEnum.skillDescription;
 
   const characterList = ref(character);
   const rarityFilter = ref([0, 1, 2]);
@@ -143,7 +162,6 @@
     if(skillKeyword.value) {
       characterList.value = characterList.value.filter(
         (item) => {
-          console.log(JSON.stringify(item.skills))
           return JSON.stringify(item.skills).indexOf(skillKeyword.value) !== -1
         }
       );
@@ -154,6 +172,12 @@
   const selectedCharacter = ref(null);
   function characterSelected(item) {
     selectedCharacter.value = item;
+  }
+
+  const isSelfDefinedSkill = ref(false);
+  function changeSkillKeywordType() {
+    skillKeyword.value = "";
+    isSelfDefinedSkill.value = !isSelfDefinedSkill.value;
   }
 
   watch(() => [nameKeyword.value, skillKeyword.value], () => {
