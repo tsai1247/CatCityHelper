@@ -2328,8 +2328,8 @@ const characterList = [
         ]
       },
       A: {
-        name: "按{{}}攻擊力，對敵方單體造成「暴烈傷害」",
-        description: "",
+        name: "力透紙背",
+        description: "按{{}}攻擊力，對敵方單體造成「暴烈傷害」",
         arguments: [
           ["95%"],
           ["100%"],
@@ -2388,8 +2388,8 @@ const characterList = [
         ]
       },
       B: {
-        name: "按{{}}攻擊力，對敵方單體造成「穿透傷害」",
-        description: "",
+        name: "飛影煌煌",
+        description: "按{{}}攻擊力，對敵方單體造成「穿透傷害」",
         arguments: [
           ["95%"],
           ["125%"],
