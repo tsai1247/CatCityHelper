@@ -72,6 +72,8 @@ import 高級特工 from "../assets/高級特工.jpg"
 import 耀夜之星 from "../assets/耀夜之星.jpg"
 import 碎夜疾霆 from "../assets/碎夜疾霆.jpg"
 import 詭夜霧行 from "../assets/詭夜霧行.jpg"
+import 鳐搖心情 from "../assets/鳐搖心情.jpg"
+import 浮世謠 from "../assets/浮世謠.jpg"
 
 const characterImages = {
   AI助理,
@@ -148,6 +150,8 @@ const characterImages = {
   耀夜之星,
   碎夜疾霆,
   詭夜霧行,
+  鳐搖心情,
+  浮世謠,
 }
 
 export default {
