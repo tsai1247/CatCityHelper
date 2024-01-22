@@ -5,14 +5,16 @@
       <v-row>
         <v-col :cols="selectedCharacter ? 8 : 12">
           <v-row>
+            <!-- search text field -->
             <v-col cols="12">
               <v-text-field
                 v-model="keyword"
                 clearable
                 prepend-inner-icon="mdi-magnify">
-
               </v-text-field>
             </v-col>
+
+            <!-- attribute(color) -->
             <v-col cols="12" :md="selectedCharacter ? 12 : 'auto'" lg="auto">
               <v-btn-toggle
                 v-model="attributeFilter"
@@ -28,6 +30,8 @@
                 </v-btn>
               </v-btn-toggle>
             </v-col>
+
+            <!-- particle(shape) -->
             <v-col cols="12" md="auto" lg="auto">
               <v-btn-toggle
                 v-model="particleFilter"
@@ -42,6 +46,8 @@
                 </v-btn>
               </v-btn-toggle>
             </v-col>
+
+            <!-- rarity -->
             <v-col cols="12" :md="selectedCharacter ? 6 : 'auto'" :lg="selectedCharacter ? 3 : 'auto'">
               <v-btn-toggle
                 v-model="levelFilter"
@@ -57,6 +63,8 @@
               </v-btn-toggle>
             </v-col>
           </v-row>
+
+          <!-- cards -->
           <v-row>
             <v-col v-for="(item, index) in characterList" :key="index" cols="auto">
               <character-card :character="item" v-on:select="characterSelected(item)"></character-card>
