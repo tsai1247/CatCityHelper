@@ -522,41 +522,41 @@ const characterList = [
     source: [characterSource.money],
     skills: {
       Sp: {
-        name: "",
-        description: "",
+        name: "猩紅終結",
+        description: "消耗自身30%當前生命值，按{{}}攻擊力，對敵方單體造成傷害",
         arguments: [
-          ["%"],
-          ["%"],
-          ["%"],
-          ["%"],
+          ["300%"],
+          ["342%"],
+          ["386%"],
+          ["427%"],
         ]
       },
       A: {
-        name: "",
-        description: "",
+        name: "緋紅旋刃",
+        description: "按120%攻擊力，對敵方單體造成傷害{{}}",
         arguments: [
-          ["%"],
-          ["%"],
-          ["%"],
+          [""],
+          ["，並使自身獲得1點奧義能量"],
+          ["，並使自身獲得2點奧義能量"],
         ]
       },
       B: {
-        name: "",
-        description: "",
+        name: "赤紅連襲",
+        description: "按{{}}攻擊力，對敵方單體造成「憤怒傷害」",
         arguments: [
-          ["%"],
-          ["%"],
-          ["%"],
+          ["98%"],
+          ["120%"],
+          ["160%"],
         ]
       },
       Passive: {
-        name: "",
-        description: "",
+        name: "斷罪",
+        description: "每回合開始時，自身所有能力提升{{}}（僅生效三次）",
         arguments: [
-          ["%"],
-          ["%"],
-          ["%"],
-          ["%"],
+          ["3.5%"],
+          ["4.2%"],
+          ["4.8%"],
+          ["5.5%"],
         ]
       },
     },

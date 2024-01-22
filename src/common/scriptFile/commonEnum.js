@@ -111,6 +111,10 @@ const skillDescription = [
 
 
   {
+    name: "憤怒傷害",
+    description: "「憤怒傷害」：對目標造成傷害時，自身每損失1%最大生命值，傷害提升1%"
+  },
+  {
     name: "暴烈傷害",
     description: "「暴烈傷害」：攻擊時按<b style=\"color: skyblue\">2倍爆擊率</b>造成傷害"
   },
