@@ -242,22 +242,22 @@ const skillDescription = [
   {
     name: "圓振",
     description: ``,
-    htmlDescription: `<i class="${particle.circle} mdi v-icon notranslate v-theme--light v-icon--size-default" aria-hidden="true"></i>`,
+    htmlDescription: ``,
   },
   {
     name: "三相",
     description: ``,
-    htmlDescription: `<i class="${particle.triangle} mdi v-icon notranslate v-theme--light v-icon--size-default" aria-hidden="true"></i>`,
+    htmlDescription: ``,
   },
   {
     name: "方波",
     description: ``,
-    htmlDescription: `<i class="${particle.square} mdi v-icon notranslate v-theme--light v-icon--size-default" aria-hidden="true"></i>`,
+    htmlDescription: ``,
   },
   {
     name: "星流",
     description: ``,
-    htmlDescription: `<i class="${particle.star} mdi v-icon notranslate v-theme--light v-icon--size-default" aria-hidden="true"></i>`,
+    htmlDescription: ``,
   },
 ]
 
