@@ -362,7 +362,7 @@ const characterList = [
   },
   {
     name: "艾可",
-    subname: "鰩搖心情",
+    subname: "鳐搖心情",
     level: level.SSR,
     attribute: attribute.light,
     particle: particle.triangle,
