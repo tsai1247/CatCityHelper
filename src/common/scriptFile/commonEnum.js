@@ -203,6 +203,11 @@ const skillDescription = [
     htmlDescription: "「沉默」：無法使用奧義技能",
   },
   {
+    name: "感染",
+    description: "「感染」：無法獲得治療",
+    htmlDescription: "「感染」：無法獲得治療",
+  },
+  {
     name: "點燃",
     description: "「點燃」：回合結束時，造成傷害量45%的傷害",
     htmlDescription: "「點燃」：回合結束時，造成傷害量45%的傷害",
