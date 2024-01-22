@@ -3,7 +3,7 @@
 
     <div class="ma-5">
       <v-row>
-        <v-col :cols="selectedCharacter ? 7 : 12">
+        <v-col :cols="selectedCharacter && !isMobile ? 7 : 12">
           <v-row>
             <!-- search text field -->
             <v-col cols="12">
@@ -106,16 +106,26 @@
           </v-row>
         </v-col>
 
-        <v-col cols="5">
+        <v-col cols="5" v-if="!isMobile">
           <character-info :character="selectedCharacter" v-on:close-dialog="characterSelected(null)"></character-info>
         </v-col>
       </v-row>
+      <v-dialog >
+      </v-dialog>
+      <v-dialog v-if="isMobile" v-model="characterInfoDialog"
+        width="500" height="100%"
+        scrollable persistent
+      >
+        <template v-slot:default>
+          <character-info :character="selectedCharacter" v-on:close-dialog="characterSelected(null)"></character-info>
+        </template>
+      </v-dialog>
     </div>
   </div>
 </template>
 
 <script setup>
-  import { ref, watch } from 'vue';
+  import { ref, computed, watch } from 'vue';
   import character from '@/common/character';
   import enumRelated from '@/common/scriptFile/enumRelated'
   import commonEnum from '@/common/scriptFile/commonEnum'
@@ -170,8 +180,10 @@
   }
 
   const selectedCharacter = ref(null);
+  const characterInfoDialog = ref(false);
   function characterSelected(item) {
     selectedCharacter.value = item;
+    characterInfoDialog.value = item !== null;
   }
 
   const isSelfDefinedSkill = ref(false);
@@ -183,6 +195,14 @@
   watch(() => [nameKeyword.value, skillKeyword.value], () => {
       filter()
     }, {deep: true})
+
+  const isMobile = computed(() => {
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      return true;
+    } else {
+      return false;
+    }
+  })
 </script>
 
 <style>
