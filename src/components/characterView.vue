@@ -3,7 +3,7 @@
 
     <div class="ma-5">
       <v-row>
-        <v-col :cols="selectedCharacter ? 8 : 12">
+        <v-col :cols="selectedCharacter ? 7 : 12">
           <v-row>
             <!-- search text field -->
             <v-col cols="12">
@@ -106,7 +106,7 @@
           </v-row>
         </v-col>
 
-        <v-col cols="4">
+        <v-col cols="5">
           <character-info :character="selectedCharacter" v-on:close-dialog="characterSelected(null)"></character-info>
         </v-col>
       </v-row>

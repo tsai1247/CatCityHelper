@@ -2,7 +2,7 @@
   <!-- Sp -->
   <v-row>
     <v-card width="100%" @click="merge">
-      <v-row class="ma-1">
+      <v-row class="ma-1 text-subtitle-1">
 
         <!-- 技能名稱 -->
         <v-col cols="3">
