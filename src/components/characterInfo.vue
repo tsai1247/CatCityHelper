@@ -143,10 +143,21 @@
     else {
       starNum.value = num;
     }
+
+    if(!localStorage.stars) {
+      localStorage.stars = "{}";
+    }
+    const info = JSON.parse(localStorage.stars);
+    info[props.character.subname] = starNum.value;
+    localStorage.stars = JSON.stringify(info);
   }
 
   watch(() => props.character, () => {
-    starNum.value = 0;
+    if(!localStorage.stars) {
+      localStorage.stars = "{}";
+    }
+    const info = JSON.parse(localStorage.stars);
+    starNum.value = info[props.character.subname] ?? 0;
   })
 
 </script>
