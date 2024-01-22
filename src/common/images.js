@@ -69,6 +69,9 @@ import 電玩怪客 from "../assets/電玩怪客.jpg"
 import 電音騎士 from "../assets/電音騎士.jpg"
 import 青之迴旋 from "../assets/青之迴旋.jpg"
 import 高級特工 from "../assets/高級特工.jpg"
+import 耀夜之星 from "../assets/耀夜之星.jpg"
+import 碎夜疾霆 from "../assets/碎夜疾霆.jpg"
+import 詭夜霧行 from "../assets/詭夜霧行.jpg"
 
 const characterImages = {
   AI助理,
@@ -142,6 +145,9 @@ const characterImages = {
   電音騎士,
   青之迴旋,
   高級特工,
+  耀夜之星,
+  碎夜疾霆,
+  詭夜霧行,
 }
 
 export default {
