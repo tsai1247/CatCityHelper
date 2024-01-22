@@ -36,6 +36,7 @@
                 「
                 <v-tooltip
                   location="left"
+                  v-if="item?.htmlDescription"
                 >
                   <template v-slot:activator="{ props }">
                     <span
@@ -45,6 +46,7 @@
                   </template>
                   <span v-html="item?.htmlDescription"></span>
                 </v-tooltip>
+                <span v-else>{{ item?.name }}</span>
                 」
               </span>
               <!-- C 部分 -->

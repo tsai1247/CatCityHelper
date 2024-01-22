@@ -232,6 +232,11 @@ const skillDescription = [
     description: "「冰盾」：吸收傷害，當「冰盾」結束時，將剩餘的護盾值轉化為生命值",
     htmlDescription: "「冰盾」：吸收傷害，當「冰盾」結束時，將剩餘的護盾值轉化為生命值",
   },
+  {
+    name: "追擊",
+    description: "「追擊」：對隨機敵方目標造成指定卡牌的效果",
+    htmlDescription: "「追擊」：對隨機敵方目標造成指定卡牌的效果",
+  },
 
 
   {
