@@ -6,7 +6,7 @@
         <v-col>
           <v-card
             class="ma-2"
-            width="145px"
+            width="140px"
             height="180px"
             :image="`${characterImages[character.subname]}`"
             theme="dark">
