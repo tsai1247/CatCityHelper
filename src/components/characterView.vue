@@ -9,7 +9,7 @@
             <v-col cols="12">
               <v-row>
                 <!-- character name -->
-                <v-col cols="4">
+                <v-col cols="6" md="5" lg="4">
                   <v-text-field
                     label="角色名稱"
                     v-model="nameKeyword"
@@ -19,7 +19,7 @@
                 </v-col>
 
                 <!-- character skill -->
-                <v-col cols="4">
+                <v-col cols="6" md="5" lg="4">
                   <v-text-field
                     label="技能敘述"
                     v-model="skillKeyword"
