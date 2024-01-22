@@ -573,41 +573,41 @@ const characterList = [
     source: [characterSource.store],
     skills: {
       Sp: {
-        name: "",
-        description: "",
+        name: "森羅門扉",
+        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」",
         arguments: [
-          ["%"],
-          ["%"],
-          ["%"],
-          ["%"],
+          ["219%"],
+          ["249%"],
+          ["281%"],
+          ["311%"],
         ]
       },
       A: {
-        name: "",
-        description: "",
+        name: "弦音流轉",
+        description: "驅散友方單體3層減益效果，並提升目標{{}}防禦力2回合",
         arguments: [
-          ["%"],
-          ["%"],
-          ["%"],
+          ["10%"],
+          ["20%"],
+          ["30%"],
         ]
       },
       B: {
-        name: "",
-        description: "",
+        name: "喚靈謠",
+        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」",
         arguments: [
-          ["%"],
-          ["%"],
-          ["%"],
+          ["94%"],
+          ["113%"],
+          ["150%"],
         ]
       },
       Passive: {
-        name: "",
-        description: "",
+        name: "春日歌",
+        description: "所有紅色情緒友方造成的間接傷害提升{{}}",
         arguments: [
-          ["%"],
-          ["%"],
-          ["%"],
-          ["%"],
+          ["10%"],
+          ["11.7%"],
+          ["13.3%"],
+          ["15%"],
         ]
       },
     },
