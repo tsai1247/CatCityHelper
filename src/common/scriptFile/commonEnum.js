@@ -1,4 +1,4 @@
-const level = {
+const rarity = {
   R: {
     id: 0,
     name: 'R',
@@ -19,7 +19,7 @@ const level = {
   },
 }
 
-const cardLevel = {
+const cardRarity = {
   R: {
     id: 0,
     color: 'grey-darken-3'
@@ -227,8 +227,8 @@ const skillDescription = [
 ]
 
 export default {
-  level,
-  cardLevel,
+  rarity,
+  cardRarity,
   attribute,
   particle,
   characterSource,

@@ -66,7 +66,7 @@ import commonEnum from '@/common/scriptFile/commonEnum'
   const props = defineProps({
     name: String,
     type: String,
-    level: {
+    rarity: {
       type: Number,
       default: 0
     },
@@ -99,10 +99,10 @@ import commonEnum from '@/common/scriptFile/commonEnum'
     }
   }, {immediate: true})
 
-  const cardLevelEnum = commonEnum.cardLevel;
+  const cardRarityEnum = commonEnum.cardRarity;
   const skillColor = computed(() => {
-    const key = Object.keys(cardLevelEnum)[props.level];
-    const color = cardLevelEnum[key].color;
+    const key = Object.keys(cardRarityEnum)[props.rarity];
+    const color = cardRarityEnum[key].color;
     return `text-${color}`
   })
 

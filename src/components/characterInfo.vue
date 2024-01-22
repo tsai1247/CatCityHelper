@@ -73,12 +73,12 @@
             </v-icon>
 
 
-            <!-- level -->
+            <!-- rarity -->
             <span
               class="float-right mr-4 text-h5 font-italic font-weight-black"
-              :class="`text-${character.level.textColor}`"
+              :class="`text-${character.rarity.textColor}`"
             >
-              {{ character.level.name }}
+              {{ character.rarity.name }}
             </span>
 
 

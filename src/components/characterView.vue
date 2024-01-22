@@ -50,15 +50,15 @@
             <!-- rarity -->
             <v-col cols="12" :md="selectedCharacter ? 6 : 'auto'" :lg="selectedCharacter ? 3 : 'auto'">
               <v-btn-toggle
-                v-model="levelFilter"
+                v-model="rarityFilter"
                 dark
                 multiple>
-                <v-btn v-for="(item, index) in levelEnum"
+                <v-btn v-for="(item, index) in rarityEnum"
                 @click="filter"
                 :key="index"
                 :class="`text-${item.color}`"
                 >
-                {{ getObjKeys(levelEnum, item) }}
+                {{ getObjKeys(rarityEnum, item) }}
                 </v-btn>
               </v-btn-toggle>
             </v-col>
@@ -88,13 +88,13 @@
   import characterInfo from "./characterInfo.vue"
   import characterCard from "./characterCard.vue"
 
-  const levelEnum = commonEnum.level;
+  const rarityEnum = commonEnum.rarity;
   const attributeEnum = commonEnum.attribute;
   const particleEnum = commonEnum.particle;
   const getObjKeys = enumRelated.getObjKeys;
 
   const characterList = ref(character);
-  const levelFilter = ref([0, 1, 2]);
+  const rarityFilter = ref([0, 1, 2]);
   const attributeFilter = ref([0, 1, 2, 3, 4]);
   const particleFilter = ref([0, 1, 2, 3]);
   const keyword = ref("");
@@ -103,7 +103,7 @@
     characterList.value = character.filter(
       (item) => {
         const results = [
-          item.level === null || levelFilter.value.find(level => item.level?.id === level) !== undefined,
+          item.rarity === null || rarityFilter.value.find(rarity => item.rarity?.id === rarity) !== undefined,
           item.attribute === null || attributeFilter.value.find((attribute) => item.attribute?.id === attribute)  !== undefined,
           item.particle === null || particleFilter.value.find((particle) => item.particle?.id === particle)  !== undefined
         ];

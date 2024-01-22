@@ -17,8 +17,8 @@
                 </span>
                 <span
                   class="float-right ma-1 text-subtitle-2 font-italic font-weight-black"
-                  :class="`text-${character.level.textColor}`">
-                  {{ character.level.name }}
+                  :class="`text-${character.rarity.textColor}`">
+                  {{ character.rarity.name }}
                 </span>
               </template>
 

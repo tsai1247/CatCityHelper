@@ -13,9 +13,9 @@
       v-if="skills.A.name"
       :name="skills.A.name"
       type="A技能"
-      :level="levelA"
+      :rarity="rarityA"
       :content="fillSkillA"
-      v-on:merge="levelA = (levelA + 1)%3">
+      v-on:merge="rarityA = (rarityA + 1)%3">
     </character-skill-description>
 
     <!-- B -->
@@ -23,9 +23,9 @@
       v-if="skills.B.name"
       :name="skills.B.name"
       type="B技能"
-      :level="levelB"
+      :rarity="rarityB"
       :content="fillSkillB"
-      v-on:merge="levelB = (levelB + 1)%3">
+      v-on:merge="rarityB = (rarityB + 1)%3">
     </character-skill-description>
 
     <!-- Passive -->
@@ -47,20 +47,20 @@
     starNum: Number,
   })
 
-  const levelA = ref(0);
-  const levelB = ref(0);
+  const rarityA = ref(0);
+  const rarityB = ref(0);
 
   const fillSkillA = computed(() => {
     let index = 0;
     return props.skills.A.description.replace(
-    /{{}}/g, () => props.skills.A.arguments[levelA.value][index++]
+    /{{}}/g, () => props.skills.A.arguments[rarityA.value][index++]
     )
   })
 
   const fillSkillB = computed(() => {
       let index = 0;
       return props.skills.B.description.replace(
-      /{{}}/g, () => props.skills.B.arguments[levelB.value][index++]
+      /{{}}/g, () => props.skills.B.arguments[rarityB.value][index++]
     )
   })
 
@@ -79,8 +79,8 @@
   })
 
   watch(() => props.skills, () => {
-    levelA.value = 0;
-    levelB.value = 0;
+    rarityA.value = 0;
+    rarityB.value = 0;
   })
 
 </script>
