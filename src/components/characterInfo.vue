@@ -157,7 +157,7 @@
       localStorage.stars = "{}";
     }
     const info = JSON.parse(localStorage.stars);
-    starNum.value = info[props.character.subname] ?? 0;
+    starNum.value = info[props.character?.subname] ?? 0;
   })
 
 </script>
