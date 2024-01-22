@@ -7,11 +7,27 @@
           <v-row>
             <!-- search text field -->
             <v-col cols="12">
-              <v-text-field
-                v-model="keyword"
-                clearable
-                prepend-inner-icon="mdi-magnify">
-              </v-text-field>
+              <v-row>
+                <!-- character name -->
+                <v-col cols="4">
+                  <v-text-field
+                    label="角色名稱"
+                    v-model="nameKeyword"
+                    clearable
+                    prepend-inner-icon="mdi-magnify">
+                  </v-text-field>
+                </v-col>
+
+                <!-- character skill -->
+                <v-col cols="4">
+                  <v-text-field
+                    label="技能敘述"
+                    v-model="skillKeyword"
+                    clearable
+                    prepend-inner-icon="mdi-magnify">
+                  </v-text-field>
+                </v-col>
+              </v-row>
             </v-col>
 
             <!-- attribute(color) -->
@@ -97,7 +113,8 @@
   const rarityFilter = ref([0, 1, 2]);
   const attributeFilter = ref([0, 1, 2, 3, 4]);
   const particleFilter = ref([0, 1, 2, 3]);
-  const keyword = ref("");
+  const nameKeyword = ref("");
+  const skillKeyword = ref("");
 
   function filter() {
     characterList.value = character.filter(
@@ -105,9 +122,8 @@
         const results = [
           item.rarity === null || rarityFilter.value.find(rarity => item.rarity?.id === rarity) !== undefined,
           item.attribute === null || attributeFilter.value.find((attribute) => item.attribute?.id === attribute)  !== undefined,
-          item.particle === null || particleFilter.value.find((particle) => item.particle?.id === particle)  !== undefined
+          item.particle === null || particleFilter.value.find((particle) => item.particle?.id === particle)  !== undefined,
         ];
-
 
         return results.reduce(
           (result, cur) => result && cur, true
@@ -115,11 +131,20 @@
       }
     );
 
-    if(keyword.value) {
+    if(nameKeyword.value) {
       characterList.value = characterList.value.filter(
         (item) => {
-          return item.name.indexOf(keyword.value) !== -1
-            || item.subname.indexOf(keyword.value) !== -1;
+          return item.name.indexOf(nameKeyword.value) !== -1
+            || item.subname.indexOf(nameKeyword.value) !== -1;
+        }
+      );
+    }
+
+    if(skillKeyword.value) {
+      characterList.value = characterList.value.filter(
+        (item) => {
+          console.log(JSON.stringify(item.skills))
+          return JSON.stringify(item.skills).indexOf(skillKeyword.value) !== -1
         }
       );
     }
@@ -131,8 +156,7 @@
     selectedCharacter.value = item;
   }
 
-
-  watch(() => keyword.value, () => {
+  watch(() => [nameKeyword.value, skillKeyword.value], () => {
       filter()
     }, {deep: true})
 </script>
