@@ -7,6 +7,7 @@
       <template v-slot:title>
         <!-- name -->
         <span class="font-weight-bold text-h5 mr-1">{{character.name}}</span>
+        <span class="font-weight-bold text-subtitle-1 font-italic mr-1">{{character.subname}}</span>
 
         <!-- attribute -->
         <v-tooltip
