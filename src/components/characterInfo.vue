@@ -112,7 +112,8 @@
             <div v-if="character.skills">
               <character-skill-view
                 :skills="character.skills"
-                :starNum="starNum">
+                :starNum="starNum"
+                v-on:set-star="setStar">
               </character-skill-view>
             </div>
           </template>

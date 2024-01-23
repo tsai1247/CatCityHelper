@@ -37,8 +37,8 @@
     </character-skill-description>
 
     <!-- Rising Star -->
-    <v-card width="100%">
-      <v-row class="ma-1 text-subtitle-1" v-for="(item, index) in skills.risingStar" :key="index">
+    <v-card width="100%" v-for="(item, index) in skills.risingStar" :key="index" @click="setStar(index + 1)">
+      <v-row class="ma-1 text-subtitle-1">
         <v-col v-if="item">
 
           <v-tooltip
@@ -70,6 +70,11 @@
     skills: Object,
     starNum: Number,
   })
+
+  const emits = defineEmits(['setStar'])
+  function setStar(starNum) {
+    emits("setStar", starNum);
+  }
 
   const rarityA = ref(0);
   const rarityB = ref(0);
