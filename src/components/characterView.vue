@@ -110,10 +110,10 @@
           <character-info :character="selectedCharacter" v-on:close-dialog="characterSelected(null)"></character-info>
         </v-col>
       </v-row>
-      <v-dialog >
+      <v-dialog>
       </v-dialog>
       <v-dialog v-if="isMobile" v-model="characterInfoDialog"
-        width="500" height="100%"
+        width="80%" height="80%"
         scrollable persistent
       >
         <template v-slot:default>
