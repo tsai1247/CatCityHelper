@@ -5,7 +5,8 @@
       v-if="skills.Sp.name"
       :name="skills.Sp.name"
       type="Sp奧義技能"
-      :content="fillSkillSp">
+      :content="fillSkillSp"
+      v-on:merge="setStar( ((parseInt((starNum + 1) / 2) + 1)*2-1) % 7 )">
     </character-skill-description>
 
     <!-- A -->
@@ -33,7 +34,8 @@
       v-if="skills.Passive.name"
       :name="skills.Passive.name"
       type="被動技能"
-      :content="fillSkillPassive">
+      :content="fillSkillPassive"
+      v-on:merge="setStar((parseInt(starNum / 2) + 1)*2 % 8 )">
     </character-skill-description>
 
     <!-- Rising Star -->
