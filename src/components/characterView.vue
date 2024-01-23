@@ -113,7 +113,7 @@
       <v-dialog>
       </v-dialog>
       <v-dialog v-if="isMobile" v-model="characterInfoDialog"
-        width="80%" height="80%"
+        width="80%" height="100%"
         scrollable persistent
       >
         <template v-slot:default>
