@@ -37,30 +37,28 @@
     </character-skill-description>
 
     <!-- Rising Star -->
-    <v-row>
-      <v-card width="100%">
-        <v-row class="ma-1 text-subtitle-1" v-for="(item, index) in skills.risingStar" :key="index">
-          <v-col v-if="item">
+    <v-card width="100%">
+      <v-row class="ma-1 text-subtitle-1" v-for="(item, index) in skills.risingStar" :key="index">
+        <v-col v-if="item">
 
-            <v-tooltip
-              location="left"
-            >
-              <template v-slot:activator="{ props }">
-                <div
-                    v-bind="props">
-                      <span
-                        :class="starNum <= index ? '' : 'font-weight-bold'"
-                        :style="{color: starNum <= index ? 'gray' : 'blue'}">
-                        {{ item }}
-                      </span>
-                </div>
-              </template>
-              <span>{{ `${index+1}星解鎖` }}</span>
-            </v-tooltip>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-row>
+          <v-tooltip
+            location="left"
+          >
+            <template v-slot:activator="{ props }">
+              <div
+                  v-bind="props">
+                    <span
+                      :class="starNum <= index ? '' : 'font-weight-bold'"
+                      :style="{color: starNum <= index ? 'gray' : 'blue'}">
+                      {{ item }}
+                    </span>
+              </div>
+            </template>
+            <span>{{ `${index+1}星解鎖` }}</span>
+          </v-tooltip>
+        </v-col>
+      </v-row>
+    </v-card>
   </div>
 </template>
 

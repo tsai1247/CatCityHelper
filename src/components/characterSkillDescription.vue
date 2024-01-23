@@ -1,64 +1,62 @@
 <template>
   <!-- Sp -->
-  <v-row>
-    <v-card width="100%" @click="merge">
-      <v-row class="ma-1 text-subtitle-1">
+  <v-card width="100%" @click="merge">
+    <v-row class="ma-1 text-subtitle-1">
 
-        <!-- 技能名稱 -->
-        <v-col cols="3">
-          <v-tooltip
-            location="left"
-          >
-            <template v-slot:activator="{ props }">
-              <span
-                :class="skillColor"
-                class="font-weight-bold"
-                width="30px"
-                v-bind="props">
-                {{ name }}
-              </span>
-            </template>
-            <span>{{ type }}</span>
-          </v-tooltip>
-        </v-col>
+      <!-- 技能名稱 -->
+      <v-col cols="3">
+        <v-tooltip
+          location="left"
+        >
+          <template v-slot:activator="{ props }">
+            <span
+              :class="skillColor"
+              class="font-weight-bold"
+              width="30px"
+              v-bind="props">
+              {{ name }}
+            </span>
+          </template>
+          <span>{{ type }}</span>
+        </v-tooltip>
+      </v-col>
 
-        <!-- 技能描述 -->
-        <v-col cols="9">
-          <span width="30px">
-            <!-- 將 content 依照上下引號位置，切割成 A + (B1 + C1) + (B2 + C2) + ... -->
-            <!-- A -->
-            <span>{{header}}</span>
+      <!-- 技能描述 -->
+      <v-col cols="9">
+        <span width="30px">
+          <!-- 將 content 依照上下引號位置，切割成 A + (B1 + C1) + (B2 + C2) + ... -->
+          <!-- A -->
+          <span>{{header}}</span>
 
-            <!-- B + C -->
-            <span v-for="(item, index) in contentArray" :key="index">
-              <!-- B 部分 -->
-              <span v-if="index % 2 === 0">
-                「
-                <v-tooltip
-                  location="left"
-                  v-if="item?.htmlDescription"
-                >
-                  <template v-slot:activator="{ props }">
-                    <span
-                        v-bind="props">
-                      {{ item?.name }}
-                    </span>
-                  </template>
-                  <span v-html="item?.htmlDescription"></span>
-                </v-tooltip>
-                <span v-else>{{ item?.name }}</span>
-                」
-              </span>
-              <!-- C 部分 -->
-              <span v-else>
-                {{ item }}
-              </span>
+          <!-- B + C -->
+          <span v-for="(item, index) in contentArray" :key="index">
+            <!-- B 部分 -->
+            <span v-if="index % 2 === 0">
+              「
+              <v-tooltip
+                location="left"
+                v-if="item?.htmlDescription"
+              >
+                <template v-slot:activator="{ props }">
+                  <span
+                      v-bind="props">
+                    {{ item?.name }}
+                  </span>
+                </template>
+                <span v-html="item?.htmlDescription"></span>
+              </v-tooltip>
+              <span v-else>{{ item?.name }}</span>
+              」
+            </span>
+            <!-- C 部分 -->
+            <span v-else>
+              {{ item }}
             </span>
           </span>
-        </v-col>
-      </v-row>
-    </v-card>
-  </v-row>
+        </span>
+      </v-col>
+    </v-row>
+  </v-card>
 </template>
 
 <script setup>

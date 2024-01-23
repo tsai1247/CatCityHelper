@@ -79,10 +79,6 @@
           {{ character.rarity.name }}
         </span>
 
-
-      </template>
-
-      <v-card-text class="ma-1">
         <!-- Stars -->
         <v-tooltip
           location="left"
@@ -105,19 +101,28 @@
           </template>
           <span>升星</span>
         </v-tooltip>
+      </template>
 
-        <div v-if="character.skills">
-          <character-skill-view
-            :skills="character.skills"
-            :starNum="starNum">
-          </character-skill-view>
-        </div>
+      <v-card-text class="ma-1">
+        <v-virtual-scroll
+          :height="innerHeight * 0.75"
+          :items="[1]"
+        >
+          <template v-slot:default>
+            <div v-if="character.skills">
+              <character-skill-view
+                :skills="character.skills"
+                :starNum="starNum">
+              </character-skill-view>
+            </div>
+          </template>
+          </v-virtual-scroll>
       </v-card-text>
     </v-card>
 </template>
 
 <script setup>
-  import { ref, watch } from 'vue';
+  import { ref, computed, watch } from 'vue';
   import characterSkillView from './characterSkillView.vue';
 
   const props = defineProps({
@@ -156,8 +161,9 @@
     starNum.value = info[props.character?.subname] ?? 0;
   })
 
+  const innerHeight = computed(() => window.innerHeight)
+
 </script>
 
 <style>
-
 </style>
