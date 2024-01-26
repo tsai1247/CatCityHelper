@@ -150,6 +150,11 @@ const skillDescription = [
     description: "「間接傷害」：只計算攻擊力和“間接傷害提升/降低”的固定值傷害",
     htmlDescription: "「間接傷害」：只計算攻擊力和“間接傷害提升/降低”的固定值傷害",
   },
+  {
+    name: "傷害擴散",
+    description: `自身受到的部分傷害會被二次施加給場上的其他角色，後續入場的角色不受影響`,
+    htmlDescription: `自身受到的部分傷害會被二次施加給場上的其他角色，後續入場的角色不受影響`,
+  },
 
 
   {
@@ -206,6 +211,16 @@ const skillDescription = [
     name: "感染",
     description: "「感染」：無法獲得治療",
     htmlDescription: "「感染」：無法獲得治療",
+  },
+  {
+    name: "失明",
+    description: `無法使用治療技能`,
+    htmlDescription: `無法使用治療技能`,
+  },
+  {
+    name: "封印",
+    description: `無法使用增益技能`,
+    htmlDescription: `無法使用增益技能`,
   },
   {
     name: "點燃",
