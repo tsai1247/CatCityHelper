@@ -3,6 +3,7 @@ const { rarity, attribute, particle } = enumList;
 const { characterSource } = enumList;
 
 const characterList = [
+  // new characters
   {
     name: "小曼",
     subname: "心動季節",
@@ -51,7 +52,561 @@ const characterList = [
 
     ]
   },
+  {
+    name: "非天",
+    subname: "棒球龍魂",
+    rarity: rarity.SR,
+    attribute: attribute.red,
+    particle: particle.square,
+    source: [],
+    supporters: [
 
+    ]
+  },
+  {
+    name: "伊德",
+    subname: "詭夜霧行",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    skills: {
+      Sp: {
+        name: "刀光未名",
+        description: "按{{}}攻擊力，對敵方單體造成「真實傷害」",
+        arguments: [
+          ["216%"],
+          ["245%"],
+          ["277%"],
+          ["307%"],
+        ]
+      },
+      A: {
+        name: "隱霧斬",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並使自身造成最終傷害提升10%，持續3回合",
+        arguments: [
+          ["90%"],
+          ["113%"],
+          ["150%"],
+        ]
+      },
+      B: {
+        name: "詭步連刃",
+        description: "按{{}}攻擊力，對敵方單體造成「真實傷害」",
+        arguments: [
+          ["87%"],
+          ["114%"],
+          ["144%"],
+        ]
+      },
+      Passive: {
+        name: "循勢而行",
+        description: "每次行動後，爆擊傷害提升{{}}（可疊加，最高10層）；一回合內，其他友方每釋放兩張攻擊技能牌，“詭夜霧行”對隨機敵方目標追擊1張1星「詭步連刃」，每回合至多追擊2次",
+        arguments: [
+          ["2%"],
+          ["3%"],
+          ["3.5%"],
+          ["4%"],
+        ]
+      },
+      risingStar: [
+        "追擊的「詭步連刃」最終傷害提升20%",
+        "",
+        "",
+        "“詭夜霧行”的攻擊技能牌也可觸發追擊效果",
+        "",
+        "每回合最大追擊次數+1",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "內特",
+    subname: "碎夜疾霆",
+    rarity: rarity.SR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.event],
+    skills: {
+      Sp: {
+        name: "雷霆躍沖",
+        description: "按{{}}攻擊力，對敵方單體造成「破滅傷害」",
+        arguments: [
+          ["191%"],
+          ["202%"],
+          ["20%"],
+          ["237%"],
+        ]
+      },
+      A: {
+        name: "閃電沖拳",
+        description: "按{{}}攻擊力，對敵方單體造成傷害",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "霹靂雙打",
+        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」",
+        arguments: [
+          ["94%"],
+          ["113%"],
+          ["150%"],
+        ]
+      },
+      Passive: {
+        name: "正義加護",
+        description: "自身攻擊力提升{{}}",
+        arguments: [
+          ["12%"],
+          ["14.7%"],
+          ["17.3%"],
+          ["20%"],
+        ]
+      },
+      risingStar: [
+        "",
+        "",
+        "戰鬥開始時，攻擊力提升8%",
+        "",
+        "戰鬥開始時，爆擊傷害提升24%",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "小音",
+    subname: "耀夜之星",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.star,
+    source: [characterSource.signin],
+    basic: {
+      attack: "255",
+      defense: "142",
+      hp: "633",
+      穿透: "14%",
+      爆率: "5%",
+      爆傷: "122.2%",
+      healed: "1.1%",
+      protected: "1.1%",
+      luck: "1%",
+    },
+    skills: {
+      Sp: {
+        name: "罪念湮滅",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並無視免疫對目標施加35%「傷害擴散」1回合",
+        arguments: [
+          ["216%"],
+          ["245%"],
+          ["277%"],
+          ["307%"],
+        ]
+      },
+      A: {
+        name: "星芒爆閃",
+        description: "按{{}}攻擊力，對敵方單體造成「真實傷害」",
+        arguments: [
+          ["61%"],
+          ["80%"],
+          ["101%"],
+        ]
+      },
+      B: {
+        name: "電磁空域",
+        description: "提升友方單體{{}}攻擊力2回合",
+        arguments: [
+          ["15%"],
+          ["20%"],
+          ["30%"],
+        ]
+      },
+      Passive: {
+        name: "貓貓快援團",
+        description: "首次釋放奧義技能時，造成最終傷害提升{{}}",
+        arguments: [
+          ["20%"],
+          ["25%"],
+          ["30%"],
+          ["35%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2點奧義能量",
+        "",
+        "奧義能量施加的「傷害擴散」持續回合數+1",
+        "",
+        "首次釋放奧義技能後，回復友方全體1點奧義能量",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "米婭",
+    subname: "冬季奇遇",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    skills: {
+      Sp: {
+        name: "白熊圓舞曲",
+        description: "提升友方全體{{}}攻擊力2回合",
+        arguments: [
+          ["18%"],
+          ["20%"],
+          ["23%"],
+          ["26%"],
+        ]
+      },
+      A: {
+        name: "熊跡追冰",
+        description: "按{{}}攻擊力，對敵方單體造成「破裂傷害」",
+        arguments: [
+          ["94%"],
+          ["113%"],
+          ["150%"],
+        ]
+      },
+      B: {
+        name: "奇遇之光",
+        description: "按{{}}攻擊力治療友方全體",
+        arguments: [
+          ["65%"],
+          ["81%"],
+          ["108%"],
+        ]
+      },
+      Passive: {
+        name: "雪之庇佑",
+        description: "所有藍色情緒友方攻擊力提升{{}}（僅存活時生效）",
+        arguments: [
+          ["7%"],
+          ["8.7%"],
+          ["10.3%"],
+          ["12%"],
+        ]
+      },
+      risingStar: [
+        "釋放技能「奇遇之光」後，按33%攻擊力，對友方全體施加2回合「漸愈」",
+        "",
+        "",
+        "釋放奧義技能後，每有1個藍色情緒友方存活，“冬季奇遇”對友方全體施加1層造成最終傷害提升7%（可疊加，最高4層），持續1回合",
+        "",
+        "每回合開始時，都可觸發1次4星效果",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "艾琳娜",
+    subname: "白瑰綺晶",
+    rarity: rarity.SSR,
+    attribute: attribute.light,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    skills: {
+      Sp: {
+        name: "冰霜主宰",
+        description: "對敵方全體造成攻擊力{{}}的傷害，同時給自身添加1層「寒生」標記，最多疊加1層，不可被驅散",
+        arguments: [
+          ["208%"],
+          ["236%"],
+          ["267%"],
+          ["295%"],
+        ]
+      },
+      A: {
+        name: "冰之誡",
+        description: "對敵方全體造成{{}}的傷害，並使目標攻擊力降低{{}}，最多疊加2層，持續2回合",
+        arguments: [
+          ["90%", "10%"],
+          ["113%", "10%"],
+          ["150%", "15%"],
+        ]
+      },
+      B: {
+        name: "霜之爪",
+        description: "對目標單體造成攻擊力{{}}的傷害，同時為友方生命值最低的單位施加白瑰綺晶生命值{{}}的「冰盾」，效果持續1回合",
+        arguments: [
+          ["102%", "20%"],
+          ["120%", "28%"],
+          ["150%", "36%"],
+        ]
+      },
+      Passive: {
+        name: "萬物凝結",
+        description: "{{}}，友方全體獲得寒冰之力效果，攻擊力提升{{}}，爆擊率提升{{}}，爆擊傷害提升{{}}，若友方為白色情緒和黑色情緒，則該效果在原有的基礎上額外提升30%",
+        arguments: [
+          ["第二回合開始時", "9%", "9%", "9%"],
+          ["第二回合開始時", "12%", "12%", "12%"],
+          ["進入戰鬥時", "12%", "12%", "12%"],
+          ["進入戰鬥時", "15%", "15%", "15%"],
+        ]
+      },
+      risingStar: [
+        "釋放「霜之爪」時，施加的「冰盾」對友方全體生效",
+        "",
+        "",
+        "當友方觸發「寒生」效果時，額外獲得白瑰綺晶生命值28%的「冰盾」，持續1回合",
+        "",
+        "進入戰鬥時，獲得1層「寒生」；「竭力」效果持續時間降低1回合",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "絲薇蒂",
+    subname: "致聖雪夜",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    skills: {
+      Sp: {
+        name: "告罪審判",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，造成傷害時目標每攜帶1個減益效果，額外造成1次「間接傷害」，每次額外傷害效果依次提升20%，首次傷害為100%攻擊力，至多造成{{}}次額外傷害。",
+        arguments: [
+          ["204%", "3"],
+          ["231%", "3"],
+          ["262%", "4"],
+          ["290%", "4"],
+        ]
+      },
+      A: {
+        name: "刀俎之刑",
+        description: "按120%攻擊力，對敵方單體造成傷害{{}}",
+        arguments: [
+          [""],
+          ["，並使自身獲得1點奧義能量"],
+          ["，並使自身獲得2點奧義能量"],
+        ]
+      },
+      B: {
+        name: "欲念戒斷",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並使目標受到的間接傷害提升至{{}}，持續3回合；若攻擊時目標攜帶此類效果，則對目標施加1層「詛咒」{{}}回合",
+        arguments: [
+          ["102%", "15%", "1"],
+          ["120%", "20%", "2"],
+          ["150%", "25%", "3"],
+        ]
+      },
+      Passive: {
+        name: "惡魔之友",
+        description: "敵方獲得減益效果時，自身攻擊力提升{{}}（可疊加，最高6層）",
+        arguments: [
+          ["3%"],
+          ["3.5%"],
+          ["4%"],
+          ["4.5%"],
+        ]
+      },
+      risingStar: [
+        "首次釋放奧義技能後，後續奧義技能造成最終傷害提升15%",
+        "",
+        "",
+        "釋放非奧義技能時，若目標身上存在減益狀態，則回復1點奧義能量，每回合至多觸發2次",
+        "",
+        "釋放奧義技能前，先對目標施加爆擊率抵抗降低20%和爆擊傷害抵抗降低20%，奧義技能結束後效果清除",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "絲薇蒂",
+    subname: "狂想花骸",
+    rarity: rarity.SR,
+    attribute: attribute.green,
+    particle: particle.square,
+    source: [characterSource.event],
+    skills: {
+      Sp: {
+        name: "縱意血光",
+        description: "清除敵方單體所有增益效果，並按{{}}攻擊力，對目標造成傷害",
+        arguments: [
+          ["229%"],
+          ["243%"],
+          ["264%"],
+          ["285%"],
+        ]
+      },
+      A: {
+        name: "貫注",
+        description: "按{{}}攻擊力，對敵方單體造成「真實傷害」",
+        arguments: [
+          ["87%"],
+          ["114%"],
+          ["144%"],
+        ]
+      },
+      B: {
+        name: "蹁躚",
+        description: "按120%攻擊力，對敵方單體造成傷害{{}}",
+        arguments: [
+          [""],
+          ["，並使自身獲得1點奧義能量"],
+          ["，並使自身獲得2點奧義能量"],
+        ]
+      },
+      Passive: {
+        name: "花骸洗塵",
+        description: "每次奧義能量恢復滿時，驅散自身3層減益效果{{}}",
+        arguments: [
+          [""],
+          ["，並且在戰鬥開始時，攻擊力提升3%"],
+          ["，並且在戰鬥開始時，攻擊力提升6%"],
+          ["，並且在戰鬥開始時，攻擊力提升9%"],
+        ]
+      },
+      risingStar: [
+        "",
+        "",
+        "戰鬥開始時，攻擊力提升8%",
+        "",
+        "戰鬥開始時，爆擊率提升6%，穿透率提升4.5%",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "多洛茜",
+    subname: "囚鳥綺願",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    skills: {
+      Sp: {
+        name: "怨靈之裁",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並使目標身上所有「詛咒」立即產生相當於原傷害150%的傷害{{}}",
+        arguments: [
+          ["193%", "，造成傷害後目標身上的「詛咒」持續時間減少1回合"],
+          ["220%", "，造成傷害後目標身上的「詛咒」持續時間減少1回合"],
+          ["248%", "，造成傷害後目標身上的「詛咒」持續時間減少1回合"],
+          ["275%", ""],
+        ]
+      },
+      A: {
+        name: "薔薇之舞",
+        description: "按{{}}攻擊力，對敵方單體造成「間接傷害」",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "骨影之咒",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「詛咒」{{}}回合",
+        arguments: [
+          ["96%", "1"],
+          ["110%", "2"],
+          ["120%", "3"],
+        ]
+      },
+      Passive: {
+        name: "血色荊棘",
+        description: "當上陣戰鬥員的屬性均為紅色時，自身造成間接傷害提升{{}}",
+        arguments: [
+          ["12%"],
+          ["14.7%"],
+          ["17.3%"],
+          ["20%"],
+        ]
+      },
+      risingStar: [
+        "釋放「薔薇之舞」後，對目標施加1回合「詛咒」",
+        "",
+        "釋放奧義技能後，回復2點奧義能量",
+        "",
+        "",
+        "釋放奧義技能後，使目標身上所有「詛咒」立即再產生1次相當於原傷害40%的傷害",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "小白",
+    subname: "滌蕩者",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    skills: {
+      Sp: {
+        name: "蓄能滌蕩",
+        description: "按{{}}攻擊力，對敵方單體造成「破滅傷害」",
+        arguments: [
+          ["198%"],
+          ["226%"],
+          ["255%"],
+          ["282%"],
+        ]
+      },
+      A: {
+        name: "暴力清掃",
+        description: "按{{}}攻擊力，對敵方單體造成「破滅傷害」",
+        arguments: [
+          ["80%"],
+          ["93%"],
+          ["125%"],
+        ]
+      },
+      B: {
+        name: "雙能進擊",
+        description: "按{{}}攻擊力，對敵方單體造成傷害{{}}",
+        arguments: [
+          ["102%", ""],
+          ["120%", "，並對目標施加1層「易傷」3回合"],
+          ["150%", "，並對目標施加1層「易傷」3回合"],
+        ]
+      },
+      Passive: {
+        name: "力場加固",
+        description: "{{}}，自身造成最終傷害提升{{}}{{}}",
+        arguments: [
+          ["當上陣戰鬥員的粒子形態均為「三相」時", "8%", ""],
+          ["當上陣戰鬥員的粒子形態均為「三相」時", "12%", ""],
+          ["除自己以外，每有1名上陣戰鬥員的粒子形態為「三相」", "12%", "（可疊加，最高3層）"],
+          ["除自己以外，每有1名上陣戰鬥員的粒子形態為「三相」", "15%", "（可疊加，最高3層）"],
+        ]
+      },
+      risingStar: [
+        "釋放1星「雙能進擊」時，對目標施加1層「易傷」3回合",
+        "",
+        "",
+        "",
+        "",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+
+  // common characters
   {
     name: "非天",
     subname: "塗鴉戰爭",
@@ -166,17 +721,6 @@ const characterList = [
         "",
       ]
     },
-    supporters: [
-
-    ]
-  },
-  {
-    name: "非天",
-    subname: "棒球龍魂",
-    rarity: rarity.SR,
-    attribute: attribute.red,
-    particle: particle.square,
-    source: [],
     supporters: [
 
     ]
@@ -1245,65 +1789,6 @@ const characterList = [
   },
   {
     name: "內特",
-    subname: "碎夜疾霆",
-    rarity: rarity.SR,
-    attribute: attribute.blue,
-    particle: particle.triangle,
-    source: [characterSource.event],
-    skills: {
-      Sp: {
-        name: "雷霆躍沖",
-        description: "按{{}}攻擊力，對敵方單體造成「破滅傷害」",
-        arguments: [
-          ["191%"],
-          ["202%"],
-          ["20%"],
-          ["237%"],
-        ]
-      },
-      A: {
-        name: "閃電沖拳",
-        description: "按{{}}攻擊力，對敵方單體造成傷害",
-        arguments: [
-          ["120%"],
-          ["150%"],
-          ["200%"],
-        ]
-      },
-      B: {
-        name: "霹靂雙打",
-        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」",
-        arguments: [
-          ["94%"],
-          ["113%"],
-          ["150%"],
-        ]
-      },
-      Passive: {
-        name: "正義加護",
-        description: "自身攻擊力提升{{}}",
-        arguments: [
-          ["12%"],
-          ["14.7%"],
-          ["17.3%"],
-          ["20%"],
-        ]
-      },
-      risingStar: [
-        "",
-        "",
-        "戰鬥開始時，攻擊力提升8%",
-        "",
-        "戰鬥開始時，爆擊傷害提升24%",
-        "",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
-    name: "內特",
     subname: "海灘冒險",
     rarity: rarity.SR,
     attribute: attribute.green,
@@ -1599,76 +2084,6 @@ const characterList = [
   },
   {
     name: "小音",
-    subname: "耀夜之星",
-    rarity: rarity.SSR,
-    attribute: attribute.green,
-    particle: particle.star,
-    source: [characterSource.signin],
-    basic: {
-      attack: "255",
-      defense: "142",
-      hp: "633",
-      穿透: "14%",
-      爆率: "5%",
-      爆傷: "122.2%",
-      healed: "1.1%",
-      protected: "1.1%",
-      luck: "1%",
-    },
-    skills: {
-      Sp: {
-        name: "罪念湮滅",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，並無視免疫對目標施加35%「傷害擴散」1回合",
-        arguments: [
-          ["216%"],
-          ["245%"],
-          ["277%"],
-          ["307%"],
-        ]
-      },
-      A: {
-        name: "星芒爆閃",
-        description: "按{{}}攻擊力，對敵方單體造成「真實傷害」",
-        arguments: [
-          ["61%"],
-          ["80%"],
-          ["101%"],
-        ]
-      },
-      B: {
-        name: "電磁空域",
-        description: "提升友方單體{{}}攻擊力2回合",
-        arguments: [
-          ["15%"],
-          ["20%"],
-          ["30%"],
-        ]
-      },
-      Passive: {
-        name: "貓貓快援團",
-        description: "首次釋放奧義技能時，造成最終傷害提升{{}}",
-        arguments: [
-          ["20%"],
-          ["25%"],
-          ["30%"],
-          ["35%"],
-        ]
-      },
-      risingStar: [
-        "戰鬥開始時，獲得2點奧義能量",
-        "",
-        "奧義能量施加的「傷害擴散」持續回合數+1",
-        "",
-        "首次釋放奧義技能後，回復友方全體1點奧義能量",
-        "",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
-    name: "小音",
     subname: "不思議鴨鴨",
     rarity: rarity.SR,
     attribute: attribute.red,
@@ -1904,65 +2319,6 @@ const characterList = [
     ]
   },
   {
-    name: "伊德",
-    subname: "詭夜霧行",
-    rarity: rarity.SSR,
-    attribute: attribute.blue,
-    particle: particle.star,
-    source: [characterSource.specialSummon],
-    skills: {
-      Sp: {
-        name: "刀光未名",
-        description: "按{{}}攻擊力，對敵方單體造成「真實傷害」",
-        arguments: [
-          ["216%"],
-          ["245%"],
-          ["277%"],
-          ["307%"],
-        ]
-      },
-      A: {
-        name: "隱霧斬",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，並使自身造成最終傷害提升10%，持續3回合",
-        arguments: [
-          ["90%"],
-          ["113%"],
-          ["150%"],
-        ]
-      },
-      B: {
-        name: "詭步連刃",
-        description: "按{{}}攻擊力，對敵方單體造成「真實傷害」",
-        arguments: [
-          ["87%"],
-          ["114%"],
-          ["144%"],
-        ]
-      },
-      Passive: {
-        name: "循勢而行",
-        description: "每次行動後，爆擊傷害提升{{}}（可疊加，最高10層）；一回合內，其他友方每釋放兩張攻擊技能牌，“詭夜霧行”對隨機敵方目標追擊1張1星「詭步連刃」，每回合至多追擊2次",
-        arguments: [
-          ["2%"],
-          ["3%"],
-          ["3.5%"],
-          ["4%"],
-        ]
-      },
-      risingStar: [
-        "追擊的「詭步連刃」最終傷害提升20%",
-        "",
-        "",
-        "“詭夜霧行”的攻擊技能牌也可觸發追擊效果",
-        "",
-        "每回合最大追擊次數+1",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
     name: "小白",
     subname: "戰略潛艇",
     rarity: rarity.SSR,
@@ -2082,65 +2438,6 @@ const characterList = [
   },
   {
     name: "小白",
-    subname: "滌蕩者",
-    rarity: rarity.SSR,
-    attribute: attribute.green,
-    particle: particle.triangle,
-    source: [characterSource.specialSummon],
-    skills: {
-      Sp: {
-        name: "蓄能滌蕩",
-        description: "按{{}}攻擊力，對敵方單體造成「破滅傷害」",
-        arguments: [
-          ["198%"],
-          ["226%"],
-          ["255%"],
-          ["282%"],
-        ]
-      },
-      A: {
-        name: "暴力清掃",
-        description: "按{{}}攻擊力，對敵方單體造成「破滅傷害」",
-        arguments: [
-          ["80%"],
-          ["93%"],
-          ["125%"],
-        ]
-      },
-      B: {
-        name: "雙能進擊",
-        description: "按{{}}攻擊力，對敵方單體造成傷害{{}}",
-        arguments: [
-          ["102%", ""],
-          ["120%", "，並對目標施加1層「易傷」3回合"],
-          ["150%", "，並對目標施加1層「易傷」3回合"],
-        ]
-      },
-      Passive: {
-        name: "力場加固",
-        description: "{{}}，自身造成最終傷害提升{{}}{{}}",
-        arguments: [
-          ["當上陣戰鬥員的粒子形態均為「三相」時", "8%", ""],
-          ["當上陣戰鬥員的粒子形態均為「三相」時", "12%", ""],
-          ["除自己以外，每有1名上陣戰鬥員的粒子形態為「三相」", "12%", "（可疊加，最高3層）"],
-          ["除自己以外，每有1名上陣戰鬥員的粒子形態為「三相」", "15%", "（可疊加，最高3層）"],
-        ]
-      },
-      risingStar: [
-        "釋放1星「雙能進擊」時，對目標施加1層「易傷」3回合",
-        "",
-        "",
-        "",
-        "",
-        "",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
-    name: "小白",
     subname: "AI助理",
     rarity: rarity.R,
     attribute: attribute.green,
@@ -2192,65 +2489,6 @@ const characterList = [
         "",
         "戰鬥開始時，爆擊率提升8%",
         "",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
-    name: "艾琳娜",
-    subname: "白瑰綺晶",
-    rarity: rarity.SSR,
-    attribute: attribute.light,
-    particle: particle.square,
-    source: [characterSource.specialSummon],
-    skills: {
-      Sp: {
-        name: "冰霜主宰",
-        description: "對敵方全體造成攻擊力{{}}的傷害，同時給自身添加1層「寒生」標記，最多疊加1層，不可被驅散",
-        arguments: [
-          ["208%"],
-          ["236%"],
-          ["267%"],
-          ["295%"],
-        ]
-      },
-      A: {
-        name: "冰之誡",
-        description: "對敵方全體造成{{}}的傷害，並使目標攻擊力降低{{}}，最多疊加2層，持續2回合",
-        arguments: [
-          ["90%", "10%"],
-          ["113%", "10%"],
-          ["150%", "15%"],
-        ]
-      },
-      B: {
-        name: "霜之爪",
-        description: "對目標單體造成攻擊力{{}}的傷害，同時為友方生命值最低的單位施加白瑰綺晶生命值{{}}的「冰盾」，效果持續1回合",
-        arguments: [
-          ["102%", "20%"],
-          ["120%", "28%"],
-          ["150%", "36%"],
-        ]
-      },
-      Passive: {
-        name: "萬物凝結",
-        description: "{{}}，友方全體獲得寒冰之力效果，攻擊力提升{{}}，爆擊率提升{{}}，爆擊傷害提升{{}}，若友方為白色情緒和黑色情緒，則該效果在原有的基礎上額外提升30%",
-        arguments: [
-          ["第二回合開始時", "9%", "9%", "9%"],
-          ["第二回合開始時", "12%", "12%", "12%"],
-          ["進入戰鬥時", "12%", "12%", "12%"],
-          ["進入戰鬥時", "15%", "15%", "15%"],
-        ]
-      },
-      risingStar: [
-        "釋放「霜之爪」時，施加的「冰盾」對友方全體生效",
-        "",
-        "",
-        "當友方觸發「寒生」效果時，額外獲得白瑰綺晶生命值28%的「冰盾」，持續1回合",
-        "",
-        "進入戰鬥時，獲得1層「寒生」；「竭力」效果持續時間降低1回合",
       ]
     },
     supporters: [
@@ -2487,65 +2725,6 @@ const characterList = [
         "",
         "戰鬥開始時，忍耐率提升9%，造成治療提升8%",
         "",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
-    name: "米婭",
-    subname: "冬季奇遇",
-    rarity: rarity.SSR,
-    attribute: attribute.blue,
-    particle: particle.triangle,
-    source: [characterSource.specialSummon],
-    skills: {
-      Sp: {
-        name: "白熊圓舞曲",
-        description: "提升友方全體{{}}攻擊力2回合",
-        arguments: [
-          ["18%"],
-          ["20%"],
-          ["23%"],
-          ["26%"],
-        ]
-      },
-      A: {
-        name: "熊跡追冰",
-        description: "按{{}}攻擊力，對敵方單體造成「破裂傷害」",
-        arguments: [
-          ["94%"],
-          ["113%"],
-          ["150%"],
-        ]
-      },
-      B: {
-        name: "奇遇之光",
-        description: "按{{}}攻擊力治療友方全體",
-        arguments: [
-          ["65%"],
-          ["81%"],
-          ["108%"],
-        ]
-      },
-      Passive: {
-        name: "雪之庇佑",
-        description: "所有藍色情緒友方攻擊力提升{{}}（僅存活時生效）",
-        arguments: [
-          ["7%"],
-          ["8.7%"],
-          ["10.3%"],
-          ["12%"],
-        ]
-      },
-      risingStar: [
-        "釋放技能「奇遇之光」後，按33%攻擊力，對友方全體施加2回合「漸愈」",
-        "",
-        "",
-        "釋放奧義技能後，每有1個藍色情緒友方存活，“冬季奇遇”對友方全體施加1層造成最終傷害提升7%（可疊加，最高4層），持續1回合",
-        "",
-        "每回合開始時，都可觸發1次4星效果",
       ]
     },
     supporters: [
@@ -3143,124 +3322,6 @@ const characterList = [
     ]
   },
   {
-    name: "絲薇蒂",
-    subname: "致聖雪夜",
-    rarity: rarity.SSR,
-    attribute: attribute.red,
-    particle: particle.star,
-    source: [characterSource.specialSummon],
-    skills: {
-      Sp: {
-        name: "告罪審判",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，造成傷害時目標每攜帶1個減益效果，額外造成1次「間接傷害」，每次額外傷害效果依次提升20%，首次傷害為100%攻擊力，至多造成{{}}次額外傷害。",
-        arguments: [
-          ["204%", "3"],
-          ["231%", "3"],
-          ["262%", "4"],
-          ["290%", "4"],
-        ]
-      },
-      A: {
-        name: "刀俎之刑",
-        description: "按120%攻擊力，對敵方單體造成傷害{{}}",
-        arguments: [
-          [""],
-          ["，並使自身獲得1點奧義能量"],
-          ["，並使自身獲得2點奧義能量"],
-        ]
-      },
-      B: {
-        name: "欲念戒斷",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，並使目標受到的間接傷害提升至{{}}，持續3回合；若攻擊時目標攜帶此類效果，則對目標施加1層「詛咒」{{}}回合",
-        arguments: [
-          ["102%", "15%", "1"],
-          ["120%", "20%", "2"],
-          ["150%", "25%", "3"],
-        ]
-      },
-      Passive: {
-        name: "惡魔之友",
-        description: "敵方獲得減益效果時，自身攻擊力提升{{}}（可疊加，最高6層）",
-        arguments: [
-          ["3%"],
-          ["3.5%"],
-          ["4%"],
-          ["4.5%"],
-        ]
-      },
-      risingStar: [
-        "首次釋放奧義技能後，後續奧義技能造成最終傷害提升15%",
-        "",
-        "",
-        "釋放非奧義技能時，若目標身上存在減益狀態，則回復1點奧義能量，每回合至多觸發2次",
-        "",
-        "釋放奧義技能前，先對目標施加爆擊率抵抗降低20%和爆擊傷害抵抗降低20%，奧義技能結束後效果清除",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
-    name: "絲薇蒂",
-    subname: "狂想花骸",
-    rarity: rarity.SR,
-    attribute: attribute.green,
-    particle: particle.square,
-    source: [characterSource.event],
-    skills: {
-      Sp: {
-        name: "縱意血光",
-        description: "清除敵方單體所有增益效果，並按{{}}攻擊力，對目標造成傷害",
-        arguments: [
-          ["229%"],
-          ["243%"],
-          ["264%"],
-          ["285%"],
-        ]
-      },
-      A: {
-        name: "貫注",
-        description: "按{{}}攻擊力，對敵方單體造成「真實傷害」",
-        arguments: [
-          ["87%"],
-          ["114%"],
-          ["144%"],
-        ]
-      },
-      B: {
-        name: "蹁躚",
-        description: "按120%攻擊力，對敵方單體造成傷害{{}}",
-        arguments: [
-          [""],
-          ["，並使自身獲得1點奧義能量"],
-          ["，並使自身獲得2點奧義能量"],
-        ]
-      },
-      Passive: {
-        name: "花骸洗塵",
-        description: "每次奧義能量恢復滿時，驅散自身3層減益效果{{}}",
-        arguments: [
-          [""],
-          ["，並且在戰鬥開始時，攻擊力提升3%"],
-          ["，並且在戰鬥開始時，攻擊力提升6%"],
-          ["，並且在戰鬥開始時，攻擊力提升9%"],
-        ]
-      },
-      risingStar: [
-        "",
-        "",
-        "戰鬥開始時，攻擊力提升8%",
-        "",
-        "戰鬥開始時，爆擊率提升6%，穿透率提升4.5%",
-        "",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
     name: "達妮卡",
     subname: "暗巷星火",
     rarity: rarity.SSR,
@@ -3431,65 +3492,6 @@ const characterList = [
         "",
         "釋放技能「長傳沖吊」時，對敵方全體施加「點燃」3回合",
         "",
-      ]
-    },
-    supporters: [
-
-    ]
-  },
-  {
-    name: "多洛茜",
-    subname: "囚鳥綺願",
-    rarity: rarity.SSR,
-    attribute: attribute.red,
-    particle: particle.star,
-    source: [characterSource.specialSummon],
-    skills: {
-      Sp: {
-        name: "怨靈之裁",
-        description: "按{{}}攻擊力，對敵方全體造成傷害，並使目標身上所有「詛咒」立即產生相當於原傷害150%的傷害{{}}",
-        arguments: [
-          ["193%", "，造成傷害後目標身上的「詛咒」持續時間減少1回合"],
-          ["220%", "，造成傷害後目標身上的「詛咒」持續時間減少1回合"],
-          ["248%", "，造成傷害後目標身上的「詛咒」持續時間減少1回合"],
-          ["275%", ""],
-        ]
-      },
-      A: {
-        name: "薔薇之舞",
-        description: "按{{}}攻擊力，對敵方單體造成「間接傷害」",
-        arguments: [
-          ["120%"],
-          ["150%"],
-          ["200%"],
-        ]
-      },
-      B: {
-        name: "骨影之咒",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「詛咒」{{}}回合",
-        arguments: [
-          ["96%", "1"],
-          ["110%", "2"],
-          ["120%", "3"],
-        ]
-      },
-      Passive: {
-        name: "血色荊棘",
-        description: "當上陣戰鬥員的屬性均為紅色時，自身造成間接傷害提升{{}}",
-        arguments: [
-          ["12%"],
-          ["14.7%"],
-          ["17.3%"],
-          ["20%"],
-        ]
-      },
-      risingStar: [
-        "釋放「薔薇之舞」後，對目標施加1回合「詛咒」",
-        "",
-        "釋放奧義技能後，回復2點奧義能量",
-        "",
-        "",
-        "釋放奧義技能後，使目標身上所有「詛咒」立即再產生1次相當於原傷害40%的傷害",
       ]
     },
     supporters: [
