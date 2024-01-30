@@ -14,15 +14,27 @@
           location="top"
         >
           <template v-slot:activator="{ props }">
-            <span v-show="character.attribute">
+            <span v-if="character.attribute">
               <v-icon size="x-small"
                 v-bind="props"
                 :color="character.attribute?.color">
                 mdi-circle
               </v-icon>
             </span>
+            <span v-else>
+              <v-icon size="x-small"
+                v-bind="props"
+                :color="grey-lighten-2">
+                mdi-help
+              </v-icon>
+            </span>
           </template>
-          <span>{{ character.attribute?.name }}</span>
+          <span v-if="character.attribute">
+            {{ character.attribute?.name }}
+          </span>
+          <span v-else>
+            屬性未知
+          </span>
         </v-tooltip>
 
         <!-- particle -->
@@ -30,14 +42,25 @@
           location="top"
         >
           <template v-slot:activator="{ props }">
-            <span v-show="character.particle">
+            <span v-if="character.particle">
               <v-icon size="x-small"
                 v-bind="props">
                 {{ character.particle?.icon }}
               </v-icon>
             </span>
+            <span v-else>
+              <v-icon size="x-small"
+                v-bind="props">
+                mdi-help
+              </v-icon>
+            </span>
           </template>
-          <span>{{ character.particle?.name }}</span>
+          <span v-if="character.particle">
+            {{ character.particle?.name }}
+          </span>
+          <span v-else>
+            粒子型態未知
+          </span>
         </v-tooltip>
 
         <!-- supporters -->
