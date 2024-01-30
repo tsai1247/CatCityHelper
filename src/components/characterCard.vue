@@ -43,10 +43,10 @@
     character: Object
   })
 
-  const emit = defineEmits(['select'])
+  const emits = defineEmits(['select'])
 
   function characterSelected(){
-    emit('select');
+    emits('select');
   }
 </script>
 
