@@ -13,6 +13,9 @@
               <character-card :character="item" v-on:select="characterSelected(item)"></character-card>
             </v-col>
           </v-row>
+
+          <!-- info version -->
+          <footer-view></footer-view>
         </v-col>
 
         <!-- character info -->
@@ -40,6 +43,7 @@
   import characterInfo from "./characterInfo.vue"
   import searchField from './searchField.vue';
   import characterCard from "./characterCard.vue"
+  import footerView from './FooterView.vue'
 
   const characterList = ref(character);
   function filter(nameKeyword, skillKeyword, rarityFilter, attributeFilter, particleFilter) {

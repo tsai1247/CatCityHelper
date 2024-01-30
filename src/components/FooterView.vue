@@ -1,5 +1,5 @@
 <template>
-  <v-footer absolute>
+  <v-footer>
     <div class="mr-3">
       <span>貓之城圖鑑版本：</span>
 
