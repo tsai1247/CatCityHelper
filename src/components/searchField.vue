@@ -31,7 +31,7 @@
             prepend-inner-icon="mdi-magnify"
             append-inner-icon="mdi-dots-horizontal"
             :items="skillDescription"
-            item-value="name"
+            :item-value="item => `「${item.name}」`"
             clearable
             :item-props="(item) => {return {'title': item.name, 'subtitle': item.description}}"
 
