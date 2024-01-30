@@ -53,17 +53,6 @@ const characterList = [
     ]
   },
   {
-    name: "非天",
-    subname: "棒球龍魂",
-    rarity: rarity.SR,
-    attribute: attribute.red,
-    particle: particle.square,
-    source: [],
-    supporters: [
-
-    ]
-  },
-  {
     name: "伊德",
     subname: "詭夜霧行",
     rarity: rarity.SSR,
