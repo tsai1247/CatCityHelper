@@ -128,54 +128,6 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.square,
     source: [],
-    skills: {
-      Sp: {
-        name: "",
-        description: "",
-        arguments: [
-          [""],
-          [""],
-          [""],
-          [""],
-        ]
-      },
-      A: {
-        name: "",
-        description: "",
-        arguments: [
-          [""],
-          [""],
-          [""],
-        ]
-      },
-      B: {
-        name: "",
-        description: "",
-        arguments: [
-          [""],
-          [""],
-          [""],
-        ]
-      },
-      Passive: {
-        name: "",
-        description: "",
-        arguments: [
-          [""],
-          [""],
-          [""],
-          [""],
-        ]
-      },
-      risingStar: [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-      ]
-    },
     supporters: [
 
     ]
