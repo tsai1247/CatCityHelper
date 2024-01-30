@@ -104,13 +104,13 @@
         </v-tooltip>
       </template>
 
-      <v-card-text class="ma-1">
-        <v-virtual-scroll
+      <v-card-text class="ma-1" >
+        <v-virtual-scroll  v-if="character.skills"
           :height="innerHeight * 0.75"
           :items="[1]"
         >
           <template v-slot:default>
-            <div v-if="character.skills">
+            <div>
               <character-skill-view
                 :skills="character.skills"
                 :starNum="starNum"
@@ -118,7 +118,11 @@
               </character-skill-view>
             </div>
           </template>
-          </v-virtual-scroll>
+        </v-virtual-scroll>
+
+        <div v-else>
+          <h2 :style="{textAlign: 'center'}" class="ma-5">技能未知</h2>
+        </div>
       </v-card-text>
     </v-card>
 </template>
