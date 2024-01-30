@@ -4,6 +4,55 @@ const { characterSource } = enumList;
 
 const characterList = [
   {
+    name: "小曼",
+    subname: "心動季節",
+    rarity: rarity.SSR,
+    attribute: null,
+    particle: null,
+    source: [characterSource.specialSummon],
+    skills: null,
+    supporters: [
+
+    ]
+  },
+  {
+    name: "望舒",
+    subname: "月朧吟",
+    rarity: rarity.SSR,
+    attribute: attribute.dark,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    skills: null,
+    supporters: [
+
+    ]
+  },
+  {
+    name: "雲沛",
+    subname: "並蒂蓮",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    skills: null,
+    supporters: [
+
+    ]
+  },
+  {
+    name: "雲燦",
+    subname: "菡萏曲",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    skills: null,
+    supporters: [
+
+    ]
+  },
+
+  {
     name: "非天",
     subname: "塗鴉戰爭",
     rarity: rarity.R,
