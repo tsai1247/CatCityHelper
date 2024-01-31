@@ -8,9 +8,15 @@
             class="ma-2"
             width="140px"
             height="180px"
-            :image="`${characterImages[character.subname]}`"
             theme="dark">
-
+              <template v-slot:image>
+                <v-img
+                  cover
+                  dark
+                  :style="{opacity: 0.4}"
+                  :src="characterImages[character.subname]">
+                </v-img>
+              </template>
               <template v-slot:title>
                 <span :class="character.name.length < 4 ? 'text-h5' : 'text-subtitle-1'">
                   {{ character.name }}
