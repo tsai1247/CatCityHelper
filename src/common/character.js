@@ -8,10 +8,57 @@ const characterList = [
     name: "小曼",
     subname: "心動季節",
     rarity: rarity.SSR,
-    attribute: null,
-    particle: null,
+    attribute: attribute.green,
+    particle: particle.triangle,
     source: [characterSource.specialSummon],
-    skills: null,
+    skills: {
+      Sp: {
+        name: "正義天降",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「恐懼」2回合",
+        arguments: [
+          ["163%"],
+          ["185%"],
+          ["209%"],
+          ["231%"],
+        ]
+      },
+      A: {
+        name: "心動神迷",
+        description: "清除敵方{{}}層增益效果，並使目標攻擊力降低{{}}，持續2回合",
+        arguments: [
+          ["2", "10%"],
+          ["2", "10%"],
+          ["3", "15%"],
+        ]
+      },
+      B: {
+        name: "心動守護",
+        description: "按{{}}攻擊力，對友方全體施加2回合護盾",
+        arguments: [
+          ["80%"],
+          ["120%"],
+          ["160%"],
+        ]
+      },
+      Passive: {
+        name: "鼓舞之心",
+        description: "上陣戰鬥員都是綠色情緒時，友方全體最終傷害提升{{}}",
+        arguments: [
+          ["7%"],
+          ["8.6%"],
+          ["10.3%"],
+          ["12%"],
+        ]
+      },
+      risingStar: [
+        "友方單位的護盾被敵方擊破時，該友方會在敵方技能結束後回復自身10%最大生命值",
+        "",
+        "綠色情緒友方每次獲得護盾效果時，攻擊力提升7.5%，可疊加2層，持續3回合",
+        "",
+        "敵方單位身上的增益效果提前結束時，該敵方單位獲得1層最終傷害降低8%，可疊加3層，持續2回合",
+        "",
+      ]
+    },
     supporters: [
 
     ]
@@ -23,7 +70,54 @@ const characterList = [
     attribute: attribute.dark,
     particle: particle.square,
     source: [characterSource.specialSummon],
-    skills: null,
+    skills: {
+      Sp: {
+        name: "月下逢",
+        description: "按{{}}攻擊力，對敵方全體造成「蓄勢傷害」",
+        arguments: [
+          ["154%"],
+          ["175%"],
+          ["197%"],
+          ["218%"],
+        ]
+      },
+      A: {
+        name: "緋月絕",
+        description: "獲得{{}}層造成最終傷害提升5%，持續3回合；本回合內，任意友方單位釋放技能後，望舒有{{}}機率回復1點奧義能量，至多回復2點，每名友方單位至多觸發1次",
+        arguments: [
+          ["1", "50%"],
+          ["1", "75%"],
+          ["2", "100%"],
+        ]
+      },
+      B: {
+        name: "流光溢彩",
+        description: "按{{}}攻擊力，對敵方全體造成「蓄勢傷害」",
+        arguments: [
+          ["72%"],
+          ["90%"],
+          ["120%"],
+        ]
+      },
+      Passive: {
+        name: "萬華鏡",
+        description: "每有1點奧義能量，爆擊傷害提升{{}}，滿奧義能量時，爆擊率額外提升20%",
+        arguments: [
+          ["4%"],
+          ["5.5%"],
+          ["7%"],
+          ["8%"],
+        ]
+      },
+      risingStar: [
+        "釋放技能「緋月絕」時，補進一張1星「流光溢彩」技能牌",
+        "",
+        "",
+        "釋放非奧義技能時，若奧義能量已滿，則獲得1個「凝結」，至多持有兩個「凝結」",
+        "",
+        "釋放奧義技能後，獲得1層造成最終傷害提升10%（可疊加，最高3層）",
+      ]
+    },
     supporters: [
 
     ]
@@ -35,7 +129,54 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.square,
     source: [characterSource.specialSummon],
-    skills: null,
+    skills: {
+      Sp: {
+        name: "飛花訣",
+        description: "對友方全體施加2回合受到最終傷害降低{{}}",
+        arguments: [
+          ["17%"],
+          ["19%"],
+          ["22%"],
+          ["24%"],
+        ]
+      },
+      A: {
+        name: "落花別",
+        description: "按{{}}攻擊力，對敵方全體造成傷害",
+        arguments: [
+          ["96%"],
+          ["120%"],
+          ["160%"],
+        ]
+      },
+      B: {
+        name: "幽蓮手",
+        description: "先消耗目標15%當前生命值，再按{{}}自身攻擊力+{{}}目標已損失生命值，對友方全體施加2回合「蓮舞」",
+        arguments: [
+          ["35%", "45%"],
+          ["40%", "50%"],
+          ["45%", "55%"],
+        ]
+      },
+      Passive: {
+        name: "菡萏同心",
+        description: "所有藍色情緒友方受到護盾提升{{}}；戰鬥開始時，若隊伍中存在“雲燦”，自身獲得1點奧義能量",
+        arguments: [
+          ["7%"],
+          ["8.6%"],
+          ["10.3%"],
+          ["12%"],
+        ]
+      },
+      risingStar: [
+        "每上陣1名藍色情緒戰鬥員，“並蒂蓮”造成護盾提升3%（可疊加，最高4層）",
+        "",
+        "",
+        "每回合開始時，對生命值低於65%的友方單位施加1層穿透率提升5%（可疊加，最高4層）",
+        "",
+        "釋放技能「幽蓮守」時，對友方全體施加1層2回合「共生」（可疊加，最高2層）",
+      ]
+    },
     supporters: [
 
     ]
@@ -47,7 +188,54 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.square,
     source: [characterSource.specialSummon],
-    skills: null,
+    skills: {
+      Sp: {
+        name: "落紅蓮",
+        description: "消耗自身10%當前生命值，按{{}}攻擊力，對敵方全體造成「穿刺傷害」",
+        arguments: [
+          ["172%"],
+          ["196%"],
+          ["221%"],
+          ["245%"],
+        ]
+      },
+      A: {
+        name: "逍遙遊",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，若釋放技能時生命值於30%，則先消耗10%當前生命值",
+        arguments: [
+          ["102%"],
+          ["120%"],
+          ["150%"],
+        ]
+      },
+      B: {
+        name: "蓮影徊",
+        description: "按{{}}攻擊力，對敵方全體造成「穿刺傷害」",
+        arguments: [
+          ["72%"],
+          ["90%"],
+          ["120%"],
+        ]
+      },
+      Passive: {
+        name: "萬物生",
+        description: "自身每損失1%最大生命值，穿透率提升{{}}，至多提升{{}}；戰鬥開始時，若隊伍中存在“雲沛”，自身獲得1點奧義能量",
+        arguments: [
+          ["0.8%", "56%"],
+          ["0.95%", "66.5%"],
+          ["1.05%", "73.5%"],
+          ["1.2%", "84%"],
+        ]
+      },
+      risingStar: [
+        "生命值低於85%時，爆擊率提升20%",
+        "",
+        "",
+        "戰鬥開始時，將25%當前生命值轉化為3回合護盾，並獲得攻擊力提升12%，持續3回合",
+        "",
+        "技能結束時，若生命值不高於75%，則獲得1層造成最終傷害提升4%（可疊加，最高4層）；若生命值不高於45%，則額外再獲得1層受到最終傷害降低4%（可疊加，最高4層）",
+      ]
+    },
     supporters: [
 
     ]

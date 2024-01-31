@@ -133,6 +133,11 @@ const skillDescription = [
     description: "「穿刺傷害」：攻擊時按2倍穿透率造成傷害",
     htmlDescription: "「穿刺傷害」：攻擊時按<b style=\"color: skyblue\">2倍穿透率</b>造成傷害",
   },
+  {
+    name: "蓄勢傷害",
+    description: "「蓄勢傷害」：攻擊時每有1點奧義能量，傷害提升15%",
+    htmlDescription: "「蓄勢傷害」：攻擊時<b style=\"color: skyblue\">每有1點奧義能量</b>，傷害提升15%",
+  },
 
 
   {
@@ -256,6 +261,21 @@ const skillDescription = [
     name: "追擊",
     description: "「追擊」：對隨機敵方目標造成指定卡牌的效果",
     htmlDescription: "「追擊」：對隨機敵方目標造成指定卡牌的效果",
+  },
+  {
+    name: "蓮舞",
+    description: "「蓮舞」：吸收傷害的護盾。攜帶者使用攻擊技能時，按「蓮舞」剩餘護盾量的40%造成一次純粹傷害",
+    htmlDescription: "「蓮舞」：吸收傷害的護盾。攜帶者使用攻擊技能時，按「蓮舞」剩餘護盾量的40%造成一次純粹傷害",
+  },
+  {
+    name: "共生",
+    description: "「共生」：抵擋一次減益效果，生效後消失",
+    htmlDescription: "「共生」：抵擋一次減益效果，生效後消失",
+  },
+  {
+    name: "凝結",
+    description: "「凝結」：奧義技能傷害提升10%，並且在釋放奧義技能後，轉化為1點奧義能量",
+    htmlDescription: "「凝結」：奧義技能傷害提升10%，並且在釋放奧義技能後，轉化為1點奧義能量",
   },
 
 
