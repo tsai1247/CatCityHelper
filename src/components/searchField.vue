@@ -138,7 +138,6 @@
 
 <script setup>
   import { onMounted, ref, watch } from 'vue';
-  import enumRelated from '@/common/scriptFile/enumRelated'
   import commonEnum from '@/common/scriptFile/commonEnum'
 
   const emits = defineEmits(['filter'])
@@ -146,7 +145,6 @@
   const rarityEnum = commonEnum.rarity;
   const attributeEnum = commonEnum.attribute;
   const particleEnum = commonEnum.particle;
-  const getObjKeys = enumRelated.getObjKeys;
   const skillDescription = commonEnum.skillDescription;
 
 
