@@ -99,10 +99,10 @@ import commonEnum from '@/common/scriptFile/commonEnum'
     }
   }, {immediate: true})
 
-  const cardRarityEnum = commonEnum.cardRarity;
+  const rarityEnum = commonEnum.rarity;
   const skillColor = computed(() => {
-    const key = Object.keys(cardRarityEnum)[props.rarity];
-    const color = cardRarityEnum[key].color;
+    const key = Object.keys(rarityEnum)[props.rarity];
+    const color = rarityEnum[key].color;
     return `text-${color}`
   })
 
