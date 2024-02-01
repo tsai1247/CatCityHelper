@@ -10,46 +10,58 @@
         <span class="font-weight-bold text-subtitle-1 font-italic mr-1">{{character.subname}}</span>
 
         <!-- attribute -->
-        <v-tooltip
-          location="top"
-        >
-          <template v-slot:activator="{ props }">
+        <span class="ml-1">
+          <v-tooltip
+            class="ma-2"
+            location="top"
+          >
+            <template v-slot:activator="{ props }">
+              <span v-if="character.attribute">
+                <v-icon size="x-small"
+                  v-bind="props"
+                >
+                  <v-img
+                    :src="character.attribute.icon"
+                  >
+                  </v-img>
+                </v-icon>
+              </span>
+              <span v-else>
+                <v-icon size="x-small"
+                  v-bind="props"
+                  :color="grey-lighten-2">
+                  mdi-help
+                </v-icon>
+              </span>
+            </template>
             <span v-if="character.attribute">
-              <v-icon size="x-small"
-                v-bind="props"
-                :color="character.attribute?.color">
-                mdi-circle
-              </v-icon>
+              {{ character.attribute?.name }}
             </span>
             <span v-else>
-              <v-icon size="x-small"
-                v-bind="props"
-                :color="grey-lighten-2">
-                mdi-help
-              </v-icon>
+              屬性未知
             </span>
-          </template>
-          <span v-if="character.attribute">
-            {{ character.attribute?.name }}
-          </span>
-          <span v-else>
-            屬性未知
-          </span>
-        </v-tooltip>
+          </v-tooltip>
+        </span>
 
         <!-- particle -->
-        <v-tooltip
-          location="top"
-        >
-          <template v-slot:activator="{ props }">
-            <span v-if="character.particle">
-              <v-icon size="x-small"
-                v-bind="props">
-                {{ character.particle?.icon }}
-              </v-icon>
-            </span>
-            <span v-else>
-              <v-icon size="x-small"
+        <span class="ml-1">
+          <v-tooltip
+            location="top"
+          >
+            <template v-slot:activator="{ props }">
+              <span v-if="character.particle">
+                <v-icon size="x-small"
+                  color="grey-lighten-2"
+                  v-bind="props"
+                  >
+                  <v-img
+                    :src="character.particle.icon"
+                  >
+                  </v-img>
+                </v-icon>
+              </span>
+              <span v-else>
+                <v-icon size="x-small"
                 v-bind="props">
                 mdi-help
               </v-icon>
@@ -57,11 +69,12 @@
           </template>
           <span v-if="character.particle">
             {{ character.particle?.name }}
-          </span>
-          <span v-else>
-            粒子型態未知
-          </span>
-        </v-tooltip>
+            </span>
+            <span v-else>
+              粒子型態未知
+            </span>
+          </v-tooltip>
+        </span>
 
         <!-- supporters -->
         <span v-if="character.supporters && character.supporters.length" class="ml-4">
@@ -97,10 +110,14 @@
 
         <!-- rarity -->
         <span
-          class="float-right mr-4 text-h5 font-italic font-weight-black"
+          class="float-right text-h5 font-italic font-weight-black"
           :class="`text-${character.rarity.textColor}`"
         >
-          {{ character.rarity.name }}
+          <v-img
+            width="70px"
+            :src="character.rarity.icon"
+          >
+          </v-img>
         </span>
 
         <!-- Stars -->
