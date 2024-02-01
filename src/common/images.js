@@ -74,6 +74,9 @@ import 碎夜疾霆 from "../assets/碎夜疾霆.jpg"
 import 詭夜霧行 from "../assets/詭夜霧行.jpg"
 import 鳐搖心情 from "../assets/鳐搖心情.jpg"
 import 浮世謠 from "../assets/浮世謠.jpg"
+import 菡萏曲 from "../assets/菡萏曲.jpg"
+import 並蒂蓮 from "../assets/並蒂蓮.jpg"
+import 月朧吟 from "../assets/月朧吟.jpg"
 
 const characterImages = {
   AI助理,
@@ -152,6 +155,9 @@ const characterImages = {
   詭夜霧行,
   鳐搖心情,
   浮世謠,
+  菡萏曲,
+  並蒂蓮,
+  月朧吟,
 }
 
 export default {
