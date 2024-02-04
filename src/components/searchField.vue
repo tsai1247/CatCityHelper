@@ -138,14 +138,15 @@
 
 <script setup>
   import { onMounted, ref, watch } from 'vue';
-  import commonEnum from '@/common/scriptFile/commonEnum'
+  import commonEnum from '@/common/commonEnum'
+  import nounDescription from '@/common/nounDescription';
 
   const emits = defineEmits(['filter'])
 
   const rarityEnum = commonEnum.rarity;
   const attributeEnum = commonEnum.attribute;
   const particleEnum = commonEnum.particle;
-  const skillDescription = commonEnum.skillDescription;
+  const skillDescription = nounDescription.skillDescription;
 
 
   const rarityFilter = ref([0, 1, 2]);
