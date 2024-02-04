@@ -1,4 +1,4 @@
-import enumList from "./scriptFile/commonEnum";
+import enumList from "./commonEnum";
 const { rarity, attribute, particle } = enumList;
 const { characterSource } = enumList;
 
@@ -2651,7 +2651,7 @@ const characterList = [
       },
       Passive: {
         name: "弱點定位",
-        description: "所有率色情緒友方穿透率提升{{}}",
+        description: "所有綠色情緒友方穿透率提升{{}}",
         arguments: [
           ["9%"],
           ["10.5%"],
