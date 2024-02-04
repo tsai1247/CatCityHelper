@@ -61,7 +61,8 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue';
-import commonEnum from '@/common/scriptFile/commonEnum'
+import commonEnum from '@/common/commonEnum'
+import nounDescription from '@/common/nounDescription';
 
   const props = defineProps({
     name: String,
@@ -81,7 +82,7 @@ import commonEnum from '@/common/scriptFile/commonEnum'
     emits('merge');
   }
 
-  const skillDescription = commonEnum.skillDescription;
+  const skillDescription = nounDescription.skillDescription;
   function getSkillDescription(name) {
     return skillDescription.find( (item) => item.name === name ) ?? {name, description: "未知技能"}
   }
