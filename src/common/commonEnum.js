@@ -85,9 +85,69 @@ const characterSource = {
   "gift": "兌換碼"
 }
 
+const basicValueDescription = {
+  "ATK": {
+    "name": "攻擊力",
+    "description": "造成傷害的基礎屬性",
+  },
+  "DEF": {
+    "name": "防禦力",
+    "description": "抵禦傷害的基礎屬性",
+  },
+  "HP": {
+    "name": "生命值",
+    "description": "承受傷害的基礎屬性",
+  },
+  "Penetration": {
+    "name": "穿透率",
+    "description": "將部分攻擊值轉換為額外穿透傷害，不會低於0點",
+  },
+  "Durability": {
+    "name": "忍耐率",
+    "description": "將部分防禦值抵禦穿透傷害，不會低於0點",
+  },
+  "CRIT_Rate": {
+    "name": "爆擊率",
+    "description": "觸發爆擊傷害的機率",
+  },
+  "CRIT_DMG": {
+    "name": "爆擊傷害",
+    "description": "觸發爆擊傷害時的輸出效果",
+  },
+  "CRIT_Rate_RES": {
+    "name": "爆擊率抵抗",
+    "description": "抵禦被爆擊傷害的機率",
+  },
+  "CRIT_DMG_RES": {
+    "name": "爆擊傷害抵抗",
+    "description": "降低被爆擊時的傷害",
+  },
+  "Received_Healing_Boost": {
+    "name": "受到治療提升",
+    "description": "提升受到的治療效果",
+  },
+  "Received_Shield_Boost": {
+    "name": "受到護盾提升",
+    "description": "提升受到的護盾效果",
+  },
+  "Healing_Boost": {
+    "name": "造成治療提升",
+    "description": "提升施加的治療效果",
+  },
+  "Generated_Shield_Boost": {
+    "name": "造成護盾提升",
+    "description": "提升施加的護盾效果",
+  },
+  "Luck": {
+    "name": "幸運",
+    "description": "提升戰鬥中抽取到兩星技能牌的機率值",
+  },
+}
+
 export default {
   rarity,
   attribute,
   particle,
   characterSource,
+  basicValueDescription,
 }
