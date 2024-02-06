@@ -9,7 +9,7 @@ const bookVersionList = [
   },
   {
     "version": "~",
-    "decription": "在此之前未受版本紀錄"
+    "description": "在此之前未受版本紀錄"
   },
 ]
 
