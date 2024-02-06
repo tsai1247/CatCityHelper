@@ -461,10 +461,10 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.star,
     source: [characterSource.signin],
-    basic: { // unconfirmed
-      ATK: "207",
-      DEF: "72",
-      HP: "489",
+    basic: {
+      ATK: "161",
+      DEF: "56",
+      HP: "380",
       Penetration: "14%",
       Durability: "0%",
       CRIT_Rate: "5%",
