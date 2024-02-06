@@ -144,24 +144,35 @@
       </template>
 
       <v-card-text class="ma-1" >
-        <v-virtual-scroll  v-if="character.skills"
+        <v-virtual-scroll  v-if="character.basic|| character.skills"
           :height="innerHeight * 0.75"
           :items="[1]"
         >
           <template v-slot:default>
             <div>
+              <!-- basic values -->
+              <character-basic-values
+                v-if="character.basic"
+                :data="character.basic">
+              </character-basic-values>
+              <div v-else>
+                <h2 :style="{textAlign: 'center'}" class="ma-5">基礎數值未知</h2>
+              </div>
+
+              <!-- skill view -->
               <character-skill-view
+                v-if="character.skills"
                 :skills="character.skills"
                 :starNum="starNum"
                 v-on:set-star="setStar">
               </character-skill-view>
+              <div v-else>
+                <h2 :style="{textAlign: 'center'}" class="ma-5">技能未知</h2>
+              </div>
             </div>
           </template>
         </v-virtual-scroll>
 
-        <div v-else>
-          <h2 :style="{textAlign: 'center'}" class="ma-5">技能未知</h2>
-        </div>
       </v-card-text>
     </v-card>
 </template>
@@ -169,6 +180,7 @@
 <script setup>
   import { ref, computed, watch } from 'vue';
   import characterSkillView from './characterSkillView.vue';
+  import characterBasicValues from './characterBasicValues.vue';
 
   const props = defineProps({
     character: Object,
