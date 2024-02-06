@@ -11,6 +11,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.specialSummon],
+    basic: {
+      ATK: "128",
+      DEF: "73",
+      HP: "509",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "正義天降",
@@ -70,6 +86,22 @@ const characterList = [
     attribute: attribute.dark,
     particle: particle.square,
     source: [characterSource.specialSummon],
+    basic: {
+      ATK: "168",
+      DEF: "63",
+      HP: "460",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "月下逢",
@@ -129,6 +161,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.square,
     source: [characterSource.specialSummon],
+    basic: {
+      ATK: "128",
+      DEF: "73",
+      HP: "509",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "飛花訣",
@@ -188,6 +236,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.square,
     source: [characterSource.specialSummon],
+    basic: {
+      ATK: "158",
+      DEF: "57",
+      HP: "377",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "落紅蓮",
@@ -201,7 +265,7 @@ const characterList = [
       },
       A: {
         name: "逍遙遊",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，若釋放技能時生命值於30%，則先消耗10%當前生命值",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，若釋放技能時生命值高於30%，則先消耗10%當前生命值",
         arguments: [
           ["102%"],
           ["120%"],
@@ -247,6 +311,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.star,
     source: [characterSource.specialSummon],
+    basic: { // unconfirmed
+      ATK: "204",
+      DEF: "77",
+      HP: "443",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "刀光未名",
@@ -306,6 +386,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.triangle,
     source: [characterSource.event],
+    basic: {
+      ATK: "115",
+      DEF: "44",
+      HP: "266",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "雷霆躍沖",
@@ -365,16 +461,21 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.star,
     source: [characterSource.signin],
-    basic: {
-      attack: "255",
-      defense: "142",
-      hp: "633",
-      穿透: "14%",
-      爆率: "5%",
-      爆傷: "122.2%",
-      healed: "1.1%",
-      protected: "1.1%",
-      luck: "1%",
+    basic: { // unconfirmed
+      ATK: "207",
+      DEF: "72",
+      HP: "489",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
     },
     skills: {
       Sp: {
@@ -435,6 +536,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.triangle,
     source: [characterSource.specialSummon],
+    basic: { // unconfirmed
+      ATK: "198",
+      DEF: "73",
+      HP: "556",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "白熊圓舞曲",
@@ -494,6 +611,22 @@ const characterList = [
     attribute: attribute.light,
     particle: particle.square,
     source: [characterSource.specialSummon],
+    basic: { // unconfirmed
+      ATK: "169",
+      DEF: "86",
+      HP: "588",
+      Penetration: "0%",
+      Durability: "27%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "15%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "冰霜主宰",
@@ -553,6 +686,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.specialSummon],
+    basic: { // unconfirmed
+      ATK: "208",
+      DEF: "74",
+      HP: "499",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "告罪審判",
@@ -612,6 +761,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.square,
     source: [characterSource.event],
+    basic: {
+      ATK: "108",
+      DEF: "43",
+      HP: "264",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "縱意血光",
@@ -671,6 +836,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.specialSummon],
+    basic: { // unconfirmed
+      ATK: "191",
+      DEF: "80",
+      HP: "556",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "20%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "怨靈之裁",
@@ -730,6 +911,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.specialSummon],
+    basic: { // unconfirmed
+      ATK: "208",
+      DEF: "75",
+      HP: "498",
+      Penetration: "10%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "蓄能滌蕩",
@@ -791,6 +988,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.square,
     source: [characterSource.summon],
+    basic: {
+      ATK: "93",
+      DEF: "34",
+      HP: "206",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "15%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "制勝一擊",
@@ -850,6 +1063,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.square,
     source: [characterSource.summon],
+    basic: {
+      ATK: "114",
+      DEF: "44",
+      HP: "269",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "滑空一閃",
@@ -909,6 +1138,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.square,
     source: [characterSource.summon],
+    basic: {
+      ATK: "154",
+      DEF: "61",
+      HP: "366",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "3%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "惡狼追蹤",
@@ -968,6 +1213,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon, characterSource.gift],
+    basic: {
+      ATK: "85",
+      DEF: "34",
+      HP: "206",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "升級軌道炮",
@@ -1027,6 +1288,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "149",
+      DEF: "61",
+      HP: "369",
+      Penetration: "14%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "1%"
+    },
     skills: {
       Sp: {
         name: "靈魂震顫",
@@ -1086,6 +1363,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "105",
+      DEF: "44",
+      HP: "266",
+      Penetration: "14%",
+      Durability: "14%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "過熱暴走",
@@ -1145,6 +1438,22 @@ const characterList = [
     attribute: attribute.light,
     particle: particle.triangle,
     source: [characterSource.store],
+    basic: {
+      ATK: "126",
+      DEF: "76",
+      HP: "460",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "3%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "危險鳐魚",
@@ -1204,6 +1513,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.money],
+    basic: {
+      ATK: "145",
+      DEF: "60",
+      HP: "373",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "雙子爆彈",
@@ -1263,6 +1588,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "109",
+      DEF: "42",
+      HP: "312",
+      Penetration: "7%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "意外底牌",
@@ -1322,6 +1663,22 @@ const characterList = [
     attribute: attribute.dark,
     particle: particle.triangle,
     source: [characterSource.money],
+    basic: {
+      ATK: "158",
+      DEF: "60",
+      HP: "359",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "猩紅終結",
@@ -1381,6 +1738,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.store],
+    basic: {
+      ATK: "157",
+      DEF: "56",
+      HP: "437",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "5%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "森羅門扉",
@@ -1440,6 +1813,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "94",
+      DEF: "50",
+      HP: "347",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "7%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "時間洪流",
@@ -1499,6 +1888,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "68",
+      DEF: "41",
+      HP: "305",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "4%"
+    },
     skills: {
       Sp: {
         name: "紙中城堡",
@@ -1558,6 +1963,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.summon, characterSource.money],
+    basic: {
+      ATK: "144",
+      DEF: "63",
+      HP: "477",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "7%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "心動四連拍",
@@ -1617,6 +2038,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "128",
+      DEF: "83",
+      HP: "509",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "不滅紅蓮",
@@ -1676,6 +2113,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "84",
+      DEF: "54",
+      HP: "385",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "7%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "激雷破",
@@ -1735,6 +2188,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "66",
+      DEF: "42",
+      HP: "305",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "謝幕",
@@ -1794,6 +2263,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "85",
+      DEF: "53",
+      HP: "385",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "暴亂手術",
@@ -1853,6 +2338,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "118",
+      DEF: "42",
+      HP: "304",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "赤封淬煉",
@@ -1912,6 +2413,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "92",
+      DEF: "34",
+      HP: "208",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "幽明有儀",
@@ -1971,6 +2488,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "116",
+      DEF: "43",
+      HP: "269",
+      Penetration: "10%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "旋風波紋斬",
@@ -2030,6 +2563,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "161",
+      DEF: "60",
+      HP: "359",
+      Penetration: "7%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "正義降臨",
@@ -2089,6 +2638,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "68",
+      DEF: "51",
+      HP: "253",
+      Penetration: "0%",
+      Durability: "27%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "噗噗超壓擊",
@@ -2148,6 +2713,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "119",
+      DEF: "71",
+      HP: "501",
+      Penetration: "0%",
+      Durability: "15%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "3%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "急急律令",
@@ -2207,6 +2788,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "86",
+      DEF: "53",
+      HP: "368",
+      Penetration: "0%",
+      Durability: "27%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "7%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "一起吃吧！",
@@ -2266,6 +2863,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "85",
+      DEF: "54",
+      HP: "368",
+      Penetration: "0%",
+      Durability: "27%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "鴨鴨衝鋒",
@@ -2325,6 +2938,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "157",
+      DEF: "60",
+      HP: "359",
+      Penetration: "7%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "5%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "七號冰模效",
@@ -2384,6 +3013,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "96",
+      DEF: "53",
+      HP: "323",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "飛躍風雪",
@@ -2443,6 +3088,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "107",
+      DEF: "43",
+      HP: "266",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "7%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "情緒奪取",
@@ -2502,6 +3163,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "161",
+      DEF: "58",
+      HP: "406",
+      Penetration: "0%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "指令：銷毀",
@@ -2561,6 +3238,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "121",
+      DEF: "42",
+      HP: "295",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "決勝之念",
@@ -2620,6 +3313,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "94",
+      DEF: "34",
+      HP: "232",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "全體清掃",
@@ -2679,6 +3388,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "145",
+      DEF: "61",
+      HP: "359",
+      Penetration: "14%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "15%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "熾熱樂章",
@@ -2738,6 +3463,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "154",
+      DEF: "60",
+      HP: "363",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "3%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "終末強襲",
@@ -2797,6 +3538,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.summon, characterSource.signin],
+    basic: {
+      ATK: "129",
+      DEF: "66",
+      HP: "471",
+      Penetration: "0%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "10%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "凜夜極冰",
@@ -2856,6 +3613,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "96",
+      DEF: "48",
+      HP: "347",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "7%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "折光逐影",
@@ -2915,6 +3688,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "96",
+      DEF: "48",
+      HP: "347",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "8%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "7%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "暴走助理",
@@ -2974,6 +3763,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "157",
+      DEF: "60",
+      HP: "359",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "125%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "赤焰沖宵",
@@ -3033,6 +3838,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "115",
+      DEF: "43",
+      HP: "269",
+      Penetration: "7%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "揮毫潑墨",
@@ -3092,6 +3913,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "157",
+      DEF: "60",
+      HP: "366",
+      Penetration: "10%",
+      Durability: "0%",
+      CRIT_Rate: "3%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "7%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "傘舞縈回",
@@ -3151,6 +3988,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.summon, characterSource.signin],
+    basic: {
+      ATK: "93",
+      DEF: "48",
+      HP: "357",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "7%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "化雲煙",
@@ -3210,6 +4063,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "157",
+      DEF: "67",
+      HP: "366",
+      Penetration: "10%",
+      Durability: "0%",
+      CRIT_Rate: "3%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "湮宇重火",
@@ -3269,6 +4138,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.square,
     source: [characterSource.summon],
+    basic: {
+      ATK: "116",
+      DEF: "73",
+      HP: "519",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "5%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "不墜誓約",
@@ -3328,6 +4213,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.triangle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "162",
+      DEF: "56",
+      HP: "385",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "沙蛇狂舞",
@@ -3387,6 +4288,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "161",
+      DEF: "60",
+      HP: "359",
+      Penetration: "10%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "地脈撼動",
@@ -3446,6 +4363,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.square,
     source: [characterSource.summon],
+    basic: {
+      ATK: "154",
+      DEF: "56",
+      HP: "414",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "125%",
+      CRIT_Rate_RES: "10%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "攝魂奪魄",
@@ -3505,6 +4438,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.star,
     source: [characterSource.summon],
+    basic: {
+      ATK: "154",
+      DEF: "60",
+      HP: "363",
+      Penetration: "14%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "3%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "叫大聲點",
@@ -3564,6 +4513,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.square,
     source: [characterSource.summon],
+    basic: {
+      ATK: "161",
+      DEF: "56",
+      HP: "388",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "終極兔兔連發彈",
@@ -3623,6 +4588,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.square,
     source: [characterSource.summon],
+    basic: {
+      ATK: "153",
+      DEF: "63",
+      HP: "469",
+      Penetration: "7%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "倒鉤射門",
@@ -3682,6 +4663,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "91",
+      DEF: "34",
+      HP: "210",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "噩夢來襲",
@@ -3741,6 +4738,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "83",
+      DEF: "34",
+      HP: "210",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "拔刀相向",
@@ -3800,6 +4813,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "113",
+      DEF: "44",
+      HP: "266",
+      Penetration: "14%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "追魂索命",
@@ -3859,6 +4888,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "92",
+      DEF: "33",
+      HP: "215",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "電玩次元大亂揍",
@@ -3918,6 +4963,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "102",
+      DEF: "52",
+      HP: "269",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "忌日快樂",
@@ -3977,6 +5038,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "116",
+      DEF: "44",
+      HP: "264",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "搖滾熔岩",
@@ -4036,6 +5113,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "119",
+      DEF: "73",
+      HP: "509",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "5%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "謝幕禮",
@@ -4095,6 +5188,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "116",
+      DEF: "43",
+      HP: "266",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "3%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "胡蘿蔔流星",
@@ -4154,6 +5263,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "118",
+      DEF: "44",
+      HP: "260",
+      Penetration: "10%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "125%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "天崩地裂",
@@ -4213,6 +5338,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "107",
+      DEF: "43",
+      HP: "266",
+      Penetration: "14%",
+      Durability: "14%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "暗殺領域",
@@ -4272,6 +5413,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "85",
+      DEF: "68",
+      HP: "326",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "10%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "無私守護",
@@ -4331,6 +5488,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "86",
+      DEF: "54",
+      HP: "378",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "美夢成真",
@@ -4390,6 +5563,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "84",
+      DEF: "68",
+      HP: "368",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "神聖獻祭",
@@ -4450,6 +5639,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "116",
+      DEF: "43",
+      HP: "269",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "具現狂想",
@@ -4509,6 +5714,22 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "105",
+      DEF: "44",
+      HP: "269",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "8%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "全盤支持",
@@ -4568,6 +5789,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "93",
+      DEF: "34",
+      HP: "208",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "千鈞降臨",
@@ -4627,6 +5864,22 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "85",
+      DEF: "33",
+      HP: "210",
+      Penetration: "10%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "不得違誤",
@@ -4686,6 +5939,22 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.circle,
     source: [characterSource.summon],
+    basic: {
+      ATK: "116",
+      DEF: "43",
+      HP: "264",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "5%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
         name: "恐慌沸騰",
