@@ -110,8 +110,7 @@
 
         <!-- rarity -->
         <span
-          class="float-right text-h5 font-italic font-weight-black"
-          :class="`text-${character.rarity.textColor}`"
+          class="float-right"
         >
           <v-img
             width="70px"
