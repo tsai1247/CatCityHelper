@@ -157,7 +157,7 @@
                 :data="character.basic">
               </character-basic-values>
               <div v-else>
-                <h2 :style="{textAlign: 'center'}" class="ma-5">數值未知</h2>
+                <h2 :style="{textAlign: 'center'}" class="ma-5">基礎數值未知</h2>
               </div>
 
               <!-- skill view -->
