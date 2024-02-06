@@ -78,7 +78,13 @@
               density="compact"
               :class="`text-${item.color}`"
             >
-              <v-icon>mdi-circle-slice-8</v-icon>
+              <v-icon size="x-large"
+                >
+                <v-img
+                  :src="item.icon"
+                >
+                </v-img>
+              </v-icon>
             </v-btn>
           </v-btn-toggle>
         </v-col>
@@ -94,7 +100,13 @@
               :key="item.id"
               density="compact"
             >
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon size="x-large"
+                >
+                <v-img
+                  :src="item.icon"
+                >
+                </v-img>
+              </v-icon>
             </v-btn>
           </v-btn-toggle>
         </v-col>
@@ -110,7 +122,12 @@
             :key="index"
             :class="`text-${item.color}`"
             >
-            {{ getObjKeys(rarityEnum, item) }}
+              <v-img
+                width="45px"
+                height="30px"
+                :src="item.icon"
+              >
+              </v-img>
             </v-btn>
           </v-btn-toggle>
         </v-col>
@@ -121,16 +138,15 @@
 
 <script setup>
   import { onMounted, ref, watch } from 'vue';
-  import enumRelated from '@/common/scriptFile/enumRelated'
-  import commonEnum from '@/common/scriptFile/commonEnum'
+  import commonEnum from '@/common/commonEnum'
+  import nounDescription from '@/common/nounDescription';
 
   const emits = defineEmits(['filter'])
 
   const rarityEnum = commonEnum.rarity;
   const attributeEnum = commonEnum.attribute;
   const particleEnum = commonEnum.particle;
-  const getObjKeys = enumRelated.getObjKeys;
-  const skillDescription = commonEnum.skillDescription;
+  const skillDescription = nounDescription.skillDescription;
 
 
   const rarityFilter = ref([0, 1, 2]);

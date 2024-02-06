@@ -8,18 +8,31 @@
             class="ma-2"
             width="140px"
             height="180px"
-            :image="`${characterImages[character.subname]}`"
             theme="dark">
-
+              <template v-slot:image>
+                <v-img
+                  cover
+                  dark
+                  :style="{opacity: 0.4}"
+                  :src="characterImages[character.subname]">
+                </v-img>
+              </template>
               <template v-slot:title>
-                <span :class="character.name.length < 4 ? 'text-h5' : 'text-subtitle-1'">
-                  {{ character.name }}
-                </span>
-                <span
-                  class="float-right ma-1 text-subtitle-2 font-italic font-weight-black"
-                  :class="`text-${character.rarity.textColor}`">
-                  {{ character.rarity.name }}
-                </span>
+                <v-row>
+                  <v-col cols="8">
+                    <span :class="character.name.length < 4 ? 'text-h5' : 'text-h6'">
+                      {{ character.name }}
+                    </span>
+                  </v-col>
+
+                  <v-col cols="4">
+                    <span
+                      class="float-right mr-1 text-subtitle-2 font-italic font-weight-black"
+                      :class="`text-${character.rarity.textColor}`">
+                      {{ character.rarity.name }}
+                    </span>
+                  </v-col>
+                </v-row>
               </template>
 
               <v-card-text>

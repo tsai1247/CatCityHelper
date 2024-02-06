@@ -1,5 +1,9 @@
 const bookVersionList = [
   {
+    "version": "1.4.1.0",
+    "description": "新增三張已實裝角色圖片；新增版本歷史；新增原生屬性/粒子/稀有度icon；修正卡片稀有度跑版；修正手機版無法紀錄星數的問題；其他版面優化"
+  },
+  {
     "version": "1.4.0.0",
     "description": "包含貓之城1.4版本前半實機內容，但圖片還沒抓到"
   },
@@ -9,7 +13,7 @@ const bookVersionList = [
   },
   {
     "version": "~",
-    "decription": "在此之前未受版本紀錄"
+    "description": "在此之前未受版本紀錄"
   },
 ]
 
