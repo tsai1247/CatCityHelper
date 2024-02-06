@@ -205,7 +205,7 @@
     }
     const info = JSON.parse(localStorage.stars);
     starNum.value = info[props.character?.subname] ?? 0;
-  })
+  }, {immediate: true})
 
   const innerHeight = computed(() => window.innerHeight)
 
