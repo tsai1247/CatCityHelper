@@ -311,10 +311,10 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.star,
     source: [characterSource.specialSummon],
-    basic: { // unconfirmed
-      ATK: "204",
-      DEF: "77",
-      HP: "443",
+    basic: {
+      ATK: "161",
+      DEF: "60",
+      HP: "340",
       Penetration: "3%",
       Durability: "0%",
       CRIT_Rate: "8%",
