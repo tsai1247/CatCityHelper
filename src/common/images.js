@@ -77,6 +77,7 @@ import 浮世謠 from "../assets/浮世謠.jpg"
 import 菡萏曲 from "../assets/菡萏曲.jpg"
 import 並蒂蓮 from "../assets/並蒂蓮.jpg"
 import 月朧吟 from "../assets/月朧吟.jpg"
+import 心動季節 from "../assets/心動季節.jpg"
 
 const characterImages = {
   AI助理,
@@ -158,6 +159,7 @@ const characterImages = {
   菡萏曲,
   並蒂蓮,
   月朧吟,
+  心動季節,
 }
 
 export default {
