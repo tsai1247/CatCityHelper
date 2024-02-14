@@ -71,6 +71,7 @@
           <v-btn-toggle
             v-model="attributeFilter"
             dark
+            variant="outlined" divided
             multiple>
             <v-btn v-for="(item) in attributeEnum"
               @click="filter"
@@ -94,6 +95,7 @@
           <v-btn-toggle
             v-model="particleFilter"
             dark
+            variant="outlined" divided
             multiple>
             <v-btn v-for="(item) in particleEnum"
               @click="filter"
@@ -116,6 +118,7 @@
           <v-btn-toggle
             v-model="rarityFilter"
             dark
+            variant="outlined" divided
             multiple>
             <v-btn v-for="(item, index) in rarityEnum"
             @click="filter"
