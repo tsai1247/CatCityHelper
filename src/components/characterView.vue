@@ -26,8 +26,8 @@
 
       <!-- character info for mobile -->
       <v-dialog v-if="isMobile" v-model="characterInfoDialog"
-        width="80%" height="100%"
-        scrollable persistent
+        width="100%" height="100%"
+        scrollable
       >
         <template v-slot:default>
           <character-info :character="selectedCharacter" v-on:close-dialog="characterSelected(null)"></character-info>

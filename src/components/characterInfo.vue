@@ -111,9 +111,10 @@
         <!-- rarity -->
         <span
           class="float-right"
+          :style="{position: 'sticky', top: '0px', right: '0px'}"
         >
           <v-img
-            width="70px"
+            width="50px"
             :src="character.rarity.icon"
           >
           </v-img>
