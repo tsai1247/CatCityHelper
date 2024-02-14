@@ -49,7 +49,7 @@ import { computed } from "vue";
   }
 
   const headers = [
-    { title: '版本號', value: 'version', width: '25%' },
+    { title: '版本號', value: 'version', width: '115px' },
     { title: '詳細資訊', value: 'description', width: 'auto'},
   ]
 
