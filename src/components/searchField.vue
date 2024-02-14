@@ -149,9 +149,9 @@
   const skillDescription = nounDescription.skillDescription;
 
 
-  const rarityFilter = ref([0, 1, 2]);
-  const attributeFilter = ref([0, 1, 2, 3, 4]);
-  const particleFilter = ref([0, 1, 2, 3]);
+  const attributeFilter = ref([]);
+  const particleFilter = ref([]);
+  const rarityFilter = ref([]);
 
   const nameKeyword = ref("");
   const skillKeyword = ref("");

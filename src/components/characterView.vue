@@ -50,9 +50,9 @@
     characterList.value = character.filter(
       (item) => {
         const results = [
-          item.rarity === null || rarityFilter.find(rarity => item.rarity?.id === rarity) !== undefined,
-          item.attribute === null || attributeFilter.find((attribute) => item.attribute?.id === attribute)  !== undefined,
-          item.particle === null || particleFilter.find((particle) => item.particle?.id === particle)  !== undefined,
+          item.rarity === null || rarityFilter.length === 0 || rarityFilter.find(rarity => item.rarity?.id === rarity) !== undefined,
+          item.attribute === null || attributeFilter.length === 0 || attributeFilter.find((attribute) => item.attribute?.id === attribute)  !== undefined,
+          item.particle === null || particleFilter.length === 0 || particleFilter.find((particle) => item.particle?.id === particle)  !== undefined,
         ];
 
         return results.reduce(
