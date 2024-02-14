@@ -71,6 +71,7 @@
           <v-btn-toggle
             v-model="attributeFilter"
             dark
+            variant="outlined" divided
             multiple>
             <v-btn v-for="(item) in attributeEnum"
               @click="filter"
@@ -94,6 +95,7 @@
           <v-btn-toggle
             v-model="particleFilter"
             dark
+            variant="outlined" divided
             multiple>
             <v-btn v-for="(item) in particleEnum"
               @click="filter"
@@ -116,6 +118,7 @@
           <v-btn-toggle
             v-model="rarityFilter"
             dark
+            variant="outlined" divided
             multiple>
             <v-btn v-for="(item, index) in rarityEnum"
             @click="filter"
@@ -149,9 +152,9 @@
   const skillDescription = nounDescription.skillDescription;
 
 
-  const rarityFilter = ref([0, 1, 2]);
-  const attributeFilter = ref([0, 1, 2, 3, 4]);
-  const particleFilter = ref([0, 1, 2, 3]);
+  const attributeFilter = ref([]);
+  const particleFilter = ref([]);
+  const rarityFilter = ref([]);
 
   const nameKeyword = ref("");
   const skillKeyword = ref("");
