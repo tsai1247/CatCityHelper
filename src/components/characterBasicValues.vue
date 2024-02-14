@@ -33,47 +33,47 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue"
-import commonEnum from "@/common/commonEnum"
+  import { ref, watch } from "vue"
+  import commonEnum from "@/common/commonEnum"
 
-const props = defineProps({
-  data: Object
-})
+  const props = defineProps({
+    data: Object
+  })
 
-const descriptions = commonEnum.basicValueDescription;
+  const descriptions = commonEnum.basicValueDescription;
 
-// 條列方式
-const isTableView = ref(true);
+  // 條列方式
+  const isTableView = ref(true);
 
-// 是否展開
-const panel = ref(null);
-function changeAlignStyle () {
-  if (panel.value === 0) {
-    isTableView.value = !isTableView.value;
-  }
-}
-
-watch(() => [isTableView.value , panel.value], () => {
-  localStorage.basicValue_isTableView = isTableView.value;
-  localStorage.basicValue_panel = panel.value ?? -1;
-})
-
-watch(() => props.data, () => {
-  if(!localStorage.basicValue_isTableView) {
-    localStorage.basicValue_isTableView = 'true';
-  }
-  if(!localStorage.basicValue_panel) {
-    localStorage.basicValue_panel = '-1';
+  // 是否展開
+  const panel = ref(null);
+  function changeAlignStyle () {
+    if (panel.value === 0) {
+      isTableView.value = !isTableView.value;
+    }
   }
 
-  if (props.data != null) {
-    // 條列方式
-    isTableView.value = localStorage.basicValue_isTableView === 'true';
+  watch(() => [isTableView.value , panel.value], () => {
+    localStorage.basicValue_isTableView = isTableView.value;
+    localStorage.basicValue_panel = panel.value ?? -1;
+  })
 
-    // 是否展開(第0個)panel
-    panel.value = parseInt(localStorage.basicValue_panel);
-  }
-}, {immediate: true})
+  watch(() => props.data, () => {
+    if(!localStorage.basicValue_isTableView) {
+      localStorage.basicValue_isTableView = 'true';
+    }
+    if(!localStorage.basicValue_panel) {
+      localStorage.basicValue_panel = '-1';
+    }
+
+    if (props.data != null) {
+      // 條列方式
+      isTableView.value = localStorage.basicValue_isTableView === 'true';
+
+      // 是否展開(第0個)panel
+      panel.value = parseInt(localStorage.basicValue_panel);
+    }
+  }, {immediate: true})
 
 
 </script>
