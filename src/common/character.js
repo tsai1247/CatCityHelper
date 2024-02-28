@@ -5,6 +5,236 @@ const { characterSource } = enumList;
 const characterList = [
   // new characters
   {
+    name: "米飯",
+    subname: "清平樂",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.circle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "119",
+      DEF: "77",
+      HP: "474",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "10%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "穗愈之歌",
+        description: "對友方全體施加爆擊傷害提升{{}}，持續2回合，並按20%最大生命值對友方全體施加3回合「漸愈」",
+        arguments: [
+          ["20%"],
+          ["28%"],
+          ["32%"],
+          ["36%"],
+        ]
+      },
+      A: {
+        name: "麥浪衝擊",
+        description: "按{{}}最大生命值，攻擊敵方單體，並對敵方攻擊力最高的單位施加2回合「暴露」",
+        arguments: [
+          ["28%"],
+          ["35%"],
+          ["45%"],
+        ]
+      },
+      B: {
+        name: "麥色守護",
+        description: "先驅散目標{{}}層減益效果，再按{{}}最大生命值，治療友方單體",
+        arguments: [
+          ["2", "25%"],
+          ["2", "35%"],
+          ["3", "45%"],
+        ]
+      },
+      Passive: {
+        name: "無微不至",
+        description: "上陣戰鬥員都是紅色情緒時，友方全體每次獲得治療效果，造成最終傷害提升{{}}",
+        arguments: [
+          ["1%"],
+          ["1.3%"],
+          ["1.6%"],
+          ["1.9%"],
+        ]
+      },
+      risingStar: [
+        "每次行動後，依15%最大生命值，治療生命百分比最低的1名友方單位，並驅散目標身上2層減益效果",
+        "",
+        "",
+        "紅色情緒友方每次對「暴露」目標釋放單體攻擊技能後，獲得其自身50%攻擊力的治療效果",
+        "",
+        "戰鬥開始時，提升友方全體15%爆擊傷害，持續2回合，並按14%最大生命值對友方全體施加3回合「漸愈」",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "紅茶",
+    subname: "醉紅塵",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.circle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "157",
+      DEF: "60",
+      HP: "387",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "落花無痕",
+        description: "按{{}}攻擊力，對敵方單體造成「破碎傷害」，獲得1層「強化子彈」",
+        arguments: [
+          ["183%"],
+          ["208%"],
+          ["235%"],
+          ["261%"],
+        ]
+      },
+      A: {
+        name: "花散盡",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並獲得1層「強化子彈」",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "花影舞",
+        description: "{{}}按{{}}攻擊力，對敵方單體造成「破碎傷害」{{}}",
+        arguments: [
+          ["", "85%"],
+          ["", "100%"],
+          ["", "133%"],
+        ],
+        reinforce: [
+          ["強化: ", "95%", "，並對目標施加1層「通緝」"],
+          ["強化: ", "112%", "，並對目標施加1層「通緝」"],
+          ["強化: ", "149%", "，並對目標施加1層「通緝」"],
+        ]
+      },
+      Passive: {
+        name: "凌人之勢",
+        description: "每上陣一名紅色情緒友方，自身攻擊力提升{{}}，可疊加，最高4；釋放奧義技能後，按130%攻擊力，對所有攜帶「通緝」的目標造成一次額外傷害，並消耗目標身上所有「通緝」，傷害提升{{}}",
+        arguments: [
+          ["3%", "20%"],
+          ["4%", "20%"],
+          ["5%", "40%"],
+          ["5.5%", "40%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2層「強化子彈」",
+        "",
+        "",
+        "除“醉紅塵”以外的其他紅色友方，釋放單體攻擊技能後，對目標施加1層「通緝」，每回合至多通過這種方式施加2層「通緝」",
+        "",
+        "每回合首次行動後，按60%攻擊力，對所有攜帶「通緝」的目標造成一次額外傷害",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "紅茶",
+    subname: "花間意",
+    rarity: rarity.SR,
+    attribute: attribute.red,
+    particle: particle.circle,
+    source: [characterSource.event],
+    basic: {
+      ATK: "87",
+      DEF: "61",
+      HP: "374",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "槍林彈雨",
+        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」，並對目標施加1層受到最終傷害提升15%",
+        arguments: [
+          ["179%"],
+          ["190%"],
+          ["206%"],
+          ["223%"],
+        ]
+      },
+      A: {
+        name: "精準射擊",
+        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」",
+        arguments: [
+          ["94%"],
+          ["113%"],
+          ["150%"],
+        ]
+      },
+      B: {
+        name: "槍火洗禮",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並對目標施加1層受到護盾降低20%",
+        arguments: [
+          ["82%"],
+          ["96%"],
+          ["120%"],
+        ]
+      },
+      Passive: {
+        name: "重振旗鼓",
+        description: "僅在PvP模式之外生效，所有粒子型態為「圓振」的友方攻擊力提升{{}}",
+        arguments: [
+          ["7%"],
+          ["8.6%"],
+          ["10.3%"],
+          ["12%"],
+        ]
+      },
+      risingStar: [
+        "",
+        "",
+        "戰鬥開始時，攻擊力提升8%",
+        "",
+        "戰鬥開始時，爆擊率提升6%，穿透率提升4.5%",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "小曼",
     subname: "心動季節",
     rarity: rarity.SSR,
@@ -1101,7 +1331,7 @@ const characterList = [
       },
       B: {
         name: "凜落",
-        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」，並對目標施加1層「易傷」3回合",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「易傷」3回合",
         arguments: [
           ["102%"],
           ["120%"],
@@ -4242,7 +4472,7 @@ const characterList = [
       },
       A: {
         name: "回刃",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，此次傷害額外獲得{{}}「流血」效果",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，此次傷害額外獲得{{}}「吸血」效果",
         arguments: [
           ["90%", "20%"],
           ["122%", "30%"],
