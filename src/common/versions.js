@@ -1,5 +1,9 @@
 const bookVersionList = [
   {
+    "version": "1.5.0.0",
+    "description": "新增三個新角色與技能，圖片尚未新增"
+  },
+  {
     "version": "1.4.2.0",
     "description": "滌蕩者、詭夜霧行角色數值與技能修正；新增心動季節圖片；優化篩選機制-預設為全部不選，與全選的意思一樣；修正部分手機版跑板問題"
   },
@@ -22,6 +26,10 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.5",
+    "description": "夢境奇緣"
+  },
   {
     "version": "1.4",
     "description": "龍貓相遇，雲瑞成雙"
