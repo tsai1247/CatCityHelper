@@ -1,6 +1,13 @@
 <template>
   <!-- Sp -->
   <v-card width="100%" @click="merge">
+    <v-icon
+      v-if="reinforceable"
+      @click.stop="reinforce"
+      class="float-right ma-2"
+    >
+      mdi-swap-horizontal-circle
+    </v-icon>
     <v-row class="ma-1 text-subtitle-1">
 
       <!-- 技能名稱 -->
@@ -72,14 +79,20 @@ import nounDescription from '@/common/nounDescription';
       default: 0
     },
     content: String,
+    reinforceable: Boolean,
   })
 
   const emits = defineEmits([
-    'merge'
+    'merge',
+    'reinforce',
   ])
 
   function merge() {
     emits('merge');
+  }
+
+  function reinforce() {
+    emits('reinforce');
   }
 
   const skillDescription = nounDescription.skillDescription;
