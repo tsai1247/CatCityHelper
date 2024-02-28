@@ -6,7 +6,9 @@
       :name="skills.Sp.name"
       type="Sp奧義技能"
       :content="fillSkillSp"
-      v-on:merge="setStar( ((parseInt((starNum + 1) / 2) + 1)*2-1) % 7 )">
+      v-on:merge="setStar( ((parseInt((starNum + 1) / 2) + 1)*2-1) % 7 )"
+      :reinforceable="skills.Sp.reinforce"
+      v-on:reinforce="reinforceSp = !reinforceSp">
     </character-skill-description>
 
     <!-- A -->
@@ -16,7 +18,9 @@
       type="A技能"
       :rarity="rarityA"
       :content="fillSkillA"
-      v-on:merge="rarityA = (rarityA + 1)%3">
+      v-on:merge="rarityA = (rarityA + 1)%3"
+      :reinforceable="skills.A.reinforce"
+      v-on:reinforce="reinforceA = !reinforceA">
     </character-skill-description>
 
     <!-- B -->
@@ -26,7 +30,9 @@
       type="B技能"
       :rarity="rarityB"
       :content="fillSkillB"
-      v-on:merge="rarityB = (rarityB + 1)%3">
+      v-on:merge="rarityB = (rarityB + 1)%3"
+      :reinforceable="skills.B.reinforce"
+      v-on:reinforce="reinforceB = !reinforceB">
     </character-skill-description>
 
     <!-- Passive -->
@@ -35,7 +41,9 @@
       :name="skills.Passive.name"
       type="被動技能"
       :content="fillSkillPassive"
-      v-on:merge="setStar((parseInt(starNum / 2) + 1)*2 % 8 )">
+      v-on:merge="setStar((parseInt(starNum / 2) + 1)*2 % 8 )"
+      :reinforceable="skills.Passive.reinforce"
+      v-on:reinforce="reinforcePassive = !reinforcePassive">
     </character-skill-description>
 
     <!-- Rising Star -->
@@ -78,35 +86,56 @@
     emits("setStar", starNum);
   }
 
-  const rarityA = ref(0);
-  const rarityB = ref(0);
-
-  const fillSkillA = computed(() => {
-    let index = 0;
-    return props.skills.A.description.replace(
-    /{{}}/g, () => props.skills.A.arguments[rarityA.value][index++]
-    )
-  })
-
-  const fillSkillB = computed(() => {
+  function getNormalSkill(skillinfo, rarity, reinforce = false) {
+    if(reinforce) {
       let index = 0;
-      return props.skills.B.description.replace(
-      /{{}}/g, () => props.skills.B.arguments[rarityB.value][index++]
-    )
+      return skillinfo.description.replace(
+        /{{}}/g, () => skillinfo.reinforce[rarity][index++] || ''
+      )
+    }
+    else {
+      let index = 0;
+      return skillinfo.description.replace(
+        /{{}}/g, () => skillinfo.arguments[rarity][index++] || ''
+      )
+    }
+  }
+
+  const rarityA = ref(0);
+  const reinforceA = ref(false);
+  const fillSkillA = computed(() => {
+    return getNormalSkill(props.skills.A, rarityA.value, reinforceA.value);
   })
 
+  const rarityB = ref(0);
+  const reinforceB = ref(false);
+  const fillSkillB = computed(() => {
+    return getNormalSkill(props.skills.B, rarityB.value, reinforceB.value);
+  })
+
+  function getSpecialSkill(skillinfo, level, reinforce = false) {
+    if(reinforce) {
+      let index = 0;
+      return skillinfo.description.replace(
+        /{{}}/g, () => skillinfo.arguments[parseInt(level)][index++] || ''
+      )
+    }
+    else {
+      let index = 0;
+      return skillinfo.description.replace(
+        /{{}}/g, () => skillinfo.reinforce[parseInt(level)][index++] || ''
+      )
+    }
+  }
+
+  const reinforceSp = ref(false);
   const fillSkillSp = computed(() => {
-    let index = 0;
-    return props.skills.Sp.description.replace(
-      /{{}}/g, () => props.skills.Sp.arguments[parseInt((props.starNum+1)/2)][index++]
-    )
+    return getSpecialSkill(props.skills.Sp, (props.starNum+1)/2, reinforceSp);
   })
 
+  const reinforcePassive = ref(false);
   const fillSkillPassive = computed(() => {
-    let index = 0;
-    return props.skills.Passive.description.replace(
-      /{{}}/g, () => props.skills.Passive.arguments[parseInt((props.starNum)/2)][index++]
-    )
+    return getSpecialSkill(props.skills.Passive, (props.starNum)/2, reinforcePassive);
   })
 
   watch(() => props.skills, () => {
