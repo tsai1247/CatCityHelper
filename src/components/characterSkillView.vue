@@ -3,6 +3,7 @@
     <!-- Sp -->
     <character-skill-description
       v-if="skills.Sp.name"
+      :style="{'background-color': reinforceSp ? '#E6ED02': '#FFFFFF'}"
       :name="skills.Sp.name"
       type="Sp奧義技能"
       :content="fillSkillSp"
@@ -14,6 +15,7 @@
     <!-- A -->
     <character-skill-description
       v-if="skills.A.name"
+      :style="{'background-color': reinforceA ? '#E6ED02': '#FFFFFF'}"
       :name="skills.A.name"
       type="A技能"
       :rarity="rarityA"
@@ -26,6 +28,7 @@
     <!-- B -->
     <character-skill-description
       v-if="skills.B.name"
+      :style="{'background-color': reinforceB ? '#E6ED02': '#FFFFFF'}"
       :name="skills.B.name"
       type="B技能"
       :rarity="rarityB"
@@ -38,6 +41,7 @@
     <!-- Passive -->
     <character-skill-description
       v-if="skills.Passive.name"
+      :style="{'background-color': reinforcePassive ? '#E6ED02': '#FFFFFF'}"
       :name="skills.Passive.name"
       type="被動技能"
       :content="fillSkillPassive"
