@@ -78,6 +78,8 @@ import 菡萏曲 from "../assets/菡萏曲.jpg"
 import 並蒂蓮 from "../assets/並蒂蓮.jpg"
 import 月朧吟 from "../assets/月朧吟.jpg"
 import 心動季節 from "../assets/心動季節.jpg"
+import 醉紅塵 from "../assets/醉紅塵.jpg"
+import 清平樂 from "../assets/清平樂.jpg"
 
 const characterImages = {
   AI助理,
@@ -160,6 +162,8 @@ const characterImages = {
   並蒂蓮,
   月朧吟,
   心動季節,
+  醉紅塵,
+  清平樂,
 }
 
 export default {
