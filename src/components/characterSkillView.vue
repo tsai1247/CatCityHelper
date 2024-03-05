@@ -63,7 +63,7 @@
                   v-bind="props">
                     <span
                       :class="starNum <= index ? '' : 'font-weight-bold'"
-                      :style="{color: starNum <= index ? 'gray' : 'blue'}">
+                      :style="{color: starNum <= index ? 'grey' : 'blue'}">
                       {{ item }}
                     </span>
               </div>
