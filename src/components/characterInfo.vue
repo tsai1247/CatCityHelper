@@ -28,8 +28,7 @@
               </span>
               <span v-else>
                 <v-icon size="x-small"
-                  v-bind="props"
-                  :color="grey-lighten-2">
+                  v-bind="props">
                   mdi-help
                 </v-icon>
               </span>
