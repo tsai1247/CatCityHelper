@@ -11,10 +11,15 @@
             theme="dark">
               <template v-slot:image>
                 <v-img
+                  v-if="characterImages[character.subname]"
                   cover
                   dark
                   :style="{opacity: 0.4}"
                   :src="characterImages[character.subname]">
+                </v-img>
+                <v-img
+                  v-else
+                  :src="characterImages['unknown']">
                 </v-img>
               </template>
               <template v-slot:title>
