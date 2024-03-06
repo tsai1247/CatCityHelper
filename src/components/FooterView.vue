@@ -4,6 +4,7 @@
       <span>貓之城圖鑑版本：</span>
 
       <v-tooltip
+        v-if="bookVersionList[0].title"
         location="top"
       >
         <template v-slot:activator="{ props }">
@@ -13,13 +14,20 @@
             </v-chip>
           </span>
         </template>
-        <span>{{bookVersionList[0].description}}</span>
+        <span>{{bookVersionList[0].title}}</span>
       </v-tooltip>
+
+      <span v-else>
+        <v-chip @click="showVersionDialogWith('貓之城圖鑑版本', bookVersionList)">
+          {{bookVersionList[0].version}}
+        </v-chip>
+      </span>
     </div>
     <div class="mr-3">
       <span>貓之城當前版本：</span>
       <v-tooltip
         location="top"
+        v-if="catCityVersionList[0].title"
       >
         <template v-slot:activator="{ props }">
           <span v-bind="props">
@@ -28,8 +36,14 @@
             </v-chip>
           </span>
         </template>
-        <span>{{catCityVersionList[0].description}}</span>
+        <span>{{catCityVersionList[0].title}}</span>
       </v-tooltip>
+
+      <span v-else>
+        <v-chip @click="showVersionDialogWith('貓之城當前版本', catCityVersionList)">
+          {{catCityVersionList[0].version}}
+        </v-chip>
+      </span>
     </div>
   </v-footer>
   <version-dialog

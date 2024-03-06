@@ -3,7 +3,31 @@ const { rarity, attribute, particle } = enumList;
 const { characterSource } = enumList;
 
 const characterList = [
-  // new characters
+  // newer characters
+  {
+    name: "法夕黛",
+    subname: "指尖芳菲",
+    rarity: rarity.SSR,
+    attribute: attribute.unknown,
+    particle: particle.unknown,
+    source: [characterSource.unknown],
+    skills: {
+      Sp: {
+      },
+      A: {
+      },
+      B: {
+      },
+      Passive: {
+      },
+      risingStar: [
+
+      ]
+    },
+    supporters: [
+
+    ]
+  },
   {
     name: "米飯",
     subname: "清平樂",

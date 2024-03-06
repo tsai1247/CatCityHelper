@@ -52,8 +52,8 @@
 
     <!-- Rising Star -->
     <v-card width="100%" v-for="(item, index) in skills.risingStar" :key="index" @click="setStar(index + 1)">
-      <v-row class="ma-1 text-subtitle-1">
-        <v-col v-if="item">
+      <v-row v-if="item" class="ma-1 text-subtitle-1">
+        <v-col>
 
           <v-tooltip
             location="left"
@@ -63,7 +63,7 @@
                   v-bind="props">
                     <span
                       :class="starNum <= index ? '' : 'font-weight-bold'"
-                      :style="{color: starNum <= index ? 'gray' : 'blue'}">
+                      :style="{color: starNum <= index ? 'grey' : 'blue'}">
                       {{ item }}
                     </span>
               </div>

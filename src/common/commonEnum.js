@@ -82,7 +82,8 @@ const characterSource = {
   "signin": "限時簽到",
   "event": "限時活動",
   "store": "商店",
-  "gift": "兌換碼"
+  "gift": "兌換碼",
+  "unknown": "未知",
 }
 
 const basicValueDescription = {
