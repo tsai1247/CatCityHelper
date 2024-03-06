@@ -1,3 +1,4 @@
+import unknown from "../assets/unknown.png"
 import AI助理 from "../assets/AI助理.jpg"
 import 不思議鴨鴨 from "../assets/不思議鴨鴨.jpg"
 import 修習者 from "../assets/修習者.jpg"
@@ -82,6 +83,7 @@ import 醉紅塵 from "../assets/醉紅塵.jpg"
 import 清平樂 from "../assets/清平樂.jpg"
 
 const characterImages = {
+  unknown,
   AI助理,
   不思議鴨鴨,
   修習者,
