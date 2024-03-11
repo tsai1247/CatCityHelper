@@ -12,8 +12,8 @@
       </v-app-bar>
 
     <v-navigation-drawer expand-on-hover rail permanent>
-      <v-list-item prepend-icon="mdi-account" class="mt-2" title="角色圖鑑" link to="Character"></v-list-item>
-      <v-list-item prepend-icon="mdi-cat" class="mt-2" title="貓球圖鑑" link to="Cato"></v-list-item>
+      <v-list-item prepend-icon="mdi-account" class="mt-2" title="角色圖鑑" link to="/CatCityHelper/Character"></v-list-item>
+      <v-list-item prepend-icon="mdi-cat" class="mt-2" title="貓球圖鑑" link to="/CatCityHelper/Cato"></v-list-item>
     </v-navigation-drawer>
     <v-main>
       <router-view></router-view>
