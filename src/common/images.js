@@ -81,6 +81,7 @@ import 月朧吟 from "../assets/月朧吟.jpg"
 import 心動季節 from "../assets/心動季節.jpg"
 import 醉紅塵 from "../assets/醉紅塵.jpg"
 import 清平樂 from "../assets/清平樂.jpg"
+import 花間意 from "../assets/花間意.jpg"
 
 const characterImages = {
   unknown,
@@ -166,6 +167,7 @@ const characterImages = {
   心動季節,
   醉紅塵,
   清平樂,
+  花間意,
 }
 
 export default {
