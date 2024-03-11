@@ -5,12 +5,12 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
-    name: "法夕黛",
-    subname: "指尖芳菲",
+    name: "祈",
+    subname: "離夢蝶",
     rarity: rarity.SSR,
-    attribute: attribute.unknown,
-    particle: particle.unknown,
-    source: [characterSource.unknown],
+    attribute: attribute.red,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
     skills: {
       Sp: {
       },
@@ -22,6 +22,81 @@ const characterList = [
       },
       risingStar: [
 
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "法夕黛",
+    subname: "指尖芳菲",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.triangle,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "131",
+      DEF: "73",
+      HP: "499",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "大地回春",
+        description: "按{{}}攻擊力治療友方全體，並對友方全體施加2回合「綻放」",
+        arguments: [
+          ["165%"],
+          ["187%"],
+          ["212%"],
+          ["234%"],
+        ]
+      },
+      A: {
+        name: "翠葉光華",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加2回合「花枝」",
+        arguments: [
+          ["80%"],
+          ["100%"],
+          ["120%"],
+        ]
+      },
+      B: {
+        name: "春蕾生息",
+        description: "對友方單體施加2回合「花蕾」",
+        arguments: [
+          [],
+          [],
+          [],
+        ]
+      },
+      Passive: {
+        name: "綻放",
+        description: "所有紅色情緒友方攻擊力提升{{}}",
+        arguments: [
+          ["8.4%"],
+          ["10.3%"],
+          ["12.4%"],
+          ["14.4%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，對攻擊力最高的友方單位施加2回合「花蕾」，效果等同於1星「春蕾生息」技能牌",
+        "",
+        "「綻放」效果提升為：受到敵方攻擊技能牌的攻擊後，若生命值低於40%，則恢復自身30%最大生命值，每回合至多觸發2次",
+        "",
+        "攜帶「花蕾」的友方單位，爆擊傷害提升45%",
+        "",
       ]
     },
     supporters: [
@@ -82,7 +157,7 @@ const characterList = [
       },
       Passive: {
         name: "無微不至",
-        description: "上陣戰鬥員都是紅色情緒時，友方全體每次獲得治療效果，造成最終傷害提升{{}}",
+        description: "上陣戰鬥員都是紅色情緒時，友方全體每次獲得治療效果，造成最終傷害提升{{}}（可疊加，每個技能最多疊加1層，最高10層）",
         arguments: [
           ["1%"],
           ["1.3%"],
