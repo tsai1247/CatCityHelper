@@ -74,12 +74,13 @@ import nounDescription from '@/common/nounDescription';
   const props = defineProps({
     name: String,
     type: String,
+    content: String,
+    reinforceable: Boolean,
     rarity: {
       type: Number,
       default: 0
     },
-    content: String,
-    reinforceable: Boolean,
+    risingStar: Number,
   })
 
   const emits = defineEmits([
@@ -97,13 +98,37 @@ import nounDescription from '@/common/nounDescription';
 
   const skillDescription = nounDescription.skillDescription;
   function getSkillDescription(name) {
-    return skillDescription.find( (item) => item.name === name ) ?? {name, description: "未知技能"}
+    const description = JSON.parse(JSON.stringify(skillDescription.find( (item) => item.name === name ) ?? {name, description: "未知技能"}));
+    if(description.argument) {
+      const status = {risingStar: props.risingStar, rarity: props.rarity};
+      let argument = description.argument.filter(
+        item => {
+          return (item.condition.risingStar === undefined || item.condition.risingStar.includes(status.risingStar))
+              && (item.condition.rarity === undefined || item.condition.rarity.includes(status.rarity))
+        }
+      )
+      .map(item => item.value)
+      .reduce((sum, cur) => {
+        const result = [];
+        cur.forEach((item, index) => {
+          result.push(sum[index] || cur[index]);
+        });
+        return result;
+      });
+
+      let index = 0;
+      description.description = description.description.replace(
+        /{{}}/g, () => argument[index++] || ''
+      );
+    }
+
+    return description;
   }
 
   const header = ref('');
   const contentArray = ref([]);
 
-  watch(() => props.content, () => {
+  watch(() => [props.content, props.risingStar, props.rarity], () => {
     const array = props.content.split(/「|」/);
     header.value = array[0];
     array.splice(0, 1);
