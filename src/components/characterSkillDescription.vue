@@ -42,7 +42,7 @@
               「
               <v-tooltip
                 location="left"
-                v-if="item?.htmlDescription"
+                v-if="item?.htmlDescription || item?.description"
               >
                 <template v-slot:activator="{ props }">
                   <span
@@ -50,7 +50,7 @@
                     {{ item?.name }}
                   </span>
                 </template>
-                <span v-html="item?.htmlDescription"></span>
+                <span v-html="item?.htmlDescription || item?.description"></span>
               </v-tooltip>
               <span v-else>{{ item?.name }}</span>
               」
