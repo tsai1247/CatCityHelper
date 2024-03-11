@@ -5,6 +5,30 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "祈",
+    subname: "離夢蝶",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    skills: {
+      Sp: {
+      },
+      A: {
+      },
+      B: {
+      },
+      Passive: {
+      },
+      risingStar: [
+
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "法夕黛",
     subname: "指尖芳菲",
     rarity: rarity.SSR,
