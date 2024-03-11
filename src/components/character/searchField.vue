@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <!-- search text field -->
-    <v-col cols="10" md="11" >
+    <v-col cols="9" md="10">
       <v-row>
         <!-- character name -->
         <v-col cols="12" :md="isExpanded ? 6 : 12">
@@ -43,7 +43,7 @@
     </v-col>
 
     <!-- expand button -->
-    <v-col cols="2" md="1">
+    <v-col cols="3" md="2">
       <v-tooltip
         location="left"
       >
