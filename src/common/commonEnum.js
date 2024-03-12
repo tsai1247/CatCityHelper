@@ -1,5 +1,7 @@
 import { rarities, attributes, particles } from '@/common/icons'
 
+import { catoTypes } from '@/common/icons'
+
 const rarity = {
   R: {
     id: 0,
@@ -145,10 +147,182 @@ const basicValueDescription = {
   },
 }
 
+const catoType = {
+  active: {
+    attack: {
+      id: 0,
+      icon: catoTypes.activeAttack,
+      name: "主動-攻擊",
+    },
+    defense: {
+      id: 1,
+      icon: catoTypes.activeDefense,
+      name: "主動-防禦",
+    },
+    support: {
+      id: 2,
+      icon: catoTypes.activeSupport,
+      name: "主動-輔助",
+    },
+  },
+  passive: {
+    attack: {
+      id: 3,
+      icon: catoTypes.passiveAttack,
+      name: "被動-攻擊",
+    },
+    defense: {
+      id: 4,
+      icon: catoTypes.passiveDefense,
+      name: "被動-防禦",
+    },
+    support: {
+      id: 5,
+      icon: catoTypes.passiveSupport,
+      name: "被動-輔助",
+    },
+  },
+  other: {
+    business: {
+      id: 6,
+      icon: catoTypes.otherBusiness,
+      name: "其他-經營",
+    }
+  }
+}
+
+const catoStatValue = {
+  "R": {
+    "ATK": {
+      "name": "攻擊力",
+      "key": "ATK",
+      "arguments": [
+        "10",
+        "30",
+        "60",
+        "100",
+        "150",
+        "210",
+        "280"
+      ]
+    },
+    "DEF": {
+      "name": "防禦力",
+      "key": "DEF",
+      "arguments": [
+        "5",
+        "15",
+        "30",
+        "50",
+        "75",
+        "105",
+        "140"
+      ]
+    },
+    "HP": {
+      "name": "生命值",
+      "key": "HP",
+      "arguments": [
+        "30",
+        "90",
+        "180",
+        "300",
+        "450",
+        "630",
+        "840"
+      ]
+    }
+  },
+  "SR": {
+    "ATK": {
+      "name": "攻擊力",
+      "key": "ATK",
+      "arguments": [
+        "15",
+        "45",
+        "90",
+        "150",
+        "225",
+        "315",
+        "420"
+      ]
+    },
+    "DEF": {
+      "name": "防禦力",
+      "key": "DEF",
+      "arguments": [
+        "8",
+        "24",
+        "48",
+        "80",
+        "120",
+        "168",
+        "224"
+      ]
+    },
+    "HP": {
+      "name": "生命值",
+      "key": "HP",
+      "arguments": [
+        "45",
+        "135",
+        "270",
+        "450",
+        "675",
+        "945",
+        "1260"
+      ]
+    }
+  },
+  "SSR": {
+    "ATK": {
+      "name": "攻擊力",
+      "key": "ATK",
+      "arguments": [
+        "20",
+        "60",
+        "120",
+        "200",
+        "300",
+        "420",
+        "560"
+      ]
+    },
+    "DEF": {
+      "name": "防禦力",
+      "key": "DEF",
+      "arguments": [
+        "10",
+        "30",
+        "60",
+        "100",
+        "150",
+        "210",
+        "280"
+      ]
+    },
+    "HP": {
+      "name": "生命值",
+      "key": "HP",
+      "arguments": [
+        "60",
+        "180",
+        "360",
+        "600",
+        "900",
+        "1260",
+        "1680"
+      ]
+    }
+  }
+}
+
 export default {
   rarity,
   attribute,
   particle,
   characterSource,
   basicValueDescription,
+  catoType,
+  catoStatValue
 }
