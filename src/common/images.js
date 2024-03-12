@@ -79,6 +79,73 @@ import 並蒂蓮 from "../assets/並蒂蓮.jpg"
 import 月朧吟 from "../assets/月朧吟.jpg"
 import 心動季節 from "../assets/心動季節.jpg"
 
+
+
+//SSR cato
+import 招財進寶 from "../assets/catoImages/SSR/招財進寶.png"
+import 章魚貓丸 from "../assets/catoImages/SSR/章魚貓丸.png"
+import 武林霸喵 from "../assets/catoImages/SSR/武林霸喵.png"
+import 貓張子 from "../assets/catoImages/SSR/貓張子.png"
+import 珍珠之淚 from "../assets/catoImages/SSR/珍珠之淚.png"
+import 海灣救援 from "../assets/catoImages/SSR/海灣救援.png"
+import 亡靈審判 from "../assets/catoImages/SSR/亡靈審判.png"
+import 災噩避散 from "../assets/catoImages/SSR/災噩避散.png"
+import 喵咪心愛 from "../assets/catoImages/SSR/喵咪心愛.png"
+import 黃金之蜂 from "../assets/catoImages/SSR/黃金之蜂.png"
+import 生煎包包 from "../assets/catoImages/SSR/生煎包包.png"
+import 愛麗喵絲 from "../assets/catoImages/SSR/愛麗喵絲.png"
+import 天籟歌姬 from "../assets/catoImages/SSR/天籟歌姬.png"
+import 千層雪糕 from "../assets/catoImages/SSR/千層雪糕.png"
+import 喵喵甜心 from "../assets/catoImages/SSR/喵喵甜心.png"
+import 血月之殤 from "../assets/catoImages/SSR/血月之殤.png"
+import 冬日雪寶 from "../assets/catoImages/SSR/冬日雪寶.png"
+import 魔法少喵 from "../assets/catoImages/SSR/魔法少喵.png"
+import 西部牛仔 from "../assets/catoImages/SSR/西部牛仔.png"
+import 柴郡貓 from "../assets/catoImages/SSR/柴郡貓.png"
+import 貓形電腦 from "../assets/catoImages/SSR/貓形電腦.png"
+import 貓熊熊貓 from "../assets/catoImages/SSR/貓熊熊貓.png"
+import 不滅之軀 from "../assets/catoImages/SSR/不滅之軀.png"
+import 角黍之祀 from "../assets/catoImages/SSR/角黍之祀.png"
+import 混血王子 from "../assets/catoImages/SSR/混血王子.png"
+import 貓咪教父 from "../assets/catoImages/SSR/貓咪教父.png"
+import 姜餅馴鹿 from "../assets/catoImages/SSR/姜餅馴鹿.png"
+import 貓老大 from "../assets/catoImages/SSR/貓老大.png"
+import 鬼馬精靈 from "../assets/catoImages/SSR/鬼馬精靈.png"
+import 布腦斧 from "../assets/catoImages/SSR/布腦斧.png"
+import 恐龍幼崽 from "../assets/catoImages/SSR/恐龍幼崽.png"
+//SR cato
+import 咪子汽水 from "../assets/catoImages/SR/咪子汽水.png"
+import 福氣包包 from "../assets/catoImages/SR/福氣包包.png"
+import 蔥花蝦餃 from "../assets/catoImages/SR/蔥花蝦餃.png"
+import 歡樂小丑 from "../assets/catoImages/SR/歡樂小丑.png"
+import 努力貓貓 from "../assets/catoImages/SR/努力貓貓.png"
+import 普羅喵斯 from "../assets/catoImages/SR/普羅喵斯.png"
+import 精緻喵喵 from "../assets/catoImages/SR/精緻喵喵.png"
+import 暴躁喵弟 from "../assets/catoImages/SR/暴躁喵弟.png"
+import 草莓奶昔 from "../assets/catoImages/SR/草莓奶昔.png"
+import 芒果布丁 from "../assets/catoImages/SR/芒果布丁.png"
+import 香芋啵啵 from "../assets/catoImages/SR/香芋啵啵.png"
+import 芝麻糊糊 from "../assets/catoImages/SR/芝麻糊糊.png"
+import 迷糊鬼 from "../assets/catoImages/SR/迷糊鬼.png"
+import 貓太狼 from "../assets/catoImages/SR/貓太狼.png"
+import 學無止境 from "../assets/catoImages/SR/學無止境.png"
+import 蒸汽動力 from "../assets/catoImages/SR/蒸汽動力.png"
+import 貓頭鷹貓 from "../assets/catoImages/SR/貓頭鷹貓.png"
+//R cato
+import 心動瞬間 from "../assets/catoImages/R/心動瞬間.png"
+import 紅豆沙 from "../assets/catoImages/R/紅豆沙.png"
+import 呆呆瓜 from "../assets/catoImages/R/呆呆瓜.png"
+import 星星閃爍 from "../assets/catoImages/R/星星閃爍.png"
+import 焦糖布丁 from "../assets/catoImages/R/焦糖布丁.png"
+import 摩卡可可 from "../assets/catoImages/R/摩卡可可.png"
+import 淘氣包 from "../assets/catoImages/R/淘氣包.png"
+import 柳丁汽水 from "../assets/catoImages/R/柳丁汽水.png"
+import 眩暈時刻 from "../assets/catoImages/R/眩暈時刻.png"
+import 夾心餅乾 from "../assets/catoImages/R/夾心餅乾.png"
+import 追星族 from "../assets/catoImages/R/追星族.png"
+import 小可愛 from "../assets/catoImages/R/小可愛.png"
+
+
 const characterImages = {
   AI助理,
   不思議鴨鴨,
@@ -162,6 +229,76 @@ const characterImages = {
   心動季節,
 }
 
+const catoImages = {
+  SSR: {
+    不滅之軀,
+    亡靈審判,
+    冬日雪寶,
+    千層雪糕,
+    喵咪心愛,
+    喵喵甜心,
+    天籟歌姬,
+    姜餅馴鹿,
+    布腦斧,
+    愛麗喵絲,
+    招財進寶,
+    柴郡貓,
+    武林霸喵,
+    海灣救援,
+    混血王子,
+    災噩避散,
+    珍珠之淚,
+    生煎包包,
+    章魚貓丸,
+    血月之殤,
+    西部牛仔,
+    角黍之祀,
+    貓咪教父,
+    貓張子,
+    貓形電腦,
+    貓熊熊貓,
+    貓老大,
+    鬼馬精靈,
+    魔法少喵,
+    黃金之蜂,
+    恐龍幼崽,
+  },
+  SR: {
+    咪子汽水,
+    福氣包包,
+    蔥花蝦餃,
+    歡樂小丑,
+    努力貓貓,
+    普羅喵斯,
+    精緻喵喵,
+    暴躁喵弟,
+    草莓奶昔,
+    芒果布丁,
+    香芋啵啵,
+    芝麻糊糊,
+    迷糊鬼,
+    貓太狼,
+    學無止境,
+    蒸汽動力,
+    貓頭鷹貓,
+  },
+  R: {
+    心動瞬間,
+    紅豆沙,
+    呆呆瓜,
+    星星閃爍,
+    焦糖布丁,
+    摩卡可可,
+    淘氣包,
+    柳丁汽水,
+    眩暈時刻,
+    夾心餅乾,
+    追星族,
+    小可愛,
+  }
+}
+
 export default {
-  characterImages
+  characterImages,
+  catoImages
 }

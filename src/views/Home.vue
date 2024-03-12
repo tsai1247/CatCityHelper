@@ -8,5 +8,4 @@
 import characterView from '@/components/characterView.vue'
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

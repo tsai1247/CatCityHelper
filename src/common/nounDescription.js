@@ -14,7 +14,6 @@ const attack = [
     description: "「破盾傷害」：對擁有護盾的目標的護盾部分造成的傷害提升至3.5倍",
     htmlDescription: "「破盾傷害」：對擁有<b style=\"color: skyblue\">護盾</b>的目標的護盾部分造成的傷害提升至3.5倍",
   },
-
   {
     name: "憤怒傷害",
     description: "「憤怒傷害」：對目標造成傷害時，自身每損失1%最大生命值，傷害提升1%",
@@ -210,6 +209,39 @@ const neutral = [
   },
 ]
 
+const catoEffect = [
+  {
+    name: "神秘學",
+    description: "「神秘學」：回合結束時，按自身最大生命值的一定比例回復生命值",
+    htmlDescription: "「神秘學」：回合結束時，按自身最大生命值的一定比例回復生命值",
+  },
+  {
+    name: "箬葉之護",
+    description: "「箬葉之護」：回合結束時恢復一定生命值",
+    htmlDescription: "「箬葉之護」：回合結束時恢復一定生命值",
+  },
+  {
+    name: "傷害傳遞",
+    description: "「傷害傳遞」：將受到的部分傷害傳遞給其他擁有「傷害傳遞」的目標",
+    htmlDescription: "「傷害傳遞」：將受到的部分傷害傳遞給其他擁有「傷害傳遞」的目標",
+  },
+  {
+    name: "傷害擴散",
+    description: "「傷害擴散」：自身受到的部分傷害會被二次施加給場上的其他角色，後續入場的角色不受影響",
+    htmlDescription: "「傷害擴散」：自身受到的部分傷害會被二次施加給場上的其他角色，後續入場的角色不受影響",
+  },
+  {
+    name: "純粹傷害",
+    description: "「純粹傷害」：只計算攻擊力的固定值傷害",
+    htmlDescription: "「純粹傷害」：只計算攻擊力的固定值傷害",
+  },
+  {
+    name: "真實傷害",
+    description: "「真實傷害」：攻擊時無視目標防禦力",
+    htmlDescription: "「真實傷害」：攻擊時無視目標<b style=\"color: skyblue\">防禦力</b>",
+  },
+]
+
 const skillDescription = [
   ...attack,
   ...buff,
@@ -219,4 +251,5 @@ const skillDescription = [
 
 export default {
   skillDescription,
+  catoEffect
 }
