@@ -4,7 +4,7 @@
         color="primary"
         prominent
       >
-        <v-app-bar-nav-icon variant="text">
+        <v-app-bar-nav-icon variant="text" link to="/CatCityHelper">
           <v-icon>mdi-cat</v-icon>
         </v-app-bar-nav-icon>
         <v-toolbar-title>貓之城圖鑑</v-toolbar-title>
