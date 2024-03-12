@@ -22,10 +22,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-const isShow = ref(false);
-
 </script>
 <style scoped>
 </style>
