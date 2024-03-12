@@ -1,5 +1,15 @@
 const bookVersionList = [
   {
+    "version": "1.5.2.0",
+    "title": "",
+    "description": [
+      "【新增】貓球分頁",
+      "【新增】角色圖片：花間意",
+      "【新增】角色技能與數據：離夢蝶、指尖芳菲",
+      "【修正】清平樂技能敘述",
+    ]
+  },
+  {
     "version": "1.5.1.0",
     "title": "",
     "description": [
