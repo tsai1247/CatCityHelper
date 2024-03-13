@@ -11,17 +11,68 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.square,
     source: [characterSource.specialSummon],
+    basic: {
+      ATK: "131",
+      DEF: "73",
+      HP: "499",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
     skills: {
       Sp: {
+        name: "如夢令",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並對釋放技能前被選為首要目標的敵方單位施加「鎖能」2回合",
+        arguments: [
+          ["191%"],
+          ["218%"],
+          ["246%"],
+          ["272%"],
+        ]
       },
       A: {
+        name: "蝶影閃",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並使目標降低{{}}點奧義能量",
+        arguments: [
+          ["80%", "1"],
+          ["100%", "1"],
+          ["120%", "3"],
+        ]
       },
       B: {
+        name: "夢蝶縛",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「封印」2回合",
+        arguments: [
+          ["102%", "1"],
+          ["120%", "1"],
+          ["150%", "2"],
+        ]
       },
       Passive: {
+        name: "蝶舞之華",
+        description: "友方全體奧義技能造成最終傷害提升{{}}",
+        arguments: [
+          ["14%"],
+          ["16%"],
+          ["18%"],
+          ["20%"],
+        ]
       },
       risingStar: [
-
+        "戰鬥開始時，獲得2點奧義能量",
+        "",
+        "奧義技能施加的「鎖能」持續回合數+1",
+        "",
+        "敵方單位身上的「鎖能」提前結束時，轉化為1層「夢魘」",
+        "",
       ]
     },
     supporters: [
