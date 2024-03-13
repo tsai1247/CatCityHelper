@@ -14,6 +14,14 @@ import SR from "@/assets/icon/rarity-sr.png"
 import SSR from "@/assets/icon/rarity-ssr.png"
 import UR from "@/assets/icon/rarity-ur.png"
 
+import activeAttack from "@/assets/icon/cato-type-active-attack.png"
+import activeDefense from "@/assets/icon/cato-type-active-defense.png"
+import activeSupport from "@/assets/icon/cato-type-active-support.png"
+import passiveAttack from "@/assets/icon/cato-type-passive-attack.png"
+import passiveDefense from "@/assets/icon/cato-type-passive-defense.png"
+import passiveSupport from "@/assets/icon/cato-type-passive-support.png"
+import otherBusiness from "@/assets/icon/cato-type-other-business.png"
+
 const attributes = {
   red,
   green,
@@ -36,8 +44,19 @@ const rarities = {
   UR,
 }
 
+const catoTypes = {
+  activeAttack,
+  activeDefense,
+  activeSupport,
+  passiveAttack,
+  passiveDefense,
+  passiveSupport,
+  otherBusiness,
+}
+
 export {
   attributes,
   particles,
   rarities,
+  catoTypes,
 }
