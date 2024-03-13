@@ -25,8 +25,7 @@
           <span v-for="(item, index) in contentArray" :key="index">
             <!-- B 部分 -->
             <span v-if="index % 2 === 0">
-              「
-              <v-tooltip location="left" v-if="item?.htmlDescription">
+              「<v-tooltip location="left" v-if="item?.htmlDescription">
                 <template v-slot:activator="{ props }">
                   <span v-bind="props">
                     {{ item?.name }}
@@ -34,8 +33,7 @@
                 </template>
                 <span v-html="item?.htmlDescription"></span>
               </v-tooltip>
-              <span v-else>{{ item?.name }}</span>
-              」
+              <span v-else>{{ item?.name }}</span>」
             </span>
             <!-- C 部分 -->
             <span v-else>
@@ -74,7 +72,7 @@ function getNormalSkill(skillinfo, rarity) {
   );
 }
 
-const skillDescription = nounDescription.skillDescription;
+const skillDescription = nounDescription.catoEffect;
 function getSkillDescription(name) {
   return skillDescription.find((item) => item.name === name) ?? { name, htmlDescription: "未知技能" }
 }
