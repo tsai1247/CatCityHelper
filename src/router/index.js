@@ -4,9 +4,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/CatCityHelper',
+    redirect: '/CatCityHelper/Home',  // 當使用者訪問根路徑時，重定向到 /Home
     children: [
       {
-        path: '',
+        path: 'Home',
         name: 'Home',
         component: () => import('@/views/Home.vue'),
       },
@@ -19,6 +20,11 @@ const routes = [
         path: 'Cato',
         name: 'Cato',
         component: () => import('@/components/cato/catoView.vue'),
+      },
+      {
+        path: 'VersionInfo',
+        name: 'VersionInfo',
+        component: () => import('@/components/versioninfo/versionView.vue'),
       },
     ],
   },
