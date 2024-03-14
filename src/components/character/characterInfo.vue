@@ -145,7 +145,7 @@
 
       <v-card-text class="ma-1" >
         <v-virtual-scroll  v-if="character.basic|| character.skills"
-          :height="innerHeight * 0.75"
+          :height="innerHeight * 0.65"
           :items="[1]"
         >
           <template v-slot:default>
