@@ -1,29 +1,29 @@
 // Composables
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory  } from 'vue-router'
 
 const routes = [
   {
-    path: '/CatCityHelper',
-    redirect: '/CatCityHelper/Home',  // 當使用者訪問根路徑時，重定向到 /Home
+    path: '/',
+    redirect: '/Home',  // 當使用者訪問根路徑時，重定向到 /Home
     children: [
       {
-        path: 'Home',
-        name: 'Home',
+        path: '/Home',
+        name: '/Home',
         component: () => import('@/views/Home.vue'),
       },
       {
-        path: 'Character',
-        name: 'Character',
+        path: '/Character',
+        name: '/Character',
         component: () => import('@/components/character/characterView.vue'),
       },
       {
-        path: 'Cato',
-        name: 'Cato',
+        path: '/Cato',
+        name: '/Cato',
         component: () => import('@/components/cato/catoView.vue'),
       },
       {
-        path: 'VersionInfo',
-        name: 'VersionInfo',
+        path: '/VersionInfo',
+        name: '/VersionInfo',
         component: () => import('@/components/versioninfo/versionView.vue'),
       },
     ],
@@ -36,7 +36,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory (process.env.BASE_URL),
   routes,
 })
 
