@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.5.2.1",
+    "title": "",
+    "description": [
+      "【修正】重新整理後會找不到頁面的問題",
+      "【修正】貓球技能說明提示框失效",
+    ]
+  },
+  {
     "version": "1.5.2.0",
     "title": "",
     "description": [
