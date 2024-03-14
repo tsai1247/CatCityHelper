@@ -1,29 +1,40 @@
 <template>
   <div>
-    圖鑑版本資訊
-  <!-- <v-row>
-      <v-col
-        v-for="i in 6"
-        :key="i"
-        cols="12"
-        md="4"
+    <v-expansion-panels>
+      <v-expansion-panel bg-color="lime-lighten-5"
+        v-for="(bookVersion, index) in bookVersionList"
+        :key="index"
       >
-        <v-img
-          :lazy-src="`https://picsum.photos/10/6?image=${i * n * 5 + 10}`"
-          :src="`https://picsum.photos/500/300?image=${i * n * 5 + 10}`"
-          aspect-ratio="1"
-        ></v-img>
-      </v-col>
-    </v-row> -->
+        <v-expansion-panel-title class="text-h6" :style="{userSelect: 'none'}">
+          {{ formattedVersionTitle(bookVersion) }}
+        </v-expansion-panel-title>
+        <v-expansion-panel-text>
+          <div
+            v-for="(description, index) in bookVersion.description"
+            :key=index
+          >
+            {{ description }}
+          </div>
+        </v-expansion-panel-text>
+      </v-expansion-panel>
+    </v-expansion-panels>
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import version from '@/common/versions'
+const bookVersionList = version.bookVersionList;
 
+function formattedVersionTitle(bookVersion) {
+  const { version, title } = bookVersion;
+  if(version) {
+    return `v${version} ${title}`;
+  }
+  return title;
 }
+
 </script>
 
-<style>
+<style scoped>
 
 </style>
