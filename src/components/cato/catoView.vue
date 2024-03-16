@@ -13,8 +13,6 @@
             </v-col>
           </v-row>
 
-          <!-- info version -->
-          <footer-view></footer-view>
         </v-col>
 
         <!-- cato info -->
@@ -39,7 +37,6 @@ import cato from '@/common/cato';
 import catoInfo from "./catoInfo.vue"
 import catoCard from "./catoCard.vue"
 import catoSearchField from './catoSearchField.vue';
-import footerView from '@/components/FooterView.vue'
 
 const catoList = ref(cato);
 function filter(nameKeyword, skillKeyword, catoTypeFilter, rarityFilter) {
