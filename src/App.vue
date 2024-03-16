@@ -4,7 +4,7 @@
         color="primary"
         prominent
       >
-        <v-app-bar-nav-icon variant="text" @click.stop="isexpended = !isexpended"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon variant="text" @click.stop="expendSideBar"></v-app-bar-nav-icon>
         <v-toolbar-title>貓之城圖鑑</v-toolbar-title>
         <v-spacer></v-spacer>
       </v-app-bar>
@@ -46,7 +46,11 @@ const catCityVersionList = version.catCityVersionList;
 const latestBookVersion = computed(() => bookVersionList[0].version);
 const latestCatCityVersion = computed(() => catCityVersionList[0].version);
 
-const isexpended = ref(false);
+const isexpended = ref(localStorage.sidebarexpended && localStorage.sidebarexpended === 'true');
+function expendSideBar() {
+  isexpended.value = !isexpended.value;
+  localStorage.sidebarexpended = isexpended.value;
+}
 
 </script>
 <style scoped>
