@@ -5,7 +5,9 @@
         <v-col>
           <v-card class="ma-2" width="140px" height="140px" theme="dark">
             <template v-slot:image>
-              <v-img cover dark :style="{ opacity: 0.4 }" :src="catoImages[cato.rarity.name][cato.name]">
+              <v-img cover dark :style="{ opacity: 0.4 }"
+                :src="catoImages[cato.rarity.name][cato.name]"
+                :lazy-src="lazyCatoImages[cato.rarity.name][cato.name]">
               </v-img>
             </template>
             <template v-slot:title>
@@ -33,7 +35,8 @@
 <script setup>
 import images from "@/common/images";
 
-const { catoImages } = images;
+const catoImages = images.catoImages.normal;
+const lazyCatoImages = images.catoImages.lazy;
 
 defineProps({
   cato: Object
