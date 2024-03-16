@@ -27,6 +27,10 @@
       </template>
     </v-navigation-drawer>
     <v-main>
+      <new-version-dialog
+        :latestBookVersion="bookVersionList[0]"
+      >
+      </new-version-dialog>
       <router-view></router-view>
     </v-main>
   </v-app>
@@ -35,6 +39,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import version from '@/common/versions'
+import newVersionDialog from '@/components/newVersionDialog.vue'
 
 const bookVersionList = version.bookVersionList;
 const catCityVersionList = version.catCityVersionList;
