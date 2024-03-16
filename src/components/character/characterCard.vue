@@ -19,7 +19,7 @@
                 </v-img>
                 <v-img
                   v-else
-                  :src="characterImages['unknown']">
+                  :src="unknownImage">
                 </v-img>
               </template>
               <template v-slot:title>
@@ -56,6 +56,7 @@
   import images from "@/common/images";
 
   const { characterImages } = images;
+  const { unknown: unknownImage } = images;
 
   defineProps({
     character: Object

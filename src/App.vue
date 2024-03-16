@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
+import { ref, computed } from 'vue';
 import version from '@/common/versions'
 
 const bookVersionList = version.bookVersionList;
@@ -42,9 +42,6 @@ const latestBookVersion = computed(() => bookVersionList[0].version);
 const latestCatCityVersion = computed(() => catCityVersionList[0].version);
 
 const isexpended = ref(false);
-watch(() => isexpended, () => {
-  console.log(isexpended.value);
-});
 
 </script>
 <style scoped>
