@@ -11,7 +11,7 @@
             theme="dark">
               <template v-slot:image>
                 <v-img
-                  v-if="characterImages[character.subname]"
+                  v-if="characterImages[character.subname] !== null"
                   cover
                   dark
                   :style="{opacity: 0.4}"
