@@ -3,7 +3,7 @@ import lazyUnknown from "../assets/lazyUnknown.png"
 
 function getImageDictionary(folder) {
   return folder.reduce((dict, image) => {
-    const key = image.slice(Math.min(image.length, image.lastIndexOf('/') + 1), image.indexOf('.'))
+    const key = image.slice(Math.min(image.length, image.lastIndexOf('/') + 1), image.indexOf('.')).split('-')[0]
     return {...dict, [key]: image};
   }, {});
 }
