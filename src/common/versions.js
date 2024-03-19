@@ -1,5 +1,15 @@
 const bookVersionList = [
   {
+    "version": "1.5.3.0",
+    "title": "",
+    "description": [
+      "【新增】版本資訊頁面",
+      "【新增】角色圖片：指尖芳菲、離夢蝶",
+      "【新增】版本更新提示(就是這裡)",
+      "【優化】角色圖片載入更加流暢了",
+    ]
+  },
+  {
     "version": "1.5.2.1",
     "title": "",
     "description": [

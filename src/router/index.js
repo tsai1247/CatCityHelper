@@ -21,6 +21,11 @@ const routes = [
         name: '/Cato',
         component: () => import('@/components/cato/catoView.vue'),
       },
+      {
+        path: '/VersionInfo',
+        name: '/VersionInfo',
+        component: () => import('@/components/versioninfo/versionView.vue'),
+      },
     ],
   },
   {
