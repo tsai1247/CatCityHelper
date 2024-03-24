@@ -9,7 +9,8 @@
         <v-spacer></v-spacer>
       </v-app-bar>
 
-    <v-navigation-drawer :rail="isexpanded" expand-on-hover permanents>
+    <v-navigation-drawer
+        v-model="isexpanded" permanents>
       <v-list-item prepend-icon="mdi-home" class="mt-2" title="首頁" link to="/Home"></v-list-item>
       <v-list-item prepend-icon="mdi-account" class="mt-2" title="角色圖鑑" link to="/Character"></v-list-item>
       <v-list-item prepend-icon="mdi-cat" class="mt-2" title="貓球圖鑑" link to="/Cato"></v-list-item>
