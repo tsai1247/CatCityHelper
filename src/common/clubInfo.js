@@ -1,3 +1,6 @@
+import enumList from "./commonEnum";
+const { attribute } = enumList;
+
 const clubInfo = [
   {
     no: 7,
@@ -9,6 +12,7 @@ const clubInfo = [
       red: {
         title: "一般討伐",
         name: "厄運轉輪",
+        attribute: attribute.red,
         skills: {
           Sp: "按176%攻擊力，對敵方單體造成傷害，並對目標施加「恐懼」3回合",
           Active: [
@@ -30,6 +34,7 @@ const clubInfo = [
       green: {
         title: "一般討伐",
         name: "警覺鍵盤鹿",
+        attribute: attribute.green,
         skills: {
           Sp: "按126%攻擊力，對敵方全體造成「弱點傷害」",
           Active: [
@@ -52,6 +57,7 @@ const clubInfo = [
       blue: {
         title: "一般討伐",
         name: "怪鳥時鐘",
+        attribute: attribute.blue,
         skills: {
           Sp: "按207%攻擊力，對敵方單體造成傷害",
           Active: [
@@ -73,6 +79,7 @@ const clubInfo = [
       white: {
         title: "特級討伐",
         name: "躁狂遊戲機",
+        attribute: attribute.light,
         skills: {
           Sp: "按141%攻擊力，對全體造成「爆裂傷害」",
           Active: [
