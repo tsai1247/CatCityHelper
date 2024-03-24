@@ -22,6 +22,11 @@ const routes = [
         component: () => import('@/components/cato/catoView.vue'),
       },
       {
+        path: '/Club',
+        name: '/Club',
+        component: () => import('@/components/club/clubView.vue'),
+      },
+      {
         path: '/VersionInfo',
         name: '/VersionInfo',
         component: () => import('@/components/versioninfo/versionView.vue'),

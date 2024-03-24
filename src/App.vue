@@ -13,6 +13,7 @@
       <v-list-item prepend-icon="mdi-home" class="mt-2" title="首頁" link to="/Home"></v-list-item>
       <v-list-item prepend-icon="mdi-account" class="mt-2" title="角色圖鑑" link to="/Character"></v-list-item>
       <v-list-item prepend-icon="mdi-cat" class="mt-2" title="貓球圖鑑" link to="/Cato"></v-list-item>
+      <v-list-item prepend-icon="mdi-home-group" class="mt-2" title="社團特訓" link to="/Club"></v-list-item>
       <v-list-item prepend-icon="mdi-history" class="mt-2" title="版本詳細資訊" link to="/VersionInfo"></v-list-item>
       <template v-slot:append>
         <div class="pa-2">
