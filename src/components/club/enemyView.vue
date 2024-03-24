@@ -13,6 +13,16 @@
             :src="enemyImages[enemy.name]"
             :lazy-src="enemyImages[enemy.name]"
           >
+            <v-btn
+              width="100%"
+              height="100%"
+              icon
+              flat
+              class="transparent-button"
+              @click="showDamageCalculatorDialog = true"
+            >
+              <v-icon class="icon-size">mdi-sword-cross</v-icon>
+            </v-btn>
           </v-img>
         </div>
 
@@ -30,12 +40,20 @@
         </v-data-table>
       </v-col>
     </v-row>
+    <damage-calculator-dialog
+      :showDialog="showDamageCalculatorDialog"
+      :enemy="enemy"
+      v-on:close="showDamageCalculatorDialog = false"
+    >
+    </damage-calculator-dialog>
   </div>
 </template>
 
 <script setup>
 import images from '@/common/images';
 import { ref, computed } from 'vue';
+import damageCalculatorDialog from './damageCalculatorDialog.vue';
+import enemyValueRelated from './enemyValueRelated';
 
 const props = defineProps({
   enemy: Object,
@@ -43,25 +61,18 @@ const props = defineProps({
 })
 
 const enemyImages = images.enemyImages;
-
-const roundValue = computed(() => {
-  const computedRound = parseInt(props.round);
-  if(isNaN(computedRound)) {
-    return 1;
-  }
-  return computedRound;
-});
+const { getEnemyValue } = enemyValueRelated;
 
 const HP = computed(() => {
-  return props.enemy.basicValues.HP + props.enemy.delta.HP * (roundValue.value - 1);
+  return getEnemyValue(props.enemy.basicValues.HP, props.enemy.delta.HP, props.round);
 });
 
 const ATK = computed(() => {
-  return props.enemy.basicValues.ATK + props.enemy.delta.ATK * (roundValue.value - 1);
+  return getEnemyValue(props.enemy.basicValues.ATK, props.enemy.delta.ATK, props.round);
 });
 
 const DEF = computed(() => {
-  return props.enemy.basicValues.DEF + props.enemy.delta.DEF * (roundValue.value - 1);
+  return getEnemyValue(props.enemy.basicValues.DEF, props.enemy.delta.DEF, props.round);
 });
 
 
@@ -103,8 +114,24 @@ const centerStyle = ref({
   display: 'flex', justifyContent: 'center'
 })
 
+const showDamageCalculatorDialog = ref(false);
+
 </script>
 
 <style>
+.transparent-button {
+  color: transparent; /* 默认图标颜色 */
+  background-color: transparent !important; /* 默认背景色透明 */
+}
+
+.transparent-button:hover {
+  background-color: transparent !important; /* 鼠标悬停时背景变为白色 */
+  color: gray !important; /* 可选：如果你想在悬停时改变图标或文字颜色 */
+}
+
+/* 调整图标大小，尽可能填满按钮 */
+.icon-size {
+  font-size: 6rem; /* 根据实际情况调整图标的大小 */
+}
 
 </style>
