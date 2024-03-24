@@ -59,6 +59,11 @@ const attack = [
     description: "「追擊」：對隨機敵方目標造成指定卡牌的效果",
   },
 
+  {
+    name: "弱點傷害",
+    description: "「弱點傷害」：對目標造成傷害時，目標每有1層減益效果，傷害提升30%",
+  }
+
 ]
 
 const buff = [
@@ -205,6 +210,10 @@ const debuff = [
   {
     name: "夢魘",
     description: "「夢魘」：回合結束時，損失1點奧義能量，生效後消失"
+  },
+  {
+    name: "鏽刃",
+    description: "「鏽刃」：降低目標10%攻擊力（可疊加，最高6層）"
   },
   ...control,
 ]
