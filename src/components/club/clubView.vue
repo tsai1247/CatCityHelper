@@ -28,14 +28,14 @@
     </div>
     <div v-if="event" class="ml-2 mr-2">
       <v-row>
-        <v-col cols="6" class="elevation-10 bg-yellow-lighten-4">
+        <v-col cols="12" md="6" class="elevation-10 bg-yellow-lighten-4">
           <enemy-view
             :enemy="event.enemies.white"
             :round="round"
           >
           </enemy-view>
         </v-col>
-        <v-col cols="6" class="bg-red-lighten-5">
+        <v-col cols="12" md="6" class="bg-red-lighten-5">
           <enemy-view
             :enemy="event.enemies.red"
             :round="round"
@@ -45,14 +45,14 @@
       </v-row>
 
       <v-row>
-        <v-col cols="6" class="bg-light-green-accent-1">
+        <v-col cols="12" md="6" class="bg-light-green-accent-1">
           <enemy-view
             :enemy="event.enemies.green"
             :round="round"
           >
           </enemy-view>
         </v-col>
-        <v-col cols="6" class="bg-indigo-lighten-5">
+        <v-col cols="12" md="6" class="bg-indigo-lighten-5">
           <enemy-view
             :enemy="event.enemies.blue"
             :round="round"

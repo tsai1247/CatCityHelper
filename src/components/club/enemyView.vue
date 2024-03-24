@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row>
-      <v-col cols="6">
+      <v-col cols="12" md="6">
         <div class="text-center font-weight-bold text-h5">
           {{ enemy.title }}-{{ enemy.name }}
 
@@ -13,7 +13,7 @@
             :src="enemyImages[enemy.name]"
             :lazy-src="enemyImages[enemy.name]"
           >
-            <v-btn
+            <v-btn v-if="!isMobile"
               width="100%"
               height="100%"
               icon
@@ -30,7 +30,7 @@
           血量: {{ HP }}&emsp;攻擊力: {{ ATK }}&emsp;防禦力: {{ DEF }}
         </div>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" md="6">
         <v-data-table
           :items="skillList"
           :headers="headerList"
@@ -115,6 +115,14 @@ const centerStyle = ref({
 })
 
 const showDamageCalculatorDialog = ref(false);
+
+const isMobile = computed(() => {
+  if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    return true;
+  } else {
+    return false;
+  }
+})
 
 </script>
 
