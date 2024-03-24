@@ -19,6 +19,9 @@ const catoImages_SR = getImageDictionary(catoImageFolder_SR);
 const catoImageFolder_R = Object.values(import.meta.glob('@/assets/cato/image/R/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))
 const catoImages_R = getImageDictionary(catoImageFolder_R);
 
+const enemyImageFolder = Object.values(import.meta.glob('@/assets/enemy/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))
+const enemyImages = getImageDictionary(enemyImageFolder);
+
 export default {
   characterImages,
   catoImages: {
@@ -26,5 +29,6 @@ export default {
     SR: catoImages_SR,
     R: catoImages_R,
   },
+  enemyImages,
   unknown,
 }
