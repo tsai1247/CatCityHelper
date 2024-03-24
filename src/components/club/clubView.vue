@@ -8,7 +8,7 @@
             label="期數"
             :items="clubInfo"
             item-value="no"
-            :item-title="item => `第${item.no}期 ${item.duration.start}~${item.duration.end}`"
+            :item-title="item => getEventTitle(item)"
             v-model="event"
             return-object
           >
@@ -89,6 +89,24 @@ const defaultRound = parseInt(route.query.round);
 const round = ref(1);
 if(!isNaN(defaultRound)) {
   round.value = defaultRound;
+}
+
+function getEventTitle(item) {
+  const start = new Date(item.duration.start);
+  start.setHours(5);
+  const end = new Date(item.duration.end);
+  end.setHours(5);
+
+  const today =  new Date();
+
+  if(today < start) {
+    return `第${item.no}期 ${item.duration.start}~${item.duration.end} (即將開始)`
+  }
+  else if(today < end) {
+    return `第${item.no}期 ${item.duration.start}~${item.duration.end} (舉辦中)`
+  } else {
+    return `第${item.no}期 ${item.duration.start}~${item.duration.end} (已結束)`
+  }
 }
 
 const updateQuery = setInterval(() => {
