@@ -20,14 +20,9 @@
             min="1"
             variant="underlined"
             label="輪次"
-            v-model="round"
+            v-model.number="round"
           >
           </v-text-field>
-        </v-col>
-        <v-col cols="1">
-          <v-btn icon>
-            <v-icon>mdi-expand</v-icon>
-          </v-btn>
         </v-col>
       </v-row>
     </div>
@@ -91,9 +86,9 @@ if(!isNaN(defaultEventNo)) {
 }
 
 const defaultRound = parseInt(route.query.round);
-const round = ref("1");
+const round = ref(1);
 if(!isNaN(defaultRound)) {
-  round.value = route.query.round;
+  round.value = defaultRound;
 }
 
 const updateQuery = setInterval(() => {

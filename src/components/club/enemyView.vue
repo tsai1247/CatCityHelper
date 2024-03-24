@@ -39,7 +39,7 @@ import { ref, computed } from 'vue';
 
 const props = defineProps({
   enemy: Object,
-  round: String,
+  round: Number,
 })
 
 const enemyImages = images.enemyImages;
