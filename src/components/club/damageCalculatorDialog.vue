@@ -281,7 +281,9 @@
   }, {deep: true});
 
   watch(() => props.showDialog, () => {
-    dataList.value = JSON.parse(localStorage[props.enemy.name]);
+    if(localStorage[props.enemy.name]) {
+      dataList.value = JSON.parse(localStorage[props.enemy.name]);
+    }
   })
 
   function close() {
