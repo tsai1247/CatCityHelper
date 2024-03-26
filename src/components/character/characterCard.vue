@@ -16,13 +16,13 @@
                   dark
                   :style="{opacity: 0.4}"
                   :src="characterImages[character.subname]"
-                  :lazy-src="lazyCharacterImages[character.subname]">
+                  :lazy-src="characterImages[character.subname]">
 
                 </v-img>
                 <v-img
                   v-else
                   :src="unknownImage"
-                  :lazy-src="lazyUnknownImage"
+                  :lazy-src="unknownImage"
                 >
                 </v-img>
               </template>
@@ -59,9 +59,8 @@
 <script setup>
   import images from "@/common/images";
 
-  const characterImages = images.characterImages.normal;
-  const lazyCharacterImages = images.characterImages.lazy;
-  const { unknown: unknownImage, lazyUnknown: lazyUnknownImage } = images;
+  const characterImages = images.characterImages;
+  const { unknown: unknownImage } = images;
 
   defineProps({
     character: Object

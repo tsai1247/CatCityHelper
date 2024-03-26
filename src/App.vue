@@ -9,20 +9,17 @@
         <v-spacer></v-spacer>
       </v-app-bar>
 
-    <v-navigation-drawer :rail="isexpanded" expand-on-hover permanents>
+    <v-navigation-drawer
+        v-model="isexpanded" permanents>
       <v-list-item prepend-icon="mdi-home" class="mt-2" title="首頁" link to="/Home"></v-list-item>
       <v-list-item prepend-icon="mdi-account" class="mt-2" title="角色圖鑑" link to="/Character"></v-list-item>
       <v-list-item prepend-icon="mdi-cat" class="mt-2" title="貓球圖鑑" link to="/Cato"></v-list-item>
+      <v-list-item prepend-icon="mdi-home-group" class="mt-2" title="社團特訓" link to="/Club"></v-list-item>
       <v-list-item prepend-icon="mdi-history" class="mt-2" title="版本詳細資訊" link to="/VersionInfo"></v-list-item>
       <template v-slot:append>
         <div class="pa-2">
-          <div v-if="isexpanded" class="text-center">
-            {{ latestCatCityVersion }}
-          </div>
-          <div v-else>
-            <div>貓之城版本：{{ latestCatCityVersion }}</div>
-            <div>圖鑑版本：{{ latestBookVersion }}</div>
-          </div>
+          <div>貓之城版本：{{ latestCatCityVersion }}</div>
+          <div>圖鑑版本：{{ latestBookVersion }}</div>
         </div>
       </template>
     </v-navigation-drawer>

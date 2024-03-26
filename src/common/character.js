@@ -5,6 +5,14 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "特莉絲",
+    subname: "幽皇月韵",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+  },
+  {
     name: "祈",
     subname: "離夢蝶",
     rarity: rarity.SSR,
@@ -288,7 +296,7 @@ const characterList = [
       },
       Passive: {
         name: "凌人之勢",
-        description: "每上陣一名紅色情緒友方，自身攻擊力提升{{}}，可疊加，最高4；釋放奧義技能後，按130%攻擊力，對所有攜帶「通緝」的目標造成一次額外傷害，並消耗目標身上所有「通緝」，傷害提升{{}}",
+        description: "每上陣一名紅色情緒友方，自身攻擊力提升{{}}，可疊加，最高4層；釋放奧義技能後，按130%攻擊力，對所有攜帶「通緝」的目標造成一次額外傷害，並消耗目標身上所有「通緝」，目標每有1層「通緝」，傷害提升{{}}",
         arguments: [
           ["3%", "20%"],
           ["4%", "20%"],
