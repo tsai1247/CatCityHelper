@@ -5,6 +5,14 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "特莉絲",
+    subname: "幽皇月韵",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+  },
+  {
     name: "祈",
     subname: "離夢蝶",
     rarity: rarity.SSR,
