@@ -1,5 +1,15 @@
 const bookVersionList = [
   {
+    "version": "1.6.0-pre",
+    "title": "",
+    "description": [
+      "【新增】社團特訓分頁與社團特訓計算機(計算機僅電腦版可用)",
+      "【新增】角色欄位：幽皇月韵",
+      "【修正】部分手機版裝置無法順利開啟側邊攔",
+      "【修正】技能描述修正：醉紅塵",
+    ]
+  },
+  {
     "version": "1.5.3.0",
     "title": "",
     "description": [
@@ -91,6 +101,10 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.6",
+    "title": "竹野熊蹤"
+  },
   {
     "version": "1.5",
     "title": "夢境奇緣"
