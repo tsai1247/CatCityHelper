@@ -18,13 +18,8 @@
       <v-list-item prepend-icon="mdi-history" class="mt-2" title="版本詳細資訊" link to="/VersionInfo"></v-list-item>
       <template v-slot:append>
         <div class="pa-2">
-          <div v-if="isexpanded" class="text-center">
-            {{ latestCatCityVersion }}
-          </div>
-          <div v-else>
-            <div>貓之城版本：{{ latestCatCityVersion }}</div>
-            <div>圖鑑版本：{{ latestBookVersion }}</div>
-          </div>
+          <div>貓之城版本：{{ latestCatCityVersion }}</div>
+          <div>圖鑑版本：{{ latestBookVersion }}</div>
         </div>
       </template>
     </v-navigation-drawer>
