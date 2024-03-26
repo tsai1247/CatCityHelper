@@ -276,6 +276,14 @@
     );
   })
 
+  watch(() => dataList.value, () => {
+    localStorage[props.enemy.name] = JSON.stringify(dataList.value);
+  }, {deep: true});
+
+  watch(() => props.showDialog, () => {
+    dataList.value = JSON.parse(localStorage[props.enemy.name]);
+  })
+
   function close() {
     emits('close');
   }
