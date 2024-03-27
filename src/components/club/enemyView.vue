@@ -64,15 +64,15 @@ const enemyImages = images.enemyImages;
 const { getEnemyValue } = enemyValueRelated;
 
 const HP = computed(() => {
-  return getEnemyValue(props.enemy.basicValues.HP, props.enemy.delta.HP, props.round);
+  return getEnemyValue(props.enemy.basicValues.HP, props.enemy.delta.HP, Math.min(props.round, props.enemy.maxRound??1));
 });
 
 const ATK = computed(() => {
-  return getEnemyValue(props.enemy.basicValues.ATK, props.enemy.delta.ATK, props.round);
+  return getEnemyValue(props.enemy.basicValues.ATK, props.enemy.delta.ATK, Math.min(props.round, props.enemy.maxRound??1));
 });
 
 const DEF = computed(() => {
-  return getEnemyValue(props.enemy.basicValues.DEF, props.enemy.delta.DEF, props.round);
+  return getEnemyValue(props.enemy.basicValues.DEF, props.enemy.delta.DEF, Math.min(props.round, props.enemy.maxRound??1));
 });
 
 
