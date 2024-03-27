@@ -130,6 +130,7 @@ const clubInfo = [
           ATK: 786,
           DEF: 262,
         },
+        maxRound: 5,
       },
       green: {
         title: "一般討伐",
@@ -153,6 +154,7 @@ const clubInfo = [
           ATK: 786,
           DEF: 262,
         },
+        maxRound: 5,
       },
       blue: {
         title: "一般討伐",
@@ -175,6 +177,7 @@ const clubInfo = [
           ATK: 786,
           DEF: 262,
         },
+        maxRound: 5,
       },
       white: {
         title: "特級討伐",
@@ -199,6 +202,7 @@ const clubInfo = [
           ATK: 786,
           DEF: 262,
         },
+        maxRound: 5,
       }
     }
   },
