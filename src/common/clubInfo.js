@@ -3,6 +3,106 @@ const { attribute } = enumList;
 
 const clubInfo = [
   {
+    no: 8,
+    duration: {
+      start: '2024-04-03',
+      end: '2024-04-09',
+    },
+    enemies: {
+      red: {
+        title: "一般討伐",
+        name: "無面塗鴉犬",
+        attribute: attribute.red,
+        skills: {
+          Sp: "召喚4個繼承自身基礎能力的友方助陣，降低其40%攻擊力，替其承擔50%受到傷害，並使其在下回合結束時死亡",
+          Active: [
+            "按120%攻擊力，對敵方單體造成傷害",
+            "提升全體友方40%防禦力2回合",
+          ]
+        },
+        basicValues: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+        delta: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+      },
+      green: {
+        title: "一般討伐",
+        name: "失敗格鬥遊戲機",
+        attribute: attribute.green,
+        skills: {
+          Sp: "按193%攻擊力，對敵方單體造成傷害，並使目標降低3點奧義能量",
+          Active: [
+            "按120%攻擊力，對敵方單體造成傷害",
+            "按96%攻擊力，對敵方單體造成傷害，並降低目標20%攻擊力2回合",
+          ],
+          Passive: "每回合結束時，敵我雙方隨機獲得以下減益效果之一：\n1. 攻擊力降低\n2. 造成間接傷害降低\n3. 受到間接傷害提升\n4. 受到傷害提升"
+        },
+
+        basicValues: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+        delta: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+      },
+      blue: {
+        title: "一般討伐",
+        name: "銅鏽盾鼠",
+        attribute: attribute.blue,
+        skills: {
+          Sp: "按207%攻擊力，對敵方單體造成傷害",
+          Active: [
+            "按120%攻擊力，對敵方單體造成傷害",
+            "對自己施加1層「受到傷害降低10%」（可疊加，最高6層）",
+          ],
+        },
+        basicValues: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+        delta: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+      },
+      white: {
+        title: "特級討伐",
+        name: "奪麥蜥蜴",
+        attribute: attribute.light,
+        skills: {
+          Sp: "召喚1個繼承自身基礎能力的友方助陣，降低其40%攻擊力，並替其承擔50%受到傷害",
+          Active: [
+            "按120%攻擊力，對單體造成傷害",
+            "按90%攻擊力，造成全體造成傷害",
+            "使自身獲得2點奧義能量",
+          ],
+        },
+        basicValues: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+        delta: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+      }
+    }
+  },
+  {
     no: 7,
     duration: {
       start: '2024-03-20',
@@ -101,7 +201,107 @@ const clubInfo = [
         },
       }
     }
-  }
+  },
+  {
+    no: 4,
+    duration: {
+      start: '2024-02-07',
+      end: '2024-02-13',
+    },
+    enemies: {
+      red: {
+        title: "一般討伐",
+        name: "無面塗鴉犬",
+        attribute: attribute.red,
+        skills: {
+          Sp: "召喚4個繼承自身基礎能力的友方助陣，降低其40%攻擊力，替其承擔50%受到傷害，並使其在下回合結束時死亡",
+          Active: [
+            "按120%攻擊力，對敵方單體造成傷害",
+            "提升全體友方40%防禦力2回合",
+          ]
+        },
+        basicValues: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+        delta: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+      },
+      green: {
+        title: "一般討伐",
+        name: "失敗格鬥遊戲機",
+        attribute: attribute.green,
+        skills: {
+          Sp: "按193%攻擊力，對敵方單體造成傷害，並使目標降低3點奧義能量",
+          Active: [
+            "按120%攻擊力，對敵方單體造成傷害",
+            "按96%攻擊力，對敵方單體造成傷害，並降低目標20%攻擊力2回合",
+          ],
+          Passive: "每回合結束時，敵我雙方隨機獲得以下減益效果之一：\n1. 攻擊力降低\n2. 造成間接傷害降低\n3. 受到間接傷害提升\n4. 受到傷害提升"
+        },
+
+        basicValues: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+        delta: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+      },
+      blue: {
+        title: "一般討伐",
+        name: "銅鏽盾鼠",
+        attribute: attribute.blue,
+        skills: {
+          Sp: "按207%攻擊力，對敵方單體造成傷害",
+          Active: [
+            "按120%攻擊力，對敵方單體造成傷害",
+            "對自己施加1層「受到傷害降低10%」（可疊加，最高6層）",
+          ],
+        },
+        basicValues: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+        delta: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+      },
+      white: {
+        title: "特級討伐",
+        name: "奪麥蜥蜴",
+        attribute: attribute.light,
+        skills: {
+          Sp: "召喚1個繼承自身基礎能力的友方助陣，降低其40%攻擊力，並替其承擔50%受到傷害",
+          Active: [
+            "按120%攻擊力，對單體造成傷害",
+            "按90%攻擊力，造成全體造成傷害",
+            "使自身獲得2點奧義能量",
+          ],
+        },
+        basicValues: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+        delta: {
+          HP: 0,
+          ATK: 0,
+          DEF: 0,
+        },
+      }
+    }
+  },
 ]
 
 export default clubInfo
