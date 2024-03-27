@@ -21,14 +21,14 @@ const clubInfo = [
           ]
         },
         basicValues: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 4155300,
+          ATK: 3958,
+          DEF: 989,
         },
         delta: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 1026900,
+          ATK: 978,
+          DEF: 245,
         },
       },
       green: {
@@ -45,14 +45,14 @@ const clubInfo = [
         },
 
         basicValues: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 4155300,
+          ATK: 3958,
+          DEF: 989,
         },
         delta: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 1026900,
+          ATK: 978,
+          DEF: 245,
         },
       },
       blue: {
@@ -67,14 +67,14 @@ const clubInfo = [
           ],
         },
         basicValues: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 4155300,
+          ATK: 3958,
+          DEF: 989,
         },
         delta: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 1026900,
+          ATK: 978,
+          DEF: 245,
         },
       },
       white: {
@@ -90,14 +90,14 @@ const clubInfo = [
           ],
         },
         basicValues: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 4551200,
+          ATK: 3958,
+          DEF: 989,
         },
         delta: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 1124700,
+          ATK: 978,
+          DEF: 245,
         },
       }
     }
@@ -221,14 +221,14 @@ const clubInfo = [
           ]
         },
         basicValues: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 4155300,
+          ATK: 3958,
+          DEF: 989,
         },
         delta: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 1026900,
+          ATK: 978,
+          DEF: 245,
         },
       },
       green: {
@@ -245,14 +245,14 @@ const clubInfo = [
         },
 
         basicValues: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 4155300,
+          ATK: 3958,
+          DEF: 989,
         },
         delta: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 1026900,
+          ATK: 978,
+          DEF: 245,
         },
       },
       blue: {
@@ -267,14 +267,14 @@ const clubInfo = [
           ],
         },
         basicValues: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 4155300,
+          ATK: 3958,
+          DEF: 989,
         },
         delta: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 1026900,
+          ATK: 978,
+          DEF: 245,
         },
       },
       white: {
@@ -290,14 +290,14 @@ const clubInfo = [
           ],
         },
         basicValues: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 4551200,
+          ATK: 3958,
+          DEF: 989,
         },
         delta: {
-          HP: 0,
-          ATK: 0,
-          DEF: 0,
+          HP: 1124700,
+          ATK: 978,
+          DEF: 245,
         },
       }
     }
