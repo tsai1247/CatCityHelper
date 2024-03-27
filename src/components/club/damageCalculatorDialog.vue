@@ -190,9 +190,10 @@
           return;
         }
 
-        dataList.value[index].HpTotal = getEnemyValue(props.enemy.basicValues.HP, props.enemy.delta.HP, value);
-        dataList.value[index].AtkTotal = getEnemyValue(props.enemy.basicValues.ATK, props.enemy.delta.ATK, value);
-        dataList.value[index].DefTotal = getEnemyValue(props.enemy.basicValues.DEF, props.enemy.delta.DEF, value);
+        const round = Math.min(props.enemy.maxRound ?? 1, value);
+        dataList.value[index].HpTotal = getEnemyValue(props.enemy.basicValues.HP, props.enemy.delta.HP, round);
+        dataList.value[index].AtkTotal = getEnemyValue(props.enemy.basicValues.ATK, props.enemy.delta.ATK, round);
+        dataList.value[index].DefTotal = getEnemyValue(props.enemy.basicValues.DEF, props.enemy.delta.DEF, round);
       },
       {immediate: true}
     );

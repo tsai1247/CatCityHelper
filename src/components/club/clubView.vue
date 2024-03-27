@@ -28,6 +28,11 @@
     </div>
     <div v-if="event" class="ml-2 mr-2">
       <v-row>
+        <v-col>
+          <div v-if="unconfirmedData" class="text-red font-weight-bold">技能數值與血攻防為前期相同BOSS的數據，僅供參考</div>
+        </v-col>
+      </v-row>
+      <v-row>
         <v-col cols="12" md="6" class="elevation-10 bg-yellow-lighten-4">
           <enemy-view
             :enemy="event.enemies.white"
@@ -91,6 +96,7 @@ if(!isNaN(defaultRound)) {
   round.value = defaultRound;
 }
 
+const unconfirmedData = ref(false);
 function getEventTitle(item) {
   const start = new Date(item.duration.start);
   start.setHours(5);
@@ -100,11 +106,14 @@ function getEventTitle(item) {
   const today =  new Date();
 
   if(today < start) {
+    unconfirmedData.value = true;
     return `第${item.no}期 ${item.duration.start}~${item.duration.end} (即將開始)`
   }
   else if(today < end) {
+    unconfirmedData.value = false;
     return `第${item.no}期 ${item.duration.start}~${item.duration.end} (舉辦中)`
   } else {
+    unconfirmedData.value = false;
     return `第${item.no}期 ${item.duration.start}~${item.duration.end} (已結束)`
   }
 }
