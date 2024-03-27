@@ -5,12 +5,304 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "非天",
+    subname: "茂林餘音",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "148",
+      DEF: "66",
+      HP: "423",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "竹風吟",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並使友方全體爆擊率和攻擊力提升2回合，提升數額分別相當於“茂林餘音”爆擊率的30%攻擊力的12%",
+        arguments: [
+          ["172%"],
+          ["196%"],
+          ["221%"],
+          ["245%"],
+        ]
+      },
+      A: {
+        name: "滌塵",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對敵方全體施加20%「傷害傳遞」，受到1張攻擊技能牌後清除",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "澄心",
+        description: "按65%攻擊力，治療友方全體，並使友方全體受到的下一個技能的傷害不超過該友方自身{{}}最大生命值",
+        arguments: [
+          ["33%"],
+          ["25%"],
+          ["20%"],
+        ]
+      },
+      Passive: {
+        name: "天音破",
+        description: "綠色情緒友方釋放攻擊技能牌時，若生命百分比高於目標，此次技能造成最終傷害提升{{}}",
+        arguments: [
+          ["10%"],
+          ["12%"],
+          ["14%"],
+          ["16%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，選定攻擊力最高的友方單位，每次行動後，按30%攻擊力治療該單位，每場戰鬥至多觸發6次",
+        "",
+        "“茂林餘音”以外的友方獲得治療效果時，若生命值高於35%，則該友方爆擊傷害提升35%，持續至下次技能結束",
+        "",
+        "敵方單位死亡後，恢復所有綠色情緒友方1點奧義能量",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "南彌生",
+    subname: "靈棰驚竹",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "161",
+      DEF: "60",
+      HP: "379",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "穿林打葉",
+        description: "無視嘲諷，按{{}}攻擊力，對敵方單體造成傷害，自身每有1層「竹影‧強襲」，技能係數提升100%",
+        arguments: [
+          ["275%"],
+          ["313%"],
+          ["353%"],
+          ["391%"],
+        ]
+      },
+      A: {
+        name: "竹影鞭",
+        description: "按{{}}攻擊力，對敵方單體造成傷害",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "竹酒沁",
+        description: "{{}}回合內受到最終傷害降低50%，並匿入「竹影」3回合，若釋放技能時身上沒有「竹影」，則額外獲得1層「竹影‧強襲」",
+        arguments: [
+          ["1"],
+          ["2"],
+          ["3"],
+        ]
+      },
+      Passive: {
+        name: "同根生",
+        description: "上陣戰鬥員都是綠色情緒時，自身爆擊傷害提升{{}}",
+        arguments: [
+          ["20%"],
+          ["24%"],
+          ["28%"],
+          ["32%"],
+        ]
+      },
+      risingStar: [
+        "技能擊殺目標時，對敵方生命百分比最低的目標追擊2星「竹影鞭」，每回合至多觸發1次",
+        "",
+        "",
+        "釋放進攻技能時，若目標生命值低於60%，則技能造成最終傷害提升20%；擊殺追擊上限提升至每回合2次，每次觸發擊殺追擊時，獲得3層「竹影‧強襲」",
+        "",
+        "戰鬥開始時獲得1點奧義能量；爆擊時每溢出1%爆擊率，轉化為1.5%爆擊傷害；並且每次釋放技能「竹酒沁」後，額外獲得1層「竹影‧強襲」",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "艾可",
+    subname: "山明箬影",
+    rarity: rarity.SR,
+    attribute: attribute.green,
+    particle: particle.triangle,
+    source: [characterSource.event],
+    basic: {
+      ATK: "85",
+      DEF: "54",
+      HP: "326",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "10%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "爆發定格",
+        description: "按{{}}攻擊力，對敵方單體造成「暴烈傷害」",
+        arguments: [
+          ["191%"],
+          ["202%"],
+          ["220%"],
+          ["237%"],
+        ]
+      },
+      A: {
+        name: "光影之佑",
+        description: "按{{}}最大生命值，對友方全體施加1回合護盾。護盾存在時，攜帶者生命相關能力提升15%",
+        arguments: [
+          ["33%"],
+          ["50%"],
+          ["67%"],
+        ]
+      },
+      B: {
+        name: "精准對焦",
+        description: "按{{}}攻擊力，對敵方單體造成傷害",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      Passive: {
+        name: "竹韌",
+        description: "所有綠色情緒友方忍耐率提升{{}}",
+        arguments: [
+          ["5%"],
+          ["6%"],
+          ["7%"],
+          ["8%"],
+        ]
+      },
+      risingStar: [
+        "",
+        "",
+        "戰鬥開始時，最大生命值提升15%",
+        "",
+        "",
+        "戰鬥開始時，最大生命值提升15%，造成護盾提升11%",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "特莉絲",
-    subname: "幽皇月韵",
+    subname: "幽皇月韻",
     rarity: rarity.SSR,
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.specialSummon],
+    basic: {
+      ATK: "157",
+      DEF: "60",
+      HP: "416",
+      Penetration: "7%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "竹風繚亂",
+        description: "按{{}}攻擊力，對敵方全體造成「湮滅傷害」",
+        arguments: [
+          ["153%"],
+          ["173%"],
+          ["196%"],
+          ["217%"],
+        ]
+      },
+      A: {
+        name: "烈風旋",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加一「烈風」，攜帶「烈風」的目標受到單體攻擊時，觸發“幽皇月韻”的追擊",
+        arguments: [
+          ["80%"],
+          ["93%"],
+          ["125%"],
+        ]
+      },
+      B: {
+        name: "踏竹風",
+        description: "按{{}}攻擊力，對敵方全體造成「湮滅傷害」",
+        arguments: [
+          ["75%"],
+          ["80%"],
+          ["90%"],
+        ]
+      },
+      Passive: {
+        name: "月華流照",
+        description: "每上陣一名綠色情緒友方，自身攻擊力提升{{}}，可疊加，最高4層；攜帶「烈風」的敵方目標受到單體攻擊後，追擊一張1星「踏竹風」，每回合至多觸發1次",
+        arguments: [
+          ["3%"],
+          ["4%"],
+          ["5%"],
+          ["5.5%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，對敵方攻擊力最高的單位施加1層「烈風」",
+        "",
+        "",
+        "追擊的「踏竹風」提升至2星技能牌",
+        "",
+        "首回合進入戰鬥階段後，在其他角色出手前，先釋放1張1星「踏竹風」",
+      ]
+    },
+    supporters: [
+
+    ]
   },
   {
     name: "祈",
