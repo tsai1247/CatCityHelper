@@ -11,15 +11,19 @@
             theme="dark">
               <template v-slot:image>
                 <v-img
-                  v-if="characterImages[character.subname]"
+                  v-if="characterImages[character.subname] !== null"
                   cover
                   dark
                   :style="{opacity: 0.4}"
-                  :src="characterImages[character.subname]">
+                  :src="characterImages[character.subname]"
+                  :lazy-src="characterImages[character.subname]">
+
                 </v-img>
                 <v-img
                   v-else
-                  :src="characterImages['unknown']">
+                  :src="unknownImage"
+                  :lazy-src="unknownImage"
+                >
                 </v-img>
               </template>
               <template v-slot:title>
@@ -55,7 +59,8 @@
 <script setup>
   import images from "@/common/images";
 
-  const { characterImages } = images;
+  const characterImages = images.characterImages;
+  const { unknown: unknownImage } = images;
 
   defineProps({
     character: Object
