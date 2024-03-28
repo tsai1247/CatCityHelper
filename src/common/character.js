@@ -1254,7 +1254,7 @@ const characterList = [
       },
       B: {
         name: "骨影之咒",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「詛咒」{{}}回合",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並對目標施加1層「詛咒」{{}}回合",
         arguments: [
           ["96%", "1"],
           ["110%", "2"],
@@ -3815,7 +3815,7 @@ const characterList = [
       },
       Passive: {
         name: "和聲",
-        description: "所有粒子型態均為「三相」的友方攻擊力提升{{}}（死亡後也生效）",
+        description: "所有粒子型態為「三相」的友方攻擊力提升{{}}（死亡後也生效）",
         arguments: [
           ["7%"],
           ["8.7%"],
