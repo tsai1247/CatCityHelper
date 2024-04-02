@@ -2,7 +2,7 @@ import unknown from "../assets/unknown.png"
 
 function getImageDictionary(folder) {
   return folder.reduce((dict, image) => {
-    const key = image.slice(Math.min(image.length, image.lastIndexOf('/') + 1), image.indexOf('.')).split('-')[0]
+    const key = image.slice(Math.min(image.length, image.lastIndexOf('/') + 1), image.lastIndexOf('.')).split('-')[0]
     return {...dict, [key]: image};
   }, {});
 }
@@ -22,6 +22,10 @@ const catoImages_R = getImageDictionary(catoImageFolder_R);
 const enemyImageFolder = Object.values(import.meta.glob('@/assets/enemy/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))
 const enemyImages = getImageDictionary(enemyImageFolder);
 
+const versionBannerFolder = Object.values(import.meta.glob('@/assets/versionbanner/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))
+const versionBanners = getImageDictionary(versionBannerFolder);
+
+
 export default {
   characterImages,
   catoImages: {
@@ -30,5 +34,6 @@ export default {
     R: catoImages_R,
   },
   enemyImages,
+  versionBanners,
   unknown,
 }
