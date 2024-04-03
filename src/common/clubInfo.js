@@ -21,15 +21,16 @@ const clubInfo = [
           ]
         },
         basicValues: {
-          HP: 4155300,
-          ATK: 3958,
-          DEF: 989,
+          HP: 4514400,
+          ATK: 3225,
+          DEF: 1075,
         },
         delta: {
-          HP: 1026900,
-          ATK: 978,
-          DEF: 245,
+          HP: 1115100,
+          ATK: 797,
+          DEF: 265,
         },
+        maxRound: 5,
       },
       green: {
         title: "一般討伐",
@@ -45,15 +46,16 @@ const clubInfo = [
         },
 
         basicValues: {
-          HP: 4155300,
-          ATK: 3958,
-          DEF: 989,
+          HP: 4514400,
+          ATK: 3225,
+          DEF: 1075,
         },
         delta: {
-          HP: 1026900,
-          ATK: 978,
-          DEF: 245,
+          HP: 1115100,
+          ATK: 797,
+          DEF: 265,
         },
+        maxRound: 5,
       },
       blue: {
         title: "一般討伐",
@@ -67,15 +69,16 @@ const clubInfo = [
           ],
         },
         basicValues: {
-          HP: 4155300,
-          ATK: 3958,
-          DEF: 989,
+          HP: 4514400,
+          ATK: 3225,
+          DEF: 1075,
         },
         delta: {
-          HP: 1026900,
-          ATK: 978,
-          DEF: 245,
+          HP: 1115100,
+          ATK: 797,
+          DEF: 265,
         },
+        maxRound: 5,
       },
       white: {
         title: "特級討伐",
@@ -90,15 +93,16 @@ const clubInfo = [
           ],
         },
         basicValues: {
-          HP: 4551200,
-          ATK: 3958,
-          DEF: 989,
+          HP: 4944500,
+          ATK: 3225,
+          DEF: 1075,
         },
         delta: {
-          HP: 1124700,
-          ATK: 978,
-          DEF: 245,
+          HP: 1221300,
+          ATK: 797,
+          DEF: 265,
         },
+        maxRound: 5,
       }
     }
   },
@@ -234,6 +238,7 @@ const clubInfo = [
           ATK: 978,
           DEF: 245,
         },
+        maxRound: 9999,
       },
       green: {
         title: "一般討伐",
@@ -258,6 +263,7 @@ const clubInfo = [
           ATK: 978,
           DEF: 245,
         },
+        maxRound: 9999,
       },
       blue: {
         title: "一般討伐",
@@ -280,6 +286,7 @@ const clubInfo = [
           ATK: 978,
           DEF: 245,
         },
+        maxRound: 9999,
       },
       white: {
         title: "特級討伐",
@@ -303,6 +310,7 @@ const clubInfo = [
           ATK: 978,
           DEF: 245,
         },
+        maxRound: 9999,
       }
     }
   },
