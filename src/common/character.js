@@ -1591,10 +1591,10 @@ const characterList = [
     attribute: attribute.green,
     particle: particle.triangle,
     source: [characterSource.specialSummon],
-    basic: { // unconfirmed
-      ATK: "208",
-      DEF: "75",
-      HP: "498",
+    basic: {
+      ATK: "162",
+      DEF: "58",
+      HP: "387",
       Penetration: "10%",
       Durability: "0%",
       CRIT_Rate: "0%",
