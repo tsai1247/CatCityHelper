@@ -18,10 +18,8 @@
 
 <script setup>
 import images from "@/common/images";
-console.log(images);
 
 const versionbanner = Object.values(images.versionBanners);
-console.log(versionbanner);
 
 </script>
 

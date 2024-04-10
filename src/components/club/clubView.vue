@@ -37,6 +37,7 @@
           <enemy-view
             :enemy="event.enemies.white"
             :round="round"
+            :stats="bigStats"
           >
           </enemy-view>
         </v-col>
@@ -44,6 +45,7 @@
           <enemy-view
             :enemy="event.enemies.red"
             :round="round"
+            :stats="smallStats"
           >
           </enemy-view>
         </v-col>
@@ -54,6 +56,7 @@
           <enemy-view
             :enemy="event.enemies.green"
             :round="round"
+            :stats="smallStats"
           >
           </enemy-view>
         </v-col>
@@ -61,6 +64,7 @@
           <enemy-view
             :enemy="event.enemies.blue"
             :round="round"
+            :stats="smallStats"
           >
           </enemy-view>
         </v-col>
@@ -75,7 +79,7 @@
 </template>
 
 <script setup>
-import { ref, onUnmounted } from 'vue';
+import { ref, computed, onUnmounted } from 'vue';
 import enemyView from './enemyView.vue';
 import clubInfo from '@/common/clubInfo';
 import { useRoute, useRouter } from 'vue-router';
@@ -136,6 +140,9 @@ const updateQuery = setInterval(() => {
     query,
   });
 }, 1000);
+
+const smallStats = computed(() => event.value.enemies.stats.small);
+const bigStats = computed(() => event.value.enemies.stats.big);
 
 onUnmounted(() => {
   clearInterval(updateQuery);
