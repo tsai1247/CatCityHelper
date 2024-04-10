@@ -31,6 +31,7 @@
               <v-text-field
                 type="number"
                 min="1"
+                max="999"
                 variant="underlined"
                 v-model.number="dataList[itemsPerPage * (currentPage - 1) + index].round"
               >
@@ -189,6 +190,10 @@
       () => dataList.value[index].round,
       (value) => {
         if( value === undefined ) {
+          return;
+        }
+        if( value > 999 ) {
+          dataList.value[index].round = 999;
           return;
         }
 
