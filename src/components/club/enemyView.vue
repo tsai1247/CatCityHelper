@@ -27,7 +27,7 @@
         </div>
 
         <div :style="centerStyle">
-          血量: {{ allStats.HP }}&emsp;攻擊力: {{ allStats.ATK }}&emsp;防禦力: {{ allStats.DEF }}
+          血量: {{ parseInt(allStats.HP) }}&emsp;攻擊力: {{ parseInt(allStats.ATK) }}&emsp;防禦力: {{ parseInt(allStats.DEF) }}
         </div>
       </v-col>
       <v-col cols="12" md="6">

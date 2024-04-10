@@ -203,9 +203,9 @@
 
         const { basic, delta } = props.stats;
         const { HP, ATK, DEF } = getEnemyStats(basic, delta, value, props.stats.maxRound);
-        dataList.value[index].HpTotal = HP;
-        dataList.value[index].AtkTotal = ATK;
-        dataList.value[index].DefTotal = DEF;
+        dataList.value[index].HpTotal = parseInt(HP);
+        dataList.value[index].AtkTotal = parseInt(ATK);
+        dataList.value[index].DefTotal = parseInt(DEF);
       },
       {immediate: true}
     );
