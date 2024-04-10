@@ -31,6 +31,7 @@
               <v-text-field
                 type="number"
                 min="1"
+                max="999"
                 variant="underlined"
                 v-model.number="dataList[itemsPerPage * (currentPage - 1) + index].round"
               >
@@ -150,6 +151,7 @@
   const props = defineProps({
     showDialog: Boolean,
     enemy: Object,
+    stats: Object,
   });
 
   const itemsPerPage = ref(5);
@@ -181,6 +183,7 @@
     remark: "這是範例",
   }
 
+  const { getEnemyStats } = enemyValueRelated;
 
   dataList.value.forEach((_, index) => {
     watch(
@@ -189,11 +192,20 @@
         if( value === undefined ) {
           return;
         }
+        if( value > 999 ) {
+          dataList.value[index].round = 999;
+          return;
+        }
+        if( value === '' ) {
+          dataList.value[index].round = 1;
+          return;
+        }
 
-        const round = Math.min(props.enemy.maxRound ?? 1, value);
-        dataList.value[index].HpTotal = getEnemyValue(props.enemy.basicValues.HP, props.enemy.delta.HP, round);
-        dataList.value[index].AtkTotal = getEnemyValue(props.enemy.basicValues.ATK, props.enemy.delta.ATK, round);
-        dataList.value[index].DefTotal = getEnemyValue(props.enemy.basicValues.DEF, props.enemy.delta.DEF, round);
+        const { basic, delta } = props.stats;
+        const { HP, ATK, DEF } = getEnemyStats(basic, delta, value, props.stats.maxRound);
+        dataList.value[index].HpTotal = parseInt(HP);
+        dataList.value[index].AtkTotal = parseInt(ATK);
+        dataList.value[index].DefTotal = parseInt(DEF);
       },
       {immediate: true}
     );
