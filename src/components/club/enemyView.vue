@@ -7,11 +7,28 @@
 
         </div>
         <div :style="centerStyle">
-          <v-img
+          <v-img v-if="enemyImages[enemy.name]"
             class="text-center"
             max-width="250px"
             :src="enemyImages[enemy.name]"
             :lazy-src="enemyImages[enemy.name]"
+          >
+            <v-btn v-if="!isMobile"
+              width="100%"
+              height="100%"
+              icon
+              flat
+              class="transparent-button"
+              @click="showDamageCalculatorDialog = true"
+            >
+              <v-icon class="icon-size">mdi-sword-cross</v-icon>
+            </v-btn>
+          </v-img>
+          <v-img v-else
+            class="text-center"
+            max-width="250px"
+            :src="unknown"
+            :lazy-src="unknown"
           >
             <v-btn v-if="!isMobile"
               width="100%"
@@ -63,6 +80,7 @@ const props = defineProps({
 })
 
 const enemyImages = images.enemyImages;
+const unknown = images.unknown;
 const { getEnemyStats } = enemyValueRelated;
 
 const allStats = computed(() => {
