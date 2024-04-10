@@ -314,6 +314,109 @@ const clubInfo = [
       }
     }
   },
+  {
+    no: 1,
+    duration: {
+      start: '2024-01-10',
+      end: '2024-01-16',
+    },
+    enemies: {
+      red: {
+        title: "一般討伐",
+        name: "爆裂鼓蟹",
+        attribute: attribute.red,
+        skills: {
+          Sp: "對敵方全體造成攻擊力75%的破盾傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
+          Active: [
+            "對敵方單體目標造成攻擊力100%的傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
+            "對敵方全體造成攻擊力90%的破盾傷害",
+          ],
+          Passive: "當敵方目標身上的【攻擊力降低】效果疊加至6層後，給予自身攻擊力提升的效果，最多可疊加4層，持續至戰鬥結束。"
+        },
+        basicValues: {
+          HP: 2071500,
+          ATK: 2762,
+          DEF: 694,
+        },
+        delta: {
+          HP: 511500,
+          ATK: 682,
+          DEF: 170,
+        },
+        maxRound: 9999,
+      },
+      green: {
+        title: "一般討伐",
+        name: "孤傲劍客",
+        attribute: attribute.green,
+        skills: {
+          Sp: "對敵方全體造成攻擊力75%的弱點傷害",
+          Active: [
+            "按120%對敵方全體造成80%的穿刺傷害",
+            "清除自身全部減益效果，同時給自身添加一層攻擊力150%的護盾",
+            "對敵方全體造成攻擊力80%的穿刺傷害",
+          ],
+        },
+        basicValues: {
+          HP: 2071500,
+          ATK: 2762,
+          DEF: 694,
+        },
+        delta: {
+          HP: 511500,
+          ATK: 682,
+          DEF: 170,
+        },
+        maxRound: 9999,
+      },
+      blue: {
+        title: "一般討伐",
+        name: "寶寶玩偶",
+        attribute: attribute.blue,
+        skills: {
+          Sp: "對敵方全體造成攻擊力112%的傷害，自身爆擊率30%，爆擊傷害提升50%，持續2回合",
+          Active: [
+            "對敵方全體造成攻擊力100%的傷害，並使目標造成傷害降低5%效果，持續2回合，最多可疊加20層。該效果可以被驅散",
+            "自身每擁有1點SP點，攻擊力提升10%",
+          ],
+        },
+        basicValues: {
+          HP: 2071500,
+          ATK: 2762,
+          DEF: 694,
+        },
+        delta: {
+          HP: 511500,
+          ATK: 682,
+          DEF: 170,
+        },
+        maxRound: 9999,
+      },
+      white: {
+        title: "特級討伐",
+        name: "莫布",
+        attribute: attribute.light,
+        skills: {
+          Sp: "對敵方全體造成141%的破盾傷害，成功破盾後給目標施加【破裂】",
+          Active: [
+            "對目標造成攻擊力120%的破勢傷害",
+            "對敵方全體造成攻擊力90%的傷害，立使目標防禦降低30%，效果持續3回合",
+          ],
+        },
+        basicValues: {
+          HP: 2485800,
+          ATK: 2762,
+          DEF: 694,
+        },
+        delta: {
+          HP: 613800,
+          ATK: 682,
+          DEF: 170,
+        },
+        maxRound: 9999,
+      }
+    }
+  },
 ]
 
 export default clubInfo
