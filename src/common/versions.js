@@ -1,5 +1,14 @@
 const bookVersionList = [
   {
+    "version": "1.6.2.0",
+    "title": "",
+    "description": [
+      "【新增】社團特訓第1期、第5期與第9期資訊",
+      "【修正】無立繪的角色應顯示問號圖示",
+      "【修正】社團特訓第7期防禦力數值微幅修正",
+    ]
+  },
+  {
     "version": "1.6.1.0",
     "title": "",
     "description": [
