@@ -18,6 +18,7 @@
           <v-text-field
             type="number"
             min="1"
+            max="999"
             variant="underlined"
             label="輪次"
             v-model.number="round"
@@ -37,6 +38,7 @@
           <enemy-view
             :enemy="event.enemies.white"
             :round="round"
+            :stats="bigStats"
           >
           </enemy-view>
         </v-col>
@@ -44,6 +46,7 @@
           <enemy-view
             :enemy="event.enemies.red"
             :round="round"
+            :stats="smallStats"
           >
           </enemy-view>
         </v-col>
@@ -54,6 +57,7 @@
           <enemy-view
             :enemy="event.enemies.green"
             :round="round"
+            :stats="smallStats"
           >
           </enemy-view>
         </v-col>
@@ -61,6 +65,7 @@
           <enemy-view
             :enemy="event.enemies.blue"
             :round="round"
+            :stats="smallStats"
           >
           </enemy-view>
         </v-col>
@@ -75,10 +80,11 @@
 </template>
 
 <script setup>
-import { ref, onUnmounted } from 'vue';
+import { ref, computed, onUnmounted } from 'vue';
 import enemyView from './enemyView.vue';
 import clubInfo from '@/common/clubInfo';
 import { useRoute, useRouter } from 'vue-router';
+import { watch } from 'vue';
 
 const route = useRoute();
 const router = useRouter();
@@ -136,6 +142,18 @@ const updateQuery = setInterval(() => {
     query,
   });
 }, 1000);
+
+watch(() => round.value, () => {
+  if(round.value === '') {
+    round.value = 1;
+  }
+  if(round.value > 999) {
+    round.value = 999;
+  }
+}, {immediate: true})
+
+const smallStats = computed(() => event.value.enemies.stats.small);
+const bigStats = computed(() => event.value.enemies.stats.big);
 
 onUnmounted(() => {
   clearInterval(updateQuery);

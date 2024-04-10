@@ -7,7 +7,7 @@
 
         </div>
         <div :style="centerStyle">
-          <v-img
+          <v-img v-if="enemyImages[enemy.name]"
             class="text-center"
             max-width="250px"
             :src="enemyImages[enemy.name]"
@@ -24,10 +24,27 @@
               <v-icon class="icon-size">mdi-sword-cross</v-icon>
             </v-btn>
           </v-img>
+          <v-img v-else
+            class="text-center"
+            max-width="250px"
+            :src="unknown"
+            :lazy-src="unknown"
+          >
+            <v-btn v-if="!isMobile"
+              width="100%"
+              height="100%"
+              icon
+              flat
+              class="transparent-button"
+              @click="showDamageCalculatorDialog = true"
+            >
+              <v-icon class="icon-size">mdi-sword-cross</v-icon>
+            </v-btn>
+          </v-img>
         </div>
 
         <div :style="centerStyle">
-          血量: {{ HP }}&emsp;攻擊力: {{ ATK }}&emsp;防禦力: {{ DEF }}
+          血量: {{ parseInt(allStats.HP) }}&emsp;攻擊力: {{ parseInt(allStats.ATK) }}&emsp;防禦力: {{ parseInt(allStats.DEF) }}
         </div>
       </v-col>
       <v-col cols="12" md="6">
@@ -43,6 +60,7 @@
     <damage-calculator-dialog
       :showDialog="showDamageCalculatorDialog"
       :enemy="enemy"
+      :stats="stats"
       v-on:close="showDamageCalculatorDialog = false"
     >
     </damage-calculator-dialog>
@@ -58,23 +76,19 @@ import enemyValueRelated from './enemyValueRelated';
 const props = defineProps({
   enemy: Object,
   round: Number,
+  stats: Object,
 })
 
 const enemyImages = images.enemyImages;
-const { getEnemyValue } = enemyValueRelated;
+const unknown = images.unknown;
+const { getEnemyStats } = enemyValueRelated;
 
-const HP = computed(() => {
-  return getEnemyValue(props.enemy.basicValues.HP, props.enemy.delta.HP, Math.min(props.round, props.enemy.maxRound??1));
-});
+const allStats = computed(() => {
+  const maxRound = props.stats.maxRound;
+  const { basic, delta } = props.stats;
 
-const ATK = computed(() => {
-  return getEnemyValue(props.enemy.basicValues.ATK, props.enemy.delta.ATK, Math.min(props.round, props.enemy.maxRound??1));
-});
-
-const DEF = computed(() => {
-  return getEnemyValue(props.enemy.basicValues.DEF, props.enemy.delta.DEF, Math.min(props.round, props.enemy.maxRound??1));
-});
-
+  return getEnemyStats(basic, delta, props.round, maxRound);
+})
 
 const headerList = [
   { title: '技能類型', key: 'name', sortable: false, width: '35%'},
