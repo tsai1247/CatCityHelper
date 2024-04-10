@@ -144,6 +144,9 @@ const updateQuery = setInterval(() => {
 }, 1000);
 
 watch(() => round.value, () => {
+  if(round.value === '') {
+    round.value = 1;
+  }
   if(round.value > 999) {
     round.value = 999;
   }

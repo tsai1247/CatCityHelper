@@ -196,6 +196,10 @@
           dataList.value[index].round = 999;
           return;
         }
+        if( value === '' ) {
+          dataList.value[index].round = 1;
+          return;
+        }
 
         const { basic, delta } = props.stats;
         const { HP, ATK, DEF } = getEnemyStats(basic, delta, value, props.stats.maxRound);
