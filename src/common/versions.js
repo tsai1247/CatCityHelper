@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.7.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：千術之王、黑桃A",
+      "【修正】角色基礎數值：囚鳥綺願",
+    ]
+  },
+  {
     "version": "1.6.3.0",
     "title": "",
     "description": [
@@ -145,6 +153,10 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.7",
+    "title": "深淵的迴響"
+  },
   {
     "version": "1.6",
     "title": "竹野熊蹤"
