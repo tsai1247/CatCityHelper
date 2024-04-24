@@ -146,6 +146,10 @@ const bookVersionList = [
 
 const catCityVersionList = [
   {
+    "version": "1.7",
+    "title": "深淵的迴響"
+  },
+  {
     "version": "1.6",
     "title": "竹野熊蹤"
   },
