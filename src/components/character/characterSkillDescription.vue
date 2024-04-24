@@ -33,7 +33,7 @@
         <span width="30px">
           <!-- 將 content 依照上下引號位置，切割成 A + (B1 + C1) + (B2 + C2) + ... -->
           <!-- A -->
-          <span>{{header}}</span>
+          <span v-html="header"></span>
 
           <!-- B + C -->
           <span v-for="(item, index) in contentArray" :key="index">
@@ -56,8 +56,7 @@
               」
             </span>
             <!-- C 部分 -->
-            <span v-else>
-              {{ item }}
+            <span v-else v-html="item">
             </span>
           </span>
         </span>
