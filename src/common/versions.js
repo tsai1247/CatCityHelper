@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.7.0.1",
+    "title": "",
+    "description": [
+      "【新增】社團特訓第10期資訊",
+      "【修正】社團特訓莫布、孤傲劍客技能敘述錯誤",
+    ]
+  },
+  {
     "version": "1.7.0.0",
     "title": "",
     "description": [
