@@ -1,7 +1,291 @@
 import enumList from "./commonEnum";
 const { attribute } = enumList;
 
+/**
+ *
+ * @param {Number} number number of club training
+ * @param {{red:{}, green:{}, blue:{}, white:{}}} customBossInfo custom statement of boss info
+ * @returns {Object} statements of four-type bosses
+ */
+function constructBossInfo(number, customBossInfo = {}) {
+  const typeList = ["red", "green", "blue", "white"];
+
+  const bossInfo = Object.fromEntries(typeList.map((type) => [
+    type,
+    {
+      title: type == "white" ? "特級討伐" : "一般討伐",
+      attribute: type == "white" ? attribute.light : attribute[type],
+      ...(customBossInfo[type] ?? clubBossList[type][(number - 1) % 4]),
+    }
+  ]));
+
+  return bossInfo;
+}
+
+/**
+ * @param {Number} number number of club training
+ * @param {{small:{delta:{}}, big:{delta:{}}}} statData original stat data
+ * @returns {{small:{delta:{}}, big:{delta:{}}}} adjusted stat data
+ */
+function adjustBossStats(number, statData) {
+  const basicStats = {
+    smallHP: 4010400,
+    bigHP: 4392500,
+    ATK: 2865,
+    DEF: 955
+  };
+
+  const basicStatsDelta = {
+    smallHP: 63000,
+    bigHP: 69000,
+    ATK: 45,
+    DEF: 15
+  };
+
+
+  const deltaStats = {
+    smallHP: 997500,
+    bigHP: 1092500,
+    ATK: statData.small.delta.ATK,
+    DEF: statData.small.delta.DEF
+  };
+
+  const deltaStatsDelta = {
+    smallHP: 14700,
+    bigHP: 16100,
+    ATK: 0,
+    DEF: 0
+  };
+
+
+  ["small", "big"].forEach((bossType) => {
+    statData[bossType].basic = createStats(basicStats, basicStatsDelta);
+    statData[bossType].delta = createStats(deltaStats, deltaStatsDelta);
+
+    function createStats(statBase, statDelta) {
+      return Object.fromEntries(["HP", "ATK", "DEF"].map((statType) => {
+        const adjustedKey = (statType) => statType == "HP" ? `${bossType}HP` : statType;
+        return [
+          statType,
+          statBase[adjustedKey(statType)] + statDelta[adjustedKey(statType)] * number
+        ];
+      }));
+    }
+  });
+
+  return statData;
+}
+
+const clubBossList = {
+  red: [
+    {
+      name: "爆裂鼓蟹",
+      skills: {
+        Sp: "對敵方全體造成攻擊力75%的破盾傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
+        Active: [
+          "對敵方單體目標造成攻擊力100%的傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
+          "對敵方全體造成攻擊力120%的破盾傷害",
+        ],
+        Passive: "當敵方目標身上的【攻擊力降低】效果疊加至6層後，給予自身攻擊力提升的效果，最多可疊加4層，持續至戰鬥結束。"
+      },
+    },
+    {
+      name: "拳擊販售機",
+      skills: {
+        Sp: "對敵方全體造成攻擊力225%的爆裂傷害，並使目標受到治療效果降低50%，效果持續3回合",
+        Active: [
+          "對目標造成攻擊力120%的爆裂傷害",
+          "對敵方全體造成攻擊力90%的爆裂傷害",
+        ],
+        Passive: "自身忍耐率提升100%"
+      },
+    },
+    {
+      name: "厄運轉輪",
+      skills: {
+        Sp: "按176%攻擊力，對敵方單體造成傷害，並對目標施加「恐懼」3回合",
+        Active: [
+          "按120%攻擊力，對敵方單體造成傷害",
+          "降低敵方單體30%爆擊率3回合",
+        ]
+      },
+    },
+    {
+      name: "無面塗鴉犬",
+      skills: {
+        Sp: "召喚4個繼承自身基礎能力的友方助陣，降低其40%攻擊力，替其承擔50%受到傷害，並使其在下回合結束時死亡",
+        Active: [
+          "按120%攻擊力，對敵方單體造成傷害",
+          "提升全體友方40%防禦力2回合",
+        ]
+      },
+    }
+  ],
+  green: [
+    {
+      name: "孤傲劍客",
+      skills: {
+        Sp: "對敵方全體造成攻擊力75%的技能傷害，並降低目標50%受療效果，最多可疊加2層，持續3回合",
+        Active: [
+          "對敵方單體造成攻擊力150%的穿刺傷害。(此為3倍穿透)",
+          "清除自身全部減益效果，同時給自身添加一層攻擊力150%的護盾",
+          "對敵方全體造成攻擊力80%的穿刺傷害",
+        ],
+      },
+    },
+    {
+      name: "惡意挖掘機",
+      skills: {
+        Sp: "對目標造成攻擊力253%的弱點傷害",
+        Active: [
+          "對目標造成攻擊力120%的強擊傷害",
+          "對目標造成攻擊力90%的弱點傷害",
+        ],
+        Passive: "自身防禦力提升50%"
+      },
+    },
+    {
+      name: "警覺鍵盤鹿",
+      skills: {
+        Sp: "按126%攻擊力，對敵方全體造成「弱點傷害」",
+        Active: [
+          "按96%攻擊力，對敵方單體造成傷害，並對目標施加2層「鏽刃」3回合",
+          "按120%攻擊力，對敵方單體造成傷害",
+          "按300%攻擊力，對自身施加護盾3回合",
+        ]
+      }
+    },
+    {
+      name: "失敗格鬥遊戲機",
+      skills: {
+        Sp: "按193%攻擊力，對敵方單體造成傷害，並使目標降低3點奧義能量",
+        Active: [
+          "按120%攻擊力，對敵方單體造成傷害",
+          "按96%攻擊力，對敵方單體造成傷害，並降低目標20%攻擊力2回合",
+        ],
+        Passive: "每回合結束時，敵我雙方隨機獲得以下減益效果之一：\n1. 攻擊力降低\n2. 造成間接傷害降低\n3. 受到間接傷害提升\n4. 受到傷害提升"
+      },
+    }
+
+  ],
+  blue: [
+    {
+      name: "寶寶玩偶",
+      skills: {
+        Sp: "對敵方全體造成攻擊力112%的傷害，自身爆擊率30%，爆擊傷害提升50%，持續2回合",
+        Active: [
+          "對敵方全體造成攻擊力100%的傷害，並使目標造成傷害降低5%效果，持續2回合，最多可疊加20層。該效果可以被驅散",
+          "自身每擁有1點SP點，攻擊力提升10%",
+        ],
+      },
+    },
+    {
+      name: "銅銹劍鼠",
+      skills: {
+        Sp: "對敵方全體造成攻擊力135%的傷害，並對目標施加【流血】效果，造成攻擊力30%的間接傷書，持續3回合",
+        Active: [
+          "對敵方全體造成攻擊力90%的傷害",
+          "對敵方全體造成攻擊力70%的傷害，並對目標施加【流血】效果，造成攻擊力30%的間接傷書，持續3回合",
+        ],
+        Passive: "自身免疫控制技能"
+      },
+    },
+    {
+      name: "怪鳥時鐘",
+      skills: {
+        Sp: "按207%攻擊力，對敵方單體造成傷害",
+        Active: [
+          "按120%攻擊力，對敵方單體造成傷害",
+          "按72%攻擊力，對敵方全體造成傷害，並對受到傷害的目標施加「點燃」3回合",
+        ],
+      },
+    },
+    {
+      name: "銅鏽盾鼠",
+      skills: {
+        Sp: "按207%攻擊力，對敵方單體造成傷害",
+        Active: [
+          "按120%攻擊力，對敵方單體造成傷害",
+          "對自己施加1層「受到傷害降低10%」（可疊加，最高6層）",
+        ],
+      },
+    }
+  ],
+  white: [
+    {
+      name: "莫布",
+      skills: {
+        Sp: "對敵方全體造成141%的破盾傷害，成功破盾後給目標施加【破裂】",
+        Active: [
+          "對敵方全體造成攻擊力100%的穿透傷害",
+          "對敵方全體造成攻擊力90%的傷害",
+        ],
+      },
+    },
+    {
+      name: "竹牙巨人",
+      skills: {
+        Sp: "對敵方全體攻擊力126%的破勢傷害",
+        Active: [
+          "對目標造成攻擊力105%的破勢傷害",
+          "對敵方全體造成攻擊力90%的傷害，並使目標防禦降低30%，效果持續3回合",
+        ],
+      },
+      Passive: "自身防禦提升30%，造成最終傷害提升30%"
+    },
+    {
+      name: "躁狂遊戲機",
+      skills: {
+        Sp: "按141%攻擊力，對全體造成「爆裂傷害」",
+        Active: [
+          "按94%攻擊力，對敵方單體造成「破盾傷害」",
+          "按90%攻擊力，對敵方全體造成傷害，並驅散自身所有減益",
+          "按72%攻擊力，造成單體傷害，並驅散目標所有增益",
+        ],
+        Passive: "50層防禦力提升，每受到一段傷害減少一層。效果消失時，重置被動，並按照攻擊者500%攻擊力受到一次「純粹傷害」"
+      },
+    },
+    {
+      name: "奪麥蜥蜴",
+      skills: {
+        Sp: "召喚1個繼承自身基礎能力的友方助陣，降低其40%攻擊力，並替其承擔50%受到傷害",
+        Active: [
+          "按120%攻擊力，對單體造成傷害",
+          "按90%攻擊力，造成全體造成傷害",
+          "使自身獲得2點奧義能量",
+        ],
+      },
+    }
+  ]
+}
+
 const clubInfo = [
+  {
+    no: 10,
+    duration: {
+      start: '2024-05-01',
+      end: '2024-05-07',
+    },
+    enemies: {
+      stats: adjustBossStats(10, {
+        small: {
+          delta: {
+            ATK: 807,
+            DEF: 269,
+          },
+          maxRound: 5,
+        },
+        big: {
+          delta: {
+            ATK: 807,
+            DEF: 269,
+          },
+          maxRound: 5,
+        },
+      }),
+      ...constructBossInfo(10)
+    }
+  },
   {
     no: 9,
     duration: {
@@ -37,56 +321,7 @@ const clubInfo = [
           maxRound: 5,
         },
       },
-      red: {
-        title: "一般討伐",
-        name: "爆裂鼓蟹",
-        attribute: attribute.red,
-        skills: {
-          Sp: "對敵方全體造成攻擊力75%的破盾傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
-          Active: [
-            "對敵方單體目標造成攻擊力100%的傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
-            "對敵方全體造成攻擊力90%的破盾傷害",
-          ],
-          Passive: "當敵方目標身上的【攻擊力降低】效果疊加至6層後，給予自身攻擊力提升的效果，最多可疊加4層，持續至戰鬥結束。"
-        },
-      },
-      green: {
-        title: "一般討伐",
-        name: "孤傲劍客",
-        attribute: attribute.green,
-        skills: {
-          Sp: "對敵方全體造成攻擊力75%的弱點傷害",
-          Active: [
-            "按120%對敵方全體造成80%的穿刺傷害",
-            "清除自身全部減益效果，同時給自身添加一層攻擊力150%的護盾",
-            "對敵方全體造成攻擊力80%的穿刺傷害",
-          ],
-        },
-      },
-      blue: {
-        title: "一般討伐",
-        name: "寶寶玩偶",
-        attribute: attribute.blue,
-        skills: {
-          Sp: "對敵方全體造成攻擊力112%的傷害，自身爆擊率30%，爆擊傷害提升50%，持續2回合",
-          Active: [
-            "對敵方全體造成攻擊力100%的傷害，並使目標造成傷害降低5%效果，持續2回合，最多可疊加20層。該效果可以被驅散",
-            "自身每擁有1點SP點，攻擊力提升10%",
-          ],
-        },
-      },
-      white: {
-        title: "特級討伐",
-        name: "莫布",
-        attribute: attribute.light,
-        skills: {
-          Sp: "對敵方全體造成141%的破盾傷害，成功破盾後給目標施加【破裂】",
-          Active: [
-            "對目標造成攻擊力120%的破勢傷害",
-            "對敵方全體造成攻擊力90%的傷害，立使目標防禦降低30%，效果持續3回合",
-          ],
-        },
-      }
+      ...constructBossInfo(9)
     }
   },
   {
@@ -124,56 +359,7 @@ const clubInfo = [
           maxRound: 5,
         },
       },
-      red: {
-        title: "一般討伐",
-        name: "無面塗鴉犬",
-        attribute: attribute.red,
-        skills: {
-          Sp: "召喚4個繼承自身基礎能力的友方助陣，降低其40%攻擊力，替其承擔50%受到傷害，並使其在下回合結束時死亡",
-          Active: [
-            "按120%攻擊力，對敵方單體造成傷害",
-            "提升全體友方40%防禦力2回合",
-          ]
-        },
-      },
-      green: {
-        title: "一般討伐",
-        name: "失敗格鬥遊戲機",
-        attribute: attribute.green,
-        skills: {
-          Sp: "按193%攻擊力，對敵方單體造成傷害，並使目標降低3點奧義能量",
-          Active: [
-            "按120%攻擊力，對敵方單體造成傷害",
-            "按96%攻擊力，對敵方單體造成傷害，並降低目標20%攻擊力2回合",
-          ],
-          Passive: "每回合結束時，敵我雙方隨機獲得以下減益效果之一：\n1. 攻擊力降低\n2. 造成間接傷害降低\n3. 受到間接傷害提升\n4. 受到傷害提升"
-        },
-      },
-      blue: {
-        title: "一般討伐",
-        name: "銅鏽盾鼠",
-        attribute: attribute.blue,
-        skills: {
-          Sp: "按207%攻擊力，對敵方單體造成傷害",
-          Active: [
-            "按120%攻擊力，對敵方單體造成傷害",
-            "對自己施加1層「受到傷害降低10%」（可疊加，最高6層）",
-          ],
-        },
-      },
-      white: {
-        title: "特級討伐",
-        name: "奪麥蜥蜴",
-        attribute: attribute.light,
-        skills: {
-          Sp: "召喚1個繼承自身基礎能力的友方助陣，降低其40%攻擊力，並替其承擔50%受到傷害",
-          Active: [
-            "按120%攻擊力，對單體造成傷害",
-            "按90%攻擊力，造成全體造成傷害",
-            "使自身獲得2點奧義能量",
-          ],
-        },
-      }
+      ...constructBossInfo(8)
     }
   },
   {
@@ -211,57 +397,7 @@ const clubInfo = [
           maxRound: 5,
         },
       },
-      red: {
-        title: "一般討伐",
-        name: "厄運轉輪",
-        attribute: attribute.red,
-        skills: {
-          Sp: "按176%攻擊力，對敵方單體造成傷害，並對目標施加「恐懼」3回合",
-          Active: [
-            "按120%攻擊力，對敵方單體造成傷害",
-            "降低敵方單體30%爆擊率3回合",
-          ]
-        },
-      },
-      green: {
-        title: "一般討伐",
-        name: "警覺鍵盤鹿",
-        attribute: attribute.green,
-        skills: {
-          Sp: "按126%攻擊力，對敵方全體造成「弱點傷害」",
-          Active: [
-            "按96%攻擊力，對敵方單體造成傷害，並對目標施加2層「鏽刃」3回合",
-            "按120%攻擊力，對敵方單體造成傷害",
-            "按300%攻擊力，對自身施加護盾3回合",
-          ]
-        }
-      },
-      blue: {
-        title: "一般討伐",
-        name: "怪鳥時鐘",
-        attribute: attribute.blue,
-        skills: {
-          Sp: "按207%攻擊力，對敵方單體造成傷害",
-          Active: [
-            "按120%攻擊力，對敵方單體造成傷害",
-            "按72%攻擊力，對敵方全體造成傷害，並對受到傷害的目標施加「點燃」3回合",
-          ],
-        },
-      },
-      white: {
-        title: "特級討伐",
-        name: "躁狂遊戲機",
-        attribute: attribute.light,
-        skills: {
-          Sp: "按141%攻擊力，對全體造成「爆裂傷害」",
-          Active: [
-            "按94%攻擊力，對敵方單體造成「破盾傷害」",
-            "按90%攻擊力，對敵方全體造成傷害，並驅散自身所有減益",
-            "按72%攻擊力，造成單體傷害，並驅散目標所有增益",
-          ],
-          Passive: "50層防禦力提升，每受到一段傷害減少一層。效果消失時，重置被動，並按照攻擊者500%攻擊力受到一次「純粹傷害」"
-        },
-      }
+      ...constructBossInfo(7)
     }
   },
   {
@@ -299,56 +435,7 @@ const clubInfo = [
           maxRound: 9999,
         },
       },
-      red: {
-        title: "一般討伐",
-        name: "爆裂鼓蟹",
-        attribute: attribute.red,
-        skills: {
-          Sp: "對敵方全體造成攻擊力75%的破盾傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
-          Active: [
-            "對敵方單體目標造成攻擊力100%的傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
-            "對敵方全體造成攻擊力90%的破盾傷害",
-          ],
-          Passive: "當敵方目標身上的【攻擊力降低】效果疊加至6層後，給予自身攻擊力提升的效果，最多可疊加4層，持續至戰鬥結束。"
-        },
-      },
-      green: {
-        title: "一般討伐",
-        name: "孤傲劍客",
-        attribute: attribute.green,
-        skills: {
-          Sp: "對敵方全體造成攻擊力75%的弱點傷害",
-          Active: [
-            "按120%對敵方全體造成80%的穿刺傷害",
-            "清除自身全部減益效果，同時給自身添加一層攻擊力150%的護盾",
-            "對敵方全體造成攻擊力80%的穿刺傷害",
-          ],
-        },
-      },
-      blue: {
-        title: "一般討伐",
-        name: "寶寶玩偶",
-        attribute: attribute.blue,
-        skills: {
-          Sp: "對敵方全體造成攻擊力112%的傷害，自身爆擊率30%，爆擊傷害提升50%，持續2回合",
-          Active: [
-            "對敵方全體造成攻擊力100%的傷害，並使目標造成傷害降低5%效果，持續2回合，最多可疊加20層。該效果可以被驅散",
-            "自身每擁有1點SP點，攻擊力提升10%",
-          ],
-        },
-      },
-      white: {
-        title: "特級討伐",
-        name: "莫布",
-        attribute: attribute.light,
-        skills: {
-          Sp: "對敵方全體造成141%的破盾傷害，成功破盾後給目標施加【破裂】",
-          Active: [
-            "對目標造成攻擊力120%的破勢傷害",
-            "對敵方全體造成攻擊力90%的傷害，立使目標防禦降低30%，效果持續3回合",
-          ],
-        },
-      }
+      ...constructBossInfo(5)
     }
   },
   {
@@ -386,56 +473,7 @@ const clubInfo = [
           maxRound: 9999,
         },
       },
-      red: {
-        title: "一般討伐",
-        name: "無面塗鴉犬",
-        attribute: attribute.red,
-        skills: {
-          Sp: "召喚4個繼承自身基礎能力的友方助陣，降低其40%攻擊力，替其承擔50%受到傷害，並使其在下回合結束時死亡",
-          Active: [
-            "按120%攻擊力，對敵方單體造成傷害",
-            "提升全體友方40%防禦力2回合",
-          ]
-        },
-      },
-      green: {
-        title: "一般討伐",
-        name: "失敗格鬥遊戲機",
-        attribute: attribute.green,
-        skills: {
-          Sp: "按193%攻擊力，對敵方單體造成傷害，並使目標降低3點奧義能量",
-          Active: [
-            "按120%攻擊力，對敵方單體造成傷害",
-            "按96%攻擊力，對敵方單體造成傷害，並降低目標20%攻擊力2回合",
-          ],
-          Passive: "每回合結束時，敵我雙方隨機獲得以下減益效果之一：\n1. 攻擊力降低\n2. 造成間接傷害降低\n3. 受到間接傷害提升\n4. 受到傷害提升"
-        },
-      },
-      blue: {
-        title: "一般討伐",
-        name: "銅鏽盾鼠",
-        attribute: attribute.blue,
-        skills: {
-          Sp: "按207%攻擊力，對敵方單體造成傷害",
-          Active: [
-            "按120%攻擊力，對敵方單體造成傷害",
-            "對自己施加1層「受到傷害降低10%」（可疊加，最高6層）",
-          ],
-        },
-      },
-      white: {
-        title: "特級討伐",
-        name: "奪麥蜥蜴",
-        attribute: attribute.light,
-        skills: {
-          Sp: "召喚1個繼承自身基礎能力的友方助陣，降低其40%攻擊力，並替其承擔50%受到傷害",
-          Active: [
-            "按120%攻擊力，對單體造成傷害",
-            "按90%攻擊力，造成全體造成傷害",
-            "使自身獲得2點奧義能量",
-          ],
-        },
-      }
+      ...constructBossInfo(4)
     }
   },
   {
@@ -473,56 +511,7 @@ const clubInfo = [
           maxRound: 9999,
         },
       },
-      red: {
-        title: "一般討伐",
-        name: "爆裂鼓蟹",
-        attribute: attribute.red,
-        skills: {
-          Sp: "對敵方全體造成攻擊力75%的破盾傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
-          Active: [
-            "對敵方單體目標造成攻擊力100%的傷害，並對目標添加1層攻擊力降低10%的效果，最高6層",
-            "對敵方全體造成攻擊力90%的破盾傷害",
-          ],
-          Passive: "當敵方目標身上的【攻擊力降低】效果疊加至6層後，給予自身攻擊力提升的效果，最多可疊加4層，持續至戰鬥結束。"
-        },
-      },
-      green: {
-        title: "一般討伐",
-        name: "孤傲劍客",
-        attribute: attribute.green,
-        skills: {
-          Sp: "對敵方全體造成攻擊力75%的弱點傷害",
-          Active: [
-            "按120%對敵方全體造成80%的穿刺傷害",
-            "清除自身全部減益效果，同時給自身添加一層攻擊力150%的護盾",
-            "對敵方全體造成攻擊力80%的穿刺傷害",
-          ],
-        },
-      },
-      blue: {
-        title: "一般討伐",
-        name: "寶寶玩偶",
-        attribute: attribute.blue,
-        skills: {
-          Sp: "對敵方全體造成攻擊力112%的傷害，自身爆擊率30%，爆擊傷害提升50%，持續2回合",
-          Active: [
-            "對敵方全體造成攻擊力100%的傷害，並使目標造成傷害降低5%效果，持續2回合，最多可疊加20層。該效果可以被驅散",
-            "自身每擁有1點SP點，攻擊力提升10%",
-          ],
-        },
-      },
-      white: {
-        title: "特級討伐",
-        name: "莫布",
-        attribute: attribute.light,
-        skills: {
-          Sp: "對敵方全體造成141%的破盾傷害，成功破盾後給目標施加【破裂】",
-          Active: [
-            "對目標造成攻擊力120%的破勢傷害",
-            "對敵方全體造成攻擊力90%的傷害，立使目標防禦降低30%，效果持續3回合",
-          ],
-        },
-      }
+      ...constructBossInfo(1)
     }
   },
 ]
