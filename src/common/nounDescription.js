@@ -135,6 +135,24 @@ const buff = [
     name: "竹影‧強襲",
     description: "「竹影‧強襲」：爆擊率提升25%，可疊加3層，攻擊後清除",
   },
+  {
+    name: "邊池",
+    description: "「邊池」：受到群體攻擊傷害降低{{}}；受擊時，對攻擊者施加1回合詛咒，每回合至多觸發1次",
+    argument: [
+      {
+        condition: {rarity: [0]},
+        value: ["25%"],
+      },
+      {
+        condition: {rarity: [1]},
+        value: ["30%"],
+      },
+      {
+        condition: {rarity: [2]},
+        value: ["35%"],
+      },
+    ]
+  },
 ]
 
 const control = [
