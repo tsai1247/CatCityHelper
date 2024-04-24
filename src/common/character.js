@@ -5,12 +5,162 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "千術",
+    subname: "千術之王",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "164",
+      DEF: "60",
+      HP: "394",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "皇家同花順",
+        description: "按{{}}攻擊力，分5段攻擊隨機敵方目標，每段攻擊使目標身上1個「詛咒」延長一回合",
+        arguments: [
+          ["200%"],
+          ["228%"],
+          ["258%"],
+          ["285%"],
+        ]
+      },
+      A: {
+        name: "瘋狂下注",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並使目標身上{{}}個「詛咒」延長1回合",
+        arguments: [
+          ["102%", "2"],
+          ["120%", "3"],
+          ["150%", "4"],
+        ]
+      },
+      B: {
+        name: "博弈選擇",
+        description: "從兩張衍生技能牌中選擇一張打出：<br>&emsp;<瓦解>：對敵方全體施加3回合受到治療降低{{}}<br>&emsp;<鞏固>：對友方全體施加2回合「邊池」",
+        arguments: [
+          ["30%"],
+          ["35%"],
+          ["40%"],
+        ]
+      },
+      Passive: {
+        name: "連勝紀錄",
+        description: "上陣戰鬥員都是紅色情緒時，友方全體造成間接傷害提升{{}}",
+        arguments: [
+          ["10%"],
+          ["11.7%"],
+          ["13.3%"],
+          ["15%"],
+        ]
+      },
+      risingStar: [
+        "釋放奧義技能時，每段攻擊對目標施加1層受到間接傷害提升8%，可疊加3層，持續3回合",
+        "",
+        "",
+        "戰鬥開始時，我方全體獲得2回合「邊池」，效果等同於1星技能牌；並且在每回合結束時，按50%攻擊力治療所有攜帶「邊池」的友方",
+        "",
+        "回合結束時，使每個敵方目標身上至多2個「詛咒」延長1回合",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "千術",
+    subname: "黑桃A",
+    rarity: rarity.SR,
+    attribute: attribute.red,
+    particle: particle.star,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "115",
+      DEF: "44",
+      HP: "298",
+      Penetration: "7%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "貓膩",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並對受到傷害的目標施加「流血」4回合",
+        arguments: [
+          ["165%"],
+          ["175%"],
+          ["190%"],
+          ["206%"],
+        ]
+      },
+      A: {
+        name: "骰子",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並使目標受到間接傷害提升20%，持續1回合",
+        arguments: [
+          ["86%"],
+          ["96%"],
+          ["128%"],
+        ]
+      },
+      B: {
+        name: "順子",
+        description: "按{{}}攻擊力，對敵方全體造成傷害",
+        arguments: [
+          ["96%"],
+          ["120%"],
+          ["160%"],
+        ]
+      },
+      Passive: {
+        name: "萬能牌",
+        description: "友方粒子型態均為「星流」時，自身爆擊傷害提升{{}}",
+        arguments: [
+          ["10%"],
+          ["12%"],
+          ["14%"],
+          ["16%"],
+        ]
+      },
+      risingStar: [
+        "",
+        "",
+        "戰鬥開始時，穿透率提升8%",
+        "",
+        "戰鬥開始時，攻擊力提升6%，生命值提升4.5%",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "非天",
     subname: "茂林餘音",
     rarity: rarity.SSR,
     attribute: attribute.green,
     particle: particle.square,
-    source: [characterSource.specialSummon],
+    source: [characterSource.summon],
     basic: {
       ATK: "148",
       DEF: "66",
@@ -1516,10 +1666,10 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.specialSummon],
-    basic: { // unconfirmed
-      ATK: "191",
-      DEF: "80",
-      HP: "556",
+    basic: {
+      ATK: "148",
+      DEF: "62",
+      HP: "431",
       Penetration: "0%",
       Durability: "20%",
       CRIT_Rate: "0%",
