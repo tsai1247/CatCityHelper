@@ -1142,6 +1142,18 @@ const catoList = [
       ]
     }
   }
-]
+].map((cato) => {
+  if (cato.type != catoType.other.business) return cato;
+
+  const battleExpBoxPercent = {
+    [rarity.R]: 7,
+    [rarity.SR]: 8.5,
+    [rarity.SSR]: 12
+  };
+  cato.skill.description = `${cato.skill.description}\n每{{}}秒有${battleExpBoxPercent[cato.rarity]}%的機率可獲得1個戰鬥心得隨機箱`;
+  cato.skill.arguments = cato.skill.arguments.map((arr) => arr.concat(arr));
+
+  return cato;
+}); //update for new descriptions
 
 export default catoList

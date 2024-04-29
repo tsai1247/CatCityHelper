@@ -381,7 +381,7 @@ const characterList = [
   },
   {
     name: "特莉絲",
-    subname: "幽皇月韻",
+    subname: "幽篁月韻",
     rarity: rarity.SSR,
     attribute: attribute.green,
     particle: particle.triangle,
@@ -415,7 +415,7 @@ const characterList = [
       },
       A: {
         name: "烈風旋",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加一「烈風」，攜帶「烈風」的目標受到單體攻擊時，觸發“幽皇月韻”的追擊",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「烈風」，攜帶「烈風」的目標受到單體攻擊時，觸發“幽篁月韻”的追擊",
         arguments: [
           ["80%"],
           ["93%"],
@@ -1028,7 +1028,7 @@ const characterList = [
         ]
       },
       B: {
-        name: "幽蓮手",
+        name: "幽蓮守",
         description: "先消耗目標15%當前生命值，再按{{}}自身攻擊力+{{}}目標已損失生命值，對友方全體施加2回合「蓮舞」",
         arguments: [
           ["35%", "45%"],

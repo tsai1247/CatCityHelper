@@ -8,23 +8,45 @@
 
           <!-- cards -->
           <v-row>
-            <v-col v-for="(item, index) in catoList" :key="index" cols="auto">
-              <cato-card :cato="item" v-on:select="catoSelected(item)"></cato-card>
+            <v-col
+              v-for="(item, index) in catoList"
+              :key="index"
+              cols="auto"
+            >
+              <cato-card
+                :cato="item"
+                v-on:select="catoSelected(item)"
+              ></cato-card>
             </v-col>
           </v-row>
 
         </v-col>
 
         <!-- cato info -->
-        <v-col cols="5" v-if="!isMobile">
-          <cato-info :cato="selectedCato" v-on:close-dialog="catoSelected(null)"></cato-info>
+        <v-col
+          cols="5"
+          v-if="!isMobile"
+        >
+          <cato-info
+            :cato="selectedCato"
+            v-on:close-dialog="catoSelected(null)"
+          ></cato-info>
         </v-col>
       </v-row>
 
       <!-- cato info for mobile -->
-      <v-dialog v-if="isMobile" v-model="catoInfoDialog" width="100%" height="100%" scrollable>
+      <v-dialog
+        v-if="isMobile"
+        v-model="catoInfoDialog"
+        width="100%"
+        height="100%"
+        scrollable
+      >
         <template v-slot:default>
-          <cato-info :cato="selectedCato" v-on:close-dialog="catoSelected(null)"></cato-info>
+          <cato-info
+            :cato="selectedCato"
+            v-on:close-dialog="catoSelected(null)"
+          ></cato-info>
         </template>
       </v-dialog>
     </div>
