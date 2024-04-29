@@ -1,12 +1,19 @@
 <template>
-  <v-card width="100%" @click="merge">
+  <v-card
+    width="100%"
+    @click="merge"
+  >
     <v-row class="ma-1 text-subtitle-1">
 
       <!-- 技能名稱 -->
       <v-col cols="3">
         <v-tooltip location="left">
           <template v-slot:activator="{ props }">
-            <span class="font-weight-bold" width="30px" v-bind="props">
+            <span
+              class="font-weight-bold"
+              width="30px"
+              v-bind="props"
+            >
               {{ skill.name }}
             </span>
           </template>
@@ -16,16 +23,26 @@
 
       <!-- 技能描述 -->
       <v-col cols="9">
-        <span width="30px">
+        <span
+          width="30px"
+          style="white-space: pre-wrap;"
+        >
           <!-- 將 content 依照上下引號位置，切割成 A + (B1 + C1) + (B2 + C2) + ... -->
           <!-- A -->
           <span>{{ header }}</span>
 
           <!-- B + C -->
-          <span v-for="(item, index) in contentArray" :key="index">
+          <span
+            v-for="(item, index) in contentArray"
+            :key="index"
+          >
             <!-- B 部分 -->
             <span v-if="index % 2 === 0">
-              「<v-tooltip location="left" v-if="item?.htmlDescription">
+              「
+              <v-tooltip
+                location="left"
+                v-if="item?.htmlDescription"
+              >
                 <template v-slot:activator="{ props }">
                   <span v-bind="props">
                     {{ item?.name }}
@@ -33,7 +50,8 @@
                 </template>
                 <span v-html="item?.htmlDescription"></span>
               </v-tooltip>
-              <span v-else>{{ item?.name }}</span>」
+              <span v-else>{{ item?.name }}</span>
+              」
             </span>
             <!-- C 部分 -->
             <span v-else>
