@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.7.2.0",
+    "title": "",
+    "description": [
+      "【新增】社團特訓第10期實際數值",
+      "【修正】社團特訓竹牙巨人技能敘述錯誤",
+    ]
+  },
+  {
     "version": "1.7.1.0",
     "title": "",
     "description": [
