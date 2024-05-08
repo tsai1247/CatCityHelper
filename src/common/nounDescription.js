@@ -100,11 +100,11 @@ const buff = [
     description: "「綻放」：攜帶者受到敵方攻擊技能牌的攻擊後，若生命值{{}}{{}}，則恢復攜帶者自身30%最大生命值，每回合至多觸發2次",
     argument: [
       {
-        condition: {risingStar: [0, 1 , 2]},
+        condition: { risingStar: [0, 1, 2] },
         value: ["不高於", "25%"],
       },
       {
-        condition: {risingStar: [3, 4, 5, 6]},
+        condition: { risingStar: [3, 4, 5, 6] },
         value: ["低於", "40%"],
       },
     ],
@@ -114,15 +114,15 @@ const buff = [
     description: "「花蕾」：爆擊率提升{{}}",
     argument: [
       {
-        condition: {rarity: [0]},
+        condition: { rarity: [0] },
         value: ["15%"],
       },
       {
-        condition: {rarity: [1]},
+        condition: { rarity: [1] },
         value: ["20%"],
       },
       {
-        condition: {rarity: [2]},
+        condition: { rarity: [2] },
         value: ["30%"],
       },
     ]
@@ -140,18 +140,30 @@ const buff = [
     description: "「邊池」：受到群體攻擊傷害降低{{}}；受擊時，對攻擊者施加1回合詛咒，每回合至多觸發1次",
     argument: [
       {
-        condition: {rarity: [0]},
+        condition: { rarity: [0] },
         value: ["25%"],
       },
       {
-        condition: {rarity: [1]},
+        condition: { rarity: [1] },
         value: ["30%"],
       },
       {
-        condition: {rarity: [2]},
+        condition: { rarity: [2] },
         value: ["35%"],
       },
     ]
+  },
+  {
+    name: "幸運福袋",
+    description: "「幸運福袋」：該狀態下，友方全體幸運值提升150%",
+  },
+  {
+    name: "直播保鏢",
+    description: "「直播保鏢」：可疊加9層。疊加至6層後，\"鈴鈴彌音\"按自身15%最大生命值為友方全體施加2回合護盾「人氣加成」，並消耗6層「直播保鏢」",
+  },
+  {
+    name: "人氣加成",
+    description: "「人氣加成」：可與其他護盾共同存在",
   },
 ]
 
