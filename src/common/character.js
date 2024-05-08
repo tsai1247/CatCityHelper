@@ -5,6 +5,81 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "鈴",
+    subname: "鈴鈴彌音",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.circle,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "128",
+      DEF: "73",
+      HP: "509",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "溢彩進行時",
+        description: "提升自身{{}}最大生命值3回合，並獲得3回合「幸運福袋」",
+        arguments: [
+          ["30%"],
+          ["34%"],
+          ["39%"],
+          ["43%"],
+        ]
+      },
+      A: {
+        name: "聚光燈下",
+        description: "按{{}}最大生命值，對敵方單體造成傷害{{}}",
+        arguments: [
+          ["33%", ""],
+          ["45%", "，並對目標施加2回合受到護盾降低30%"],
+          ["50%", "，並對目標施加3回合受到護盾降低45%"],
+        ]
+      },
+      B: {
+        name: "喵喵愛心波",
+        description: "按{{}}最大生命值，對友方全體施加{{}}回合護盾",
+        arguments: [
+          ["25%", "1"],
+          ["33%", "2"],
+          ["40%", "2"],
+        ]
+      },
+      Passive: {
+        name: "直播助力",
+        description: "所有藍色情緒友方生命值提升{{}}，並且在攜帶護盾時爆擊抵抗提升{{}}",
+        arguments: [
+          ["7.5%", "15%"],
+          ["9%", "18%"],
+          ["10.5%", "21%"],
+          ["12%", "24%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時自身獲得2點奧義能量",
+        "",
+        "自身處於「幸運福袋」狀態下時，其他友方每次主動釋放1/2/3星技能牌時，\"鈴鈴彌音\"獲得1/2/5層「直播保鏢」。",
+        "",
+        "每次對友方施加護盾「人氣加成」時，自身獲得1點奧義能量，每回合至多觸發1次；自身釋放奧義技能後，友方攻擊力最高的單位在接下來的兩個回合開始時掉落的技能牌必定為2星技能牌",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "千術",
     subname: "千術之王",
     rarity: rarity.SSR,

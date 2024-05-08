@@ -1,5 +1,14 @@
 const bookVersionList = [
   {
+    "version": "1.7.3.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：鈴鈴彌音",
+      "【新增】社團特訓第11期資訊",
+      "【優化】對角色升星效果的特殊效果添加提示框",
+    ]
+  },
+  {
     "version": "1.7.2.0",
     "title": "",
     "description": [
