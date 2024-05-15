@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.7.4.0",
+    "title": "",
+    "description": [
+      "【新增】社團特訓第11期實際數值",
+      "【新增】角色圖片：鈴鈴彌音",
+    ]
+  },
+  {
     "version": "1.7.3.0",
     "title": "",
     "description": [
