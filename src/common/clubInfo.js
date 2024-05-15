@@ -270,27 +270,27 @@ const clubInfo = [
       stats: {
         small: {
           basic: {
-            HP: 4638300,
-            ATK: 3314,
-            DEF: 1104,
+            HP: 4701300,
+            ATK: 3359,
+            DEF: 1119.5,
           },
           delta: {
-            HP: 1146600,
-            ATK: 819,
-            DEF: 273,
+            HP: 1161300,
+            ATK: 829.5,
+            DEF: 276.5,
           },
           maxRound: 5,
         },
         big: {
           basic: {
-            HP: 5080200,
-            ATK: 3314,
-            DEF: 1104,
+            HP: 5149200,
+            ATK: 3359,
+            DEF: 1119.5,
           },
           delta: {
-            HP: 1255800,
-            ATK: 819,
-            DEF: 273,
+            HP: 1271900,
+            ATK: 829.5,
+            DEF: 276.5,
           },
           maxRound: 5,
         },
