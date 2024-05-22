@@ -165,6 +165,28 @@ const buff = [
     name: "人氣加成",
     description: "「人氣加成」：可與其他護盾共同存在",
   },
+  {
+    name: "發現",
+    description: "「發現」：從其他友方的{{}}星技能牌中選擇一張加入牌庫",
+    argument: [
+      {
+        condition: { rarity: [0] },
+        value: ["1"],
+      },
+      {
+        condition: { rarity: [1] },
+        value: ["2"],
+      },
+      {
+        condition: { rarity: [2] },
+        value: ["3"],
+      },
+    ]
+  },
+  {
+    name: "親密陪伴",
+    description: "「親密陪伴」：包含5種增益效果：爆擊傷害提升15%；穿透率提升6%；防禦力提升12%；忍耐率提升10%；生命值提升12%，增益效果持續3回合",
+  },
 ]
 
 const control = [
@@ -264,6 +286,10 @@ const debuff = [
   {
     name: "傷害傳遞",
     description: "「傷害傳遞」：將受到的部分傷害傳遞給其他擁有「傷害傳遞」的目標"
+  },
+  {
+    name: "治癒貓爪",
+    description: "「治癒貓爪」：受到攻擊時，攻擊者獲得等同於傷害量5%的治癒效果",
   },
   ...control,
 ]

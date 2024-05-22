@@ -5,6 +5,381 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "絲卡蕾特",
+    subname: "架刑罪贖",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.circle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "151",
+      DEF: "60",
+      HP: "384",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "3%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "當守聖安息",
+        description: "按{{}}攻擊力，對敵方全體造成「穿刺傷害」",
+        arguments: [
+          ["172%"],
+          ["196%"],
+          ["221%"],
+          ["245%"],
+        ]
+      },
+      A: {
+        name: "不可妄悖",
+        description: "按{{}}攻擊力，對敵方全體造成「穿刺傷害」",
+        arguments: [
+          ["72%"],
+          ["90%"],
+          ["120%"],
+        ]
+      },
+      B: {
+        name: "不可肆行",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加{{}}層忍耐率降低12%，持續3回合，可疊加5層",
+        arguments: [
+          ["102%", "1"],
+          ["120%", "1"],
+          ["150%", "2"],
+        ]
+      },
+      Passive: {
+        name: "罪贖",
+        description: "戰鬥開始時，按自身戰前穿透率的{{}}，提升友方全體穿透率",
+        arguments: [
+          ["20%"],
+          ["26%"],
+          ["32%"],
+          ["38%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2點奧義能量",
+        "",
+        "",
+        "釋放奧義技能後，自身穿透率提升20%，可疊加2層",
+        "",
+        "所有藍色情緒友方主動釋放1/2/3星單體攻擊技能時，先對目標施加防禦力降低15%/18%/20%，效果持續至技能結束",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "巧克力",
+    subname: "香甜滿溢",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.circle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "157",
+      DEF: "60",
+      HP: "387",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "禮儀教導",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並獲得3回合30%爆擊率提升",
+        arguments: [
+          ["280%"],
+          ["319%"],
+          ["360%"],
+          ["398%"],
+        ]
+      },
+      A: {
+        name: "不可以浪費",
+        description: "按{{}}攻擊力，對敵方單體造成傷害{{}}",
+        arguments: [
+          ["120%", ""],
+          ["150%", "，並使自身獲得1點奧義能量"],
+          ["200%", "，並使自身獲得2點奧義能量"],
+        ]
+      },
+      B: {
+        name: "乖乖吃飯",
+        description: "按{{}}攻擊力，對敵方單體造成「破碎傷害」，自身每有1個屬性增益效果，基礎傷害提升8%，至多提升{{}}",
+        arguments: [
+          ["85%", "24%"],
+          ["100%", "32%"],
+          ["133%", "40%"],
+        ]
+      },
+      Passive: {
+        name: "一起上吧",
+        description: "隊伍中每有一名藍色情緒友方，自身爆擊傷害提升{{}}，可疊加4層<br>「專屬效果：親友的力量」：戰鬥開始時，若隊伍中存在\"香甜滿溢\"以外的其他貓娘樂園卡牌，自身獲得2點奧義能量",
+        arguments: [
+          ["5.5%"],
+          ["6.5%"],
+          ["7.5%"],
+          ["8.5%"],
+        ]
+      },
+      risingStar: [
+        "釋放奧義技能後，自身獲得1層造成最終傷害提升10%，至多疊加2層",
+        "",
+        "",
+        "釋放奧義技能後，自身隨機2張技能牌升星1次",
+        "",
+        "戰鬥開始時，自身1張「不可以浪費」升星1次，每次釋放3星「乖乖吃飯」後，再追擊1張2星「乖乖吃飯」，每回合至多觸發1次追擊",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "香草",
+    subname: "喵星電波",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.circle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "128",
+      DEF: "73",
+      HP: "509",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "喵喵大助攻",
+        description: "提升友方全體{{}}攻擊力2回合，並驅散友方全體3層減益效果",
+        arguments: [
+          ["18%"],
+          ["20%"],
+          ["23%"],
+          ["26%"],
+        ]
+      },
+      A: {
+        name: "喵星的守護",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加{{}}回合「治癒貓爪」",
+        arguments: [
+          ["120%", "1"],
+          ["150%", "2"],
+          ["200%", "2"],
+        ]
+      },
+      B: {
+        name: "喵星的祝福",
+        description: "觸發<「發現」({{}})>效果，並且對友方單體隨機施加「親密陪伴」中的{{}}個增益效果",
+        arguments: [
+          ["1", "1"],
+          ["2", "2"],
+          ["3", "3"],
+        ]
+      },
+      Passive: {
+        name: "電波共振",
+        description: "所有藍色情緒友方爆擊率提升{{}}<br>「專屬效果：親友的愈療」：戰鬥開始時，若隊伍中存在\"喵星電波\"以外的其他貓娘樂園卡牌，友方全體受到治療提升12%",
+        arguments: [
+          ["7%"],
+          ["8.4%"],
+          ["9.8%"],
+          ["11.2%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，自身1張「喵星的祝福」升星1次",
+        "",
+        "",
+        "\"喵星電波\"以外的其他友方釋放3星技能牌後，\"喵星電波\"對友方全體隨機添加「親密陪伴」中的1個增益效果，並驅散友方全體身上2層減益效果，每回合至多觸發1次",
+        "",
+        "每回合開始時，對友方全體隨機添加「親密陪伴」中的1個增益效果，優先添加未獲得的效果",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "可可",
+    subname: "懵懂精靈",
+    rarity: rarity.SR,
+    attribute: attribute.blue,
+    particle: particle.circle,
+    source: [characterSource.event],
+    basic: {
+      ATK: "117",
+      DEF: "44",
+      HP: "295",
+      Penetration: "7%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "飛天頭槌",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「易傷」3回合",
+        arguments: [
+          ["169%"],
+          ["179%"],
+          ["195%"],
+          ["211%"],
+        ]
+      },
+      A: {
+        name: "貓咪頭槌",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「易傷」3回合",
+        arguments: [
+          ["102%"],
+          ["120%"],
+          ["150%"],
+        ]
+      },
+      B: {
+        name: "貓爪連擊",
+        description: "按{{}}攻擊力，對敵方單體造成「穿透傷害」",
+        arguments: [
+          ["90%"],
+          ["113%"],
+          ["150%"],
+        ]
+      },
+      Passive: {
+        name: "爪痕",
+        description: "戰鬥開始時，按自身戰前爆擊率的{{}}，降低敵方全體爆擊率抵抗",
+        arguments: [
+          ["15%"],
+          ["20%"],
+          ["25%"],
+          ["30%"],
+        ]
+      },
+      risingStar: [
+        "",
+        "",
+        "戰鬥開始時，爆擊率提升6%",
+        "",
+        "戰鬥開始時，攻擊力提升6%，爆擊率提升6%",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "斯泰茜",
+    subname: "旋風初成",
+    rarity: rarity.SSR,
+    attribute: attribute.light,
+    particle: particle.circle,
+    source: [characterSource.signin],
+    basic: {
+      ATK: "135",
+      DEF: "73",
+      HP: "535",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "全力以赴",
+        description: "對友方全體施加2回合穿透率提升{{}}和2回合爆擊率提升20%",
+        arguments: [
+          ["20%"],
+          ["23%"],
+          ["26%"],
+          ["28%"],
+        ]
+      },
+      A: {
+        name: "榮耀衝鋒",
+        description: "按{{}}攻擊力，對敵方單體造成傷害{{}}",
+        arguments: [
+          ["120%", ""],
+          ["120%", "，並對目標施加「恐懼」1回合"],
+          ["120%", "，並對目標施加「恐懼」2回合"],
+        ]
+      },
+      B: {
+        name: "勇氣加冕",
+        description: "驅散友方單體{{}}層減益效果，並對友方單體施加{{}}回合造成最終傷害提升15%",
+        arguments: [
+          ["3", "2"],
+          ["4", "2"],
+          ["5", "3"],
+        ]
+      },
+      Passive: {
+        name: "家族傳承",
+        description: "友方全體攻擊力提升{{}}。在社團特訓模式中，友方全體額外獲得與\"旋風初成\"戰鬥員星級相對應的攻擊力提升，分別為8% / 10.5% / 12% / 13.5% / 16% / 17.5% / 19%",
+        arguments: [
+          ["5%"],
+          ["6%"],
+          ["7%"],
+          ["8%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2點奧義能量",
+        "",
+        "",
+        "釋放奧義技能後恢復1點奧義能量，並驅散友方全體2層減益效果",
+        "",
+        "回合開始時，友方全體防禦力和生命值提升4%，可疊加5層",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "鈴",
     subname: "鈴鈴彌音",
     rarity: rarity.SSR,
@@ -1424,7 +1799,7 @@ const characterList = [
       risingStar: [
         "戰鬥開始時，獲得2點奧義能量",
         "",
-        "奧義能量施加的「傷害擴散」持續回合數+1",
+        "奧義技能施加的「傷害擴散」持續回合數+1",
         "",
         "首次釋放奧義技能後，回復友方全體1點奧義能量",
         "",

@@ -10,7 +10,7 @@
   >
     <!-- B 部分 -->
     <span v-if="contentIndex % 2 === 0">
-      「
+      <span>「</span>
       <v-tooltip
         location="left"
         v-if="contentItem?.htmlDescription || contentItem?.description"
@@ -23,7 +23,7 @@
         <span v-html="contentItem?.htmlDescription || contentItem?.description"></span>
       </v-tooltip>
       <span v-else>{{ contentItem?.name }}</span>
-      」
+      <span>」</span>
     </span>
     <!-- C 部分 -->
     <span v-else>
