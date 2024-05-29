@@ -1,5 +1,12 @@
 const bookVersionList = [
   {
+    "version": "1.8.1.0",
+    "title": "",
+    "description": [
+      "【新增】社團特訓第12期實際數值",
+    ]
+  },
+  {
     "version": "1.8.0.0",
     "title": "",
     "description": [
@@ -206,6 +213,10 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.8",
+    "title": "百味蛋糕店"
+  },
   {
     "version": "1.7",
     "title": "深淵的迴響"
