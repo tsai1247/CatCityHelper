@@ -1,5 +1,14 @@
 const bookVersionList = [
   {
+    "version": "1.8.2.0",
+    "title": "",
+    "description": [
+      "【新增】角色圖片：架刑罪贖",
+      "【新增】社團特訓第13期資訊&實際數值",
+      "【修正】技能敘述錯誤：祈-離夢蝶",
+    ]
+  },
+  {
     "version": "1.8.1.0",
     "title": "",
     "description": [
