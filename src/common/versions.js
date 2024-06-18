@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.8.3.0",
+    "title": "",
+    "description": [
+      "【修正】社團特訓莫布、爆裂鼓蟹、孤傲劍客、寶寶玩偶技能敘述錯誤",
+      "【修正】社團特訓預設期數不存在的錯誤導致頁面空白"
+    ]
+  },
+  {
     "version": "1.8.2.0",
     "title": "",
     "description": [
