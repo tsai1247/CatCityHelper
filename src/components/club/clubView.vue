@@ -118,7 +118,7 @@ const lsProxy = objProxy(localStorage);
 
 if (!lsProxy.clubLog) {
   lsProxy.clubLog = {
-    lastEventNo: 2,
+    lastEventNo: 1,
     roundLog: []
   };
 }

@@ -641,6 +641,44 @@ const clubInfo = [
       ...constructBossInfo(2)
     }
   },
+  {
+    no: 1,
+    duration: {
+      start: '2023-12-27',
+      end: '2024-01-02',
+    },
+    enemies: {
+      stats: {
+        small: {
+          basic: {
+            HP: 2071500,
+            ATK: 2762,
+            DEF: 694,
+          },
+          delta: {
+            HP: 511500,
+            ATK: 682,
+            DEF: 170,
+          },
+          maxRound: 9999,
+        },
+        big: {
+          basic: {
+            HP: 2485800,
+            ATK: 2762,
+            DEF: 694,
+          },
+          delta: {
+            HP: 613800,
+            ATK: 682,
+            DEF: 170,
+          },
+          maxRound: 9999,
+        },
+      },
+      ...constructBossInfo(1)
+    }
+  },
 ]
 
 export default clubInfo
