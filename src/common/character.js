@@ -5,6 +5,81 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "特莉絲",
+    subname: "場外焦點",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.triangle,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "128",
+      DEF: "73",
+      HP: "509",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "10%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "全力應援",
+        description: "對友方全體施加2回合受到最終傷害降低{{}}，並使自身獲得2回合「凝聚力」",
+        arguments: [
+          ["15%"],
+          ["17%"],
+          ["19%"],
+          ["21%"],
+        ]
+      },
+      A: {
+        name: "愛心鼓舞",
+        description: "按{{}}攻擊力治療友方全體，並對友方全體施加2回合爆擊傷害提升15%",
+        arguments: [
+          ["60%"],
+          ["76%"],
+          ["103%"],
+        ]
+      },
+      B: {
+        name: "雀躍不已",
+        description: "按{{}}攻擊力，對敵方單體造成傷害",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      Passive: {
+        name: "振奮人心",
+        description: "所有紅色情緒友方爆擊率提升{{}}",
+        arguments: [
+          ["7%"],
+          ["8.4%"],
+          ["9.8%"],
+          ["11.2%"],
+        ]
+      },
+      risingStar: [
+        "所有紅色情緒友方生命值每降低1%，受到治療提升0.5%",
+        "",
+        "釋放「愛心鼓舞」時，溢出治療量的100%轉化為1回合護盾",
+        "",
+        "所有紅色情緒友方攜帶護盾時，造成最終傷害提升20%",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "絲卡蕾特",
     subname: "架刑罪贖",
     rarity: rarity.SSR,
@@ -1816,10 +1891,10 @@ const characterList = [
     attribute: attribute.blue,
     particle: particle.triangle,
     source: [characterSource.specialSummon],
-    basic: { // unconfirmed
-      ATK: "198",
-      DEF: "73",
-      HP: "556",
+    basic: {
+      ATK: "154",
+      DEF: "57",
+      HP: "432",
       Penetration: "0%",
       Durability: "0%",
       CRIT_Rate: "5%",
@@ -1891,10 +1966,10 @@ const characterList = [
     attribute: attribute.light,
     particle: particle.square,
     source: [characterSource.specialSummon],
-    basic: { // unconfirmed
-      ATK: "169",
-      DEF: "86",
-      HP: "588",
+    basic: {
+      ATK: "131",
+      DEF: "66",
+      HP: "456",
       Penetration: "0%",
       Durability: "27%",
       CRIT_Rate: "0%",
@@ -1966,10 +2041,10 @@ const characterList = [
     attribute: attribute.red,
     particle: particle.star,
     source: [characterSource.specialSummon],
-    basic: { // unconfirmed
-      ATK: "208",
-      DEF: "74",
-      HP: "499",
+    basic: {
+      ATK: "161",
+      DEF: "57",
+      HP: "387",
       Penetration: "3%",
       Durability: "0%",
       CRIT_Rate: "0%",

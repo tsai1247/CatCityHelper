@@ -1,5 +1,15 @@
 const bookVersionList = [
   {
+    "version": "1.9.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：場外焦點",
+      "【新增】角色圖片：場外焦點",
+      "【新增】社團特訓第14期資訊",
+      "【修正】角色基礎數值：冬季奇遇、白瑰綺晶、致聖雪夜"
+    ]
+  },
+  {
     "version": "1.8.3.0",
     "title": "",
     "description": [
@@ -21,6 +31,7 @@ const bookVersionList = [
     "title": "",
     "description": [
       "【新增】社團特訓第12期實際數值",
+      "【新增】1.8版本橫幅"
     ]
   },
   {
@@ -81,6 +92,7 @@ const bookVersionList = [
     "title": "",
     "description": [
       "【新增】新角色技能與數據：千術之王、黑桃A",
+      "【新增】1.7版本橫幅",
       "【修正】角色基礎數值：囚鳥綺願",
     ]
   },
@@ -230,6 +242,10 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.9",
+    "title": "半周年慶典"
+  },
   {
     "version": "1.8",
     "title": "百味蛋糕店"
