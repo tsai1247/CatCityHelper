@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.9.2.0",
+    "title": "",
+    "description": [
+      "【新增】社團特訓第15期數據&實際數值",
+      "【修正】角色技能暗改：離夢蝶、清平樂"
+    ]
+  },
+  {
     "version": "1.9.1.0",
     "title": "",
     "description": [
