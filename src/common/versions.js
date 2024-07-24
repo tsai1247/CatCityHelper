@@ -1,5 +1,14 @@
 const bookVersionList = [
   {
+    "version": "1.10.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：鯨語海鳴、企鵝冰山、激潮之夏、破浪逐潮",
+      "【新增】社團特訓第16期數據&實際數值",
+
+    ]
+  },
+  {
     "version": "1.9.2.0",
     "title": "",
     "description": [
@@ -257,6 +266,10 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.10",
+    "title": "夏日狂歡節"
+  },
   {
     "version": "1.9",
     "title": "半周年慶典"

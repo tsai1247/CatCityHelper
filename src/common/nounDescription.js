@@ -66,6 +66,10 @@ const attack = [
   {
     name: "湮滅傷害",
     description: "「湮滅傷害」：目標每有1%生命值，造成的傷害提升0.8%"
+  },
+  {
+    name: "巨人傷害",
+    description: "「巨人傷害」：目標最大生命值每大於自身1%，傷害提升1%，至多提升至3倍"
   }
 
 ]
@@ -190,7 +194,16 @@ const buff = [
   {
     name: "凝聚力",
     description: "「凝聚力」：任意友方受到攻擊時，所受傷害將由友方全體平攤"
+  },
+  {
+    name: "滲透",
+    description: "「滲透」：釋放單體攻擊技能時，若敵方身上不存在護盾，則此次攻擊無視敵方30%防禦相關能力"
+  },
+  {
+    name: "流溢",
+    description: "「流溢」：回合結束前，若奧義能量已滿，則對敵方最大生命值最高的單位追擊1次奧義技能並清除「流溢」"
   }
+
 ]
 
 const control = [
@@ -294,6 +307,24 @@ const debuff = [
   {
     name: "治癒貓爪",
     description: "「治癒貓爪」：受到攻擊時，攻擊者獲得等同於傷害量5%的治癒效果",
+  },
+  {
+    name: "海蝕",
+    description: "「海蝕」：攜帶護盾時，受到最終傷害提升{{}}",
+    argument: [
+      {
+        condition: { rarity: [0] },
+        value: ["15%"],
+      },
+      {
+        condition: { rarity: [1] },
+        value: ["20%"],
+      },
+      {
+        condition: { rarity: [2] },
+        value: ["25%"],
+      },
+    ]
   },
   ...control,
 ]
