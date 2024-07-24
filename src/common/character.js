@@ -6,6 +6,306 @@ const characterList = [
   // newer characters
   {
     name: "特莉絲",
+    subname: "鯨語海鳴",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "168",
+      DEF: "59",
+      HP: "368",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "汐語鯨躍",
+        description: "按{{}}攻擊力，對敵方單體造成「巨人傷害」",
+        arguments: [
+          ["192%"],
+          ["219%"],
+          ["247%"],
+          ["274%"],
+        ]
+      },
+      A: {
+        name: "浮鯨",
+        description: "按{{}}攻擊力，對敵方全體造成「破盾傷害」",
+        arguments: [
+          ["90%"],
+          ["108%"],
+          ["144%"],
+        ]
+      },
+      B: {
+        name: "海之頌",
+        description: "2回合內爆擊傷害提升{{}}，並獲得{{}}回合「流溢」",
+        arguments: [
+          ["", "1"],
+          ["，爆擊率提升20%", "2"],
+          ["，爆擊率提升30%", "2"],
+        ]
+      },
+      Passive: {
+        name: "蓄潮",
+        description: "每次行動後，攻擊力提升{{}}，可疊加{{}}層，每回合首次行動後，額外獲得1點奧義能量",
+        arguments: [
+          ["3%", "4"],
+          ["3.3%", "4"],
+          ["3.6%", "6"],
+          ["4%", "6"],
+        ]
+      },
+      risingStar: [
+        "釋放攻擊技能後，若擊破敵方護盾，則額外再獲得1層「蓄潮」的攻擊力提升效果",
+        "",
+        "",
+        "\"鯨語海鳴\"以外的友方釋放攻擊技能擊破敵方護盾後，\"鯨語海鳴\"也可獲得1層「蓄潮」的攻擊力提升效果，並且疊加上限提升至6層",
+        "",
+        "每次奧義能量回復滿後，驅散自身3層減益效果；每次釋放奧義技能後，後續奧義技能造成最終傷害提升10%，可疊加3層",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "非天",
+    subname: "企鵝冰山",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.square,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "160",
+      DEF: "59",
+      HP: "387",
+      Penetration: "0%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "企鵝衝鋒",
+        description: "按{{}}攻擊力，對敵方全體造成「破盾傷害」，若成功擊破敵方護盾，自身回復1點奧義能量",
+        arguments: [
+          ["224%"],
+          ["255%"],
+          ["288%"],
+          ["319%"],
+        ]
+      },
+      A: {
+        name: "企鵝號令",
+        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」",
+        arguments: [
+          ["94%"],
+          ["113%"],
+          ["150%"],
+        ]
+      },
+      B: {
+        name: "深海湧潮",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並對目標施加3回合「海蝕」",
+        arguments: [
+          ["96%"],
+          ["120%"],
+          ["160%"],
+        ]
+      },
+      Passive: {
+        name: "浪擊",
+        description: "對攜帶護盾的敵方目標釋放攻擊技能時，攻擊力提升{{}}",
+        arguments: [
+          ["8%"],
+          ["10%"],
+          ["12%"],
+          ["14%"],
+        ]
+      },
+      risingStar: [
+        "「企鵝號令」和「企鵝衝鋒」造成最終傷害提升20%",
+        "",
+        "攜帶「海蝕」的敵方目標被擊破護盾後，扣除1點奧義能量，並且在2回合內基礎能力值降低10%，每回合至多觸發1次",
+        "",
+        "每次對攜帶「海蝕」的敵方目標釋放單體攻擊技能後，穿透率提升10%，可疊加4層",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "艾可",
+    subname: "激潮之夏",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "157",
+      DEF: "59",
+      HP: "416",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "潮湧之刻",
+        description: "無視免疫對目標施加30%「傷害擴散」2回合，並按{{}}攻擊力，對敵方單體造成傷害",
+        arguments: [
+          ["224%"],
+          ["255%"],
+          ["288%"],
+          ["319%"],
+        ]
+      },
+      A: {
+        name: "湧動炮",
+        description: "按{{}}攻擊力，對敵方單體造成「暴烈傷害」",
+        arguments: [
+          ["90%"],
+          ["100%"],
+          ["124%"],
+        ]
+      },
+      B: {
+        name: "水動力",
+        description: "觸發<「發現」({{}})>效果，並按自身{{}}基礎攻擊力，提升友方全體攻擊力{{}}回合",
+        arguments: [
+          ["1", "10%", "2"],
+          ["2", "15%", "2"],
+          ["3", "20%", "3"],
+        ]
+      },
+      Passive: {
+        name: "沖刷",
+        description: "戰鬥開始時，敵方全體受到護盾和治療降低{{}}",
+        arguments: [
+          ["20%"],
+          ["23%"],
+          ["26%"],
+          ["30%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時獲得2點奧義能量",
+        "",
+        "",
+        "釋放奧義技能後，自身隨機1張技能牌升星1次，並回復1點奧義能量",
+        "",
+        "釋放「水動力」後，為友方全體施加2回合「滲透」",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "南彌生",
+    subname: "破浪逐潮",
+    rarity: rarity.SR,
+    attribute: attribute.blue,
+    particle: particle.star,
+    source: [characterSource.event],
+    basic: {
+      ATK: "94",
+      DEF: "54",
+      HP: "374",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "深海怒濤",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對受到傷害的目標施加「餘震」3回合",
+        arguments: [
+          ["215%"],
+          ["228%"],
+          ["248%"],
+          ["268%"],
+        ]
+      },
+      A: {
+        name: "浪影突襲",
+        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」",
+        arguments: [
+          ["90%"],
+          ["100%"],
+          ["124%"],
+        ]
+      },
+      B: {
+        name: "浪花噴射",
+        description: "按{{}}攻擊力，對敵方單體造成「穿透傷害」",
+        arguments: [
+          ["95%"],
+          ["125%"],
+          ["167%"],
+        ]
+      },
+      Passive: {
+        name: "海嘯",
+        description: "上陣戰鬥員都是藍色情緒時，自身爆擊傷害提升{{}}",
+        arguments: [
+          ["20%"],
+          ["24%"],
+          ["28%"],
+          ["32%"],
+        ]
+      },
+      risingStar: [
+        "",
+        "",
+        "戰鬥開始時，攻擊力提升6%",
+        "",
+        "戰鬥開始時，爆擊率提升6%，爆擊傷害提升12%",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "特莉絲",
     subname: "場外焦點",
     rarity: rarity.SSR,
     attribute: attribute.red,
