@@ -49,7 +49,7 @@ const characterList = [
       },
       B: {
         name: "海之頌",
-        description: "2回合內爆擊傷害提升{{}}，並獲得{{}}回合「流溢」",
+        description: "2回合內爆擊傷害提升30%{{}}，並獲得{{}}回合「流溢」",
         arguments: [
           ["", "1"],
           ["，爆擊率提升20%", "2"],
@@ -105,7 +105,7 @@ const characterList = [
     skills: {
       Sp: {
         name: "企鵝衝鋒",
-        description: "按{{}}攻擊力，對敵方全體造成「破盾傷害」，若成功擊破敵方護盾，自身回復1點奧義能量",
+        description: "按{{}}攻擊力，對敵方單體造成「破盾傷害」，若成功擊破敵方護盾，自身回復1點奧義能量",
         arguments: [
           ["224%"],
           ["255%"],
@@ -274,7 +274,7 @@ const characterList = [
       },
       B: {
         name: "浪花噴射",
-        description: "按{{}}攻擊力，對敵方單體造成「穿透傷害」",
+        description: "按{{}}攻擊力，對敵方全體造成「穿透傷害」",
         arguments: [
           ["95%"],
           ["125%"],
