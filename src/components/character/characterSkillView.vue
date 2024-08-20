@@ -166,6 +166,9 @@ watch(() => props.skills, () => {
   rarityA.value = 0;
   rarityB.value = 0;
 
+  reinforceA.value = false;
+  reinforceB.value = false;
+
 }, { immediate: true })
 
 
