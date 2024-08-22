@@ -293,6 +293,10 @@ const bookVersionList = [
 
 const catCityVersionList = [
   {
+    "version": "1.11",
+    "title": "貓與夢王國"
+  },
+  {
     "version": "1.10",
     "title": "夏日狂歡節"
   },
