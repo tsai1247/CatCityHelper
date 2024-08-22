@@ -1,5 +1,14 @@
 const bookVersionList = [
   {
+    "version": "1.11.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：愈者療心、十二夜中人、理性邊界、掌上淑女",
+      "【新增】角色圖片：十二夜中人、理性邊界、掌上淑女",
+      "【優化】角色圖片亮度"
+    ]
+  },
+  {
     "version": "1.10.2.0",
     "title": "",
     "description": [

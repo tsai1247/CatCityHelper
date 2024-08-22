@@ -5,6 +5,316 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters
   {
+    name: "塞琪",
+    subname: "愈者療心",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.circle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "113",
+      DEF: "89",
+      HP: "519",
+      Penetration: "0%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "生命壁壘",
+        description: "按{{}}最大生命值治療自身",
+        arguments: [
+          ["49%"],
+          ["56%"],
+          ["64%"],
+          ["71%"],
+        ]
+      },
+      A: {
+        name: "出診",
+        description: "{{}}按{{}}攻擊力{{}}",
+        arguments: [
+          ["", "120%", "，對敵方單體造成傷害"],
+          ["", "150%", "，對敵方單體造成傷害"],
+          ["", "200%", "，對敵方單體造成傷害"],
+        ],
+        reinforce: [
+          ["「看診」狀態下釋放: ", "96%", "，對敵方全體造成傷害"],
+          ["「看診」狀態下釋放: ", "120%", "，對敵方全體造成傷害"],
+          ["「看診」狀態下釋放: ", "160%", "，對敵方全體造成傷害"],
+        ]
+      },
+      B: {
+        name: "因人制宜",
+        description: "{{}}{{}}",
+        arguments: [
+          ["", "受到傷害降低30%並進入「看診」狀態，持續3回合"],
+          ["", "受到傷害降低30%並進入「看診」狀態，持續3回合"],
+          ["", "受到傷害降低30%並進入「看診」狀態，持續3回合"],
+        ],
+        reinforce: [
+          ["「看診」狀態下釋放: ", "按20%最大生命值治療友方全體"],
+          ["「看診」狀態下釋放: ", "按28%最大生命值治療友方全體"],
+          ["「看診」狀態下釋放: ", "按36%最大生命值治療友方全體"],
+        ]
+      },
+      Passive: {
+        name: "仁心仁術",
+        description: "自身生命相關能力提升{{}}，上陣戰鬥員都是綠色情緒時，效果額外提升2%",
+        arguments: [
+          ["8%"],
+          ["11%"],
+          ["14%"],
+          ["17%"],
+        ]
+      },
+      risingStar: [
+        "使用奧義技能後，「看診」延長1回合，可以超過最大回合數",
+        "",
+        "",
+        "戰鬥開始時，釋放1張2星「因人制宜」",
+        "",
+        "「看診」替友方承受的傷害減免20%",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "薇奧拉",
+    subname: "十二夜中人",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.circle,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "143",
+      DEF: "64",
+      HP: "486",
+      Penetration: "0%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "命運前夜",
+        description: "按{{}}攻擊力，對友方全體施加「漸愈」3回合",
+        arguments: [
+          ["112%"],
+          ["127%"],
+          ["144%"],
+          ["159%"],
+        ]
+      },
+      A: {
+        name: "瘋樹根",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加{{}}層防禦力降低10%效果，可疊加3層，持續3回合",
+        arguments: [
+          ["115%", "1"],
+          ["150%", "1"],
+          ["190%", "2"],
+        ]
+      },
+      B: {
+        name: "愛懶花",
+        description: "按自身{{}}爆擊傷害，對友方施加2回合爆擊傷害提升效果(提升量不超過目標爆擊傷害的70%)並補充1張目標的隨機{{}}星技能牌",
+        arguments: [
+          ["15%", "1"],
+          ["20%", "1"],
+          ["20%", "2"],
+        ]
+      },
+      Passive: {
+        name: "常春藤",
+        description: "上陣戰鬥員都是綠色情緒時，友方全體受到治療效果提升{{}}，且受到治療溢出的80%轉化為護盾，持續2回合",
+        arguments: [
+          ["9.5%"],
+          ["11.7%"],
+          ["13.9%"],
+          ["16.2%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，使一張「愛懶花」升2星",
+        "",
+        "當爆擊傷害高於200%時，使用「愛懶花」對目標施加的爆擊傷害提升效果額外提升5%",
+        "",
+        "敵方對我方使用攻擊技能時，友方全體獲得1層10%爆擊率提升效果，持續2回合，可疊加，最高2層",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "埃爾芙",
+    subname: "理性邊界",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.circle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "157",
+      DEF: "59",
+      HP: "391",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "雷霆突襲",
+        description: "按{{}}攻擊力，對敵方單體造成「破滅傷害」，目標身上每有1層屬性改變類減益效果，基礎傷害提升2%，至多計算5個減益效果",
+        arguments: [
+          ["182%"],
+          ["207%"],
+          ["234%"],
+          ["259%"],
+        ]
+      },
+      A: {
+        name: "空襲先鋒",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並使敵方牌庫隨機1張技能牌星級-1(僅PVP生效)<br>被「吞噬」後，使我方隨機1張技能牌星級+1",
+        arguments: [
+          ["90%"],
+          ["120%"],
+          ["170%"],
+        ]
+      },
+      B: {
+        name: "精准智控",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並施加{{}}層「洞察」",
+        arguments: [
+          ["87%", "1"],
+          ["105%", "2"],
+          ["135%", "2"],
+        ]
+      },
+      Passive: {
+        name: "無死角",
+        description: "上陣戰鬥員都是綠色情緒時，友方攻擊力提升{{}}，攜帶「洞察」的敵方使用攻擊技能後，使目標「洞察」層數+1，每回合至多觸發3次",
+        arguments: [
+          ["7%"],
+          ["8.7%"],
+          ["10.3%"],
+          ["12%"],
+        ]
+      },
+      risingStar: [
+        "敵方使用攻擊技能後，按原傷害的30%對隨機敵方釋放1次1星「精准智控」，每回合至多觸發1次",
+        "",
+        "",
+        "使用「精准智控」後，額外對敵方全體施加1層「洞察」",
+        "",
+        "使用「雷霆突襲」時，基礎傷害提升效果提升至5%，且至多計算10個減益效果",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "阿芙羅",
+    subname: "掌上淑女",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.circle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "164",
+      DEF: "59",
+      HP: "379",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "3%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "戰術合擊",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，選擇1張卡進行「吞噬」，吞噬的卡每有1星，基礎傷害提升2%，並在技能釋放時和下回合開始時獲得2層「警覺」",
+        arguments: [
+          ["204%"],
+          ["231%"],
+          ["262%"],
+          ["290%"],
+        ]
+      },
+      A: {
+        name: "攻擊示警",
+        description: "按{{}}攻擊力，對敵方單體造成傷害{{}}",
+        arguments: [
+          ["120%"],
+          ["120%", "，並使自身獲得1點奧義能量"],
+          ["120%", "，並使自身獲得2點奧義能量"],
+        ]
+      },
+      B: {
+        name: "撲擊擒拿",
+        description: "按{{}}攻擊力，對敵方全體造成「破滅傷害」，牌庫中每有一張攻擊技能牌，基礎傷害提升4%，最高提升12%",
+        arguments: [
+          ["64.3%"],
+          ["74.8%"],
+          ["99.7%"],
+        ]
+      },
+      Passive: {
+        name: "團體作戰",
+        description: "上陣戰鬥員都是綠色情緒時，自身攻擊力提升{{}}<br>除自身外友方受到攻擊後，獲得1層「警覺」，每個技能至多觸發1次<br>當敵方對我方使用進攻技能時，若阿芙蘿擁有5層「警覺」，立即觸發反擊，按原傷害的80%釋放1張1星「撲擊擒拿」(每回合至多觸發1次)，並在回合結束時清除全部「警覺」",
+        arguments: [
+          ["8%"],
+          ["11%"],
+          ["13.5%"],
+          ["15%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得3層「警覺」",
+        "",
+        "",
+        "反擊釋放的「撲擊擒拿」也能獲得奧義能量，並使觸發反擊所需的「警覺」層數降低至4層",
+        "",
+        "反擊改為按原傷害的120%釋放「撲擊擒拿」",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "特莉絲",
     subname: "鯨語海鳴",
     rarity: rarity.SSR,
