@@ -24,7 +24,7 @@
                 v-if="characterImages[character.subname]"
                 cover
                 dark
-                :style="{ opacity: 0.4 }"
+                :style="{ opacity: 0.55 }"
                 :src="characterImages[character.subname]"
                 :lazy-src="characterImages[character.subname]"
               >

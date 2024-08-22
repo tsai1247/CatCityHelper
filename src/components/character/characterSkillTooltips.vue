@@ -22,13 +22,17 @@
         </template>
         <span v-html="contentItem?.htmlDescription || contentItem?.description"></span>
       </v-tooltip>
-      <span v-else>{{ contentItem?.name }}</span>
+      <span
+        v-else
+        v-html="contentItem?.name"
+      ></span>
       <span>」</span>
     </span>
     <!-- C 部分 -->
-    <span v-else>
-      {{ contentItem }}
-    </span>
+    <span
+      v-else
+      v-html="contentItem"
+    ></span>
   </span>
 </template>
 
