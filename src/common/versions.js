@@ -1,5 +1,12 @@
 const bookVersionList = [
   {
+    "version": "1.11.1.0",
+    "title": "",
+    "description": [
+      "【新增】社團特訓第19期數據&實際數值",
+    ]
+  },
+  {
     "version": "1.11.0.0",
     "title": "",
     "description": [
