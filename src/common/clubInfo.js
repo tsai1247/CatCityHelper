@@ -24,50 +24,53 @@ function constructBossInfo(number, customBossInfo = {}) {
 
 /**
  * @param {Number} number number of club training
- * @param {{small:{delta:{}}, big:{delta:{}}}} statData original stat data
- * @returns {{small:{delta:{}}, big:{delta:{}}}} adjusted stat data
+ * @param {{small:{basic:{}, delta:{}, maxRound:Number}, big:{basic:{}, delta:{}, maxRound:Number}}} statData original stat data
+ * @returns {{small:{basic:{}, delta:{}, maxRound:Number}, big:{basic:{}, delta:{}, maxRound:Number}}} adjusted stat data
  */
-function adjustBossStats(number, statData) {
+function adjustBossStats(number, statData = { small: {}, big: {} }) {
+  if (number >= 20) number -= 20;
+
   const basicStats = {
-    smallHP: 4010400,
-    bigHP: 4392500,
-    ATK: 2865,
-    DEF: 955
+    smallHP: 5222100,
+    bigHP: 5719600,
+    ATK: 3731,
+    DEF: 1243.5
   };
 
   const basicStatsDelta = {
-    smallHP: 63000,
-    bigHP: 69000,
-    ATK: 45,
-    DEF: 15
+    smallHP: [67200, 65100],
+    bigHP: [73600, 71300],
+    ATK: [48, 46.5],
+    DEF: [16, 15.5]
   };
 
 
   const deltaStats = {
-    smallHP: 997500,
-    bigHP: 1092500,
-    ATK: statData.small.delta.ATK,
-    DEF: statData.small.delta.DEF
+    smallHP: 1289400,
+    bigHP: 1412200,
+    ATK: 921,
+    DEF: 307
   };
 
   const deltaStatsDelta = {
-    smallHP: 14700,
-    bigHP: 16100,
-    ATK: 0,
-    DEF: 0
+    smallHP: [16800, 14700],
+    bigHP: [18400, 16100],
+    ATK: [12, 10.5],
+    DEF: [4, 3.5]
   };
 
 
   ["small", "big"].forEach((bossType) => {
     statData[bossType].basic = createStats(basicStats, basicStatsDelta);
     statData[bossType].delta = createStats(deltaStats, deltaStatsDelta);
+    statData[bossType].maxRound = 5;
 
     function createStats(statBase, statDelta) {
       return Object.fromEntries(["HP", "ATK", "DEF"].map((statType) => {
         const adjustedKey = (statType) => statType == "HP" ? `${bossType}HP` : statType;
         return [
           statType,
-          statBase[adjustedKey(statType)] + statDelta[adjustedKey(statType)] * number
+          Array(number).fill().reduce((s, e, i) => s + statDelta[adjustedKey(statType)][(number + i) % 2], statBase[adjustedKey(statType)])
         ];
       }));
     }
@@ -261,6 +264,17 @@ const clubBossList = {
 }
 
 const clubInfo = [
+  {
+    no: 20,
+    duration: {
+      start: '2024-09-12',
+      end: '2024-09-18',
+    },
+    enemies: {
+      stats: adjustBossStats(20),
+      ...constructBossInfo(20)
+    }
+  },
   {
     no: 19,
     duration: {
