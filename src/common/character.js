@@ -3,7 +3,82 @@ const { rarity, attribute, particle } = enumList;
 const { characterSource } = enumList;
 
 const characterList = [
-  // newer characters
+  // newer characters (remember -8 HP)
+  {
+    name: "南彌生",
+    subname: "浪花約會",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "125",
+      DEF: "92",
+      HP: "491",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "攜鳥乘空",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「感染」2回合",
+        arguments: [
+          ["280%"],
+          ["319%"],
+          ["360%"],
+          ["398%"],
+        ]
+      },
+      A: {
+        name: "泡影束縛",
+        description: "清除敵方單體{{}}層增益效果{{}}",
+        arguments: [
+          ["3", ""],
+          ["3", "，並對目標施加2回合「泡影」"],
+          ["4", "，並對目標施加2回合「泡影」"],
+        ]
+      },
+      B: {
+        name: "水波折射",
+        description: "按{{}}攻擊力，對敵方單體造成「穿刺傷害」",
+        arguments: [
+          ["95%"],
+          ["125%"],
+          ["167%"],
+        ]
+      },
+      Passive: {
+        name: "浪壁",
+        description: "所有藍色情緒友方防禦力提升{{}}",
+        arguments: [
+          ["12%"],
+          ["15%"],
+          ["18%"],
+          ["20%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2點奧義能量",
+        "",
+        "戰鬥開始時，隨機1張「泡影束縛」升1星",
+        "",
+        "「攜鳥乘空」不會解除「泡影」，並重置「泡影」的持續回合數",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
   {
     name: "塞琪",
     subname: "愈者療心",

@@ -337,6 +337,10 @@ const debuff = [
     name: "洞察",
     description: "「洞察」：受到破滅傷害提升3%，可疊加10層，持續2回合",
   },
+  {
+    name: "泡影",
+    description: "「泡影」：爆擊率抵抗降低30%，無法行動，受擊後解除",
+  },
   ...control,
 ]
 

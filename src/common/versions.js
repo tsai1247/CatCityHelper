@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.12.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：浪花約會",
+      "【新增】角色圖片：浪花約會",
+    ]
+  },
+  {
     "version": "1.11.2.0",
     "title": "",
     "description": [
