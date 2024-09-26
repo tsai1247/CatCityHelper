@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.12.1.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：風物詩、星月夜、繪空事",
+      "【新增】角色圖片：風物詩",
+    ]
+  },
+  {
     "version": "1.12.0.0",
     "title": "",
     "description": [
@@ -315,6 +323,10 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.12",
+    "title": "相聞歌"
+  },
   {
     "version": "1.11",
     "title": "貓與夢王國"
