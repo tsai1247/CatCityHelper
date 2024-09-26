@@ -211,6 +211,10 @@ const buff = [
     name: "吞噬",
     description: "「吞噬」：選擇一張卡牌",
   },
+  {
+    name: "星芒",
+    description: "「星芒」：\"星月夜\"的專屬標記，可疊加8層",
+  },
 ]
 
 const control = [
@@ -340,6 +344,10 @@ const debuff = [
   {
     name: "泡影",
     description: "「泡影」：爆擊率抵抗降低30%，無法行動，受擊後解除",
+  },
+  {
+    name: "業火",
+    description: "「業火」：傷害傳遞類效果，受到傷害時，消耗1層「業火」，將受到傷害的20%傳遞給其他擁有「業火」的目標",
   },
   ...control,
 ]

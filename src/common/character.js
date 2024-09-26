@@ -5,6 +5,231 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters (remember -8 HP)
   {
+    name: "赤沼蓮",
+    subname: "繪空事",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "148",
+      DEF: "63",
+      HP: "490",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "3%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "罪與罰",
+        description: "按{{}}攻擊力，對敵方單體造成「破滅傷害」，若攻擊時目標身上攜帶「業火」，自身在奧義技能結束後恢復1點奧義能量",
+        arguments: [
+          ["192%"],
+          ["219%"],
+          ["247%"],
+          ["274%"],
+        ]
+      },
+      A: {
+        name: "無間業火",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並對敵方全體施加1層「業火」",
+        arguments: [
+          ["73%"],
+          ["86%"],
+          ["108%"],
+        ]
+      },
+      B: {
+        name: "透骨連斬",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層防禦力降低10%，可疊加3層，持續3回合，該技能不會消耗目標身上的「業火」",
+        arguments: [
+          ["102%"],
+          ["120%"],
+          ["150%"],
+        ]
+      },
+      Passive: {
+        name: "處刑人",
+        description: "所有粒子形態「三相」的友方爆擊傷害提升{{}}",
+        arguments: [
+          ["14%"],
+          ["16.3%"],
+          ["18.6%"],
+          ["21%"],
+        ]
+      },
+      risingStar: [
+        "\"繪空事\"的奧義技能不再消耗目標身上的「業火」",
+        "",
+        "",
+        "對攜帶「業火」的敵方釋放單體技能後，自身攻擊力提升7%，可疊加3層",
+        "",
+        "釋放單體技能攻擊攜帶「業火」的敵方時，額外按敵方目標30%最大生命值造成1次純粹傷害，不超過\"繪空事\"當前攻擊力的120%，每回合至多觸發1次",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "瑪莉娜",
+    subname: "星月夜",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "157",
+      DEF: "60",
+      HP: "373",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "爆裂蒼穹",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，自身「星芒」達到2/4/6/8層時，基礎傷害提升50%/60%/70%/75%，技能結束時清除全部「星芒」",
+        arguments: [
+          ["173%"],
+          ["197%"],
+          ["222%"],
+          ["246%"],
+        ]
+      },
+      A: {
+        name: "星火衝擊",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並獲得{{}}層「星芒」",
+        arguments: [
+          ["102%", "1"],
+          ["120%", "2"],
+          ["150%", "4"],
+        ]
+      },
+      B: {
+        name: "星隕破夜",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並獲得1層造成最終傷害提升10%，持續3回合，可疊加3層",
+        arguments: [
+          ["90%"],
+          ["114%"],
+          ["154%"],
+        ]
+      },
+      Passive: {
+        name: "狂戰",
+        description: "每次獲得「星芒」時，攻擊力提升{{}}(可疊加，每個技能最多疊加1層，最高5層)",
+        arguments: [
+          ["2.6%"],
+          ["2.8%"],
+          ["3%"],
+          ["3.2%"],
+        ]
+      },
+      risingStar: [
+        "釋放「星隕破夜」後，獲得1層「星芒」",
+        "",
+        "",
+        "除\"星月夜\"以外，其他粒子型態為「三相」的藍色友方釋放攻擊技能牌後，\"星月夜\"獲得1層「星芒」，每回合至多通過此方式獲得2層「星芒」，回合結束時，若「星芒」層數達到6層，自身回復1點奧義能量",
+        "",
+        "釋放技能時，自身每有1層「星芒」，此次技能爆擊率提升2%，爆擊傷害提升3%",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "識",
+    subname: "風物詩",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "125",
+      DEF: "73",
+      HP: "535",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "3%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "魚之眼",
+        description: "清除敵方全體2層增益效果，並按{{}}最大生命值，對目標造成傷害",
+        arguments: [
+          ["51%"],
+          ["58%"],
+          ["65%"],
+          ["72%"],
+        ]
+      },
+      A: {
+        name: "水中舞",
+        description: "按{{}}當前最大生命值，對敵方單體造成傷害，並按目標生命變更量的60%治療友方全體",
+        arguments: [
+          ["25%"],
+          ["32%"],
+          ["41%"],
+        ]
+      },
+      B: {
+        name: "水上曲",
+        description: "按20%戰前最大生命值，提升友方全體最大生命值2回合，提升量不超過目標最大生命值的35%{{}}",
+        arguments: [
+          [""],
+          ["，並驅散目標2層減益效果"],
+          ["，並驅散目標4層減益效果"],
+        ]
+      },
+      Passive: {
+        name: "乙姬的禮物",
+        description: "所有粒子型態為「三相」的友方最大生命值提升{{}}，使用「魚之眼」後，下一次「水中舞」變更為群體傷害",
+        arguments: [
+          ["12%"],
+          ["15%"],
+          ["18%"],
+          ["20%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，所有藍色友方獲得2回合受到最終傷害降低25%",
+        "",
+        "",
+        "使用「魚之眼」後，每有1個敵方目標被清除增益效果，友方全體獲得1層造成最終傷害提升7%，可疊加4層，持續2回合",
+        "",
+        "戰鬥開始時，額外獲得1點奧義能量，釋放奧義技能後恢復1點奧義能量，並對我方全體施加造成群體傷害提升20%效果，持續2回合",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "南彌生",
     subname: "浪花約會",
     rarity: rarity.SSR,
