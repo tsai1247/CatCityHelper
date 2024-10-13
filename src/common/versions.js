@@ -1,5 +1,12 @@
 const bookVersionList = [
   {
+    "version": "1.12.2.0",
+    "title": "",
+    "description": [
+      "【新增】角色圖片：星月夜、繪空事",
+    ]
+  },
+  {
     "version": "1.12.1.0",
     "title": "",
     "description": [
