@@ -131,7 +131,7 @@ const event = ref(clubInfo[0]);
 if (!isNaN(defaultEventNo)) {
   event.value = clubInfo.find(item => item.no === defaultEventNo);
 }
-
+console.log(clubInfo[0])
 // const defaultRound = parseInt(route.query.round);
 const defaultRound = parseInt(lsProxy.clubLog.roundLog[event.value.no]);
 const round = ref(1);

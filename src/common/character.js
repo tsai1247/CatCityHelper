@@ -2,8 +2,394 @@ import enumList from "./commonEnum";
 const { rarity, attribute, particle } = enumList;
 const { characterSource } = enumList;
 
+({
+  name: "",
+  subname: "",
+  rarity: rarity.SSR,
+  attribute: attribute.green,
+  particle: particle.triangle,
+  source: [characterSource.specialSummon],
+  basic: {
+    ATK: "158",
+    DEF: "57",
+    HP: "391",
+    Penetration: "3%",
+    Durability: "0%",
+    CRIT_Rate: "0%",
+    CRIT_DMG: "140%",
+    CRIT_Rate_RES: "0%",
+    CRIT_DMG_RES: "0%",
+    Received_Healing_Boost: "0%",
+    Received_Shield_Boost: "0%",
+    Healing_Boost: "0%",
+    Generated_Shield_Boost: "0%",
+    Luck: "0%"
+  },
+  skills: {
+    Sp: {
+      name: "",
+      description: "",
+      arguments: [
+        ["%"],
+        ["%"],
+        ["%"],
+        ["%"],
+      ]
+    },
+    A: {
+      name: "",
+      description: "",
+      arguments: [
+        ["%"],
+        ["%"],
+        ["%"],
+      ]
+    },
+    B: {
+      name: "",
+      description: "",
+      arguments: [
+        ["%"],
+        ["%"],
+        ["%"],
+      ]
+    },
+    Passive: {
+      name: "",
+      description: "",
+      arguments: [
+        ["%"],
+        ["%"],
+        ["%"],
+        ["%"],
+      ]
+    },
+    risingStar: [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ]
+  },
+  supporters: [
+
+  ]
+})
+
 const characterList = [
   // newer characters (remember -8 HP)
+  {
+    name: "梅娜塔",
+    subname: "衍罪之淵",
+    rarity: rarity.SSR,
+    attribute: attribute.dark,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "168",
+      DEF: "59",
+      HP: "377",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "深淵復甦",
+        description: "「吞噬」補充1張隨機1星技能牌，並降低1點奧義能量上限，進入【魔主】狀態，無法獲得奧義能量，且使用技能牌會消耗1點奧義能量，自身每有1%爆擊率，造成傷害提升1%，最多提升80%<br>當奧義能量為0時，按{{}}攻擊力，對敵方全體造成「破碎傷害」並回到【潛淵】狀態",
+        arguments: [
+          ["204%"],
+          ["232%"],
+          ["262%"],
+          ["290%"],
+        ]
+      },
+      A: {
+        name: "痛苦之犁",
+        description: "{{}}按{{}}攻擊力，對敵方單體造成{{}}",
+        arguments: [
+          ["", "96%", "傷害"],
+          ["", "120%", "傷害"],
+          ["", "160%", "傷害"],
+        ],
+        reinforce: [
+          ["【魔主】狀態下", "96%", "「破碎傷害」，自身每有1點奧義能量，基礎傷害提升10%"],
+          ["【魔主】狀態下", "120%", "「破碎傷害」，自身每有1點奧義能量，基礎傷害提升10%"],
+          ["【魔主】狀態下", "160%", "「破碎傷害」，自身每有1點奧義能量，基礎傷害提升10%"],
+        ]
+      },
+      B: {
+        name: "靈魂穿刺",
+        description: "{{}}按{{}}，對敵方單體造成{{}}",
+        arguments: [
+          ["", "96%", "傷害，並獲得20%爆擊傷害提升，持續3回合"],
+          ["", "120%", "傷害，並獲得20%爆擊傷害提升，持續3回合"],
+          ["", "160%", "傷害，並獲得20%爆擊傷害提升，持續3回合"],
+        ],
+        reinforce: [
+          ["【魔主】狀態下", "96%", "「破碎傷害」，並按傷害量的50%對相鄰敵方造成傷害"],
+          ["【魔主】狀態下", "120%", "「破碎傷害」，並按傷害量的50%對相鄰敵方造成傷害"],
+          ["【魔主】狀態下", "160%", "「破碎傷害」，並按傷害量的50%對相鄰敵方造成傷害"],
+        ]
+      },
+      Passive: {
+        name: "衍罪",
+        description: "自身爆擊率提升{{}}，戰鬥開始時進入【潛淵】狀態，使用技能牌額外獲得1點奧義能量",
+        arguments: [
+          ["10%"],
+          ["13%"],
+          ["16%"],
+          ["19%"],
+        ]
+      },
+      risingStar: [
+        "【魔主】狀態結束時額外獲得1點奧義能量",
+        "",
+        "",
+        "戰鬥開始時，獲得2點奧義能量；使用技能前，獲得5%攻擊力提升效果，可疊加，最高4層",
+        "",
+        "當自身生命值高於75%時，造成傷害提升25%，低於50%時，受到傷害降低20%",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "黛蕾拉",
+    subname: "多情演繹",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "158",
+      DEF: "57",
+      HP: "362",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "銘心之刻",
+        description: "按{{}}攻擊力，對敵方單體造成「增幅傷害」，當自身增益層數不低於10層時，本次傷害額外獲得20%爆擊傷害",
+        arguments: [
+          ["178%"],
+          ["203%"],
+          ["229%"],
+          ["253%"],
+        ]
+      },
+      A: {
+        name: "迫近射擊",
+        description: "按{{}}攻擊力，對敵方單體造成「增幅傷害」",
+        arguments: [
+          ["76%"],
+          ["90%"],
+          ["120%"],
+        ]
+      },
+      B: {
+        name: "心意連擊",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並獲得一層「勘破」，持續4回合",
+        arguments: [
+          ["96%"],
+          ["120%"],
+          ["160%"],
+        ]
+      },
+      Passive: {
+        name: "魅力加成",
+        description: "所有綠色情緒友方爆擊率提升{{}}%",
+        arguments: [
+          ["7%"],
+          ["9%"],
+          ["10%"],
+          ["12%"],
+        ]
+      },
+      risingStar: [
+        "使用「迫近射擊」前獲得1層「勘破」",
+        "",
+        "",
+        "回合結束時，如果友方攜帶的增益效果總層數不低於10層，自身攻擊力提升5%，持續2回合，可疊加，最高3層",
+        "",
+        "使用「銘心之刻」提供的額外爆擊傷害提升至40%，且該效果作為增益效果持續至戰鬥結束",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "凱菲爾",
+    subname: "爆破藝術",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "158",
+      DEF: "57",
+      HP: "391",
+      Penetration: "3%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "閃電爆雷",
+        description: "按{{}}攻擊力，對敵方單體造成「增幅傷害」",
+        arguments: [
+          ["178%"],
+          ["203%"],
+          ["229%"],
+          ["253%"],
+        ]
+      },
+      A: {
+        name: "定點爆破",
+        description: "按{{}}攻擊力，對敵方單體造成傷害",
+        arguments: [
+          ["81.6%"],
+          ["96%"],
+          ["120%"],
+        ]
+      },
+      B: {
+        name: "電磁爆破",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並施加1層「暗雷」，持續1回合，攻擊攜帶「暗雷」的目標後使攻擊者獲得1層「勘破」",
+        arguments: [
+          ["81.6%"],
+          ["96%"],
+          ["120%"],
+        ]
+      },
+      Passive: {
+        name: "隔爆",
+        description: "綠色友方單位每攜帶1層增益效果，攻擊力提升{{}}，最高計算4層",
+        arguments: [
+          ["2%"],
+          ["2.3%"],
+          ["2.6%"],
+          ["3%"],
+        ]
+      },
+      risingStar: [
+        "「定點爆破」傷害類型變更為「增幅傷害」",
+        "",
+        "",
+        "「暗雷」持續回合數+1",
+        "",
+        "使用「閃電暴雷」前對所有友方施加「勘破」",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "莉莉",
+    subname: "天使心",
+    rarity: rarity.SSR,
+    attribute: attribute.green,
+    particle: particle.triangle,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "120",
+      DEF: "71",
+      HP: "478",
+      Penetration: "0%",
+      Durability: "7%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "8%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "守護大家?",
+        description: "按{{}}攻擊力治療友方全體，並對治療產生爆擊的目標施加「動力滿滿」，並驅散目標3層減益效果",
+        arguments: [
+          ["153%"],
+          ["174%"],
+          ["196%"],
+          ["217%"],
+        ]
+      },
+      A: {
+        name: "發現壞蛋!",
+        description: "按{{}}攻擊力，對敵方單體造成傷害",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "不哭不哭",
+        description: "按{{}}攻擊力治療友方全體，並提升目標5%忍耐率，持續2回合，可疊加，最高4層",
+        arguments: [
+          ["58%"],
+          ["73%"],
+          ["97%"],
+        ]
+      },
+      Passive: {
+        name: "愛心滿滿",
+        description: "自身造成的治療可以爆擊，自身爆擊率提升{{}}，溢出治療量的50%轉化為等量護盾值",
+        arguments: [
+          ["6%"],
+          ["7.8%"],
+          ["9.3%"],
+          ["10.8%"],
+        ]
+      },
+      risingStar: [
+        "除自己外友方使用奧義技能後，自身造成治療效果提升5%，可疊加，最多3層",
+        "",
+        "自身所有治療爆擊時都會對目標施加20%防禦力提升效果，持續2回合，不可疊加",
+        "",
+        "「動力滿滿」提升至攻擊力提升20%，且該效果持續至戰鬥結束",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
   {
     name: "赤沼蓮",
     subname: "繪空事",

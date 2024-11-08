@@ -19,10 +19,16 @@
 <script setup>
 import images from "@/common/images";
 
-const versionbanner = Object.values(images.versionBanners);
+const versionbanner = Object.values(images.versionBanners).sort((a, b) => {
+  const aVer = a.split("/").pop().split(".");
+  const bVer = b.split("/").pop().split(".");
+
+  for (const i in aVer) {
+    if (aVer[i] != bVer[i]) return aVer[i] - bVer[i];
+  }
+
+});
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

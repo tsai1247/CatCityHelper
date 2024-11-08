@@ -1,5 +1,22 @@
 const bookVersionList = [
   {
+    "version": "1.13.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：天使心、爆破藝術、多情演繹、衍罪之淵",
+      "【新增】角色圖片：天使心、爆破藝術、多情演繹、衍罪之淵",
+      "【新增】1.11~1.13版本橫幅",
+      "【新增】社團特訓第22期數據&實際數值"
+    ]
+  },
+  {
+    "version": "1.12.3.0",
+    "title": "",
+    "description": [
+      "【新增】社團特訓第21期數據&實際數值",
+    ]
+  },
+  {
     "version": "1.12.2.0",
     "title": "",
     "description": [
@@ -330,6 +347,10 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.13",
+    "title": "無名之花"
+  },
   {
     "version": "1.12",
     "title": "相聞歌"
