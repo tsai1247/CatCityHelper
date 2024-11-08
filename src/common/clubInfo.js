@@ -28,13 +28,12 @@ function constructBossInfo(number, customBossInfo = {}) {
  * @returns {{small:{basic:{}, delta:{}, maxRound:Number}, big:{basic:{}, delta:{}, maxRound:Number}}} adjusted stat data
  */
 function adjustBossStats(number, statData = { small: {}, big: {} }) {
-  if (number >= 20) number -= 20;
 
   const basicStats = {
-    smallHP: 5222100,
-    bigHP: 5719600,
-    ATK: 3731,
-    DEF: 1243.5
+    smallHP: 5354400,
+    bigHP: 5864500,
+    ATK: 3825.5,
+    DEF: 1275
   };
 
   const basicStatsDelta = {
@@ -46,10 +45,10 @@ function adjustBossStats(number, statData = { small: {}, big: {} }) {
 
 
   const deltaStats = {
-    smallHP: 1289400,
-    bigHP: 1412200,
-    ATK: 921,
-    DEF: 307
+    smallHP: 1323000,
+    bigHP: 1323000 * 23 / 21,
+    ATK: 945,
+    DEF: 315
   };
 
   const deltaStatsDelta = {
@@ -59,6 +58,8 @@ function adjustBossStats(number, statData = { small: {}, big: {} }) {
     DEF: [4, 3.5]
   };
 
+
+  if (number >= 22) number -= 21;
 
   ["small", "big"].forEach((bossType) => {
     statData[bossType].basic = createStats(basicStats, basicStatsDelta);
@@ -70,7 +71,7 @@ function adjustBossStats(number, statData = { small: {}, big: {} }) {
         const adjustedKey = (statType) => statType == "HP" ? `${bossType}HP` : statType;
         return [
           statType,
-          Array(number).fill().reduce((s, e, i) => s + statDelta[adjustedKey(statType)][(number + i) % 2], statBase[adjustedKey(statType)])
+          Array(number).fill().reduce((s, e, i) => s + statDelta[adjustedKey(statType)][(number + i + 1) % 2], statBase[adjustedKey(statType)])
         ];
       }));
     }
@@ -265,13 +266,89 @@ const clubBossList = {
 
 const clubInfo = [
   {
+    no: 22,
+    duration: {
+      start: '2024-10-31',
+      end: '2024-11-5',
+    },
+    enemies: {
+      stats: adjustBossStats(22),
+      ...constructBossInfo(22)
+    }
+  },
+  {
+    no: 21,
+    duration: {
+      start: '2024-10-17',
+      end: '2024-10-23',
+    },
+    enemies: {
+      stats: {
+        "small": {
+          "basic": {
+            "HP": 5354400,
+            "ATK": 3825.5,
+            "DEF": 1275
+          },
+          "delta": {
+            "HP": 1323000,
+            "ATK": 945,
+            "DEF": 315
+          },
+          "maxRound": 5
+        },
+        "big": {
+          "basic": {
+            "HP": 5864500,
+            "ATK": 3825.5,
+            "DEF": 1275
+          },
+          "delta": {
+            "HP": 1449000,
+            "ATK": 945,
+            "DEF": 315
+          },
+          "maxRound": 5
+        }
+      },
+      ...constructBossInfo(21)
+    }
+  },
+  {
     no: 20,
     duration: {
       start: '2024-09-12',
       end: '2024-09-18',
     },
     enemies: {
-      stats: adjustBossStats(20),
+      stats: {
+        "small": {
+          "basic": {
+            "HP": 5222100,
+            "ATK": 3731,
+            "DEF": 1243.5
+          },
+          "delta": {
+            "HP": 1289400,
+            "ATK": 921,
+            "DEF": 307
+          },
+          "maxRound": 5
+        },
+        "big": {
+          "basic": {
+            "HP": 5719600,
+            "ATK": 3731,
+            "DEF": 1243.5
+          },
+          "delta": {
+            "HP": 1412200,
+            "ATK": 921,
+            "DEF": 307
+          },
+          "maxRound": 5
+        }
+      },
       ...constructBossInfo(20)
     }
   },
