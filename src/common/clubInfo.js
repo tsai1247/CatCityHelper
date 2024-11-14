@@ -266,6 +266,44 @@ const clubBossList = {
 
 const clubInfo = [
   {
+    no: 23,
+    duration: {
+      start: '2024-11-14',
+      end: '2024-11-20',
+    },
+    enemies: {
+      stats: {
+        small: {
+          basic: {
+            HP: 5490900,
+            ATK: 3923,
+            DEF: 1307.5,
+          },
+          delta: {
+            HP: 1356600,
+            ATK: 969,
+            DEF: 323
+          },
+          maxRound: 5,
+        },
+        big: {
+          basic: {
+            HP: 5574700,
+            ATK: 3923,
+            DEF: 1307.5,
+          },
+          delta: {
+            HP: 1485800,
+            ATK: 969,
+            DEF: 323
+          },
+          maxRound: 5,
+        },
+      },
+      ...constructBossInfo(23)
+    }
+  },
+  {
     no: 22,
     duration: {
       start: '2024-10-31',
