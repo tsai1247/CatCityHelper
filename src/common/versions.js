@@ -1,5 +1,14 @@
 const bookVersionList = [
   {
+    "version": "1.14.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：惡兆之影",
+      "【新增】角色圖片：惡兆之影",
+      "【新增】1.14版本橫幅",
+    ]
+  },
+  {
     "version": "1.13.1.0",
     "title": "",
     "description": [

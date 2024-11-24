@@ -81,6 +81,81 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters (remember -8 HP)
   {
+    name: "羅寇",
+    subname: "惡兆之影",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "159",
+      DEF: "59",
+      HP: "387",
+      Penetration: "0%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "135%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "罪欲爆發",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並使目標身上所有「詛咒」立即產生相當於原傷害150%的傷害，造成傷害後目標身上的「詛咒」持續時間減少1回合",
+        arguments: [
+          ["204%"],
+          ["232%"],
+          ["262%"],
+          ["290%"],
+        ]
+      },
+      A: {
+        name: "欲念縛魂",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並延長自身「詛咒」{{}}回合",
+        arguments: [
+          ["85%", "1"],
+          ["100%", "1"],
+          ["133.3%", "2"],
+        ]
+      },
+      B: {
+        name: "孽魂負影",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並將自身所有「詛咒」<轉移>給目標單體<br><轉移>:刪除原擁有者身上的效果，保留效果的持續回合數和疊加層數將其施加給目標",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      Passive: {
+        name: "罪罰之身",
+        description: "自身每損失1%最大生命值，造成間接傷害提升{{}}，最多提升{{}}，每個回合開始時，如果自身攜帶「詛咒」數量不超過3個，獲得1層「詛咒」，持續2回合，回合結束時自身受到的持續傷害至多將自身生命值消耗至1點",
+        arguments: [
+          ["0.5%", "33%"],
+          ["0.6%", "36%"],
+          ["0.7%", "39%"],
+          ["0.8%", "42%"],
+        ]
+      },
+      risingStar: [
+        "其他友方施加「詛咒」時，自身獲得1層「詛咒」，持續2回合，每個回合至多生效1次",
+        "",
+        "",
+        "自身施加的「詛咒」對敵方造成傷害後，攻擊力提升10%，持續2回合，並在下回合將造成總傷害的45%轉換為1回合護盾，不超過自身最大生命值的50%",
+        "",
+        "「罪欲爆發」使目標身上「詛咒」產生原傷害180%的傷害",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "梅娜塔",
     subname: "衍罪之淵",
     rarity: rarity.SSR,
