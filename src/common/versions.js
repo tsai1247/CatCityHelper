@@ -1,5 +1,14 @@
 const bookVersionList = [
   {
+    "version": "1.14.1.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：森嶼漁歌",
+      "【新增】角色圖片：森嶼漁歌",
+      "【新增】社團特訓第24期數據&實際數值",
+    ]
+  },
+  {
     "version": "1.14.0.0",
     "title": "",
     "description": [

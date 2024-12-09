@@ -81,6 +81,81 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters (remember -8 HP)
   {
+    name: "菲菲",
+    subname: "森嶼漁歌",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "149",
+      DEF: "59",
+      HP: "387",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "140%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "靈影獵襲",
+        description: "按{{}}攻擊力，對敵方單位造成「破碎傷害」，並搶奪目標20%攻擊力2回合(不超過自身基礎攻擊力的35%)",
+        arguments: [
+          ["188%"],
+          ["214%"],
+          ["242%"],
+          ["268%"],
+        ]
+      },
+      A: {
+        name: "森獵撲殺",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並施加「爪痕」，持續3回合，菲菲對攜帶「爪痕」的敵方造成的傷害提高20%，受到來自攜帶「爪痕」的敵方造成的傷害降低15%，場上只有一個敵方擁有「爪痕」",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "疾影漁獵",
+        description: "按{{}}攻擊力，對敵方單體造成「破碎傷害」，並對目標施加1層受到破碎傷害提升5%效果，可疊加，最高8層",
+        arguments: [
+          ["85%"],
+          ["100%"],
+          ["133.3%"],
+        ]
+      },
+      Passive: {
+        name: "協力痛擊",
+        description: "所有紅色情緒友方爆擊傷害提升{{}}",
+        arguments: [
+          ["14%"],
+          ["17.4%"],
+          ["20.6%"],
+          ["24%"],
+        ]
+      },
+      risingStar: [
+        "「靈影獵襲」改為先搶奪攻擊力，再造成「破碎傷害」",
+        "",
+        "",
+        "對攜帶「爪痕」的敵方造成的傷害額外擁有40%爆擊傷害",
+        "",
+        "當自身當前生命值大於50%時，造成最終傷害提升20%",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "羅寇",
     subname: "惡兆之影",
     rarity: rarity.SSR,
