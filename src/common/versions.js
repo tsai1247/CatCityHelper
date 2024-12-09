@@ -373,6 +373,10 @@ const bookVersionList = [
 
 const catCityVersionList = [
   {
+    "version": "1.14",
+    "title": "悼亡之影"
+  },
+  {
     "version": "1.13",
     "title": "無名之花"
   },
