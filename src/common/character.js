@@ -10,13 +10,13 @@ const { characterSource } = enumList;
   particle: particle.triangle,
   source: [characterSource.specialSummon],
   basic: {
-    ATK: "158",
-    DEF: "57",
-    HP: "391",
-    Penetration: "3%",
+    ATK: "",
+    DEF: "",
+    HP: "",
+    Penetration: "0%",
     Durability: "0%",
     CRIT_Rate: "0%",
-    CRIT_DMG: "140%",
+    CRIT_DMG: "120%",
     CRIT_Rate_RES: "0%",
     CRIT_DMG_RES: "0%",
     Received_Healing_Boost: "0%",
@@ -80,6 +80,306 @@ const { characterSource } = enumList;
 
 const characterList = [
   // newer characters (remember -8 HP)
+  {
+    name: "特莉絲",
+    subname: "雙生俠影",
+    rarity: rarity.SSR,
+    attribute: attribute.light,
+    particle: particle.square,
+    source: [characterSource.event],
+    basic: {
+      ATK: "176",
+      DEF: "59",
+      HP: "410",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "7%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "化身連擊",
+        description: "按{{}}攻擊力，對敵方單體造成「穿刺傷害」",
+        arguments: [
+          ["113%"],
+          ["128%"],
+          ["145%"],
+          ["160%"],
+        ]
+      },
+      A: {
+        name: "兩儀流轉",
+        description: "按{{}}攻擊力，對敵方單體造成傷害<br>白色情緒下：按{{}}當前生命值，對友方全體施加2回合護盾<br>黑色情緒下：消耗自身{{}}當前生命值，額外對目標造成一段{{}}的「穿刺傷害」",
+        arguments: [
+          ["72%", "25%", "5%", "97%"],
+          ["90%", "40%", "4%", "125%"],
+          ["120%", "50%", "3%", "153%"],
+        ]
+      },
+      B: {
+        name: "陰陽化生",
+        description: "「吞噬」，並按120%攻擊力，對敵方單體造成傷害<br>白色情緒下：使友方全體下一次攻擊附帶{{}}吸血效果<br>黑色情緒下：當自身擁有護盾時，消耗自身護盾量的{{}}，按我方全體{{}}護盾值對目標造成一次額外傷害（不超過自身攻擊力的400%）",
+        arguments: [
+          ["20%", "10%", "30%"],
+          ["30%", "8%", "40%"],
+          ["40%", "5%", "45%"],
+        ]
+      },
+      Passive: {
+        name: "萬物歸一",
+        description: "\"雙生俠影\"的奧義能量上限降低至2點，使用「化身連擊」時會將自身情緒顏色在黑、白之間進行切換，使用基礎技能時會獲得2層「陰陽合和」，可疊加，最高15層<br>白色情緒下：每層「陰陽合和」提供{{}}生命值，{{}}忍耐率加成<br>黑色情緒下：每層「陰陽合和」提供{{}}攻擊力，{{}}穿透率加成",
+        arguments: [
+          ["3%", "4%", "3%", "2%"],
+          ["3.5%", "5%", "3.5%", "2.5%"],
+          ["4%", "6%", "4%", "3%"],
+          ["5%", "8%", "5%", "4%"],
+        ]
+      },
+      risingStar: [
+        "奧義能量上限降低至1點，使用「化身連擊」後獲得1點奧義能量",
+        "",
+        "",
+        "友方全體攻擊或受到攻擊時，屬性克制效果提升15%，使用基礎技能時額外獲得1層「陰陽合和」",
+        "",
+        "「陰陽合和」達到滿層時，額外獲得6層「陰陽合和」，且「萬物歸一」同時提供所有屬性加成",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "望舒",
+    subname: "守月歌",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.square,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "117",
+      DEF: "86",
+      HP: "519",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "3%",
+      Generated_Shield_Boost: "7%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "星月變",
+        description: "使友方全體獲得「星月相生」<br>「星月相生」：按守月歌最大生命值的{{}}提升最大生命值，並且受到治療量、受到護盾量提升{{}}",
+        arguments: [
+          ["61%", "15%"],
+          ["69%", "17%"],
+          ["78%", "19%"],
+          ["87%", "21%"],
+        ]
+      },
+      A: {
+        name: "凝輝",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並按{{}}生命值，回復生命值百分比最低的1名友方",
+        arguments: [
+          ["102%", "25%"],
+          ["120%", "35%"],
+          ["150%", "45%"],
+        ]
+      },
+      B: {
+        name: "月華",
+        description: "按{{}}最大生命值，對友方單體施加護盾2回合",
+        arguments: [
+          ["33%"],
+          ["50%"],
+          ["67%"],
+        ]
+      },
+      Passive: {
+        name: "星月同輝",
+        description: "場上每有1名紅色友方，自身造成護盾效果提升{{}}",
+        arguments: [
+          ["6%"],
+          ["7.3%"],
+          ["8.7%"],
+          ["10%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2點奧義能量",
+        "",
+        "攜帶「星月相生」的友方受到的傷害均攤（此次傷害視為對我方全體釋放進攻技能）",
+        "",
+        "對友方治療或施加護盾時，使目標獲得30%攻擊力提升，持續3回合",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "霧非",
+    subname: "雲天外",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "146",
+      DEF: "65",
+      HP: "458",
+      Penetration: "0%",
+      Durability: "7%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "7%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "耀世聖光",
+        description: "按{{}}攻擊力治療友方全體，並使自身獲得2層「永恆」",
+        arguments: [
+          ["154%"],
+          ["175%"],
+          ["197%"],
+          ["218%"],
+        ]
+      },
+      A: {
+        name: "聖光·擊",
+        description: "按{{}}攻擊力，對敵方全體造成「穿刺傷害」",
+        arguments: [
+          ["72%"],
+          ["90%"],
+          ["120%"],
+        ]
+      },
+      B: {
+        name: "聖光·沐",
+        description: "對友方全體施加{{}}層「交織」，並使自身獲得{{}}層「永恆」",
+        arguments: [
+          ["1", "2"],
+          ["2", "3"],
+          ["4", "4"],
+        ]
+      },
+      Passive: {
+        name: "時之梭",
+        description: "所有紅色情緒友方攻擊力提升{{}}",
+        arguments: [
+          ["7%"],
+          ["8.7%"],
+          ["10.3%"],
+          ["12%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2層「永恆」",
+        "",
+        "",
+        "「交織」層數上限提升至16層<br>使用「聖光·擊」使攜帶「交織」的友方再次獲得一層「交織」",
+        "",
+        "攜帶「交織」的友方額外獲得15%攻擊力",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "辭青",
+    subname: "破陣曲",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "164",
+      DEF: "57",
+      HP: "369",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "龍嘯九天",
+        description: "按{{}}攻擊力，對敵方單體造成「穿刺傷害」，並進入「招架」狀態2回合，持續期間內受到傷害降低30%",
+        arguments: [
+          ["172%"],
+          ["196%"],
+          ["221%"],
+          ["245%"],
+        ]
+      },
+      A: {
+        name: "伏龍斬雪",
+        description: "按80%攻擊力，對敵方單體造成傷害，並獲得{{}}層4%穿透率提升效果3回合，可疊加，最高10層",
+        arguments: [
+          ["2"],
+          ["3"],
+          ["4"],
+        ]
+      },
+      B: {
+        name: "守禦八方",
+        description: "「挑釁」敵方單體{{}}回合，自身進入「招架」狀態{{}}回合，持續期間受到傷害降低{{}}",
+        arguments: [
+          ["1", "1", "25%"],
+          ["1", "2", "35%"],
+          ["2", "2", "40%"],
+        ]
+      },
+      Passive: {
+        name: "潛龍",
+        description: "處於「招架」狀態下，每次受到敵方攻擊，使自身造成傷害提升{{}}，可疊加，最高10層，當我方增益效果總層數達到20層時，自身獲得「龍焰」，成功「招架」攜帶自身施加「挑釁」的敵方攻擊時，按「招架」敵方傷害的80%，對目標使用「追剿」（無法爆擊，不算做使用進攻技能），每叵合最多觸發3次",
+        arguments: [
+          ["4%"],
+          ["4.5%"],
+          ["5%"],
+          ["6%"],
+        ]
+      },
+      risingStar: [
+        "\"辭青\"的「追剿」無視目標40%防禦力，並按傷害量的25%回復自身生命值",
+        "",
+        "",
+        "戰鬥開始時，獲得「龍焰」，「追剿」對被施加「挑釁」以外的目標也生效",
+        "",
+        "「追剿」改為按照受到目標造成總傷害量的50%造成傷害",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
   {
     name: "菲菲",
     subname: "森嶼漁歌",
@@ -2470,7 +2770,7 @@ const characterList = [
       },
       B: {
         name: "夢蝶縛",
-        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「封印」{{}}回合",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「恐懼」{{}}回合",
         arguments: [
           ["102%", "1"],
           ["120%", "1"],
@@ -3754,7 +4054,7 @@ const characterList = [
         arguments: [
           ["102%", ""],
           ["120%", "，並對目標施加1層「易傷」3回合"],
-          ["150%", "，並對目標施加1層「易傷」3回合"],
+          ["150%", "，並對目標施加2層「易傷」3回合"],
         ]
       },
       Passive: {

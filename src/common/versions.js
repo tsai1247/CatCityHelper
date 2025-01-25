@@ -1,5 +1,14 @@
 const bookVersionList = [
   {
+    "version": "1.16.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：破陣曲、雲天外、守月歌、雙生俠影",
+      "【新增】角色圖片：破陣曲、雲天外、守月歌、雙生俠影",
+      "【修正】滌蕩者技能敘述"
+    ]
+  },
+  {
     "version": "1.14.1.0",
     "title": "",
     "description": [
@@ -372,6 +381,14 @@ const bookVersionList = [
 ]
 
 const catCityVersionList = [
+  {
+    "version": "1.16",
+    "title": "遠山來賀"
+  },
+  {
+    "version": "1.15",
+    "title": "一周年慶典"
+  },
   {
     "version": "1.14",
     "title": "悼亡之影"
