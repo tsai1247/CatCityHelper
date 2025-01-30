@@ -81,6 +81,81 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters (remember -8 HP)
   {
+    name: "金闕",
+    subname: "金雀台",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.square,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "157",
+      DEF: "61",
+      HP: "366",
+      Penetration: "14%",
+      Durability: "0%",
+      CRIT_Rate: "5%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "遮天",
+        description: "按{{}}攻擊力，對敵方全體造成「穿透傷害」，並獲得5層「多寶」",
+        arguments: [
+          ["227%"],
+          ["258%"],
+          ["292%"],
+          ["323%"],
+        ]
+      },
+      A: {
+        name: "鏡光",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，每命中一個目標，自身獲得一層「多寶」，可疊加，最高14層",
+        arguments: [
+          ["108%"],
+          ["135%"],
+          ["180%"],
+        ]
+      },
+      B: {
+        name: "藏兵",
+        description: "分2段，每段按{{}}攻擊力，對隨機敵方單體造成「穿刺傷害」(每次對重複目標造成的傷害降低35%，最多降低70%)，自身每擁有14層「多寶」，技能額外增加2段",
+        arguments: [
+          ["90%"],
+          ["113%"],
+          ["150%"],
+        ]
+      },
+      Passive: {
+        name: "每擁有2層「多寶」，穿透率提升{{}}",
+        description: "",
+        arguments: [
+          ["4%"],
+          ["4.5%"],
+          ["5%"],
+          ["6%"],
+        ]
+      },
+      risingStar: [
+        "使用「藏兵」時，每造成1段傷害，自身獲得1層「多寶」",
+        "",
+        "",
+        "「多寶」層數上限提升至28層",
+        "",
+        "當「多寶」達到15層時，「遮天」額外按目標30%已損失生命值，對敵方全體造成一段傷害，不超過自身攻擊力的500%",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "特莉絲",
     subname: "雙生俠影",
     rarity: rarity.SSR,
