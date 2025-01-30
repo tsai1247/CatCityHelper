@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.16.1.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：金雀台",
+      "【新增】角色圖片：金雀台",
+    ]
+  },
+  {
     "version": "1.16.0.0",
     "title": "",
     "description": [
