@@ -133,8 +133,8 @@ const characterList = [
         ]
       },
       Passive: {
-        name: "每擁有2層「多寶」，穿透率提升{{}}",
-        description: "",
+        name: "天子怒",
+        description: "每擁有2層「多寶」，穿透率提升{{}}",
         arguments: [
           ["4%"],
           ["4.5%"],
