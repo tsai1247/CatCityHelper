@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.16.2.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：幸福時光、糖果甜心",
+      "【新增】角色圖片：幸福時光、糖果甜心",
+    ]
+  },
+  {
     "version": "1.16.1.0",
     "title": "",
     "description": [
