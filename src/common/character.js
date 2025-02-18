@@ -81,6 +81,156 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters (remember -8 HP)
   {
+    name: "依蓮娜",
+    subname: "糖果甜心",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "158",
+      DEF: "58",
+      HP: "372",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "甜心大禮包",
+        description: "消耗自身所有「夾心餅乾」，按{{}}攻擊力，對敵方單體造成「破碎傷害」，每層「夾心餅乾」使基礎傷害提升5%",
+        arguments: [
+          ["183%"],
+          ["208%"],
+          ["235%"],
+          ["261%"],
+        ]
+      },
+      A: {
+        name: "蹦蹦飛擊",
+        description: "按{{}}攻擊力，對敵方單體造成傷害{{}}",
+        arguments: [
+          ["102%", ""],
+          ["120%", "，並使自身造成傷害提升10%，持續2回合"],
+          ["150%", "<br>並施加「暈眩」1回合，自身造成傷害提升25%，持續2回合"],
+        ]
+      },
+      B: {
+        name: "咕嚕咕嚕大旋風",
+        description: "按120%攻擊力，對敵方單體造成{{}}，並使自身攻擊力提升{{}}，持續{{}}回合",
+        arguments: [
+          ["傷害", "15%", "2"],
+          ["傷害", "35%", "2"],
+          ["「破碎傷害」", "35%", "3"],
+        ]
+      },
+      Passive: {
+        name: "糖果派對",
+        description: "場上每有1名藍色友方，自身爆擊傷害提升{{}}<br>除自身以外友方施加星級提升效果後，自身隨機1張1星技能牌升至2星(每回合至多1次)<br>\"糖果甜心\"釋放基礎技能時，會根據技能星級獲得同等層數的「夾心餅乾」，可疊加，最高8層",
+        arguments: [
+          ["7%"],
+          ["8%"],
+          ["9%"],
+          ["10%"],
+        ]
+      },
+      risingStar: [
+        "每回合開始時，自身隨機1張技能牌升1星",
+        "",
+        "",
+        "自身施加星級提升效果時，獲得100%爆擊傷害，持續至自身釋放下一個進攻技能後",
+        "",
+        "釋放「甜心大禮包」時，每消耗1層「夾心餅乾」使基礎傷害提升10%",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "拉斐爾",
+    subname: "幸福時光",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.triangle,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "114",
+      DEF: "79",
+      HP: "519",
+      Penetration: "0%",
+      Durability: "20%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "5%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "約定的流星",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，丟棄牌庫中\"幸福時光\"所有技能牌(不超過4張)，並按丟棄牌數量+1，使牌庫內同等數量隨機技能牌升1星",
+        arguments: [
+          ["183%"],
+          ["208%"],
+          ["235%"],
+          ["261%"],
+        ]
+      },
+      A: {
+        name: "點點星光",
+        description: "按{{}}攻擊力，對敵方單體造成傷害",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "心願魔法",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並對除自身以外其他友方施加「祝福」持續3回合",
+        arguments: [
+          ["96%"],
+          ["120%"],
+          ["160%"],
+        ]
+      },
+      Passive: {
+        name: "守護",
+        description: "所有藍色友方爆擊率抵抗提升{{}}",
+        arguments: [
+          ["8%"],
+          ["9.6%"],
+          ["11.2%"],
+          ["12.8%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2點奧義能量",
+        "",
+        "釋放「約定的流星」時，每丟棄自身1張技能牌，按自身15%最大生命恢復我方全體生命值",
+        "",
+        "釋放「約定的流星」時，丟棄技能牌時，自身獲得1點奧義能量，丟棄的技能卡超過2張時，自身獲得2點奧義能量",
+        "",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "金闕",
     subname: "金雀台",
     rarity: rarity.SSR,

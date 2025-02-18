@@ -234,8 +234,11 @@ const buff = [
   {
     name: "交織",
     description: "「交織」：穿透率提升3%，持續3回合，可疊加，最高8層",
-  }
-
+  },
+  {
+    name: "祝福",
+    description: "「祝福」：按\"幸福時光\"當前爆擊率抵抗的50%獲得爆擊率提升效果(提升量不超過15%)",
+  },
 ]
 
 const control = [
@@ -260,6 +263,10 @@ const control = [
   {
     name: "封印",
     description: `無法使用增益技能`,
+  },
+  {
+    name: "暈眩",
+    description: `無法行動，不受驅散效果影響`,
   },
 ]
 
