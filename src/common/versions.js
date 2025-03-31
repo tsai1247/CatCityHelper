@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.17.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：絢爛之雨",
+      "【新增】角色圖片：絢爛之雨",
+    ]
+  },
+  {
     "version": "1.16.2.0",
     "title": "",
     "description": [
