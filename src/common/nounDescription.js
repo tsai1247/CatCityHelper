@@ -74,7 +74,11 @@ const attack = [
   {
     name: "增幅傷害",
     description: "「增幅傷害」：對目標造成傷害時，自身每擁有1層增益效果，傷害提升20%，最多計入10層"
-  }
+  },
+  {
+    name: "強擊傷害",
+    description: "「強擊傷害」：對目標造成傷害時，自身每擁有1%當前生命值，傷害提升1%，(不超過80%)"
+  },
 
 ]
 
@@ -239,6 +243,10 @@ const buff = [
     name: "祝福",
     description: "「祝福」：按\"幸福時光\"當前爆擊率抵抗的50%獲得爆擊率提升效果(提升量不超過15%)",
   },
+  {
+    name: "潤澤",
+    description: "「潤澤」：增益效果在下2次回合結束時不會消耗回合數",
+  },
 ]
 
 const control = [
@@ -246,7 +254,6 @@ const control = [
     name: "恐懼",
     description: "「恐懼」：無法使用進攻技能",
   },
-
   {
     name: "冰封",
     description: "「冰封」：無法行動，受到攻擊會提前中斷效果並造成額外傷害",
@@ -255,7 +262,6 @@ const control = [
     name: "沉默",
     description: "「沉默」：無法使用奧義技能",
   },
-
   {
     name: "失明",
     description: `無法使用治療技能`,
@@ -376,6 +382,28 @@ const debuff = [
   {
     name: "業火",
     description: "「業火」：傷害傳遞類效果，受到傷害時，消耗1層「業火」，將受到傷害的20%傳遞給其他擁有「業火」的目標",
+  },
+  {
+    name: "激流",
+    description: "「激流」：回合結束時，按目標20%最大生命值造成間接傷害，傷害量不超過施法者120%攻擊力",
+  },
+  {
+    name: "滌淨",
+    description: "「滌淨」：除行動限制外減益效果在下1次回合結束時不會消耗回合數",
+    argument: [
+      {
+        condition: { rarity: [0] },
+        value: ["1"],
+      },
+      {
+        condition: { rarity: [1] },
+        value: ["2"],
+      },
+      {
+        condition: { rarity: [2] },
+        value: ["2"],
+      },
+    ],
   },
   ...control,
 ]

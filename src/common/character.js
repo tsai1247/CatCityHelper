@@ -81,6 +81,156 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters (remember -8 HP)
   {
+    name: "斐恩",
+    subname: "絢爛之雨",
+    rarity: rarity.SSR,
+    attribute: attribute.light,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "176",
+      DEF: "62",
+      HP: "422",
+      Penetration: "0%",
+      Durability: "14%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "3%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "雨能聚射",
+        description: "按{{}}攻擊力+「無盡雨幕」累積治療量，對敵方全體造成「強擊傷害」，清除累積治療量，並展開「無盡雨幕」，持續3回合",
+        arguments: [
+          ["173%"],
+          ["197%"],
+          ["222%"],
+          ["246%"],
+        ]
+      },
+      A: {
+        name: "電掣雷雲",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「滌淨」，當我方場上存在「無盡雨幕」時，傷害和施加效果會傳遞至敵方全體",
+        arguments: [
+          ["108%"],
+          ["135%"],
+          ["180%"],
+        ]
+      },
+      B: {
+        name: "驟降沛霖",
+        description: "按{{}}攻擊力回復生命值百分比最低的1名友方，並按108%攻擊力對目標施加1回合「漸愈」和「潤澤」，當我方場上存在「無盡雨幕」時，施加效果會傳遞至我方全體",
+        arguments: [
+          ["108%"],
+          ["153%"],
+          ["180%"],
+        ]
+      },
+      Passive: {
+        name: "幸運雨帶",
+        description: "我方全體爆擊傷害提升{{}}，戰鬥開始時，展開「無盡雨幕」，持續3回合<br>「無盡雨幕」：我方全體造成傷害時因情緒克制而變更的傷害+20%；並累積\"斐恩\"造成治療量的30%(「無盡雨幕」消失後累積值仍然存在)",
+        arguments: [
+          ["20%"],
+          ["23.3%"],
+          ["26.7%"],
+          ["30%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2點奧義能量，「無盡雨幕」持續期間我方全體受到治療效果提升30%",
+        "",
+        "",
+        "\"斐恩\"施加的「漸愈」效果在攜帶者受到傷害後立即觸發(每回合至多觸發1次，且不會累積治療量)；「無盡雨幕」提供的屬性克制傷害提升效果提升至40%",
+        "",
+        "釋放「雨能聚射」後，保留30%「無盡雨幕」累積的治療量，並隨機獲得1~3點奧義能量",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  // {
+  //   name: "塔拉",
+  //   subname: "滌盡凡塵",
+  //   rarity: rarity.SSR,
+  //   attribute: attribute.red,
+  //   particle: particle.star,
+  //   source: [characterSource.specialSummon],
+  //   basic: {
+  //     ATK: "169",
+  //     DEF: "56",
+  //     HP: "358",
+  //     Penetration: "0%",
+  //     Durability: "0%",
+  //     CRIT_Rate: "10%",
+  //     CRIT_DMG: "130%",
+  //     CRIT_Rate_RES: "0%",
+  //     CRIT_DMG_RES: "0%",
+  //     Received_Healing_Boost: "0%",
+  //     Received_Shield_Boost: "0%",
+  //     Healing_Boost: "0%",
+  //     Generated_Shield_Boost: "0%",
+  //     Luck: "0%"
+  //   },
+  //   skills: {
+  //     Sp: {
+  //       name: "象群洪流",
+  //       description: "按{{}}攻擊力，對敵方單體造成傷害，如果此次傷害爆擊，對目標施加1層「湧動」3回合，持續期間內攜帶者受到的間接傷害按\"塔拉\"爆擊傷害的30%(不低於130%)結算爆擊效果",
+  //       arguments: [
+  //         ["244%"],
+  //         ["278%"],
+  //         ["314%"],
+  //         ["348%"],
+  //       ]
+  //     },
+  //     A: {
+  //       name: "斷波",
+  //       description: "按{{}}攻擊力，對敵方單體造成「間接傷害」",
+  //       arguments: [
+  //         ["120%"],
+  //         ["150%"],
+  //         ["200%"],
+  //       ]
+  //     },
+  //     B: {
+  //       name: "潮升",
+  //       description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「激流」2回合",
+  //       arguments: [
+  //         ["120%"],
+  //         ["150%"],
+  //         ["200%"],
+  //       ]
+  //     },
+  //     Passive: {
+  //       name: "滲透",
+  //       description: "所有紅色友方造成間接傷害提升{{}}，每個回合開始時，如果敵方目標自身或其相鄰友方攜帶「激流」，獲得1層「激流」，持續1回合",
+  //       arguments: [
+  //         ["10%"],
+  //         ["11.7%"],
+  //         ["13.3%"],
+  //         ["15%"],
+  //       ]
+  //     },
+  //     risingStar: [
+  //       "戰鬥開始時，獲得2點奧義能量",
+  //       "",
+  //       "",
+  //       "釋放「象群洪流」，對目標成功施加「湧動」時，對其相鄰目標也施加「湧動」；「湧動」使間接傷害受到爆擊傷害影響的效果不低於160%",
+  //       "",
+  //       "使用自身技能牌時，額外對目標及其相鄰目標施加1層「激流」，持續1回合",
+  //     ]
+  //   },
+  //   supporters: [
+
+  //   ]
+  // },
+  {
     name: "依蓮娜",
     subname: "糖果甜心",
     rarity: rarity.SSR,
