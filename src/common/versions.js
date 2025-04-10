@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.17.1.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：滌盡凡塵",
+      "【新增】角色圖片：滌盡凡塵",
+    ]
+  },
+  {
     "version": "1.17.0.0",
     "title": "",
     "description": [
