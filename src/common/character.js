@@ -155,81 +155,81 @@ const characterList = [
 
     ]
   },
-  // {
-  //   name: "塔拉",
-  //   subname: "滌盡凡塵",
-  //   rarity: rarity.SSR,
-  //   attribute: attribute.red,
-  //   particle: particle.star,
-  //   source: [characterSource.specialSummon],
-  //   basic: {
-  //     ATK: "169",
-  //     DEF: "56",
-  //     HP: "358",
-  //     Penetration: "0%",
-  //     Durability: "0%",
-  //     CRIT_Rate: "10%",
-  //     CRIT_DMG: "130%",
-  //     CRIT_Rate_RES: "0%",
-  //     CRIT_DMG_RES: "0%",
-  //     Received_Healing_Boost: "0%",
-  //     Received_Shield_Boost: "0%",
-  //     Healing_Boost: "0%",
-  //     Generated_Shield_Boost: "0%",
-  //     Luck: "0%"
-  //   },
-  //   skills: {
-  //     Sp: {
-  //       name: "象群洪流",
-  //       description: "按{{}}攻擊力，對敵方單體造成傷害，如果此次傷害爆擊，對目標施加1層「湧動」3回合，持續期間內攜帶者受到的間接傷害按\"塔拉\"爆擊傷害的30%(不低於130%)結算爆擊效果",
-  //       arguments: [
-  //         ["244%"],
-  //         ["278%"],
-  //         ["314%"],
-  //         ["348%"],
-  //       ]
-  //     },
-  //     A: {
-  //       name: "斷波",
-  //       description: "按{{}}攻擊力，對敵方單體造成「間接傷害」",
-  //       arguments: [
-  //         ["120%"],
-  //         ["150%"],
-  //         ["200%"],
-  //       ]
-  //     },
-  //     B: {
-  //       name: "潮升",
-  //       description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「激流」2回合",
-  //       arguments: [
-  //         ["120%"],
-  //         ["150%"],
-  //         ["200%"],
-  //       ]
-  //     },
-  //     Passive: {
-  //       name: "滲透",
-  //       description: "所有紅色友方造成間接傷害提升{{}}，每個回合開始時，如果敵方目標自身或其相鄰友方攜帶「激流」，獲得1層「激流」，持續1回合",
-  //       arguments: [
-  //         ["10%"],
-  //         ["11.7%"],
-  //         ["13.3%"],
-  //         ["15%"],
-  //       ]
-  //     },
-  //     risingStar: [
-  //       "戰鬥開始時，獲得2點奧義能量",
-  //       "",
-  //       "",
-  //       "釋放「象群洪流」，對目標成功施加「湧動」時，對其相鄰目標也施加「湧動」；「湧動」使間接傷害受到爆擊傷害影響的效果不低於160%",
-  //       "",
-  //       "使用自身技能牌時，額外對目標及其相鄰目標施加1層「激流」，持續1回合",
-  //     ]
-  //   },
-  //   supporters: [
+  {
+    name: "塔拉",
+    subname: "滌盡凡塵",
+    rarity: rarity.SSR,
+    attribute: attribute.red,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "169",
+      DEF: "56",
+      HP: "358",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "象群洪流",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，如果此次傷害爆擊，對目標施加1層「湧動」3回合，持續期間內攜帶者受到的間接傷害按\"塔拉\"爆擊傷害的30%(不低於130%)結算爆擊效果",
+        arguments: [
+          ["244%"],
+          ["278%"],
+          ["314%"],
+          ["348%"],
+        ]
+      },
+      A: {
+        name: "斷波",
+        description: "按{{}}攻擊力，對敵方單體造成「間接傷害」",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      B: {
+        name: "潮升",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加1層「激流」2回合",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      Passive: {
+        name: "滲透",
+        description: "所有紅色友方造成間接傷害提升{{}}，每個回合開始時，如果敵方目標自身或其相鄰友方攜帶「激流」，獲得1層「激流」，持續1回合",
+        arguments: [
+          ["10%"],
+          ["11.7%"],
+          ["13.3%"],
+          ["15%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得2點奧義能量",
+        "",
+        "",
+        "釋放「象群洪流」，對目標成功施加「湧動」時，對其相鄰目標也施加「湧動」；「湧動」使間接傷害受到爆擊傷害影響的效果不低於160%",
+        "",
+        "使用自身技能牌時，額外對目標及其相鄰目標施加1層「激流」，持續1回合",
+      ]
+    },
+    supporters: [
 
-  //   ]
-  // },
+    ]
+  },
   {
     name: "依蓮娜",
     subname: "糖果甜心",
