@@ -79,7 +79,10 @@ const attack = [
     name: "強擊傷害",
     description: "「強擊傷害」：對目標造成傷害時，自身每擁有1%當前生命值，傷害提升1%，(不超過80%)"
   },
-
+  {
+    name: "積蓄傷害",
+    description: "「積蓄傷害」：目標每受到一次該類型傷害，傷害提升10%，最多提升12次"
+  },
 ]
 
 const buff = [
@@ -274,6 +277,10 @@ const control = [
     name: "暈眩",
     description: `無法行動，不受驅散效果影響`,
   },
+  {
+    name: "睡眠",
+    description: "「睡眠」：無法行動，攜帶者受到攻擊或其友方行動後提前結束",
+  },
 ]
 
 const debuff = [
@@ -404,6 +411,10 @@ const debuff = [
         value: ["2"],
       },
     ],
+  },
+  {
+    name: "蔓生",
+    description: "「蔓生」：被施加「瑰刺」的機率提升10%，可疊加，最高3層",
   },
   ...control,
 ]
