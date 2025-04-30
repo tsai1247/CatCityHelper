@@ -1,5 +1,13 @@
 const bookVersionList = [
   {
+    "version": "1.18.0.0",
+    "title": "",
+    "description": [
+      "【新增】新角色技能與數據：暗夜玫瑰、閒暇時刻、晚安故事",
+      "【新增】角色圖片：暗夜玫瑰、閒暇時刻、晚安故事",
+    ]
+  },
+  {
     "version": "1.17.1.0",
     "title": "",
     "description": [

@@ -81,6 +81,231 @@ const { characterSource } = enumList;
 const characterList = [
   // newer characters (remember -8 HP)
   {
+    name: "艾可",
+    subname: "晚安故事",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.star,
+    source: [characterSource.summon],
+    basic: {
+      ATK: "128",
+      DEF: "74",
+      HP: "503",
+      Penetration: "0%",
+      Durability: "27%",
+      CRIT_Rate: "0%",
+      CRIT_DMG: "120%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "全劇終",
+        description: "按{{}}攻擊力，對敵方全體造成傷害，並按自身25%穿透率降低目標穿透率",
+        arguments: [
+          ["195%"],
+          ["222%"],
+          ["251%"],
+          ["278%"],
+        ]
+      },
+      A: {
+        name: "高能劇情",
+        description: "對敵方全體施加爆擊率降低{{}}，持續2回合",
+        arguments: [
+          ["15%"],
+          ["25%"],
+          ["40%"],
+        ]
+      },
+      B: {
+        name: "晚安送別",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「睡眠」1回合",
+        arguments: [
+          ["84%"],
+          ["105%"],
+          ["140%"],
+        ]
+      },
+      Passive: {
+        name: "即興表演",
+        description: "所有藍色友方攻擊力提升{{}}，我方<主動釋放>1張技能牌，\"晚安故事\"對隨機敵方目標<追擊>1張1星「晚安送別」，每回合至多<追擊>2次",
+        arguments: [
+          ["6.7%"],
+          ["8.2%"],
+          ["9.9%"],
+          ["11.5%"],
+        ]
+      },
+      risingStar: [
+        "每回合最大<追擊>次數+1",
+        "",
+        "<追擊>的「晚安送別」提升至2星",
+        "",
+        "",
+        "攜帶「睡眠」的敵方受到我方攻擊導致「睡眠」提前結束時，按\"晚安故事\"95%攻擊力，對目標額外造成一段「穿刺傷害」",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "露露",
+    subname: "閒暇時刻",
+    rarity: rarity.SSR,
+    attribute: attribute.blue,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "168",
+      DEF: "57",
+      HP: "364",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "8%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "完美構圖",
+        description: "自身獲得「記錄」2回合<br>「記錄」：我方全體<追擊>造成傷害提升{{}}，並累積我方任意戰鬥員通過非奧義單體進攻技能造成的傷害量，效果結束後對隨機敵方單體目標<追擊>1次「快門連擊」，按560%攻擊力造成「純粹傷害」(不超過累積傷害量的30%)",
+        arguments: [
+          ["20%"],
+          ["23%"],
+          ["26%"],
+          ["29%"],
+        ]
+      },
+      A: {
+        name: "快門連擊",
+        description: "按{{}}攻擊力，對敵方單體造成「積蓄傷害」<br><主動釋放>時：額外對目標施加「聚焦」2回合(只對最新一名施加的敵方生效)<br><追擊>觸發時：額外對目標施加1層攻擊力降低10%效果2回合，可疊加，最高4層<br>「聚焦」：持續期間內，使目標優先成為我方單體<追擊>的目標",
+        arguments: [
+          ["97%"],
+          ["115%"],
+          ["140%"],
+        ]
+      },
+      B: {
+        name: "動作捕捉",
+        description: "對我方單體施加「跟拍」{{}}回合<br>「跟拍」：我方任意戰鬥員每使用1次單體進攻技能，自身造成傷害提升5%，最多提升3次，回合結束後重置",
+        arguments: [
+          ["2"],
+          ["3"],
+          ["4"],
+        ]
+      },
+      Passive: {
+        name: "自動對焦",
+        description: "我方<追擊>時額外獲得{{}}爆擊傷害，攜帶「跟拍」的友方使用進攻技能後，\"閒暇時刻\"對隨機敵方目標<追擊>1張1星「快門連擊」，每回合至多以這種方式<追擊>1次",
+        arguments: [
+          ["20%"],
+          ["23.3%"],
+          ["26.7%"],
+          ["30%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得1點奧義能量，「聚焦」的持續回合數+1",
+        "",
+        "",
+        "「跟拍」可提升的次數上限提升至6次，且在回合結束後不會重置",
+        "",
+        "「記錄」效果結束時觸發的<追擊>造成的傷害提升至800%攻擊力(不超過累積傷害量的50%)",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
+    name: "羅莎曼德",
+    subname: "暗夜玫瑰",
+    rarity: rarity.SSR,
+    attribute: attribute.dark,
+    particle: particle.star,
+    source: [characterSource.specialSummon],
+    basic: {
+      ATK: "173",
+      DEF: "62",
+      HP: "391",
+      Penetration: "0%",
+      Durability: "0%",
+      CRIT_Rate: "10%",
+      CRIT_DMG: "130%",
+      CRIT_Rate_RES: "0%",
+      CRIT_DMG_RES: "0%",
+      Received_Healing_Boost: "0%",
+      Received_Shield_Boost: "0%",
+      Healing_Boost: "0%",
+      Generated_Shield_Boost: "0%",
+      Luck: "0%"
+    },
+    skills: {
+      Sp: {
+        name: "殘紅盛宴",
+        description: "按{{}}攻擊力，對敵方單體造成「積蓄傷害」，並對目標施加4層「瑰刺」",
+        arguments: [
+          ["179%"],
+          ["204%"],
+          ["230%"],
+          ["255%"],
+        ]
+      },
+      A: {
+        name: "怒放",
+        description: "按{{}}攻擊力，對敵方單體造成「積蓄傷害」<br><追擊>觸發時：目標「瑰刺」達到4層，傷害提升至原傷害的110%<br>「瑰刺」達到5層，額外增加2段技能傷害<br>「瑰刺」達到7層，每層「瑰刺」使傷害額外提高5%，最多提高50%",
+        arguments: [
+          ["97%"],
+          ["115%"],
+          ["140%"],
+        ]
+      },
+      B: {
+        name: "花吻",
+        description: "按{{}}攻擊力，對敵方單體造成傷害，並對目標施加「蔓生」3回合",
+        arguments: [
+          ["120%"],
+          ["150%"],
+          ["200%"],
+        ]
+      },
+      Passive: {
+        name: "秘香",
+        description: "我方<追擊>後，自身造成傷害提升{{}}，最高10層<br>\"暗夜玫瑰\"在場時，我方對敵方使用的單體技能有70%的基礎機率對目標施加1層「瑰刺」，持續1回合<br>回合結束時，如果敵方「瑰刺」總層數達到3層，對「瑰刺」層數最高的敵方按原傷害的80%<追擊>1張1星「怒放」",
+        arguments: [
+          ["4.5%"],
+          ["5%"],
+          ["5.5%"],
+          ["6%"],
+        ]
+      },
+      risingStar: [
+        "戰鬥開始時，獲得1點奧義能量，每回合結束時必定<追擊>",
+        "",
+        "",
+        "每回合開始時對敵方全體施加2層「瑰刺」",
+        "",
+        "<追擊>的「怒放」在目標擁有至少7層「瑰刺」時，每層「瑰刺」使傷害額外提高12%，最多提高120%",
+      ]
+    },
+    supporters: [
+
+    ]
+  },
+  {
     name: "斐恩",
     subname: "絢爛之雨",
     rarity: rarity.SSR,
